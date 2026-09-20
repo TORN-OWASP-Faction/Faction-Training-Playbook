@@ -1,6 +1,15 @@
 <script>
   import { base } from '$app/paths';
   import Icon from '$lib/Icon.svelte';
+
+  // Illustrative crew for a 4-slot OC — each slot shows the per-checkpoint CPR
+  // Torn actually displays on the OC page. The weak link is what drags the crew.
+  const crew = [
+    { role: 'Robber', cpr: 92 },
+    { role: 'Lookout', cpr: 88 },
+    { role: 'Muscle', cpr: 34, weak: true },
+    { role: 'Driver', cpr: 79 }
+  ];
 </script>
 
 <header class="hero"><div class="wrap">
@@ -148,6 +157,78 @@
     <h3>What it means for staff</h3>
     <p style="margin:.4rem 0 0;color:var(--muted)">Match each member to the highest role they reliably pass, make sure they have the required item (loan from the armory if not), and time slot-filling to when people finish their current OC. Don't leave a high-NNB member sitting in a low role — that's value left on the table. (This is exactly what the faction bot's OC optimizer is built to automate.)</p>
   </div>
+
+  <!-- NERDY: how the crew's number is really built -->
+  <div class="nerd">
+    <span class="eyebrow">For the spreadsheet crowd</span>
+    <h3>How the crew's number is really built</h3>
+    <p style="margin:.4rem 0 0;color:var(--muted)">Torn shows you a <b>per-slot</b> number and stops there. But an OC doesn't roll once — it runs as a chain of <b>checkpoints</b>, and understanding that chain is the difference between guessing and knowing which crimes to run.</p>
+
+    <div class="grid2" style="margin-top:1.1rem">
+      <div class="card">
+        <h3>What CPR actually is</h3>
+        <ul class="rules" style="margin-top:.6rem">
+          <li><span class="k">%</span><div>Your <b>CPR</b> is your chance to pass <b>one checkpoint</b> in that role — the coloured number on the slot.</div></li>
+          <li><span class="k">Σ</span><div>It's built from <b>crime experience + battle stats + job stats</b>, weighted by the role. <b>CE is weighted heavily</b> and keeps raising CPR even past CS 100 — so the crime grind never stops paying.</div></li>
+          <li><span class="k"><Icon name="backpack"/></span><div>The role's <b>required item</b> (and its quality) feeds in too — a missing item can cap an otherwise-ready member.</div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why it's not just multiplying the slots</h3>
+        <ul class="rules" style="margin-top:.6rem">
+          <li><span class="k">↻</span><div>Each checkpoint is <b>one member's own roll</b> at their CPR — CPRs don't pool or average. If a member fails, the crew gets <b>another attempt</b>.</div></li>
+          <li><span class="k"><Icon name="skull"/></span><div>The OC only <b>fails outright</b> after several checkpoints fail in a row (community reports ~<b>3–4</b>). So a strong bench <b>absorbs</b> a weak slot's misses.</div></li>
+          <li><span class="k">≠</span><div>That makes the real team chance <b>more forgiving</b> than "all slots must pass" — but the low slot is still where failure starts.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CREW CPR CHART -->
+    <div class="card" style="margin-top:1rem">
+      <h3>A crew is only as strong as its weakest checkpoint</h3>
+      <p style="margin:.3em 0 .8rem;color:var(--muted)">Same 4-slot OC. Three slots are ready — but the <b>34% Muscle</b> is where nearly every failure will start. Fixing that one slot lifts the whole crew far more than nudging the others.</p>
+      <div class="bars">
+        {#each crew as m}
+          <div class="bar-row{m.weak ? ' weak' : ''}">
+            <div class="lbl">{m.role}{m.weak ? ' ⚠' : ''}</div>
+            <div class="track"><div class="fill" style="width:{m.cpr}%"><span class="v">{m.cpr}% CPR</span></div></div>
+          </div>
+        {/each}
+      </div>
+      <p style="color:var(--faint);font-size:.8rem;margin:.8rem 0 0">Per-slot CPRs are the real numbers Torn displays; the crew is illustrative. The <em>overall</em> team chance is what the model computes from all four — see the tool below.</p>
+    </div>
+
+    <!-- CHECKPOINT CHAIN -->
+    <div class="card" style="margin-top:1rem">
+      <h3>The checkpoint chain</h3>
+      <p style="margin:.3em 0 .9rem;color:var(--muted)">An OC plays out as a sequence. Each checkpoint is a member's roll; a miss burns one of the crew's few retries; too many misses and the whole crime fails.</p>
+      <div class="chain">
+        <div class="cp ok"><span class="cpn">CP1</span><span class="cps">pass</span></div>
+        <span class="cpar">→</span>
+        <div class="cp ok"><span class="cpn">CP2</span><span class="cps">pass</span></div>
+        <span class="cpar">→</span>
+        <div class="cp miss"><span class="cpn">CP3</span><span class="cps">miss · retry</span></div>
+        <span class="cpar">→</span>
+        <div class="cp ok"><span class="cpn">CP3′</span><span class="cps">pass</span></div>
+        <span class="cpar">→</span>
+        <div class="cp ok"><span class="cpn">CP4</span><span class="cps">pass</span></div>
+        <span class="cpar">→</span>
+        <div class="cp done"><span class="cpn">✓</span><span class="cps">OC succeeds</span></div>
+      </div>
+      <div class="chain-legend">
+        <span><i class="sw ok"></i>checkpoint passed</span>
+        <span><i class="sw miss"></i>missed — crew retries</span>
+        <span><i class="sw fail"></i>~3–4 misses = crime fails</span>
+      </div>
+    </div>
+
+    <div class="say militia">
+      <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+      <div><div><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
+        <p class="line">"Don't eyeball it. Run the <b>OC Success Chance</b> script on the crimes page — it takes every slot's number and shows you the crew's real odds, so we only spend Scope on crimes we'll actually clear."</p></div>
+    </div>
+    <p class="note" style="margin-top:.9rem">Want the exact team number? The <a href="{base}/scripts/">OC Success Chance</a> userscript overlays it on every OC. Mechanics from the community Crimes 2.0 guides and the <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Torn wiki</a>; the checkpoint model is community-observed, so treat the chain as intuition, not an exact formula.</p>
+  </div>
 </div></section>
 
 <!-- THE CRIMES -->
@@ -232,5 +313,31 @@
     <span class="mono" style="letter-spacing:.16em;font-size:.72rem;color:var(--muted)">SLOW MONEY IS STILL MONEY</span>
   </div>
   <strong>Crimes 2.0.</strong> Part of the <a href="{base}/">Faction Training Playbook</a>. Summarized from the community Crimes 2.0 in-depth guides and the Torn wiki; per-crime mechanics change as crimes are updated — check the wiki or a crime's guide for exact drop tables and numbers.
-  <p class="note">Sources: Torn wiki (<a href="https://wiki.torn.com/wiki/Crimes_2.0" target="_blank" rel="noopener">Crimes 2.0</a>, <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Organized Crime 2.0</a>) &amp; the community per-crime and OC 2.0 guides. Scope, CPR and tier details per the OC 2.0 wiki; exact numbers can change.</p>
+  <p class="note">Sources: Torn wiki (<a href="https://wiki.torn.com/wiki/Crimes_2.0" target="_blank" rel="noopener">Crimes 2.0</a>, <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Organized Crime 2.0</a>) &amp; the community per-crime and OC 2.0 guides. Scope, CPR and tier details per the OC 2.0 wiki; exact numbers can change. OC Success Chance script by Allenone [2033011].</p>
 </div></footer>
+
+<style>
+  .nerd{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--border)}
+  .bar-row.weak .lbl{color:var(--c-medic);font-weight:600}
+  .bar-row.weak .fill{background:var(--c-medic)}
+  .bar-row.weak .fill .v{color:#fff}
+
+  .chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:.5rem}
+  .cp{display:flex;flex-direction:column;gap:.15rem;justify-content:center;min-width:5.4rem;
+    padding:.5rem .6rem;border-radius:3px;border:1px solid var(--border);background:var(--raised)}
+  .cp .cpn{font-family:"Oswald",sans-serif;font-weight:700;font-size:.95rem}
+  .cp .cps{font-family:"IBM Plex Mono",monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
+  .cp.ok{border-color:var(--amber-soft)}
+  .cp.ok .cpn{color:var(--amber)}
+  .cp.miss{border-color:var(--c-medic);background:var(--medic-soft)}
+  .cp.miss .cpn,.cp.miss .cps{color:var(--c-medic)}
+  .cp.done{border-color:var(--amber);background:var(--amber-soft)}
+  .cp.done .cpn{color:var(--amber)}
+  .cpar{align-self:center;color:var(--faint);font-size:1.1rem}
+  .chain-legend{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.9rem;font-size:.78rem;color:var(--muted)}
+  .chain-legend span{display:inline-flex;align-items:center;gap:.4rem}
+  .sw{width:12px;height:12px;border-radius:2px;display:inline-block}
+  .sw.ok{background:var(--amber)}
+  .sw.miss{background:var(--c-medic)}
+  .sw.fail{background:transparent;border:1px solid var(--c-medic)}
+</style>

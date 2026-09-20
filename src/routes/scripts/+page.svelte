@@ -70,6 +70,18 @@
     </div>
 
     <div class="card tool">
+      <div class="hd"><h3>OC Success Chance</h3><span class="type">Userscript</span></div>
+      <p class="what">On the faction OC page, Torn only shows each member's <b>per-slot</b> chance. This overlays the <b>whole crew's</b> computed success chance on every crime — so leaders can see at a glance which OCs are actually ready to run and which will bleed Scope.</p>
+      <ol>
+        <li>Install Tampermonkey / Violentmonkey (above).</li>
+        <li>Open the Greasy Fork page and click <b>Install</b>.</li>
+        <li>Go to <b>Faction → Organized Crimes</b>; a "Success Chance: %" line appears under each OC title.</li>
+        <li>No API key needed — it reads the page and asks the tornprobability model for the team number.</li>
+      </ol>
+      <div class="link"><a href="https://greasyfork.org/en/scripts/526834-oc-success-chance-2-0" target="_blank" rel="noopener">greasyfork.org · OC Success Chance 2.0 ↗</a></div>
+    </div>
+
+    <div class="card tool">
       <div class="hd"><h3>TornStats</h3><span class="type">Website + script</span></div>
       <p class="what">Enemy <b>spies</b> (estimated stats), chain &amp; war tools, faction roster and stat tracking. A staple for war prep.</p>
       <ol>
@@ -102,7 +114,7 @@
     </div>
 
   </div>
-  <p class="note">YATA, TornStats and Torn PDA are third-party but Torn-endorsed. TornTools and FF Scouter are community userscripts/extensions. Exact install screens change — follow each tool's own guide if a step looks different.</p>
+  <p class="note">YATA, TornStats and Torn PDA are third-party but Torn-endorsed. TornTools, FF Scouter and OC Success Chance are community userscripts/extensions. Exact install screens change — follow each tool's own guide if a step looks different.</p>
 </div></section>
 
 <!-- KEY SAFETY -->
@@ -130,5 +142,5 @@
     <span class="mono" style="letter-spacing:.16em;font-size:.72rem;color:var(--muted)">GEAR UP · THEN FIGHT</span>
   </div>
   <strong>Scripts &amp; Tools.</strong> Part of the <a href="{base}/">Faction Training Playbook</a>. Setup steps summarized from each tool's docs — verify against the source if a screen differs.
-  <p class="note">Sources: <a href="https://torntools.tornplayground.eu/" target="_blank" rel="noopener">TornTools</a> · <a href="https://ffscouter.com/guides/ff-scouter-v2-installation" target="_blank" rel="noopener">FF Scouter</a> · <a href="https://www.tornstats.com/" target="_blank" rel="noopener">TornStats</a> · <a href="https://yata.yt/" target="_blank" rel="noopener">YATA</a> · <a href="https://github.com/Manuito83/torn-pda" target="_blank" rel="noopener">Torn PDA</a> · <a href="https://wiki.torn.com/wiki/API" target="_blank" rel="noopener">Torn API</a></p>
+  <p class="note">Sources: <a href="https://torntools.tornplayground.eu/" target="_blank" rel="noopener">TornTools</a> · <a href="https://ffscouter.com/guides/ff-scouter-v2-installation" target="_blank" rel="noopener">FF Scouter</a> · <a href="https://www.tornstats.com/" target="_blank" rel="noopener">TornStats</a> · <a href="https://yata.yt/" target="_blank" rel="noopener">YATA</a> · <a href="https://github.com/Manuito83/torn-pda" target="_blank" rel="noopener">Torn PDA</a> · <a href="https://greasyfork.org/en/scripts/526834-oc-success-chance-2-0" target="_blank" rel="noopener">OC Success Chance</a> (Allenone [2033011]) · <a href="https://wiki.torn.com/wiki/API" target="_blank" rel="noopener">Torn API</a></p>
 </div></footer>
