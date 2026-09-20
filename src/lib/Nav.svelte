@@ -7,9 +7,11 @@
     ['Items', '#items'], ['Education', '#edu'], ['Charts', '#ref']
   ];
   const crimes = [
-    ['Overview', `${base}/crimes`], ['How crimes work', `${base}/crimes#how`],
-    ['Build your nerve', `${base}/crimes#nerve`], ['OC & faction', `${base}/crimes#oc`],
-    ['Burglary data', `${base}/crimes/burglary`]
+    ['Overview', `${base}/crimes/`], ['How crimes work', `${base}/crimes/#how`],
+    ['Build your nerve', `${base}/crimes/#nerve`], ['OC & faction', `${base}/crimes/#oc`],
+    ['— Data tables —', `${base}/crimes/`],
+    ['Burglary', `${base}/crimes/burglary/`], ['Shoplifting', `${base}/crimes/shoplifting/`],
+    ['Cracking', `${base}/crimes/cracking/`], ['Forgery', `${base}/crimes/forgery/`]
   ];
 </script>
 

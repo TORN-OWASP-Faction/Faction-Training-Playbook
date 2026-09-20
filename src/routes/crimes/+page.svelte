@@ -14,6 +14,19 @@
   </div>
 </div></header>
 
+<section><div class="wrap">
+  <div class="callout" style="border-left-color:var(--c-fixer)">
+    <h3>Interactive drop-table data</h3>
+    <p style="margin:.3em 0 .7em;color:var(--muted)">Community-compiled droptables and rates, converted to sortable/filterable tables (credit: Emforus [2535044]).</p>
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+      <a class="hero-badge" href="{base}/crimes/burglary/" style="text-decoration:none">Burglary →</a>
+      <a class="hero-badge" href="{base}/crimes/shoplifting/" style="text-decoration:none">Shoplifting →</a>
+      <a class="hero-badge" href="{base}/crimes/cracking/" style="text-decoration:none">Cracking →</a>
+      <a class="hero-badge" href="{base}/crimes/forgery/" style="text-decoration:none">Forgery →</a>
+    </div>
+  </div>
+</div></section>
+
 <!-- HOW -->
 <section id="how"><div class="wrap">
   <span class="eyebrow">The system</span>
