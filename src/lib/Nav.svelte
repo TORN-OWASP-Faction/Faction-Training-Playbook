@@ -7,7 +7,7 @@
     ['The idea', '#idea'], ['Level ≤15', '#new'], ['Make money', '#money'],
     ['By income', '#brackets'], ['Builds', '#builds'], ['Schedules', '#schedule'],
     ['Items', '#items'], ['Education', '#edu'], ['Charts', '#ref'],
-    ['Training math ↗', 'training/formula/'], ['Field medicine ↗', 'medical/']
+    ['Training math ↗', 'training/formula/'], ['Field medicine ↗', 'medical/'], ['War loadout ↗', 'loadout/']
   ].map(([l, h]) => [l, `${base}/${h}`]);
 
   const crimes = [

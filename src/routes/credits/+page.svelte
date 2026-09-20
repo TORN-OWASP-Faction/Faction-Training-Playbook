@@ -24,6 +24,13 @@
 </div></section>
 
 <section><div class="wrap">
+  <span class="eyebrow">Combat &amp; gear</span>
+  <h2 style="margin-top:.3em">War loadout</h2>
+  <div class="credit"><div class="who">MasterF1re <span class="id">[2854737]</span></div><div class="what">"Fight better than a top 100 player" — the fighting/gear guide our <a href="{base}/loadout/">War loadout</a> page distils.</div></div>
+  <div class="credit"><div class="who">mug <span class="id">[553318]</span></div><div class="what">The "what to buy" weapons section (viable rifles, pistols, melee and their perks) within that guide.</div></div>
+</div></section>
+
+<section><div class="wrap">
   <span class="eyebrow">Crimes 2.0</span>
   <h2 style="margin-top:.3em">Crime guides &amp; drop-table data</h2>
   <div class="credit"><div class="who">Emforus <span class="id">[2535044]</span></div><div class="what">The Crimes 2.0 In-Depth Guide series (all crimes) and the linked consolidated droptable spreadsheets (Burglary Consolidated, Shoplifting Droptables) that our interactive crime tables are built from. Wiki contributor.</div></div>
