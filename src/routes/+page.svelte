@@ -397,8 +397,8 @@
       <p style="margin:.3em 0 0;color:var(--muted)">Train enough to comfortably win, then attack inactive <b>"leveling targets"</b> (low stats for their level) and <b>leave them in the street</b> — that's the best XP. Spend all your energy on them until 15. Losing or taking heavy damage? Train more, try again in a few days.</p>
     </div>
     <div class="card" style="border-left:3px solid var(--c-fixer)">
-      <h3>Buying losses <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Nico Knows a Guy</span></h3>
-      <p style="margin:.3em 0 0;color:var(--muted)">Pay other players to feed you easy fight wins — a fast, reliable way to rush levels when you don't feel like hunting targets. It's the buyer's end of a real income stream; flip it around and <b>you're</b> the one getting paid — see <a href="#sell-losses">Selling losses</a> below.</p>
+      <h3>Losses — sell, don't buy <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Nico Knows a Guy</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Some players <em>pay</em> to be fed easy wins to rush levels — but for our crew the money's on the other side. Level off <b>leveling targets</b>; <b>sell</b> your losses for cash. Be the one getting paid, not the one paying — see <a href="#sell-losses">Selling losses</a> below.</p>
     </div>
   </div>
   <div class="say trainer">

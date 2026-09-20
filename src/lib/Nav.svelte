@@ -6,7 +6,8 @@
   const guide = [
     ['The idea', '#idea'], ['Level ≤15', '#new'], ['Make money', '#money'],
     ['By income', '#brackets'], ['Builds', '#builds'], ['Schedules', '#schedule'],
-    ['Items', '#items'], ['Education', '#edu'], ['Charts', '#ref']
+    ['Items', '#items'], ['Education', '#edu'], ['Charts', '#ref'],
+    ['Training math ↗', 'training/formula/']
   ].map(([l, h]) => [l, `${base}/${h}`]);
 
   const crimes = [
