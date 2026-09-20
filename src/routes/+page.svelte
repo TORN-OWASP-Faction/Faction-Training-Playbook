@@ -1,6 +1,40 @@
 <script>
   import { base } from '$app/paths';
   import { onMount } from 'svelte';
+  import Tabs from '$lib/Tabs.svelte';
+
+  const brackets = [
+    { label: 'Broke', note: '< $5M', rows: [
+      ['Jump to', "~ base happy (top up, don't jump)"], ['Happy', 'Cheap candy (+25), shoplifted'],
+      ['Energy', 'Natural regen · LSD (cheap) · faction Xanax'], ['Property', 'Apartment → Semi'],
+      ['Cadence', 'Train daily, fly Mexico to fund the next tier'] ] },
+    { label: 'Building', note: '$5M – $100M', rows: [
+      ['Jump to', '2,000 – 5,000'], ['Happy', 'Mid candy (+75–150), stacked'],
+      ['Energy', 'Xanax daily · energy drinks (faction ×1.5)'], ['Property', 'Detached → Mansion'],
+      ['Cadence', '1 candy jump/day + passive trains'] ] },
+    { label: 'Established', note: '$100M – $1B', rows: [
+      ['Jump to', '10,000 – 25,000'], ['Happy', 'eDVD (+2,500) · Ecstasy (×2) · premium candy'],
+      ['Energy', 'Xanax + drinks + point refills'], ['Property', 'Castle → saving for Private Island'],
+      ['Cadence', 'Daily eDVD jump; book up before big pushes'] ] },
+    { label: 'Wealthy', note: '$1B +', rows: [
+      ['Jump to', '50,000 – 99,999'], ['Happy', 'eDVD stacks · Ecstasy · Sweet Shop special (+4,500)'],
+      ['Energy', 'Xanax + drinks + refills, stacked'], ['Property', 'Private Island (5,025) + marry to split upkeep'],
+      ['Cadence', 'Max jump daily; time big pushes to World Diabetes Day (candy ×9)'] ] }
+  ];
+  const builds = [
+    { label: 'Balanced', note: 'new players', rows: [
+      ['Focus', 'All four evenly'], ['Role', 'Flexible, safe, good for chaining'],
+      ['Scale', 'Keep stats within ~10–20% of each other until you pick a role'] ] },
+    { label: 'Hitter', note: 'attack / war', rows: [
+      ['Focus', 'Speed + Strength'], ['Role', 'Land fast, hit hard — the classic war attacker'],
+      ['Scale', "Grow Speed and Strength together; keep some Defense so you're not glass"] ] },
+    { label: 'Wall', note: 'defending', rows: [
+      ['Focus', 'Defense + Speed'], ['Role', 'Survive attacks, hold during a war'],
+      ['Scale', 'Defense leads; keep Speed up so you still hit back'] ] },
+    { label: 'Pure', note: 'specialist', rows: [
+      ['Focus', 'One stat, all-in'], ['Role', 'Max respect / niche (e.g. pure Speed). High risk/reward'],
+      ['Scale', 'Only once you know why — a single weak stat is exploitable'] ] }
+  ];
   onMount(() => {
 
 (function(){
@@ -442,48 +476,7 @@
       <p class="line plain">Torres can turn money into stats fast. Unfortunately it's usually <em>my</em> money she wants to turn into stats.</p></div>
   </div>
 
-  <div class="grid g4" style="margin-top:22px">
-    <div class="card brk">
-      <div class="top"><div class="tier">Broke</div><div class="cash">&lt; $5M</div></div>
-      <dl>
-        <dt>Jump to</dt><dd class="jumphappy">~ base happy<br><small style="color:var(--muted)">top up, don't jump</small></dd>
-        <dt>Happy</dt><dd>Cheap candy (+25), shoplifted</dd>
-        <dt>Energy</dt><dd>Natural regen · LSD (cheap) · faction Xanax</dd>
-        <dt>Property</dt><dd>Apartment → Semi</dd>
-        <dt>Cadence</dt><dd>Train daily, fly Mexico to fund the next tier</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Building</div><div class="cash">$5M – $100M</div></div>
-      <dl>
-        <dt>Jump to</dt><dd class="jumphappy">2,000 – 5,000</dd>
-        <dt>Happy</dt><dd>Mid candy (+75–150), stacked</dd>
-        <dt>Energy</dt><dd>Xanax daily · energy drinks (faction ×1.5)</dd>
-        <dt>Property</dt><dd>Detached → Mansion</dd>
-        <dt>Cadence</dt><dd>1 candy jump/day + passive trains</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Established</div><div class="cash">$100M – $1B</div></div>
-      <dl>
-        <dt>Jump to</dt><dd class="jumphappy">10,000 – 25,000</dd>
-        <dt>Happy</dt><dd>eDVD (+2,500) · Ecstasy (×2) · premium candy</dd>
-        <dt>Energy</dt><dd>Xanax + drinks + point refills</dd>
-        <dt>Property</dt><dd>Castle → saving for Private Island</dd>
-        <dt>Cadence</dt><dd>Daily eDVD jump; book up before big pushes</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Wealthy</div><div class="cash">$1B +</div></div>
-      <dl>
-        <dt>Jump to</dt><dd class="jumphappy">50,000 – 99,999</dd>
-        <dt>Happy</dt><dd>eDVD stacks · Ecstasy · Sweet Shop special (+4,500)</dd>
-        <dt>Energy</dt><dd>Xanax + drinks + refills, stacked</dd>
-        <dt>Property</dt><dd>Private Island (5,025) + marry to split upkeep</dd>
-        <dt>Cadence</dt><dd>Max jump daily; time big pushes to World Diabetes Day (candy ×9)</dd>
-      </dl>
-    </div>
-  </div>
+  <Tabs items={brackets} accent="var(--amber)" />
   <p class="note">Faction holdings can effectively bump your bracket — if leadership funds your eDVDs or Xanax, train like the tier above your wallet.</p>
 </div></section>
 
@@ -508,40 +501,7 @@
     <p style="margin:10px 0 0;color:var(--muted)">So an attacker wants Speed over the target's Dex and Strength over their Defense; a defender flips it — Defense to absorb, Dexterity to dodge.</p>
   </div>
 
-  <div class="grid g4" style="margin-top:16px">
-    <div class="card brk">
-      <div class="top"><div class="tier">Balanced</div><div class="cash">new players</div></div>
-      <dl>
-        <dt>Focus</dt><dd>All four evenly</dd>
-        <dt>Role</dt><dd>Flexible, safe, good for chaining</dd>
-        <dt>Scale</dt><dd>Keep stats within ~10–20% of each other until you pick a role</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Hitter</div><div class="cash">attack / war</div></div>
-      <dl>
-        <dt>Focus</dt><dd>Speed + Strength</dd>
-        <dt>Role</dt><dd>Land fast, hit hard — the classic war attacker</dd>
-        <dt>Scale</dt><dd>Grow Speed and Strength together; keep some Defense so you're not glass</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Wall</div><div class="cash">defending</div></div>
-      <dl>
-        <dt>Focus</dt><dd>Defense + Speed</dd>
-        <dt>Role</dt><dd>Survive attacks, hold during a war</dd>
-        <dt>Scale</dt><dd>Defense leads; keep Speed up so you still hit back</dd>
-      </dl>
-    </div>
-    <div class="card brk">
-      <div class="top"><div class="tier">Pure</div><div class="cash">specialist</div></div>
-      <dl>
-        <dt>Focus</dt><dd>One stat, all-in</dd>
-        <dt>Role</dt><dd>Max respect / niche (e.g. pure Speed). High risk/reward</dd>
-        <dt>Scale</dt><dd>Only once you know why — a single weak stat is exploitable</dd>
-      </dl>
-    </div>
-  </div>
+  <Tabs items={builds} accent="var(--c-militia)" />
 
   <div class="callout" style="margin-top:16px">
     <h3>Scaling rules</h3>
