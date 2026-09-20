@@ -369,7 +369,7 @@
     <div class="callout">
       <h3>Pre-flight — all true before you start</h3>
       <ul class="rules" style="margin-top:10px">
-        <li><span class="k">opt</span><div><b>Pay insurance</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — settle it before the jump so nothing interrupts you.</div></li>
+        <li><span class="k">opt</span><div><b>Pay your insurance</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — arson/bounty protection. A jump leaves you sitting full and idle; if someone <b>arsons</b> you or you're carrying a <b>bounty</b>, a hit puts you in hospital mid-jump and the whole stacked happy is gone. Clear it first so nothing can interrupt you.</div></li>
         <li><span class="k">0</span><div><b>No drug cooldown</b> — you need it clear to take your XTC (and Xanax).</div></li>
         <li><span class="k">0</span><div><b>No boost cooldown</b> — so your eDVDs and energy items all count.</div></li>
         <li><span class="k"><Icon name="pill"/></span><div><b>The right gym</b> — be in the best gym for the stat you're training (dots differ per stat).</div></li>
