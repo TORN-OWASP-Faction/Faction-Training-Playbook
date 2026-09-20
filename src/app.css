@@ -258,7 +258,7 @@
   html{color-scheme:dark}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;
     line-height:1.6;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:clip}
-  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  .wrap{max-width:75rem;margin:0 auto;padding:0 1.4rem}
   h1,h2,h3,.disp{font-family:"Oswald","Arial Narrow",sans-serif;text-wrap:balance}
   .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
   a{color:var(--amber)}
@@ -535,7 +535,7 @@
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6;
     font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:clip}
-  .wrap{max-width:66rem;margin:0 auto;padding:0 1.4rem;position:relative;z-index:2}
+  .wrap{max-width:75rem;margin:0 auto;padding:0 1.4rem;position:relative;z-index:2}
   h1,h2,.eyebrow{font-family:"Oswald","Arial Narrow",sans-serif}
   .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
   a{color:var(--amber)}
