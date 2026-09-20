@@ -31,7 +31,7 @@
   <span class="eyebrow">Targets</span>
   <h2>Locations &amp; casing</h2>
   <p class="lede">CS to unlock, safety, recommended casing, sample size and casing success rate per target. Click a header to sort.</p>
-  <DataTable columns={data.locations.columns} rows={data.locations.rows} caption="Burglary — locations & casing rates" />
+  <DataTable columns={data.locations.columns} rows={data.locations.rows} caption="Burglary — locations & casing rates" group={true} />
 </div></section>
 
 <section><div class="wrap">

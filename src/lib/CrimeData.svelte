@@ -14,7 +14,7 @@
 {#each tabs as tab}
   <section><div class="wrap">
     <h2>{tab.name}</h2>
-    <DataTable columns={tab.columns} rows={tab.rows} caption={tab.name} />
+    <DataTable columns={tab.columns} rows={tab.rows} caption={tab.name} note={tab.note ?? []} group={true} />
   </div></section>
 {/each}
 

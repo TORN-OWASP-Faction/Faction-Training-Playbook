@@ -1,5 +1,5 @@
 <script>
-  let { columns = [], rows = [], search = true, caption = '' } = $props();
+  let { columns = [], rows = [], search = true, caption = '', note = [], group = false } = $props();
   let q = $state('');
   let sortCol = $state(-1);
   let dir = $state(1);
@@ -46,13 +46,21 @@
         </tr>
       </thead>
       <tbody>
-        {#each filtered as row}
-          <tr>{#each row as cell}<td>{cell}</td>{/each}</tr>
+        {#each filtered as row, i}
+          {@const cont = group && i > 0 && filtered[i - 1][0] === row[0]}
+          <tr class:cont>
+            {#each row as cell, j}
+              {#if j === 0 && cont}<td class="grp"></td>{:else}<td>{cell}</td>{/if}
+            {/each}
+          </tr>
         {/each}
       </tbody>
     </table>
   </div>
   <div class="dt-count">{filtered.length} of {rows.length} rows</div>
+  {#if note && note.length}
+    <div class="dt-notes">{#each note as n}<p>{n}</p>{/each}</div>
+  {/if}
 </div>
 
 <style>
@@ -72,4 +80,8 @@
   tbody tr:hover{background:var(--raised)}
   tbody tr:last-child td{border-bottom:none}
   .dt-count{color:var(--faint);font-size:.75rem;margin-top:.4rem;font-family:"IBM Plex Mono",monospace}
+  tr.cont td{border-top:0}
+  tr.cont td:first-child{border-bottom:0}
+  .dt-notes{margin-top:.7rem;display:grid;gap:.35rem}
+  .dt-notes p{margin:0;font-size:.78rem;color:var(--faint);max-width:70ch;line-height:1.5}
 </style>
