@@ -15,7 +15,7 @@
     --ink:#E6E1D6; --muted:#9A948A; --faint:#6E6862;
     --amber:#C39A6B; --amber-fill:#C39A6B; --amber-soft:rgba(195,154,107,.14);
     --energy:#3BA55D; --energy-soft:rgba(59,165,93,.14); --crime:#C0453B; --crime-soft:rgba(192,69,59,.16);
-    --c-banker:#C39A6B; --c-trainer:#3BA55D; --c-militia:#C0453B; --money:#C39A6B;
+    --c-banker:#C39A6B; --c-trainer:#3BA55D; --c-militia:#C0453B; --c-fixer:#CBB78F; --fixer-soft:rgba(203,183,143,.14); --money:#C39A6B;
     --grid:rgba(230,225,214,.08); --axis:rgba(230,225,214,.3);
     --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 30px rgba(0,0,0,.5);
   }
@@ -191,8 +191,9 @@
   nav.toc{z-index:20}
 
   /* hero lineup */
-  .hero-crew{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-  @media(max-width:720px){.hero-crew{grid-template-columns:1fr}}
+  .hero-crew{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+  @media(max-width:900px){.hero-crew{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.hero-crew{grid-template-columns:1fr}}
   .crew{position:relative;border:1px solid var(--border);border-radius:14px;overflow:hidden;min-height:230px;
     display:flex;flex-direction:column;justify-content:flex-end;background:var(--bg2)}
   .crew .art{position:absolute;inset:0;background-size:cover;background-position:top center;opacity:.9}
@@ -227,6 +228,8 @@
   .say.banker{border-left-color:var(--c-banker)} .say.banker .av{color:var(--c-banker)} .say.banker .tag{color:var(--c-banker);background:var(--amber-soft)}
   .say.trainer{border-left-color:var(--c-trainer)} .say.trainer .av{color:var(--c-trainer)} .say.trainer .tag{color:var(--c-trainer);background:var(--energy-soft)}
   .say.militia{border-left-color:var(--c-militia)} .say.militia .av{color:var(--c-militia)} .say.militia .tag{color:var(--c-militia);background:var(--crime-soft)}
+  .say.fixer{border-left-color:var(--c-fixer)} .say.fixer .av{color:var(--c-fixer)} .say.fixer .tag{color:var(--c-fixer);background:var(--fixer-soft)}
+  .crew.fixer{border-top:3px solid var(--c-fixer)} .crew.fixer .role{color:var(--c-fixer)}
 
   /* section banner (uses bg_*.png with gradient veil; falls back to gradient) */
   .banner{position:relative;border-radius:14px;overflow:hidden;margin-bottom:22px;border:1px solid var(--border);
@@ -250,6 +253,7 @@
 <nav class="toc"><div class="wrap">
   <a href="#idea">The idea</a>
   <a href="#new">Level ≤15</a>
+  <a href="#money">Make money</a>
   <a href="#brackets">By income</a>
   <a href="#builds">Builds</a>
   <a href="#schedule">Schedules</a>
@@ -264,11 +268,12 @@
 <header class="hero"><div class="wrap">
   <span class="hero-badge">FACTION TRAINING · EST. 2004</span>
   <h1>Faction<br>Training <em>Playbook</em></h1>
-  <p class="lede">Turn energy into stats fast — and spend cash so it actually pays off. Three people run this page: the money, the method, and the muscle. Find the tier that matches you and follow their lead.</p>
+  <p class="lede">Turn energy into stats fast — and spend cash so it actually pays off. Four people run this page: the plan, the method, the muscle, and the connections. Find the tier that matches you and follow their lead.</p>
   <div class="rule-strip" aria-hidden="true">
-    <span style="background:var(--c-banker)"></span><span style="background:var(--c-banker);opacity:.7"></span>
-    <span style="background:var(--c-trainer)"></span><span style="background:var(--c-trainer);opacity:.7"></span>
-    <span style="background:var(--c-militia)"></span><span style="background:var(--c-militia);opacity:.7"></span>
+    <span style="background:var(--c-banker)"></span>
+    <span style="background:var(--c-trainer)"></span>
+    <span style="background:var(--c-militia)"></span>
+    <span style="background:var(--c-fixer)"></span>
   </div>
 
   <div class="hero-crew">
@@ -292,6 +297,13 @@
       <div class="veil"></div>
       <img class="art" src="assets/militia.png" alt="Marcus Kane, the militia veteran" style="background:none" onerror="this.remove()">
       <div class="cap"><div class="role">Militia · Factions</div><div class="who">Marcus "Rook" Kane</div><div class="dom">Faction perks · war readiness · preparation</div></div>
+    </div>
+    <div class="crew fixer">
+      <div class="art" style="background-image:url('assets/bg_alley.png')"></div>
+      <div class="fallback">N</div>
+      <div class="veil"></div>
+      <img class="art" src="assets/nico.png" alt="Nico Vescari, the fixer" style="background:none" onerror="this.remove()">
+      <div class="cap"><div class="role">Fixer · Opportunity</div><div class="who">Nico "The Line" Vescari</div><div class="dom">Quick cash · leveling · flipping · introductions</div></div>
     </div>
   </div>
 </div></header>
@@ -362,6 +374,83 @@
   <div class="callout dont" style="margin-top:16px">
     <h3 style="color:var(--crime)">Don't, yet</h3>
     <p style="margin:6px 0 0">No eDVDs and no big happy jumps at this stage. They're expensive and your low stats don't need them — that money buys far more stats as a property upgrade or an education course. Jumping starts once you're past level 15 <em>and</em> have cash to spare.</p>
+  </div>
+</div></section>
+
+<!-- MAKE MONEY -->
+<section id="money"><div class="wrap">
+  <span class="eyebrow">Level up · then get paid</span>
+  <h2>Make money</h2>
+  <p class="lede">Money moves through this city constantly — the trick is standing where it lands. Get to <strong>level 15</strong> (that's where the real money unlocks), then pick your hustle.</p>
+
+  <div class="say fixer">
+    <div class="av"><span class="mono-badge">N</span><img src="assets/nico.png" alt="" onerror="this.remove()"></div>
+    <div class="body"><div class="hd"><span class="nm">Nico "The Line"</span><span class="tag">Between Us</span></div>
+      <p class="line">"You want safe money? Talk to Ledger. You want money this week? Keep listening. First problem — you're stuck under 15. Let's fix that."</p></div>
+  </div>
+
+  <h3 style="margin-top:26px">1 · Rush to level 15, then stop</h3>
+  <p style="color:var(--muted);margin:.2em 0 0">Level 15 unlocks <b>travel</b> — and travel is where money gets easy. Get there fast, then never grind levels again; they come on their own while you train.</p>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card">
+      <h3>Leveling targets</h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Train enough to comfortably win, then attack inactive <b>"leveling targets"</b> (low stats for their level) and <b>leave them in the street</b> — that's the best XP. Spend all your energy on them until 15. Losing or taking heavy damage? Train more, try again in a few days.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--c-fixer)">
+      <h3>Loss buying <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Nico Knows a Guy</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Pay a higher-level player to let you beat them — clean, fast, repeatable XP, and one of the most common ways people rush 15. A high-level punching bag pays out far more XP per hit than a random target.</p>
+    </div>
+  </div>
+  <div class="say trainer">
+    <div class="av"><span class="mono-badge">M</span><img src="assets/trainer.png" alt="" onerror="this.remove()"></div>
+    <div class="body"><div class="hd"><span class="nm">Rep</span><span class="tag">Coach's Tip</span></div>
+      <p class="line">"The day you hit 15, stop chasing levels. Every point of energy goes into the gym from there — level just shows up on its own."</p></div>
+  </div>
+
+  <h3 style="margin-top:30px">2 · Rent your happy, don't buy it</h3>
+  <div class="callout" style="margin-top:10px">
+    <ul class="rules">
+      <li><span class="k">↧15</span><div>Getting to 15: <b>rent</b> a Mansion/Ranch (bare minimum a Penthouse, 925 happy) for <b>30–45 days</b>. Don't buy, don't rent long-term.</div></li>
+      <li><span class="k">15+</span><div>At 15 you can afford a <b>Private Island</b> — ~$12–13M / 30 days for the 3,600-happy sweet spot. First PI: grab the cheapest one <b>with a landing strip</b> (even a 2,550 will do).</div></li>
+    </ul>
+  </div>
+  <div class="say banker">
+    <div class="av"><span class="mono-badge">V</span><img src="assets/banker.png" alt="" onerror="this.remove()"></div>
+    <div class="body"><div class="hd"><span class="nm">Ledger</span><span class="tag">Money Talk</span></div>
+      <p class="line">"Buying a cheap property to save money is how you lose money. Rent short, move up the moment you hit 15. Your happy is an investment, not a possession."</p></div>
+  </div>
+
+  <h3 style="margin-top:30px">3 · Where the money is</h3>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card">
+      <h3>Before 15 — shop flips <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Quick Money</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">City → East Side → <b>Bits N Bobs</b> &amp; <b>Sweet Shop</b>. You can buy <b>100 items/day</b>; resell lollipops, beer and basic plushies to players at a markup — roughly <b>$50–60k/day</b>. Small, but it compounds your first property.</p>
+    </div>
+    <div class="card">
+      <h3>After 15 — flowers &amp; plushies <span class="tag" style="color:var(--c-trainer);background:var(--ok-soft)">the big one</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Fly abroad, buy flowers/plushies from the General Store, fly home, sell to players. Huge demand — <b>$3–6M/day</b> active. See <a href="#schedule">Schedules</a> and the <a href="planner.html">live planner</a> for destinations and timing.</p>
+    </div>
+    <div class="card">
+      <h3>Market flipping <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Worth the Risk?</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Buy underpriced listings, resell higher. Real money — but it takes money to make money, it's time-consuming, and while you're small you're an easy <b>mug</b>. Scale it up as your stats and vault grow.</p>
+    </div>
+    <div class="card">
+      <h3>Favors &amp; introductions <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">An Opportunity</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">The flip side of loss buying: strong players <b>sell</b> losses to levelers. Buyers for your flowers, someone who needs a job done — the faction is full of these. Ask around; someone always needs something.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:30px">4 · Don't get mugged</h3>
+  <div class="say militia">
+    <div class="av"><span class="mono-badge">R</span><img src="assets/militia.png" alt="" onerror="this.remove()"></div>
+    <div class="body"><div class="hd"><span class="nm">Rook</span><span class="tag">Field Note</span></div>
+      <p class="line">"Everyone gets mugged — plan for it. Keep cash off your person: a property vault if you can afford one, ghost trades (6-hour limit), the faction vault (some risk, no instant access), or park value in items and points. Use a mix until you own a PI vault."</p></div>
+  </div>
+
+  <div class="say fixer">
+    <div class="av"><span class="mono-badge">N</span><img src="assets/nico.png" alt="" onerror="this.remove()"></div>
+    <div class="body"><div class="hd"><span class="nm">Nico "The Line"</span><span class="tag">The Exit</span></div>
+      <p class="line">"That's the map. Ledger tells you how to keep it, Rep tells you how to spend the energy. Me — I just know where it's moving. You didn't hear it from me."</p></div>
   </div>
 </div></section>
 
