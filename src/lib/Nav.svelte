@@ -30,9 +30,9 @@
     </div>
   </details>
 
-  <a class="top" href="{base}/planner">Planner</a>
-  <a class="top" href="{base}/scripts">Scripts</a>
-  <a class="top" href="{base}/credits">Credits</a>
+  <a class="top" href="{base}/planner/">Planner</a>
+  <a class="top" href="{base}/scripts/">Scripts</a>
+  <a class="top" href="{base}/credits/">Credits</a>
   <span class="toc-spacer"></span>
   <span class="brandmark">TORN</span>
 </div></nav>
