@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import Icon from '$lib/Icon.svelte';
 </script>
 
 <header class="hero"><div class="wrap">
@@ -72,9 +73,9 @@
     <h3>Raise your success rate</h3>
     <ul class="rules" style="margin-top:.6rem">
       <li><span class="k">+2%</span><div>Buy the crime's <b>enhancer item</b> early — you'll do thousands of attempts, so 2% is a lot of extra successes.</div></li>
-      <li><span class="k">☺</span><div><b>Happiness</b> and <b>merits</b> both help — the same happy that boosts gym gains helps crimes.</div></li>
-      <li><span class="k">🎓</span><div><b>Bachelor of Psychological Sciences</b> (education) and the <b>Federal Judge</b> rank in the Law city job.</div></li>
-      <li><span class="k">⚑</span><div>The faction <b>Criminality</b> upgrade tree — a faction-wide boost worth pushing for.</div></li>
+      <li><span class="k"><Icon name="smile"/></span><div><b>Happiness</b> and <b>merits</b> both help — the same happy that boosts gym gains helps crimes.</div></li>
+      <li><span class="k"><Icon name="grad"/></span><div><b>Bachelor of Psychological Sciences</b> (education) and the <b>Federal Judge</b> rank in the Law city job.</div></li>
+      <li><span class="k"><Icon name="flag"/></span><div>The faction <b>Criminality</b> upgrade tree — a faction-wide boost worth pushing for.</div></li>
     </ul>
   </div>
   <div class="say banker">
@@ -122,7 +123,7 @@
     <div class="card">
       <h3>Scope — the faction's fuel</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⛽</span><div>Spawning an OC costs <b>Scope</b>. A faction starts at <b>25</b>, caps at <b>100</b>, and it only regenerates <b>+1/day</b>.</div></li>
+        <li><span class="k"><Icon name="fuel"/></span><div>Spawning an OC costs <b>Scope</b>. A faction starts at <b>25</b>, caps at <b>100</b>, and it only regenerates <b>+1/day</b>.</div></li>
         <li><span class="k">+</span><div>You earn <b>1 + the OC's tier</b> in Scope for each one you <b>clear</b> — so successes fund more OCs; failures burn Scope for nothing.</div></li>
         <li><span class="k">✓</span><div>That's why members' readiness matters faction-wide: the faction should only run OCs its people can pass, or it bleeds Scope.</div></li>
       </ul>
@@ -130,9 +131,9 @@
     <div class="card">
       <h3>Boost OC success</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⚑</span><div>The same crime boosters carry over: <b>happy, merits, education, the faction Criminality tree</b>.</div></li>
-        <li><span class="k">🏢</span><div>A <b>Law Firm</b> company special boosts OC success — handy if a member works there.</div></li>
-        <li><span class="k">🎒</span><div>Bring the role's <b>required item</b> — a missing item can block an otherwise-ready member (this is where the faction armory earns its keep).</div></li>
+        <li><span class="k"><Icon name="flag"/></span><div>The same crime boosters carry over: <b>happy, merits, education, the faction Criminality tree</b>.</div></li>
+        <li><span class="k"><Icon name="building"/></span><div>A <b>Law Firm</b> company special boosts OC success — handy if a member works there.</div></li>
+        <li><span class="k"><Icon name="backpack"/></span><div>Bring the role's <b>required item</b> — a missing item can block an otherwise-ready member (this is where the faction armory earns its keep).</div></li>
       </ul>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import Icon from '$lib/Icon.svelte';
   import Character from '$lib/Character.svelte';
   import FormulaLab from '$lib/FormulaLab.svelte';
 
@@ -93,7 +94,7 @@
       <li><span class="k">ln</span><div><b>Happy has diminishing returns but never stops helping</b> — the ln term keeps rising, so a big jump is always worth more per point than the last.</div></li>
       <li><span class="k">×</span><div><b>Perks multiply, they don't add.</b> +2% property × +15% faction × +1% education = ×1.02 × 1.15 × 1.01 ≈ <b>+19.7%</b> on every train, forever.</div></li>
       <li><span class="k">↓</span><div><b>Training costs happy</b> — you lose 40–60% of the energy you spend as happy, which bounds how long a jump lasts before it decays.</div></li>
-      <li><span class="k">⏱</span><div><b>Spend a jump before the reset.</b> Happy above your max resets to max at :00 / :15 / :30 / :45.</div></li>
+      <li><span class="k"><Icon name="timer"/></span><div><b>Spend a jump before the reset.</b> Happy above your max resets to max at :00 / :15 / :30 / :45.</div></li>
       <li><span class="k">50M</span><div><b>The stat term caps at 50M</b> — beyond that, S stops adding, so happy and gym dots carry the gains.</div></li>
     </ul>
   </div>

@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import Icon from '$lib/Icon.svelte';
   import { onMount } from 'svelte';
   import Tabs from '$lib/Tabs.svelte';
 
@@ -340,7 +341,7 @@
       <h3>The golden rules</h3>
       <ul class="rules" style="margin-top:10px">
         <li><span class="k">×</span><div>Every train burns <b>40–60% of the energy you spend</b> back out of your happy bar.</div></li>
-        <li><span class="k">⏱</span><div>Happy over your max <b>resets at :00 / :15 / :30 / :45</b>. Spend a jump immediately — don't let the clock eat it.</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div>Happy over your max <b>resets at :00 / :15 / :30 / :45</b>. Spend a jump immediately — don't let the clock eat it.</div></li>
         <li><span class="k">∏</span><div>Perks from <b>property, faction &amp; education multiply</b> your gains (they don't add). Stack them.</div></li>
         <li><span class="k">↓</span><div>The bigger your stats, the <b>less</b> happy matters — so new players get the most out of it.</div></li>
       </ul>

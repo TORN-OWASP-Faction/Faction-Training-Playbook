@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import Icon from '$lib/Icon.svelte';
 </script>
 
 <header class="hero"><div class="wrap">
@@ -24,7 +25,7 @@
       <p class="what" style="color:var(--muted)">Userscripts (like FFScouter) run inside a script manager extension. Install one first:</p>
       <ul class="rules" style="margin-top:.7rem">
         <li><span class="k">PC</span><div><b>Tampermonkey</b> (Chrome / Edge / Safari) or <b>Violentmonkey</b>. Firefox supports both.</div></li>
-        <li><span class="k">📱</span><div>Mobile: <b>Torn PDA</b> runs userscripts built-in; on Android, <b>Kiwi Browser</b> can install Chrome extensions.</div></li>
+        <li><span class="k"><Icon name="phone"/></span><div>Mobile: <b>Torn PDA</b> runs userscripts built-in; on Android, <b>Kiwi Browser</b> can install Chrome extensions.</div></li>
       </ul>
     </div>
     <div class="card">

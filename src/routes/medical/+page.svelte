@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
+  import Icon from '$lib/Icon.svelte';
 </script>
 
 <header class="hero"><div class="wrap">
@@ -24,16 +25,16 @@
       <h3>What an OD does</h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">0</span><div>Empties your <b>happy, energy and nerve</b> bars — a happy-jump's worth of progress, gone.</div></li>
-        <li><span class="k">🏥</span><div>Long hospital stay, plus your <b>drug cooldown balloons — up to 24 hours</b>.</div></li>
+        <li><span class="k"><Icon name="hospital"/></span><div>Long hospital stay, plus your <b>drug cooldown balloons — up to 24 hours</b>.</div></li>
         <li><span class="k">✗</span><div>Some drugs do extra damage on OD (life loss, stat/happy wipes). A careless Xanax can cost you a whole day of training.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>How to not do it</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⏱</span><div><b>Respect the drug cooldown</b> — cooldowns run 1h (Cannabis) to 8h (Xanax). Don't re-dose early.</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div><b>Respect the drug cooldown</b> — cooldowns run 1h (Cannabis) to 8h (Xanax). Don't re-dose early.</div></li>
         <li><span class="k">↑</span><div>OD risk rises the more you push drugs — <b>don't stack</b> multiple drugs back-to-back chasing a jump.</div></li>
-        <li><span class="k">💊</span><div>Manage addiction; a heavily-addicted player ODs more and gains less. Rehab (Switzerland) resets it.</div></li>
+        <li><span class="k"><Icon name="pill"/></span><div>Manage addiction; a heavily-addicted player ODs more and gains less. Rehab (Switzerland) resets it.</div></li>
       </ul>
     </div>
   </div>
@@ -73,9 +74,9 @@
   <h2>Hospital time &amp; cooldowns</h2>
   <div class="callout" style="border-left-color:var(--c-medic)">
     <ul class="rules">
-      <li><span class="k">🏥</span><div><b>Hospital time is a resource.</b> Sometimes the right move is to <b>wait it out</b> and save your kits — don't spend a blood bag to shave off ten minutes.</div></li>
-      <li><span class="k">＋</span><div><b>Medical cooldown</b> (from FAKs/blood bags) is separate from your <b>drug cooldown</b> (from Xanax/Opium). Burning one doesn't touch the other — plan both.</div></li>
-      <li><span class="k">♺</span><div><b>Revives</b> — a revivable player can be pulled from hospital by a faction/paid reviver. Enable revives before a war if leadership runs a revive team.</div></li>
+      <li><span class="k"><Icon name="hospital"/></span><div><b>Hospital time is a resource.</b> Sometimes the right move is to <b>wait it out</b> and save your kits — don't spend a blood bag to shave off ten minutes.</div></li>
+      <li><span class="k"><Icon name="plus"/></span><div><b>Medical cooldown</b> (from FAKs/blood bags) is separate from your <b>drug cooldown</b> (from Xanax/Opium). Burning one doesn't touch the other — plan both.</div></li>
+      <li><span class="k"><Icon name="revive"/></span><div><b>Revives</b> — a revivable player can be pulled from hospital by a faction/paid reviver. Enable revives before a war if leadership runs a revive team.</div></li>
     </ul>
   </div>
   <Character variant="medic" name="Patch" tag="Check Your Cooldown" initial="P" img="medic.png">
@@ -91,10 +92,10 @@
   <div class="card" style="margin-top:1rem">
     <h3>The pre-war checklist</h3>
     <ul class="rules" style="margin-top:.6rem">
-      <li><span class="k">🩸</span><div>A stack of <b>blood bags</b> (and know your usable types) + <b>First Aid Kits</b> for quick exits.</div></li>
-      <li><span class="k">☠</span><div>An <b>Opium</b> or two as the emergency hospital-clear — but respect its drug cooldown.</div></li>
-      <li><span class="k">💊</span><div>Xanax for energy, meds for life — and enough of both to last the whole war, bought <b>beforehand</b> (prices spike mid-war).</div></li>
-      <li><span class="k">♺</span><div>Revives on, reviver contacts saved, medical cooldown clear before the first hit.</div></li>
+      <li><span class="k"><Icon name="droplet"/></span><div>A stack of <b>blood bags</b> (and know your usable types) + <b>First Aid Kits</b> for quick exits.</div></li>
+      <li><span class="k"><Icon name="skull"/></span><div>An <b>Opium</b> or two as the emergency hospital-clear — but respect its drug cooldown.</div></li>
+      <li><span class="k"><Icon name="pill"/></span><div>Xanax for energy, meds for life — and enough of both to last the whole war, bought <b>beforehand</b> (prices spike mid-war).</div></li>
+      <li><span class="k"><Icon name="revive"/></span><div>Revives on, reviver contacts saved, medical cooldown clear before the first hit.</div></li>
     </ul>
   </div>
   <Character variant="militia" name="Rook" tag="Field Note" initial="R" img="militia.png">
