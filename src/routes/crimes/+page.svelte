@@ -227,7 +227,7 @@
       <div><div><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
         <p class="line">"Don't eyeball it. Run the <b>OC Success Chance</b> script on the crimes page — it takes every slot's number and shows you the crew's real odds, so we only spend Scope on crimes we'll actually clear."</p></div>
     </div>
-    <p class="note" style="margin-top:.9rem">Want the exact team number? The <a href="{base}/scripts/">OC Success Chance</a> userscript overlays it on every OC. Mechanics from the community Crimes 2.0 guides and the <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Torn wiki</a>; the checkpoint model is community-observed, so treat the chain as intuition, not an exact formula.</p>
+    <p class="note" style="margin-top:.9rem">Want the exact team number? The <a href="{base}/scripts/">OC Success Chance</a> userscript overlays it on every OC. See the <a href="{base}/crimes/oc-scenarios/">full OC scenario roster</a> for every crime's slots and roles. Mechanics from the community Crimes 2.0 guides and the <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Torn wiki</a>; the checkpoint model is community-observed, so treat the chain as intuition, not an exact formula.</p>
   </div>
 </div></section>
 

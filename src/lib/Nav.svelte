@@ -13,6 +13,7 @@
   const crimes = [
     ['Overview', `${base}/crimes/`], ['How crimes work', `${base}/crimes/#how`],
     ['Build your nerve', `${base}/crimes/#nerve`], ['OC & faction', `${base}/crimes/#oc`],
+    ['OC scenarios', `${base}/crimes/oc-scenarios/`],
     ['— Data tables —', ''],
     ['Burglary', `${base}/crimes/burglary/`], ['Shoplifting', `${base}/crimes/shoplifting/`],
     ['Cracking', `${base}/crimes/cracking/`], ['Forgery', `${base}/crimes/forgery/`]
