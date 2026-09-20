@@ -2,168 +2,201 @@
  "columns": [
   "Scenario",
   "Slots",
-  "Roles"
+  "Key role",
+  "Roles by weight"
  ],
  "rows": [
   [
    "Ace in the Hole",
    5,
-   "Imitator, Muscle 1, Muscle 2, Hacker, Driver"
+   "Hacker (28%)",
+   "Hacker 28%, Muscle 2 25%, Imitator 21%, Muscle 1 18%, Driver 8%"
   ],
   [
    "Best of the Lot",
    4,
-   "Picklock, Car Thief, Muscle, Imitator"
+   "Muscle (44%)",
+   "Muscle 44%, Picklock 21%, Car Thief 20%, Imitator 16%"
   ],
   [
    "Bidding War",
    6,
-   "Robber 1, Driver, Robber 2, Robber 3, Bomber 1, Bomber 2"
+   "Robber 3 (32%)",
+   "Robber 3 32%, Robber 2 23%, Bomber 2 18%, Driver 13%, Bomber 1 8%, Robber 1 7%"
   ],
   [
    "Blast from the Past",
    6,
-   "Picklock 1, Hacker, Engineer, Bomber, Muscle, Picklock 2"
+   "Muscle (35%)",
+   "Muscle 35%, Engineer 24%, Bomber 16%, Hacker 12%, Picklock 1 11%, Picklock 2 3%"
   ],
   [
    "Break the Bank",
    6,
-   "Robber, Muscle 1, Muscle 2, Thief 1, Muscle 3, Thief 2"
+   "Muscle 3 (32%)",
+   "Muscle 3 32%, Thief 2 29%, Muscle 1 14%, Robber 13%, Muscle 2 10%, Thief 1 3%"
   ],
   [
    "Cash Me if You Can",
    3,
-   "Thief 1, Thief 2, Lookout"
+   "Thief 1 (54%)",
+   "Thief 1 54%, Thief 2 28%, Lookout 18%"
   ],
   [
    "Cleared for Takeoff",
    6,
-   "Imitator, Techie, Pickpocket, Lookout, Assassin, Interrogator"
+   "Interrogator (25%)",
+   "Interrogator 25%, Imitator 25%, Assassin 18%, Pickpocket 12%, Techie 11%, Lookout 8%"
   ],
   [
    "Clinical Precision",
    4,
-   "Imitator, Cat Burglar, Assassin, Cleaner"
+   "Imitator (43%)",
+   "Imitator 43%, Cleaner 22%, Cat Burglar 19%, Assassin 16%"
   ],
   [
    "Counter Offer",
    5,
-   "Robber, Looter, Hacker, Picklock, Engineer"
+   "Robber (36%)",
+   "Robber 36%, Engineer 28%, Picklock 17%, Hacker 12%, Looter 7%"
   ],
   [
    "Crane Reaction",
    6,
-   "Sniper, Lookout, Engineer, Bomber, Muscle 1, Muscle 2"
+   "Sniper (41%)",
+   "Sniper 41%, Lookout 17%, Bomber 16%, Muscle 1 11%, Engineer 8%, Muscle 2 8%"
   ],
   [
    "Dish It Out",
    5,
-   "Assassin, Muscle, Saboteur 1, Saboteur 2, Engineer"
+   "Assassin (37%)",
+   "Assassin 37%, Muscle 25%, Saboteur 1 15%, Engineer 14%, Saboteur 2 9%"
   ],
   [
    "First Aid and Abet",
    3,
-   "Picklock, Decoy, Pickpocket"
+   "Pickpocket (43%)",
+   "Pickpocket 43%, Decoy 31%, Picklock 26%"
   ],
   [
    "Gaslight the Way",
    6,
-   "Imitator 1, Imitator 2, Imitator 3, Looter 1, Looter 2, Looter 3"
+   "Imitator 3 (41%)",
+   "Imitator 3 41%, Imitator 2 27%, Looter 3 12%, Imitator 1 9%, Looter 1 9%, Looter 2 0%"
   ],
   [
    "Gone Fission",
    5,
-   "Hijacker, Engineer, Pickpocket, Imitator, Bomber"
+   "Imitator (25%)",
+   "Imitator 25%, Hijacker 25%, Bomber 18%, Pickpocket 17%, Engineer 16%"
   ],
   [
    "Guardian Ángels",
    3,
-   "Enforcer, Hustler, Engineer"
+   "Hustler (42%)",
+   "Hustler 42%, Engineer 30%, Enforcer 27%"
   ],
   [
    "Honey Trap",
    3,
-   "Enforcer, Muscle 1, Muscle 2"
+   "Muscle 2 (42%)",
+   "Muscle 2 42%, Muscle 1 31%, Enforcer 27%"
   ],
   [
    "Hostile Takeover",
    6,
-   "Hacker, Engineer, Cat Burglar, Kidnapper, Negotiator, Muscle"
+   "Negotiator (24%)",
+   "Negotiator 24%, Muscle 21%, Cat Burglar 16%, Engineer 15%, Kidnapper 13%, Hacker 11%"
   ],
   [
    "Leave No Trace",
    3,
-   "Techie, Negotiator, Imitator"
+   "Imitator (37%)",
+   "Imitator 37%, Negotiator 34%, Techie 29%"
   ],
   [
    "Lock Stock",
    5,
-   "Assassin, Smuggler, Hacker, Muscle 1, Muscle 2"
+   "Assassin (40%)",
+   "Assassin 40%, Hacker 18%, Smuggler 17%, Muscle 1 12%, Muscle 2 12%"
   ],
   [
    "Manifest Cruelty",
    4,
-   "Hacker, Interrogator, Reviver, Cat Burglar"
+   "Reviver (46%)",
+   "Reviver 46%, Interrogator 23%, Hacker 16%, Cat Burglar 14%"
   ],
   [
    "Market Forces",
    5,
-   "Enforcer, Negotiator, Lookout, Arsonist, Muscle"
+   "Enforcer (29%)",
+   "Enforcer 29%, Negotiator 27%, Muscle 23%, Lookout 16%, Arsonist 4%"
   ],
   [
    "Mob Mentality",
    4,
-   "Looter 1, Looter 2, Looter 3, Looter 4"
+   "Looter 1 (34%)",
+   "Looter 1 34%, Looter 2 26%, Looter 4 21%, Looter 3 18%"
   ],
   [
    "No Reserve",
    3,
-   "Car Thief, Techie, Engineer"
+   "Techie (38%)",
+   "Techie 38%, Engineer 31%, Car Thief 31%"
   ],
   [
    "Pet Project",
    3,
-   "Kidnapper, Muscle, Picklock"
+   "Picklock (36%)",
+   "Picklock 36%, Muscle 33%, Kidnapper 31%"
   ],
   [
    "Plucking the Lotus Petal",
    4,
-   "Robber 1, Hustler, Robber 2, Muscle"
+   "Muscle (48%)",
+   "Muscle 48%, Robber 2 24%, Hustler 14%, Robber 1 14%"
   ],
   [
    "Smoke and Wing Mirrors",
    4,
-   "Car Thief, Imitator, Hustler 1, Hustler 2"
+   "Car Thief (51%)",
+   "Car Thief 51%, Imitator 27%, Hustler 2 13%, Hustler 1 9%"
   ],
   [
    "Sneaky Git Grab",
    4,
-   "Imitator, Pickpocket, Hacker, Techie"
+   "Pickpocket (51%)",
+   "Pickpocket 51%, Imitator 18%, Techie 17%, Hacker 14%"
   ],
   [
    "Snow Blind",
    4,
-   "Hustler, Imitator, Muscle 1, Muscle 2"
+   "Hustler (48%)",
+   "Hustler 48%, Imitator 35%, Muscle 1 9%, Muscle 2 9%"
   ],
   [
    "Stacking the Deck",
    4,
-   "Cat Burglar, Driver, Hacker, Imitator"
+   "Imitator (48%)",
+   "Imitator 48%, Hacker 25%, Cat Burglar 23%, Driver 3%"
   ],
   [
    "Stage Fright",
    6,
-   "Enforcer, Muscle 1, Muscle 2, Muscle 3, Lookout, Sniper"
+   "Sniper (46%)",
+   "Sniper 46%, Muscle 1 20%, Enforcer 16%, Muscle 3 9%, Lookout 6%, Muscle 2 3%"
   ],
   [
    "Thou Shalt Not Steal",
    3,
-   "Thief, Pickpocket, Picklock"
+   "Picklock (50%)",
+   "Picklock 50%, Pickpocket 38%, Thief 12%"
   ],
   [
    "Window of Opportunity",
    5,
-   "Engineer, Looter 1, Looter 2, Muscle 1, Muscle 2"
+   "Looter 2 (26%)",
+   "Looter 2 26%, Muscle 1 23%, Looter 1 20%, Muscle 2 17%, Engineer 15%"
   ]
  ]
 }

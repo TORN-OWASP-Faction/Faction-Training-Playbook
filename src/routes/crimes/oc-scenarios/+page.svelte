@@ -30,7 +30,7 @@
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">%</span><div>Each role weights <b>crime XP, battle stats and job stats differently</b> — a great Muscle can be a poor Hacker. Put people where their stats fit.</div></li>
         <li><span class="k">≥</span><div>Roles have a practical <b>CPR floor</b>: faction worksheets run higher slots at <b>~70–80 CPR minimum</b> before they'll fill them.</div></li>
-        <li><span class="k">Σ</span><div>Roles also carry <b>different weight</b> toward the crew's overall success — the model prices a weak high-weight slot harder than a weak minor one.</div></li>
+        <li><span class="k">Σ</span><div>Roles carry <b>different weight</b> toward the crew's success — the <b>Key role</b> column below is each crime's heaviest slot (e.g. Break the Bank leans <b>32%</b> on Muscle 3). A weak member there hurts far more than in a minor slot.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -64,13 +64,13 @@
 <!-- THE TABLE -->
 <section><div class="wrap">
   <span class="eyebrow">The full list</span>
-  <h2>All scenarios &amp; their roles</h2>
-  <p class="lede">Filter by a role (e.g. "Hacker") to see which OCs need it, or sort by slot count. {data.rows.length} scenarios.</p>
-  <DataTable columns={data.columns} rows={data.rows} caption="OC 2.0 scenarios — slot count & roles" />
+  <h2>All scenarios, roles &amp; weights</h2>
+  <p class="lede">Roles are listed <b>heaviest first</b> with each one's share of the crew's success. The <b>Key role</b> is the slot to fill first and never leave weak. Filter by a role (e.g. "Hacker") to see which OCs need it, or sort by slot count. {data.rows.length} scenarios.</p>
+  <DataTable columns={data.columns} rows={data.rows} caption="OC 2.0 scenarios — slots, key role & role weights" />
 </div></section>
 
 <footer><div class="wrap">
-  <strong>OC scenarios.</strong> Scenario list and role names from the
+  <strong>OC scenarios.</strong> Scenario list, role names and role weights from the
   <a href="https://tornprobability.com" target="_blank" rel="noopener">TornProbability</a> model (used by the OC Success Chance script by Allenone [2033011]);
   tier, CPR, item-burn and reward figures from community OC 2.0 worksheets and the
   <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">Torn wiki</a>. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Torn adds and tweaks scenarios — treat this as a living snapshot.
