@@ -36,6 +36,7 @@
 </div></nav>
 
 <style>
+  nav.toc :global(.wrap){overflow:visible}
   .nd{position:relative}
   .nd>summary{list-style:none;cursor:pointer;color:var(--muted);font-size:.95rem;font-weight:500;
     padding:.45rem .8rem;border-radius:2px;white-space:nowrap;user-select:none}
