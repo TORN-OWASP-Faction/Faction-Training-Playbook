@@ -629,7 +629,7 @@
       <tr><td>Cheap candy <span class="tag h">low tier</span></td><td class="mono">+25</td><td>Lollipop, Box of Chocolate Bars, Bon Bons. Topping up / new players.</td></tr>
       <tr><td>Mid candy</td><td class="mono">+75–150</td><td>Tootsie Rolls, Humbugs, Jawbreaker, Pixie Sticks. Building-tier jumps.</td></tr>
       <tr><td>Birthday Cupcake</td><td class="mono">+250</td><td>Top candy value per item.</td></tr>
-      <tr><td>Erotic DVD (eDVD)</td><td class="mono">+2,500</td><td>+5,000 working at 10★ Adult Novelties. The jump workhorse once you can afford it.</td></tr>
+      <tr><td>Erotic DVD (eDVD) <span class="tag h">jump workhorse</span></td><td class="mono">+2,500</td><td>Made at the <b>Adult Novelties</b> company — you earn ~<b>1 eDVD per 20 job points</b>. The company's star rating adds a happy bonus: at <b>10★</b> it's <b>+100%</b>, so each eDVD gives <b>+5,000</b>, not 2,500. Only worth it once you're in a <b>3★+</b> Adult Novelties (or about to be) — below that, stick to candy.</td></tr>
       <tr><td>Ecstasy (XTC) <span class="tag h">always</span></td><td class="mono">×2</td><td><b>Doubles your current happy</b> for a fairly low price — the best-value happy multiplier there is. <b>Always take one if you're small, or on any full happy jump.</b> Big drug cooldown, so time it; pairs with eDVD stacks.</td></tr>
       <tr><td>Xanax</td><td class="mono">+75</td><td>Bonus happy on top of its energy (below).</td></tr>
       <tr><td>Sweet Shop special</td><td class="mono">+4,500</td><td>10★ company, for job points. Endgame jumps.</td></tr>
