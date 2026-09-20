@@ -34,7 +34,11 @@
       ['Scale', 'Defense leads; keep Speed up so you still hit back'] ] },
     { label: 'Pure', note: 'specialist', rows: [
       ['Focus', 'One stat, all-in'], ['Role', 'Max respect / niche (e.g. pure Speed). High risk/reward'],
-      ['Scale', 'Only once you know why — a single weak stat is exploitable'] ] }
+      ['Scale', 'Only once you know why — a single weak stat is exploitable'] ] },
+    { label: 'Hawk (3-stat)', note: 'efficiency', rows: [
+      ['Focus', 'Three stats hard; leave one (commonly Defense) untrained for a long time'],
+      ['Role', 'Fastest total gains — three stats ride the special-gym bonuses at once, and the lower total keeps your fair fight down'],
+      ['Scale', 'Deliberate and long-term: the skipped stat stays low. Confirm it fits your faction role before committing — see the walkthrough below'] ] }
   ];
   onMount(() => {
 
@@ -441,13 +445,14 @@
     </div>
     <div class="card" id="sell-losses" style="border-left:3px solid var(--c-fixer)">
       <h3>Selling losses <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">A means to an end</span></h3>
-      <p style="margin:.3em 0 0;color:var(--muted)">Attack willing buyers and <b>lose on purpose</b> — charge <b>$350k per loss, minimum</b> (don't undercut the going rate). Advertise in <b>Trade Chat</b> ("Selling losses, $350k per."), collect after.</p>
+      <p style="margin:.3em 0 0;color:var(--muted)">Attack willing buyers and <b>lose on purpose</b> for cash. <b>Base is $350k per loss — never go lower</b>; it's sold as high as ~$425k. Easiest and safest way to do it is <b>FFScouter's Sell Losses service</b>: buyers <b>prepay</b> into contract slots (so you can't get scammed), you hit their target with a pillow until you lose, and it verifies your attack log and pays you automatically — quick and reliable, no Trade-Chat haggling.</p>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">E</span><div>25 energy per attack → hospital; a <b>First Aid Kit</b> clears 50 min. A full bar = ~4 losses.</div></li>
         <li><span class="k">X</span><div><b>Xanax</b> (+250 energy) → ~10 more; stack First Aid Kits and knock out ~16 in a sitting (dual-tab it).</div></li>
         <li><span class="k">$</span><div>16 losses ≈ <b>$5.6M</b> gross → <b>~$4.4M net</b> after Xanax + kits (donator). Works before level 15 — you just need buyers.</div></li>
+        <li><span class="k"><Icon name="phone"/></span><div>Set it up through <a href="https://ffscouter.com/sell-losses" target="_blank" rel="noopener">FFScouter → Sell Losses</a> (see the <a href="{base}/scripts/">Scripts</a> page). Prepaid contracts mean you're always paid.</div></li>
       </ul>
-      <p style="margin:.8rem 0 0;padding-left:.75rem;border-left:2px solid var(--c-medic);color:var(--muted);font-size:.88rem"><b style="color:var(--ink)">Use it for a goal, not as a job.</b> Selling losses is a burst of cash for one <em>specific</em> target — a first property, a book, a Xanax stack — then you switch off it. It is <b>not</b> a long-term income: every hour spent taking hits is an hour you're <b>not training or warring</b>, so your stats stall and you stay weak. The real ladder is <b>war payouts first</b>, then <b>passive income</b> (a ~$2B bank stack earning interest, plus the faction's other money methods) once you can afford to build it.</p>
+      <p style="margin:.8rem 0 0;padding-left:.75rem;border-left:2px solid var(--c-medic);color:var(--muted);font-size:.88rem"><b style="color:var(--ink)">Use it for a goal, not as a job.</b> Selling losses is a burst of cash for one <em>specific</em> target — a first property, a book, a Xanax stack — then you switch off it. It is <b>not</b> a long-term income: every hour spent taking hits is an hour you're <b>not training or warring</b>, so your stats stall and you stay weak. And the math says so — that same <b>25 energy spent on a war hit earns ~$450k–$1M</b> (depending on respect gain), well above a $350k loss. The real ladder is <b>war payouts first</b>, then <b>passive income</b> (a ~$2B bank stack earning interest, plus the faction's other money methods) once you can afford to build it.</p>
     </div>
     <div class="card">
       <h3>Market flipping <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Worth the Risk?</span></h3>
@@ -512,6 +517,17 @@
   </div>
 
   <Tabs items={builds} accent="var(--c-militia)" />
+
+  <div class="callout" style="margin-top:16px">
+    <h3>The Hawk build — three stats, one left behind</h3>
+    <p style="margin:.3rem 0 0;color:var(--muted)">Instead of spreading evenly, you train <b>three</b> battle stats and deliberately leave <b>one</b> (usually Defense) low for a long time. Because Torn's <b>special gyms</b> unlock and pay out per-stat, concentrating on three lets more of your training ride the best gym bonuses at once — faster total gains — while a lower overall stat total keeps your <b>fair fight</b> (and the size of hits you attract) down. It's a commitment: the skipped stat is a real hole, so only run it if it suits your role.</p>
+    <p style="margin:.6rem 0 0"><a href="https://youtu.be/bXC3vQoKh3U" target="_blank" rel="noopener">▶ Hawk build walkthrough (video) ↗</a></p>
+  </div>
+
+  <div class="callout" style="margin-top:16px">
+    <h3>Use the right gym for the stat</h3>
+    <p style="margin:.3rem 0 0;color:var(--muted)">Every gym has <b>different dots (modifiers) per stat</b> — and a <b>newer or higher gym isn't automatically better for the stat you're training</b>. Some older gyms have a higher modifier for a single stat than the shiny one you just unlocked. Before a jump, check the gym's per-stat dots and train each stat in <b>its</b> best gym; the <a href="{base}/planner/">live planner</a> pulls your gyms so you can compare gain per stat directly.</p>
+  </div>
 
   <div class="callout" style="margin-top:16px">
     <h3>Scaling rules</h3>
@@ -585,7 +601,7 @@
       <tr><td>Mid candy</td><td class="mono">+75–150</td><td>Tootsie Rolls, Humbugs, Jawbreaker, Pixie Sticks. Building-tier jumps.</td></tr>
       <tr><td>Birthday Cupcake</td><td class="mono">+250</td><td>Top candy value per item.</td></tr>
       <tr><td>Erotic DVD (eDVD)</td><td class="mono">+2,500</td><td>+5,000 working at 10★ Adult Novelties. The jump workhorse once you can afford it.</td></tr>
-      <tr><td>Ecstasy</td><td class="mono">×2</td><td>Doubles current happy. Big drug cooldown — pairs with eDVD stacks.</td></tr>
+      <tr><td>Ecstasy (XTC) <span class="tag h">always</span></td><td class="mono">×2</td><td><b>Doubles your current happy</b> for a fairly low price — the best-value happy multiplier there is. <b>Always take one if you're small, or on any full happy jump.</b> Big drug cooldown, so time it; pairs with eDVD stacks.</td></tr>
       <tr><td>Xanax</td><td class="mono">+75</td><td>Bonus happy on top of its energy (below).</td></tr>
       <tr><td>Sweet Shop special</td><td class="mono">+4,500</td><td>10★ company, for job points. Endgame jumps.</td></tr>
     </tbody>

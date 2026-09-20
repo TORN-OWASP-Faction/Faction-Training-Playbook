@@ -59,14 +59,15 @@
 
     <div class="card tool">
       <div class="hd"><h3>FF Scouter (V2)</h3><span class="type">Userscript</span></div>
-      <p class="what">Shows an estimated <b>Fair Fight / target strength</b> on profiles and attack lists — so you pick fights you win and chain efficiently.</p>
+      <p class="what">Shows an estimated <b>Fair Fight / target strength</b> on profiles and attack lists — so you pick fights you win and chain efficiently. Its site also runs a <b>Sell/Buy Losses</b> service with <b>prepaid contracts</b> — a safe, automatic way to sell losses (no scams, auto-verified, paid within the hour).</p>
       <ol>
         <li>Install Tampermonkey (above).</li>
         <li>Register your 16-char key at <b>ffscouter.com</b> (paste key, accept terms, Sign Up).</li>
         <li>Install "FF Scouter V2" from Greasy Fork → Install.</li>
         <li>On your Torn profile, open <b>FF Scouter Settings</b>, paste the key, Verify.</li>
+        <li>To sell losses: go to <b>ffscouter.com → Sell Losses</b>, claim a prepaid slot, hit the target until you lose — it pays out automatically.</li>
       </ol>
-      <div class="link"><a href="https://ffscouter.com/guides/ff-scouter-v2-installation" target="_blank" rel="noopener">ffscouter.com install guide ↗</a></div>
+      <div class="link"><a href="https://ffscouter.com/guides/ff-scouter-v2-installation" target="_blank" rel="noopener">install guide ↗</a> · <a href="https://ffscouter.com/sell-losses" target="_blank" rel="noopener">Sell Losses ↗</a></div>
     </div>
 
     <div class="card tool">
