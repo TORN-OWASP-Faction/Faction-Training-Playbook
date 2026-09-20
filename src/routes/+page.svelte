@@ -407,7 +407,7 @@
     </div>
     <div class="card" style="border-left:3px solid var(--c-fixer)">
       <h3>Losses — sell, don't buy <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Nico Knows a Guy</span></h3>
-      <p style="margin:.3em 0 0;color:var(--muted)">Some players <em>pay</em> to be fed easy wins to rush levels — but for our crew the money's on the other side. Level off <b>leveling targets</b>; <b>sell</b> your losses for cash. Be the one getting paid, not the one paying — see <a href="#sell-losses">Selling losses</a> below.</p>
+      <p style="margin:.3em 0 0;color:var(--muted)">Some players <em>pay</em> to be fed easy wins to rush levels — but for our crew the money's on the other side. Level off <b>leveling targets</b>; <b>sell</b> your losses for cash — as a burst toward a <b>specific goal</b>, never your main income. Be the one getting paid, not the one paying — see <a href="#sell-losses">Selling losses</a> below.</p>
     </div>
   </div>
   <div class="say trainer">
@@ -440,13 +440,14 @@
       <p style="margin:.3em 0 0;color:var(--muted)">Fly abroad, buy flowers/plushies from the General Store, fly home, sell to players. Huge demand — <b>$3–6M/day</b> active. See <a href="#schedule">Schedules</a> and the <a href="{base}/planner/">live planner</a> for destinations and timing.</p>
     </div>
     <div class="card" id="sell-losses" style="border-left:3px solid var(--c-fixer)">
-      <h3>Selling losses <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Quick Money</span></h3>
-      <p style="margin:.3em 0 0;color:var(--muted)">Attack willing buyers and <b>lose on purpose</b> — they pay you <b>$250–350k per loss</b> (price a new service ~$250–300k). Advertise in <b>Trade Chat</b> ("Selling losses. $250k per."), collect after.</p>
+      <h3>Selling losses <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">A means to an end</span></h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">Attack willing buyers and <b>lose on purpose</b> — charge <b>$350k per loss, minimum</b> (don't undercut the going rate). Advertise in <b>Trade Chat</b> ("Selling losses, $350k per."), collect after.</p>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">E</span><div>25 energy per attack → hospital; a <b>First Aid Kit</b> clears 50 min. A full bar = ~4 losses.</div></li>
         <li><span class="k">X</span><div><b>Xanax</b> (+250 energy) → ~10 more; stack First Aid Kits and knock out ~16 in a sitting (dual-tab it).</div></li>
-        <li><span class="k">$</span><div>16 losses ≈ <b>$4M</b> gross → <b>~$2.8M net</b> after Xanax + kits (donator). Works before level 15 — you just need buyers.</div></li>
+        <li><span class="k">$</span><div>16 losses ≈ <b>$5.6M</b> gross → <b>~$4.4M net</b> after Xanax + kits (donator). Works before level 15 — you just need buyers.</div></li>
       </ul>
+      <p style="margin:.8rem 0 0;padding-left:.75rem;border-left:2px solid var(--c-medic);color:var(--muted);font-size:.88rem"><b style="color:var(--ink)">Use it for a goal, not as a job.</b> Selling losses is a burst of cash for one <em>specific</em> target — a first property, a book, a Xanax stack — then you switch off it. It is <b>not</b> a long-term income: every hour spent taking hits is an hour you're <b>not training or warring</b>, so your stats stall and you stay weak. The real ladder is <b>war payouts first</b>, then <b>passive income</b> (a ~$2B bank stack earning interest, plus the faction's other money methods) once you can afford to build it.</p>
     </div>
     <div class="card">
       <h3>Market flipping <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">Worth the Risk?</span></h3>
