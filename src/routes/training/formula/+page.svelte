@@ -1,35 +1,24 @@
 <script>
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
-  import { onMount } from 'svelte';
+  import FormulaLab from '$lib/FormulaLab.svelte';
 
-  const STAT = { str: { A: 1600, B: 1700, C: 700 }, spd: { A: 1600, B: 2000, C: 1350 }, dex: { A: 1800, B: 1500, C: 1000 }, def: { A: 2100, B: -600, C: 1500 } };
-
-  onMount(() => {
-    const NS = 'http://www.w3.org/2000/svg';
-    const svg = document.getElementById('fchart');
-    if (!svg) return;
-    const cs = (n) => getComputedStyle(document.body).getPropertyValue(n).trim();
-    const amber = cs('--amber') || '#C39A6B', grid = cs('--grid') || 'rgba(230,225,214,.08)', ink = cs('--ink') || '#E6E1D6', muted = cs('--muted') || '#9A948A';
-    const W = 900, H = 380, m = { l: 54, r: 20, t: 20, b: 40 };
-    const S = 10000, A = 1600, B = 1700;
-    const bracket = (h) => S * (1 + 0.07 * Math.log(1 + h / 250)) + 8 * Math.pow(h, 1.05) + (1 - Math.pow(h / 99999, 2)) * A + B;
-    const base0 = bracket(250), xMax = 100000, yMax = 90;
-    const X = (h) => m.l + (h / xMax) * (W - m.l - m.r);
-    const Y = (v) => H - m.b - (v / yMax) * (H - m.t - m.b);
-    const mk = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
-    const pts = [];
-    for (let i = 0; i <= 120; i++) { let h = (i / 120) * xMax; if (h < 250) h = 250; pts.push([h, bracket(h) / base0]); }
-    const line = pts.map((p, i) => (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ' ' + Y(p[1]).toFixed(1)).join(' ');
-    [0, 15, 30, 45, 60, 75, 90].forEach((g) => { const y = Y(g); svg.appendChild(mk('line', { x1: m.l, y1: y, x2: W - m.r, y2: y, stroke: grid, 'stroke-width': 1 })); const tx = mk('text', { x: m.l - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, fill: muted }); tx.textContent = g + '×'; svg.appendChild(tx); });
-    [[250, 'base'], [5000, '5k'], [25000, '25k'], [50000, '50k'], [100000, '99,999']].forEach((d) => { const x = X(d[0]); const tx = mk('text', { x, y: H - m.b + 20, 'text-anchor': 'middle', 'font-size': 11, fill: muted }); tx.textContent = d[1]; svg.appendChild(tx); });
-    const defs = mk('defs', {}), lg = mk('linearGradient', { id: 'fg', x1: 0, y1: 0, x2: 0, y2: 1 });
-    lg.appendChild(mk('stop', { offset: '0%', 'stop-color': amber, 'stop-opacity': .4 })); lg.appendChild(mk('stop', { offset: '100%', 'stop-color': amber, 'stop-opacity': .02 }));
-    defs.appendChild(lg); svg.appendChild(defs);
-    svg.appendChild(mk('path', { d: line + ` L${X(xMax)} ${Y(0)} L${X(250)} ${Y(0)} Z`, fill: 'url(#fg)' }));
-    svg.appendChild(mk('path', { d: line, fill: 'none', stroke: amber, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
-    [[5000, 'candy jump'], [25000, 'eDVD'], [99999, 'max']].forEach((d) => { const mult = bracket(d[0]) / base0, x = X(d[0]), y = Y(mult); svg.appendChild(mk('circle', { cx: x, cy: y, r: 4, fill: amber })); const anch = d[0] === 99999 ? 'end' : 'start'; const tx = mk('text', { x: d[0] === 99999 ? x - 6 : x + 8, y: y - 9, 'text-anchor': anch, 'font-size': 11, fill: ink, 'font-weight': 600 }); tx.textContent = `${d[1]} · ${Math.round(mult)}×`; svg.appendChild(tx); });
-  });
+  // energy you get per $1,000,000 spent (higher = better value)
+  const energyValue = [
+    { l: 'LSD', e: 2439, note: '~$410/E' },
+    { l: 'Xanax', e: 294, note: '~$3,400/E · +75 happy' },
+    { l: 'Energy drink', e: 15, note: '~$65k/E · emergencies' }
+  ];
+  const evMax = Math.max(...energyValue.map((d) => d.e));
+  // effective happy from a single +25 candy under stacking multipliers
+  const candyStack = [
+    { l: 'Base', h: 25 },
+    { l: '+ Voracity ×1.5', h: 38 },
+    { l: '+ Book ×2', h: 50 },
+    { l: 'World Diabetes ×3', h: 75 },
+    { l: 'All stacked ×9', h: 225 }
+  ];
+  const csMax = Math.max(...candyStack.map((d) => d.h));
 </script>
 
 <header class="hero"><div class="wrap">
@@ -48,11 +37,9 @@
   </div>
   <p style="color:var(--muted);margin-top:1rem">More energy per train = proportionally more gain. Better gym (more dots) = more gain. Your current stat total and — above all — your <strong>happiness</strong> shape the rest. Happy is the lever you control minute to minute, and it matters most when your stats are still small.</p>
 
-  <div class="card" style="margin-top:1.4rem;overflow:hidden">
-    <h3>Gym gain vs. happy <span style="color:var(--faint);font-weight:400;font-size:.8rem" class="mono">— relative to training at base happy</span></h3>
-    <svg id="fchart" viewBox="0 0 900 380" style="width:100%;height:auto;display:block" role="img" aria-label="Gym gain multiple rising with happiness, ~1x at base up to ~88x at maximum"></svg>
-    <p style="color:var(--faint);font-size:.8rem;margin:.4rem 0 0">Gain scales with <strong>ln(happy)</strong> plus a steeper happy term — which is the entire reason a happy jump (spike happy, dump energy) beats trickle-training.</p>
-  </div>
+  <h3 style="margin-top:1.4rem">Try it — the interactive model</h3>
+  <p style="color:var(--muted);margin:.2em 0 0">Set your stat, gym dots, energy and perks, then drag <b>Happy</b> and watch the gain curve. This is the exact V2.0 formula below, computed live on your numbers.</p>
+  <FormulaLab />
 </div></section>
 
 <section><div class="wrap">
@@ -115,6 +102,83 @@
   </Character>
 </div></section>
 
+<section><div class="wrap">
+  <span class="eyebrow">Making the call</span>
+  <h2>Cost vs. gain — how to decide</h2>
+  <p class="lede">Every training choice reduces to one number: <strong>how much stat does this dollar (or this energy point) buy?</strong> Rank your options on that and the "best" method becomes obvious for <em>your</em> situation. Plug real numbers into the <a href="{base}/planner/">live planner</a> — this is the reasoning behind it.</p>
+
+  <div class="card" style="margin-top:1.2rem">
+    <h3>1 · Permanent multipliers first</h3>
+    <p style="margin:.3em 0 0;color:var(--muted)">Property happy, gym-gain <b>education</b>, and the faction perks are <b>×(1+PERK%)</b> on <em>every future train</em> — a one-time cost with an unbounded payoff. Their stat-per-dollar beats any consumable over a playing career, so buy these before you spend a cent on candy. A +1% gym-gain course pays out forever.</p>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <h3>2 · Buy energy by cost-per-energy</h3>
+    <p style="margin:.3em 0 0;color:var(--muted)">Energy is the raw input (the <b>E</b> in the formula). Compare sources by $ per energy:</p>
+    <div class="tbl-scroll" style="margin-top:.6rem"><table>
+      <thead><tr><th>Source</th><th>Energy</th><th>~ $/energy</th><th>Cooldown</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Natural regen</td><td class="mono">5 / 10–15 min</td><td class="mono">free</td><td class="mono">—</td><td>Never let it cap.</td></tr>
+        <tr><td>LSD</td><td class="mono">+50</td><td class="mono">~$410</td><td class="mono">2 h drug</td><td>Cheapest cash energy; some happy too.</td></tr>
+        <tr><td>Xanax</td><td class="mono">+250</td><td class="mono">~$3,400</td><td class="mono">8 h drug</td><td>Daily backbone: energy <em>and</em> +75 happy. OD risk.</td></tr>
+        <tr><td>Energy drink</td><td class="mono">+5–30</td><td class="mono">~$45k–86k</td><td class="mono">none</td><td>Expensive per point — for cooldowns/emergencies, not bulk.</td></tr>
+        <tr><td>Point refill</td><td class="mono">+150</td><td class="mono">points</td><td class="mono">none</td><td>For pushes, not daily.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="viz">
+      <div class="vcap">Energy you get per $1,000,000 — longer is better value</div>
+      {#each energyValue as d}
+        <div class="vrow"><span class="vlab">{d.l}</span><span class="vtrack"><span class="vbar" style="width:{Math.max(2, (d.e / evMax) * 100)}%"></span></span><span class="vval mono">{d.e.toLocaleString()} E</span></div>
+        <div class="vnote">{d.note}</div>
+      {/each}
+    </div>
+    <p style="color:var(--faint);font-size:.8rem;margin:.6rem 0 0">LSD is the cheapest cash energy; Xanax is the workhorse (energy + happy); energy drinks are for emergencies, not bulk. Drugs share <b>one</b> drug cooldown — each dose adds to it, so you can't chain Xanax back-to-back. Time your doses around it; see <a href="{base}/medical/">Field medicine</a> for OD and cooldown management.</p>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <h3>3 · Is a happy jump worth it?</h3>
+    <p style="margin:.3em 0 0;color:var(--muted)">Happy is a <b>multiplier on the energy you then spend</b> — you're buying a higher <code>g(Happy)</code> and cashing it in across a burst of trains. The break-even:</p>
+    <div class="callout" style="margin-top:.6rem">
+      <p class="mono" style="margin:0;font-size:.86rem;color:var(--ink)">(gain/E at jump happy − gain/E at base happy) × energy you'll dump  &gt;  cost of the happy items</p>
+    </div>
+    <p style="margin:.6rem 0 0;color:var(--muted)">So the more energy you can dump in one window, the more a jump pays for itself. <b>Small energy on hand → cheap candy top-up. A big banked bar (Xanax stack) → an eDVD / premium jump earns its cost.</b> That ratio of happy-to-energy is exactly what Hank's / Baldr's Ratio formalizes.</p>
+  </div>
+
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card">
+      <h3>4 · Candy multiplies — hugely</h3>
+      <p style="margin:.3em 0 0;color:var(--muted)">The same +25 candy is worth wildly different happy depending on your stacked multipliers:</p>
+      <div class="viz">
+        <div class="vcap">Effective happy from one +25 candy</div>
+        {#each candyStack as d}
+          <div class="vrow"><span class="vlab">{d.l}</span><span class="vtrack"><span class="vbar" style="width:{Math.max(2, (d.h / csMax) * 100)}%"></span></span><span class="vval mono">{d.h}</span></div>
+        {/each}
+      </div>
+      <p style="color:var(--faint);font-size:.8rem;margin:.6rem 0 0">On <b>World Diabetes Day</b> (×9) candy is far cheaper per happy than eDVD; off-event, eDVD wins for big single jumps. The <a href="{base}/planner/">planner</a> ranks your items by $-per-happy.</p>
+    </div>
+    <div class="card">
+      <h3>5 · Gym dots &amp; books</h3>
+      <p style="margin:.3em 0 0;color:var(--muted)"><b>G</b> multiplies gain directly — unlocking the next gym is often a bigger jump than any consumable, so keep progressing gyms. Books like "Yes Please Diabetes" (×2 candy) pay off only if you jump on candy often enough to beat the book's cost.</p>
+    </div>
+  </div>
+
+  <Character variant="banker" name="Ledger" tag="Worth the Cost?" initial="V" img="banker.png">
+    "Cheap and inexpensive aren't the same thing. The right buy is the one with the best stat-per-dollar for where you are today — not the biggest number, and not what someone richer told you to buy."
+  </Character>
+</div></section>
+
 <footer><div class="wrap">
   <strong>The training math.</strong> Formula credit: <strong>Vladar [1996140]</strong> (Training Formula V2.0); CE/nerve &amp; success factors from <strong>Owen [2087327]</strong>. Part of the <a href="{base}/">Faction Training Playbook</a> — see <a href="{base}/credits/">all credits</a>.
 </div></footer>
+
+<style>
+  .viz{margin-top:.8rem;display:grid;gap:.35rem}
+  .vcap{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600;margin-bottom:.15rem}
+  .vrow{display:grid;grid-template-columns:9rem 1fr auto;gap:.6rem;align-items:center}
+  .vlab{font-size:.82rem;color:var(--muted);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .vtrack{background:var(--raised);border-radius:2px;height:1.15rem;overflow:hidden}
+  .vbar{display:block;height:100%;background:var(--amber);border-radius:2px;min-width:2px}
+  .vval{font-size:.8rem;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .vnote{grid-column:1;margin:-.2rem 0 .1rem;font-size:.68rem;color:var(--faint);padding-left:9.6rem}
+  @media(max-width:560px){.vrow{grid-template-columns:6.5rem 1fr auto}.vnote{padding-left:7.1rem}}
+</style>

@@ -268,12 +268,13 @@
 <header class="hero"><div class="wrap">
   <span class="hero-badge">FACTION TRAINING · EST. 2004</span>
   <h1>Faction<br>Training <em>Playbook</em></h1>
-  <p class="lede">Turn energy into stats fast — and spend cash so it actually pays off. Four people run this page: the plan, the method, the muscle, and the connections. Find the tier that matches you and follow their lead.</p>
+  <p class="lede">Turn energy into stats fast — and spend cash so it actually pays off. Five people run this page: the plan, the method, the muscle, the connections, and the medic. Find the tier that matches you and follow their lead.</p>
   <div class="rule-strip" aria-hidden="true">
     <span style="background:var(--c-banker)"></span>
     <span style="background:var(--c-trainer)"></span>
     <span style="background:var(--c-militia)"></span>
     <span style="background:var(--c-fixer)"></span>
+    <span style="background:var(--c-medic)"></span>
   </div>
 
   <div class="hero-crew">
@@ -304,6 +305,13 @@
       <div class="veil"></div>
       <img class="art" src="{base}/assets/nico.png" alt="Nico Vescari, the fixer" style="background:none">
       <div class="cap"><div class="role">Fixer · Opportunity</div><div class="who">Nico "The Line" Vescari</div><div class="dom">Quick cash · leveling · flipping · introductions</div></div>
+    </div>
+    <div class="crew medic">
+      <div class="art" style="background-image:url('{base}/assets/bg_medic.png')"></div>
+      <div class="fallback">P</div>
+      <div class="veil"></div>
+      <img class="art" src="{base}/assets/medic.png" alt="Dr. Elara Moreau, the medic" style="background:none">
+      <div class="cap"><div class="role">Medic · Recovery</div><div class="who">Dr. "Patch" Moreau</div><div class="dom">OD · medical items · hospital · war prep</div></div>
     </div>
   </div>
 </div></header>

@@ -566,3 +566,10 @@
   .note{font-size:.8rem;color:var(--faint);margin-top:.8rem}
   footer{border-top:1px solid var(--border);padding:2rem 0 3.2rem;color:var(--muted);font-size:.82rem;position:relative;z-index:2}
   :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* ===== Patch (medic) character ===== */
+:root{ --c-medic:#E24A4A; --medic-soft:rgba(226,74,74,.15); }
+.say.medic{border-left-color:var(--c-medic)} .say.medic .av{color:var(--c-medic)} .say.medic .tag{color:var(--c-medic);background:var(--medic-soft)}
+.crew.medic{border-top:3px solid var(--c-medic)} .crew.medic .role{color:var(--c-medic)}
+
+.hero-crew{grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
