@@ -360,6 +360,35 @@
       </ul>
     </div>
   </div>
+
+  <!-- FULL JUMP ROUTINE -->
+  <h3 style="margin-top:26px">The full jump routine</h3>
+  <p style="color:var(--muted);margin:.2em 0 0">The exact pre-flight and execution serious jumpers run. Get the checklist right <em>before</em> you touch an item — a jump wasted on a cooldown or the wrong gym is happy you don't get back.</p>
+
+  <div class="grid g2" style="margin-top:14px">
+    <div class="callout">
+      <h3>Pre-flight — all true before you start</h3>
+      <ul class="rules" style="margin-top:10px">
+        <li><span class="k">opt</span><div><b>Pay insurance</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — settle it before the jump so nothing interrupts you.</div></li>
+        <li><span class="k">0</span><div><b>No drug cooldown</b> — you need it clear to take your XTC (and Xanax).</div></li>
+        <li><span class="k">0</span><div><b>No boost cooldown</b> — so your eDVDs and energy items all count.</div></li>
+        <li><span class="k"><Icon name="pill"/></span><div><b>The right gym</b> — be in the best gym for the stat you're training (dots differ per stat).</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div><b>Fresh 15-min TCT window</b> — start right after :00 / :15 / :30 / :45 so the reset doesn't eat your over-max happy.</div></li>
+        <li><span class="k">+5</span><div><b>Watch the energy timer</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — line it up to catch a natural +5 energy tick.</div></li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>The jump — in order</h3>
+      <ol class="steps" style="margin-top:10px">
+        <li><b>Stack, then XTC last.</b> Eat your 5 eDVDs, candies and job-points special — <b>then</b> 1 Ecstasy, so its ×2 doubles the whole stacked total.</li>
+        <li><b>Train.</b> Dump your full energy bar into the target stat.</li>
+        <li><b>Refill.</b> Point refill (or Xanax) to top the bar back up.</li>
+        <li><b>Train.</b> Dump it again while happy's still high.</li>
+        <li><b>Wait.</b> Let natural energy tick back.</li>
+        <li><b>Train the +5</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — spend the regen tick before happy resets.</li>
+      </ol>
+    </div>
+  </div>
 </div></section>
 
 <!-- LEVEL <=15 -->
