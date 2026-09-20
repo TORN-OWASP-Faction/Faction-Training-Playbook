@@ -62,9 +62,10 @@
   .dt-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:3px;background:var(--surface)}
   table{border-collapse:collapse;width:100%;font-size:.86rem;min-width:32rem}
   caption{caption-side:top;text-align:left;color:var(--faint);font-size:.75rem;padding:.5rem .7rem}
-  th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border);white-space:nowrap;
-    font-variant-numeric:tabular-nums}
-  thead th{position:sticky;top:0;background:var(--raised);cursor:pointer;user-select:none;
+  th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border);
+    font-variant-numeric:tabular-nums;vertical-align:top}
+  td{overflow-wrap:anywhere;max-width:26rem;min-width:3rem}
+  thead th{position:sticky;top:0;background:var(--raised);cursor:pointer;user-select:none;white-space:nowrap;
     font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.72rem;color:var(--muted)}
   thead th.sorted{color:var(--ink)}
   .ar{opacity:.5;margin-left:.3em;font-size:.85em}
