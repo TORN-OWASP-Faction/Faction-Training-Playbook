@@ -28,6 +28,8 @@
   <h2 style="margin-top:.3em">Crime guides &amp; drop-table data</h2>
   <div class="credit"><div class="who">Emforus <span class="id">[2535044]</span></div><div class="what">The Crimes 2.0 In-Depth Guide series (all crimes) and the linked consolidated droptable spreadsheets (Burglary Consolidated, Shoplifting Droptables) that our interactive crime tables are built from. Wiki contributor.</div></div>
   <div class="credit"><div class="who">Owen <span class="id">[2087327]</span></div><div class="what">Crime Guide: Start to End — CE / Natural Nerve Bar mechanics and crime-success factors.</div></div>
+  <div class="credit"><div class="who">TornProbability</div><div class="what">The OC success-probability model and scenario/role dataset behind our <a href="{base}/crimes/oc-scenarios/">OC scenarios</a> table — <a href="https://tornprobability.com" target="_blank" rel="noopener">tornprobability.com</a></div></div>
+  <div class="credit"><div class="who">legitimatenexus.com</div><div class="what">OC 2.0 basics worksheet — tier/CPR thresholds, item-burn and reward figures that inform our OC checkpoint explainer.</div></div>
   <div class="note">Organized Crime 2.0 mechanics (Scope, CPR, tiers) from the <a href="https://wiki.torn.com/wiki/Organized_Crime_2.0" target="_blank" rel="noopener">OC 2.0</a> and <a href="https://wiki.torn.com/wiki/Crimes_2.0" target="_blank" rel="noopener">Crimes 2.0</a> wiki pages.</div>
 </div></section>
 
@@ -39,6 +41,7 @@
   <div class="credit"><div class="who">TornStats</div><div class="what">Spies, chains &amp; war tools — <a href="https://www.tornstats.com/" target="_blank" rel="noopener">tornstats.com</a></div></div>
   <div class="credit"><div class="who">YATA</div><div class="what">Kivou [2000607] — chains, travel, awards — <a href="https://yata.yt/" target="_blank" rel="noopener">yata.yt</a></div></div>
   <div class="credit"><div class="who">Torn PDA</div><div class="what">Manuito — mobile app with userscript support — <a href="https://github.com/Manuito83/torn-pda" target="_blank" rel="noopener">github.com/Manuito83/torn-pda</a></div></div>
+  <div class="credit"><div class="who">OC Success Chance</div><div class="what">Allenone [2033011] — OC team success-chance userscript — <a href="https://greasyfork.org/en/scripts/526834-oc-success-chance-2-0" target="_blank" rel="noopener">greasyfork.org</a></div></div>
 </div></section>
 
 <footer><div class="wrap">
