@@ -573,3 +573,6 @@
 .crew.medic{border-top:3px solid var(--c-medic)} .crew.medic .role{color:var(--c-medic)}
 
 .hero-crew{grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
+
+/* Grid items may shrink below their content width; wide tables scroll inside .tbl-scroll instead of widening the page */
+.grid > *, .grid2 > *{min-width:0}

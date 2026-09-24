@@ -49,6 +49,7 @@
     {/if}
   </div>
 
+  <a class="top" href="{base}/paths/">Paths</a>
   <a class="top" href="{base}/travel/">Travel</a>
   <a class="top" href="{base}/planner/">Planner</a>
   <a class="top" href="{base}/scripts/">Scripts</a>
@@ -73,4 +74,8 @@
     color:var(--faint);padding:.5rem .6rem .25rem;border-top:1px solid var(--border);margin-top:.2rem}
   .top{color:var(--muted);text-decoration:none;font-size:.95rem;white-space:nowrap;padding:.45rem .8rem;border-radius:2px;font-weight:500}
   .top:hover{color:var(--ink);background:var(--raised)}
+  @media(max-width:720px){
+    nav.toc :global(.wrap){flex-wrap:wrap}
+    .toc-spacer,.brandmark{display:none}
+  }
 </style>

@@ -133,7 +133,7 @@
     <thead><tr><th>Line item</th><th>Cost</th><th>Why</th></tr></thead>
     <tbody>
       <tr><td><b>30-day rent</b>: 3,600-happy PI with airstrip</td><td class="mono">~$12–13M</td><td>The best value for the money. Your first one can be cheaper: some 2,550-happy PIs have an airstrip too.</td></tr>
-      <tr><td><b>Pilot</b>: 1× staff</td><td class="mono">$25k/day ≈ $750k</td><td>No pilot means the airstrip does nothing. Staff fees keep adding up for the whole lease.</td></tr>
+      <tr><td><b>Pilot</b>: 1× staff</td><td class="mono">$30k/day ≈ $900k</td><td>No pilot means the airstrip does nothing. Staff fees keep adding up for the whole lease.</td></tr>
       <tr><td><b>First load of stock</b></td><td class="mono">well under $1M</td><td>Flowers and plushies are cheap to buy abroad. The profit is in the resale.</td></tr>
       <tr><td><b>Reserve</b></td><td class="mono">~$1M</td><td>So one slow day doesn't ground you. Keep it in the bank, not on you.</td></tr>
     </tbody>

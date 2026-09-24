@@ -43,7 +43,7 @@
   .tab.active{color:var(--ink);border-bottom-color:var(--acc)}
   .tab.active .tn{color:var(--acc)}
   .panel{background:var(--surface);border:1px solid var(--border);border-top:0;border-radius:0 0 3px 3px;padding:.3rem 1.1rem}
-  table.kv{border-collapse:collapse;width:100%}
+  table.kv{border-collapse:collapse;width:100%;min-width:0}
   .kv th{text-align:left;vertical-align:top;color:var(--faint);font-family:"IBM Plex Mono",monospace;
     font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;
     padding:.7rem 1.2rem .7rem 0;white-space:nowrap;width:1%;border-bottom:1px solid var(--border)}

@@ -66,7 +66,8 @@
   .controls{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
   @media(max-width:720px){.controls{grid-template-columns:repeat(2,1fr)}}
   label{display:grid;gap:.3rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:600}
-  select,input{font-family:inherit;font-size:.9rem;color:var(--ink);background:var(--raised);border:1px solid var(--border);border-radius:2px;padding:.5rem .6rem;font-variant-numeric:tabular-nums}
+  .controls > label{min-width:0}
+  select,input{font-family:inherit;font-size:.9rem;color:var(--ink);background:var(--raised);border:1px solid var(--border);border-radius:2px;padding:.5rem .6rem;font-variant-numeric:tabular-nums;width:100%;min-width:0}
   .slider{margin-top:1rem}
   .slabel{display:flex;justify-content:space-between;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600;margin-bottom:.35rem}
   .hv{color:var(--amber);font-size:.9rem}
