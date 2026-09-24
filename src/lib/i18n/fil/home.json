@@ -3,6 +3,11 @@
   "badge": "Faction training · mula 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Libreng guides para lumakas at yumaman sa Torn, isinulat sa simpleng salita ng faction namin. Piliin kung saan mo gustong magsimula.",
+  "event": {
+    "title": "Parating na ang Halloween Trick or Treat",
+    "text": "Kumita ng treats sa mga attack, plus isang madaling merit. Oktubre 25 – Nobyembre 1.",
+    "go": "Paano sumali"
+  },
   "choose": {
     "eyebrow": "Pumili ng goal",
     "title": "Saan mo gustong magsimula?"
@@ -12,35 +17,63 @@
       "title": "Bago ako sa Torn",
       "text": "Ang unang linggo mo, paano protektahan ang pera mo, at ang mga bitag na pinakamahal ang singil sa mga bagong player.",
       "go": "Magsimula dito",
-      "links": ["Ang unang linggo mo", "Protektahan ang pera mo", "Glossary"]
+      "links": [
+        "Ang unang linggo mo",
+        "Protektahan ang pera mo",
+        "Glossary"
+      ]
     },
     "train": {
       "title": "Lumakas",
       "text": "Paano gumagana ang happy jumps, anong build ang pipiliin, ang pinakamagandang gym sa bawat stat, at ano ang itsura ng isang araw ng training.",
       "go": "Training guide",
-      "links": ["Ang happy jump", "Builds", "Jump planner"]
+      "links": [
+        "Ang happy jump",
+        "Builds",
+        "Jump planner"
+      ]
     },
     "money": {
       "title": "Kumita ng pera",
       "text": "Lumipad para sa flowers at plushies, kailan sulit ang Private Island, at paano ibenta ang mga naiuwi mo.",
       "go": "Lumipad para kumita",
-      "links": ["Paraan para kumita", "Paggamit ng YATA", "Pagbenta ng items"]
+      "links": [
+        "Paraan para kumita",
+        "Paggamit ng YATA",
+        "Pagbenta ng items"
+      ]
     },
     "plan": {
       "title": "Planuhin ang long game",
       "text": "Income muna, stats muna, o balanced: timelines, milestones, at ano ang bibilhin at sa anong pagkakasunod.",
       "go": "Paths at milestones",
-      "links": ["Interactive planner", "Ang tatlong guide", "Faction upgrades"]
+      "links": [
+        "Interactive planner",
+        "Ang tatlong guide",
+        "Faction upgrades"
+      ]
     }
   },
   "more": {
     "eyebrow": "Nasa playbook din",
     "title": "Crimes, war at tools",
     "items": {
-      "crimes": ["Crimes at OCs", "Aling crimes ang gagawin, paano lumalaki ang nerve mo, at paano nagbabayad ang organized crimes."],
-      "loadout": ["War loadout", "Weapons, armor at paano lumaban sa mas malakas sa'yo."],
-      "medical": ["Field medicine", "Overdose, medical items, at paano manatiling useful sa war."],
-      "scripts": ["Scripts at tools", "TornTools, YATA, FF Scouter at iba pa, at paano panatilihing safe ang API key mo."]
+      "crimes": [
+        "Crimes at OCs",
+        "Aling crimes ang gagawin, paano lumalaki ang nerve mo, at paano nagbabayad ang organized crimes."
+      ],
+      "loadout": [
+        "War loadout",
+        "Weapons, armor at paano lumaban sa mas malakas sa'yo."
+      ],
+      "medical": [
+        "Field medicine",
+        "Overdose, medical items, at paano manatiling useful sa war."
+      ],
+      "scripts": [
+        "Scripts at tools",
+        "TornTools, YATA, FF Scouter at iba pa, at paano panatilihing safe ang API key mo."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Kilalanin ang crew",
     "lede": "Limang character ang nagpapatakbo ng playbook na ito. Bawat isa ay may hawak na parte ng game, at makikita mo ang advice nila sa mga page na sakop nila.",
     "members": {
-      "banker": ["Banker · Economy", "Pera, property, education, at kailan hindi dapat gumastos", "Vincent Moretti, ang banker"],
-      "trainer": ["Trainer · Progress", "Gym, happy, energy, routines at jumps", "Maya Torres, ang trainer"],
-      "militia": ["Militia · Factions", "Faction perks, war readiness at paghahanda", "Marcus Kane, ang militia veteran"],
-      "fixer": ["Fixer · Opportunity", "Mabilisang pera, pag-level, flipping at introductions", "Nico Vescari, ang fixer"],
-      "medic": ["Medic · Recovery", "Overdose, medical items, hospital at war prep", "Dr. Elara Moreau, ang medic"]
+      "banker": [
+        "Banker · Economy",
+        "Pera, property, education, at kailan hindi dapat gumastos",
+        "Vincent Moretti, ang banker"
+      ],
+      "trainer": [
+        "Trainer · Progress",
+        "Gym, happy, energy, routines at jumps",
+        "Maya Torres, ang trainer"
+      ],
+      "militia": [
+        "Militia · Factions",
+        "Faction perks, war readiness at paghahanda",
+        "Marcus Kane, ang militia veteran"
+      ],
+      "fixer": [
+        "Fixer · Opportunity",
+        "Mabilisang pera, pag-level, flipping at introductions",
+        "Nico Vescari, ang fixer"
+      ],
+      "medic": [
+        "Medic · Recovery",
+        "Overdose, medical items, hospital at war prep",
+        "Dr. Elara Moreau, ang medic"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Ginawa ng faction namin mula sa mga guide na isinulat ng mga Torn player. Nakalista ang bawat source sa <a href=\"/credits/\">credits</a> page."

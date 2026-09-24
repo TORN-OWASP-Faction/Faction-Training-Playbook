@@ -24,6 +24,14 @@
 </div></section>
 
 <section><div class="wrap">
+  <span class="eyebrow">Events</span>
+  <h2 style="margin-top:.3em">Halloween</h2>
+  <div class="credit"><div class="who">IceBlueFire <span class="id">[776]</span></div><div class="what">Halloween Trick or Treat Guide: basket levels, upgrade costs and the event FAQ behind our <a href="{base}/halloween/">Trick or Treat</a> page.</div></div>
+  <div class="credit"><div class="who">Andyman</div><div class="what">The recommended basket upgrade order.</div></div>
+  <div class="credit"><div class="who">Proxima <span class="id">[1879587]</span></div><div class="what">The spooky weapon vs Revitalize chart, which gives the treat odds per basket level.</div></div>
+</div></section>
+
+<section><div class="wrap">
   <span class="eyebrow">Money &amp; leveling</span>
   <h2 style="margin-top:.3em">Losses, leveling &amp; income</h2>
   <div class="credit"><div class="who">18Delta <span class="id">[1814266]</span></div><div class="what">Guide to LOSSES — Beginner to Advanced (selling losses: pricing, energy/First-Aid-Kit/Xanax math).</div></div>

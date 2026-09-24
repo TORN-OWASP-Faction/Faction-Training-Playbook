@@ -1,9 +1,15 @@
 <script>
   import { base } from '$app/paths';
+  import { onMount } from 'svelte';
   import Icon from '$lib/Icon.svelte';
   import { href, rich } from '$lib/i18n';
 
   let { m, lang } = $props();
+
+  // Hide the Halloween banner once the event is over. Update EVENT_END for next year's event.
+  const EVENT_END = new Date('2026-11-02T00:00:00Z');
+  let eventOver = $state(false);
+  onMount(() => (eventOver = Date.now() > EVENT_END));
 
   // Message keys in m.goals, with each goal's main page and its three shortcuts (same order as the labels).
   const GOALS = [
@@ -34,6 +40,13 @@
   <span class="hero-badge">{m.badge}</span>
   <h1>{@html m.h1}</h1>
   <p class="lede">{m.lede}</p>
+  {#if !eventOver}
+    <a class="event" href={href('/halloween/', lang)}>
+      <span class="ev-icon"><Icon name="ghost" size={24} /></span>
+      <span><b>{m.event.title}</b><small>{m.event.text}</small></span>
+      <span class="ev-go">{m.event.go} <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  {/if}
 </div></header>
 
 <section class="goals-sec" aria-labelledby="goals-h"><div class="wrap">
@@ -91,6 +104,13 @@
 
 <style>
   .hero{padding-bottom:28px}
+  .event{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:1.4rem;max-width:48rem;text-decoration:none;color:var(--ink);
+    background:var(--surface);border:1px solid var(--border);border-inline-start:3px solid #e07b24;border-radius:3px;padding:.8rem 1rem}
+  .event:hover{border-color:#e07b24}
+  .ev-icon{color:#e07b24;flex:none}
+  .event b{display:block}
+  .event small{display:block;color:var(--muted);font-size:.88rem}
+  .ev-go{margin-inline-start:auto;color:var(--amber);font-weight:600;white-space:nowrap}
   .goals-sec{border-top:0;padding-top:12px}
   .goals,.sub,.more{list-style:none;margin:0;padding:0}
   .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1.2rem}

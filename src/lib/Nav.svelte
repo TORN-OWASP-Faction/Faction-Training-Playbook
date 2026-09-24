@@ -26,7 +26,7 @@
       ['Burglary', '/crimes/burglary/'], ['Shoplifting', '/crimes/shoplifting/'],
       ['Cracking', '/crimes/cracking/'], ['Forgery', '/crimes/forgery/']
     ] },
-    { id: 'fight', links: [['loadout', '/loadout/'], ['medical', '/medical/'], ['factionBasics', '/start/#faction']] },
+    { id: 'fight', links: [['loadout', '/loadout/'], ['medical', '/medical/'], ['factionBasics', '/start/#faction'], ['halloween', '/halloween/']] },
     { id: 'more', links: [['scripts', '/scripts/'], ['glossary', '/glossary/'], ['credits', '/credits/']] }
   ];
 

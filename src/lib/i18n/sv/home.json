@@ -3,6 +3,11 @@
   "badge": "Factionträning · sedan 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Gratis guider för att bli starkare och rikare i Torn, skrivna med enkla ord av vår faction. Välj var du vill börja.",
+  "event": {
+    "title": "Halloween Trick or Treat är på väg",
+    "text": "Tjäna treats på attacker, plus en enkel merit. 25 oktober – 1 november.",
+    "go": "Så är du med"
+  },
   "choose": {
     "eyebrow": "Välj ett mål",
     "title": "Var vill du börja?"
@@ -12,35 +17,63 @@
       "title": "Jag är ny i Torn",
       "text": "Din första vecka, hur du håller pengarna säkra och fällorna som kostar nya spelare mest.",
       "go": "Börja här",
-      "links": ["Din första vecka", "Håll pengarna säkra", "Ordlista"]
+      "links": [
+        "Din första vecka",
+        "Håll pengarna säkra",
+        "Ordlista"
+      ]
     },
     "train": {
       "title": "Bli starkare",
       "text": "Hur happy jumps fungerar, vilken build du ska välja, bästa gymmet för varje stat och hur en träningsdag ser ut.",
       "go": "Träningsguide",
-      "links": ["Happy jump", "Builds", "Jumpplanerare"]
+      "links": [
+        "Happy jump",
+        "Builds",
+        "Jumpplanerare"
+      ]
     },
     "money": {
       "title": "Tjäna pengar",
       "text": "Flyga efter blommor och gosedjur, när en Private Island lönar sig och hur du säljer det du tar hem.",
       "go": "Flyga för pengar",
-      "links": ["Sätt att tjäna pengar", "Använda YATA", "Sälja items"]
+      "links": [
+        "Sätt att tjäna pengar",
+        "Använda YATA",
+        "Sälja items"
+      ]
     },
     "plan": {
       "title": "Planera på lång sikt",
       "text": "Inkomst först, stats först eller balanserat: tidslinjer, milstolpar och vad du ska köpa i vilken ordning.",
       "go": "Vägar och milstolpar",
-      "links": ["Interaktiv planerare", "De tre guiderna", "Factionuppgraderingar"]
+      "links": [
+        "Interaktiv planerare",
+        "De tre guiderna",
+        "Factionuppgraderingar"
+      ]
     }
   },
   "more": {
     "eyebrow": "Också i playbooken",
     "title": "Brott, krig och verktyg",
     "items": {
-      "crimes": ["Brott och OC", "Vilka brott du ska göra, hur din nerve växer och hur organiserade brott betalar ut."],
-      "loadout": ["Krigsutrustning", "Vapen, rustning och hur du slåss mot starkare motståndare."],
-      "medical": ["Fältsjukvård", "Överdoser, medicinska items och hur du gör nytta i ett krig."],
-      "scripts": ["Skript och verktyg", "TornTools, YATA, FF Scouter med mera, och hur du håller din API-nyckel säker."]
+      "crimes": [
+        "Brott och OC",
+        "Vilka brott du ska göra, hur din nerve växer och hur organiserade brott betalar ut."
+      ],
+      "loadout": [
+        "Krigsutrustning",
+        "Vapen, rustning och hur du slåss mot starkare motståndare."
+      ],
+      "medical": [
+        "Fältsjukvård",
+        "Överdoser, medicinska items och hur du gör nytta i ett krig."
+      ],
+      "scripts": [
+        "Skript och verktyg",
+        "TornTools, YATA, FF Scouter med mera, och hur du håller din API-nyckel säker."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Möt gänget",
     "lede": "Fem karaktärer driver den här playbooken. Var och en tar hand om en del av spelet, och du hittar deras råd på sidorna de ansvarar för.",
     "members": {
-      "banker": ["Bankir · Ekonomi", "Pengar, fastigheter, utbildning och när du inte ska spendera", "Vincent Moretti, bankiren"],
-      "trainer": ["Tränare · Framsteg", "Gym, happy, energi, rutiner och jumps", "Maya Torres, tränaren"],
-      "militia": ["Milis · Factions", "Factionförmåner, krigsberedskap och förberedelser", "Marcus Kane, milisveteranen"],
-      "fixer": ["Fixare · Möjligheter", "Snabba pengar, levla, flippa och kontakter", "Nico Vescari, fixaren"],
-      "medic": ["Läkare · Återhämtning", "Överdoser, medicinska items, sjukhus och krigsförberedelser", "Dr. Elara Moreau, läkaren"]
+      "banker": [
+        "Bankir · Ekonomi",
+        "Pengar, fastigheter, utbildning och när du inte ska spendera",
+        "Vincent Moretti, bankiren"
+      ],
+      "trainer": [
+        "Tränare · Framsteg",
+        "Gym, happy, energi, rutiner och jumps",
+        "Maya Torres, tränaren"
+      ],
+      "militia": [
+        "Milis · Factions",
+        "Factionförmåner, krigsberedskap och förberedelser",
+        "Marcus Kane, milisveteranen"
+      ],
+      "fixer": [
+        "Fixare · Möjligheter",
+        "Snabba pengar, levla, flippa och kontakter",
+        "Nico Vescari, fixaren"
+      ],
+      "medic": [
+        "Läkare · Återhämtning",
+        "Överdoser, medicinska items, sjukhus och krigsförberedelser",
+        "Dr. Elara Moreau, läkaren"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Byggd av vår faction utifrån guider skrivna av Torn-spelare. Alla källor listas på sidan <a href=\"/credits/\">tack till</a>."

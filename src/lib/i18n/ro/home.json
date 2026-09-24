@@ -3,6 +3,11 @@
   "badge": "Antrenament de facțiune · din 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Ghiduri gratuite ca să devii mai puternic și mai bogat în Torn, scrise pe limba tuturor de facțiunea noastră. Alege de unde vrei să începi.",
+  "event": {
+    "title": "Vine Halloween Trick or Treat",
+    "text": "Câștigă treats din atacuri, plus un merit ușor. 25 octombrie – 1 noiembrie.",
+    "go": "Cum participi"
+  },
   "choose": {
     "eyebrow": "Alege un obiectiv",
     "title": "De unde vrei să începi?"
@@ -12,35 +17,63 @@
       "title": "Sunt nou în Torn",
       "text": "Prima ta săptămână, cum îți ții banii în siguranță și capcanele care îi costă cel mai mult pe jucătorii noi.",
       "go": "Începe aici",
-      "links": ["Prima ta săptămână", "Ține-ți banii în siguranță", "Glosar"]
+      "links": [
+        "Prima ta săptămână",
+        "Ține-ți banii în siguranță",
+        "Glosar"
+      ]
     },
     "train": {
       "title": "Devino mai puternic",
       "text": "Cum funcționează happy jump-urile, ce build să alegi, cea mai bună sală pentru fiecare stat și cum arată o zi de antrenament.",
       "go": "Ghid de antrenament",
-      "links": ["Happy jump", "Build-uri", "Planificator de jump"]
+      "links": [
+        "Happy jump",
+        "Build-uri",
+        "Planificator de jump"
+      ]
     },
     "money": {
       "title": "Fă bani",
       "text": "Zboruri după flori și plușuri, când merită un Private Island și cum vinzi ce aduci înapoi.",
       "go": "Zboruri pentru bani",
-      "links": ["Cum să faci bani", "Cum folosești YATA", "Vânzarea itemelor"]
+      "links": [
+        "Cum să faci bani",
+        "Cum folosești YATA",
+        "Vânzarea itemelor"
+      ]
     },
     "plan": {
       "title": "Planifică pe termen lung",
       "text": "Întâi venit, întâi stats sau echilibrat: termene, repere și ce să cumperi în ce ordine.",
       "go": "Căi și repere",
-      "links": ["Planificator interactiv", "Cele trei ghiduri", "Upgrade-uri de facțiune"]
+      "links": [
+        "Planificator interactiv",
+        "Cele trei ghiduri",
+        "Upgrade-uri de facțiune"
+      ]
     }
   },
   "more": {
     "eyebrow": "Tot în playbook",
     "title": "Crime, război și unelte",
     "items": {
-      "crimes": ["Crime și OC-uri", "Ce crime să faci, cum îți crește nerve-ul și cât plătesc crimele organizate."],
-      "loadout": ["Echipament de război", "Arme, armură și cum lupți cu unii mai puternici decât tine."],
-      "medical": ["Medicină de teren", "Supradoze, iteme medicale și cum rămâi util într-un război."],
-      "scripts": ["Scripturi și unelte", "TornTools, YATA, FF Scouter și altele, plus cum îți păstrezi cheia API în siguranță."]
+      "crimes": [
+        "Crime și OC-uri",
+        "Ce crime să faci, cum îți crește nerve-ul și cât plătesc crimele organizate."
+      ],
+      "loadout": [
+        "Echipament de război",
+        "Arme, armură și cum lupți cu unii mai puternici decât tine."
+      ],
+      "medical": [
+        "Medicină de teren",
+        "Supradoze, iteme medicale și cum rămâi util într-un război."
+      ],
+      "scripts": [
+        "Scripturi și unelte",
+        "TornTools, YATA, FF Scouter și altele, plus cum îți păstrezi cheia API în siguranță."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Cunoaște echipa",
     "lede": "Cinci personaje conduc acest playbook. Fiecare se ocupă de o parte a jocului, iar sfaturile lor le găsești pe paginile de care răspund.",
     "members": {
-      "banker": ["Bancher · Economie", "Bani, proprietăți, educație și când să nu cheltui", "Vincent Moretti, bancherul"],
-      "trainer": ["Antrenor · Progres", "Sală, happy, energie, rutine și jump-uri", "Maya Torres, antrenoarea"],
-      "militia": ["Miliție · Facțiuni", "Perk-uri de facțiune, pregătire de război și organizare", "Marcus Kane, veteranul miliției"],
-      "fixer": ["Descurcăreț · Oportunități", "Bani rapizi, nivelare, flipping și contacte", "Nico Vescari, descurcărețul"],
-      "medic": ["Medic · Recuperare", "Supradoze, iteme medicale, spital și pregătire de război", "Dr. Elara Moreau, medicul"]
+      "banker": [
+        "Bancher · Economie",
+        "Bani, proprietăți, educație și când să nu cheltui",
+        "Vincent Moretti, bancherul"
+      ],
+      "trainer": [
+        "Antrenor · Progres",
+        "Sală, happy, energie, rutine și jump-uri",
+        "Maya Torres, antrenoarea"
+      ],
+      "militia": [
+        "Miliție · Facțiuni",
+        "Perk-uri de facțiune, pregătire de război și organizare",
+        "Marcus Kane, veteranul miliției"
+      ],
+      "fixer": [
+        "Descurcăreț · Oportunități",
+        "Bani rapizi, nivelare, flipping și contacte",
+        "Nico Vescari, descurcărețul"
+      ],
+      "medic": [
+        "Medic · Recuperare",
+        "Supradoze, iteme medicale, spital și pregătire de război",
+        "Dr. Elara Moreau, medicul"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Construit de facțiunea noastră din ghiduri scrise de jucători Torn. Toate sursele sunt listate pe pagina de <a href=\"/credits/\">mulțumiri</a>."

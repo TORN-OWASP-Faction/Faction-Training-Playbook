@@ -3,6 +3,11 @@
   "badge": "Latihan faction · sejak 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Panduan gratis supaya kamu makin kuat dan makin kaya di Torn, ditulis dengan bahasa sederhana oleh faction kami. Pilih mau mulai dari mana.",
+  "event": {
+    "title": "Halloween Trick or Treat segera datang",
+    "text": "Dapatkan treat dari serangan, plus satu merit yang gampang. 25 Oktober – 1 November.",
+    "go": "Cara ikut"
+  },
   "choose": {
     "eyebrow": "Pilih tujuan",
     "title": "Mau mulai dari mana?"
@@ -12,35 +17,63 @@
       "title": "Aku baru di Torn",
       "text": "Minggu pertamamu, cara mengamankan uang, dan jebakan yang paling merugikan pemain baru.",
       "go": "Mulai di sini",
-      "links": ["Minggu pertamamu", "Amankan uangmu", "Glosarium"]
+      "links": [
+        "Minggu pertamamu",
+        "Amankan uangmu",
+        "Glosarium"
+      ]
     },
     "train": {
       "title": "Jadi lebih kuat",
       "text": "Cara kerja happy jump, build mana yang dipilih, gym terbaik untuk tiap stat, dan seperti apa sehari latihan.",
       "go": "Panduan latihan",
-      "links": ["Happy jump", "Build", "Perencana jump"]
+      "links": [
+        "Happy jump",
+        "Build",
+        "Perencana jump"
+      ]
     },
     "money": {
       "title": "Cari uang",
       "text": "Terbang beli bunga dan plushie, kapan Private Island balik modal, dan cara menjual barang bawaanmu.",
       "go": "Terbang cari uang",
-      "links": ["Cara cari uang", "Pakai YATA", "Jual item"]
+      "links": [
+        "Cara cari uang",
+        "Pakai YATA",
+        "Jual item"
+      ]
     },
     "plan": {
       "title": "Rencana jangka panjang",
       "text": "Income dulu, stat dulu, atau seimbang: timeline, target, dan apa yang dibeli dengan urutan apa.",
       "go": "Jalur dan target",
-      "links": ["Perencana interaktif", "Tiga panduan", "Upgrade faction"]
+      "links": [
+        "Perencana interaktif",
+        "Tiga panduan",
+        "Upgrade faction"
+      ]
     }
   },
   "more": {
     "eyebrow": "Juga ada di playbook",
     "title": "Crimes, perang, dan tools",
     "items": {
-      "crimes": ["Crimes dan OC", "Crime mana yang dikerjakan, bagaimana nerve kamu naik, dan bagaimana organized crime membayar."],
-      "loadout": ["Loadout perang", "Senjata, armor, dan cara melawan yang lebih kuat dari kamu."],
-      "medical": ["Medis lapangan", "Overdosis, item medis, dan tetap berguna saat perang."],
-      "scripts": ["Script dan tools", "TornTools, YATA, FF Scouter dan lainnya, plus cara menjaga API key kamu tetap aman."]
+      "crimes": [
+        "Crimes dan OC",
+        "Crime mana yang dikerjakan, bagaimana nerve kamu naik, dan bagaimana organized crime membayar."
+      ],
+      "loadout": [
+        "Loadout perang",
+        "Senjata, armor, dan cara melawan yang lebih kuat dari kamu."
+      ],
+      "medical": [
+        "Medis lapangan",
+        "Overdosis, item medis, dan tetap berguna saat perang."
+      ],
+      "scripts": [
+        "Script dan tools",
+        "TornTools, YATA, FF Scouter dan lainnya, plus cara menjaga API key kamu tetap aman."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Kenalan dengan kru",
     "lede": "Lima karakter menjalankan playbook ini. Masing-masing mengurus satu bagian game, dan saran mereka ada di halaman yang mereka pegang.",
     "members": {
-      "banker": ["Bankir · Ekonomi", "Uang, properti, pendidikan, dan kapan jangan belanja", "Vincent Moretti, sang bankir"],
-      "trainer": ["Pelatih · Progres", "Gym, happy, energy, rutinitas, dan jump", "Maya Torres, sang pelatih"],
-      "militia": ["Milisi · Faction", "Perk faction, kesiapan perang, dan persiapan", "Marcus Kane, veteran milisi"],
-      "fixer": ["Fixer · Peluang", "Uang cepat, naik level, flipping, dan perkenalan", "Nico Vescari, sang fixer"],
-      "medic": ["Medis · Pemulihan", "Overdosis, item medis, rumah sakit, dan persiapan perang", "Dr. Elara Moreau, sang petugas medis"]
+      "banker": [
+        "Bankir · Ekonomi",
+        "Uang, properti, pendidikan, dan kapan jangan belanja",
+        "Vincent Moretti, sang bankir"
+      ],
+      "trainer": [
+        "Pelatih · Progres",
+        "Gym, happy, energy, rutinitas, dan jump",
+        "Maya Torres, sang pelatih"
+      ],
+      "militia": [
+        "Milisi · Faction",
+        "Perk faction, kesiapan perang, dan persiapan",
+        "Marcus Kane, veteran milisi"
+      ],
+      "fixer": [
+        "Fixer · Peluang",
+        "Uang cepat, naik level, flipping, dan perkenalan",
+        "Nico Vescari, sang fixer"
+      ],
+      "medic": [
+        "Medis · Pemulihan",
+        "Overdosis, item medis, rumah sakit, dan persiapan perang",
+        "Dr. Elara Moreau, sang petugas medis"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Dibuat oleh faction kami dari panduan yang ditulis pemain Torn. Semua sumber tercantum di halaman <a href=\"/credits/\">kredit</a>."

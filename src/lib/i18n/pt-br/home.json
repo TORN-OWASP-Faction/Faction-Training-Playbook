@@ -3,6 +3,11 @@
   "badge": "Treino de facção · desde 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Guias gratuitos para ficar mais forte e mais rico no Torn, escritos em palavras simples pela nossa facção. Escolha por onde você quer começar.",
+  "event": {
+    "title": "O Trick or Treat de Halloween está chegando",
+    "text": "Ganhe treats com ataques e um mérito fácil. De 25 de outubro a 1º de novembro.",
+    "go": "Como participar"
+  },
   "choose": {
     "eyebrow": "Escolha um objetivo",
     "title": "Por onde você quer começar?"
@@ -12,35 +17,63 @@
       "title": "Sou novo no Torn",
       "text": "Sua primeira semana, como proteger seu dinheiro e as armadilhas que mais custam caro aos novatos.",
       "go": "Comece aqui",
-      "links": ["Sua primeira semana", "Proteja seu dinheiro", "Glossário"]
+      "links": [
+        "Sua primeira semana",
+        "Proteja seu dinheiro",
+        "Glossário"
+      ]
     },
     "train": {
       "title": "Fique mais forte",
       "text": "Como funcionam os happy jumps, qual build escolher, a melhor gym para cada stat e como é um dia de treino.",
       "go": "Guia de treino",
-      "links": ["O happy jump", "Builds", "Planejador de jumps"]
+      "links": [
+        "O happy jump",
+        "Builds",
+        "Planejador de jumps"
+      ]
     },
     "money": {
       "title": "Ganhe dinheiro",
       "text": "Voar atrás de flores e plushies, quando uma Private Island se paga e como vender o que você traz.",
       "go": "Voar por dinheiro",
-      "links": ["Formas de ganhar dinheiro", "Usando o YATA", "Vendendo itens"]
+      "links": [
+        "Formas de ganhar dinheiro",
+        "Usando o YATA",
+        "Vendendo itens"
+      ]
     },
     "plan": {
       "title": "Planeje a longo prazo",
       "text": "Renda primeiro, stats primeiro ou equilibrado: prazos, metas e o que comprar em qual ordem.",
       "go": "Caminhos e metas",
-      "links": ["Planejador interativo", "Os três guias", "Upgrades da facção"]
+      "links": [
+        "Planejador interativo",
+        "Os três guias",
+        "Upgrades da facção"
+      ]
     }
   },
   "more": {
     "eyebrow": "Também no Playbook",
     "title": "Crimes, guerra e ferramentas",
     "items": {
-      "crimes": ["Crimes e OCs", "Quais crimes fazer, como seu nerve cresce e como os crimes organizados pagam."],
-      "loadout": ["Equipamento de guerra", "Armas, armadura e como lutar acima do seu peso."],
-      "medical": ["Medicina de campo", "Overdoses, itens médicos e como continuar útil numa guerra."],
-      "scripts": ["Scripts e ferramentas", "TornTools, YATA, FF Scouter e mais, e como manter sua API key segura."]
+      "crimes": [
+        "Crimes e OCs",
+        "Quais crimes fazer, como seu nerve cresce e como os crimes organizados pagam."
+      ],
+      "loadout": [
+        "Equipamento de guerra",
+        "Armas, armadura e como lutar acima do seu peso."
+      ],
+      "medical": [
+        "Medicina de campo",
+        "Overdoses, itens médicos e como continuar útil numa guerra."
+      ],
+      "scripts": [
+        "Scripts e ferramentas",
+        "TornTools, YATA, FF Scouter e mais, e como manter sua API key segura."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Conheça a equipe",
     "lede": "Cinco personagens comandam este Playbook. Cada um cuida de uma parte do jogo, e você encontra os conselhos deles nas páginas que eles cobrem.",
     "members": {
-      "banker": ["Banqueiro · Economia", "Dinheiro, propriedades, educação e quando não gastar", "Vincent Moretti, o banqueiro"],
-      "trainer": ["Treinadora · Progresso", "Gym, happy, energia, rotinas e jumps", "Maya Torres, a treinadora"],
-      "militia": ["Milícia · Facções", "Benefícios da facção, prontidão e preparação para a guerra", "Marcus Kane, o veterano da milícia"],
-      "fixer": ["Intermediário · Oportunidades", "Dinheiro rápido, subir de nível, revenda e contatos", "Nico Vescari, o intermediário"],
-      "medic": ["Médica · Recuperação", "Overdoses, itens médicos, hospital e preparação para a guerra", "Dra. Elara Moreau, a médica"]
+      "banker": [
+        "Banqueiro · Economia",
+        "Dinheiro, propriedades, educação e quando não gastar",
+        "Vincent Moretti, o banqueiro"
+      ],
+      "trainer": [
+        "Treinadora · Progresso",
+        "Gym, happy, energia, rotinas e jumps",
+        "Maya Torres, a treinadora"
+      ],
+      "militia": [
+        "Milícia · Facções",
+        "Benefícios da facção, prontidão e preparação para a guerra",
+        "Marcus Kane, o veterano da milícia"
+      ],
+      "fixer": [
+        "Intermediário · Oportunidades",
+        "Dinheiro rápido, subir de nível, revenda e contatos",
+        "Nico Vescari, o intermediário"
+      ],
+      "medic": [
+        "Médica · Recuperação",
+        "Overdoses, itens médicos, hospital e preparação para a guerra",
+        "Dra. Elara Moreau, a médica"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Feito pela nossa facção a partir de guias escritos por jogadores do Torn. Todas as fontes estão na página de <a href=\"/credits/\">créditos</a>."

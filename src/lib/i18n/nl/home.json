@@ -3,6 +3,11 @@
   "badge": "Faction-training · sinds 2004",
   "h1": "Faction Training <em>Playbook</em>",
   "lede": "Gratis gidsen om sterker en rijker te worden in Torn, in gewone taal geschreven door onze faction. Kies waar je wilt beginnen.",
+  "event": {
+    "title": "Halloween Trick or Treat komt eraan",
+    "text": "Verdien treats met aanvallen, plus een makkelijke merit. 25 oktober t/m 1 november.",
+    "go": "Zo doe je mee"
+  },
   "choose": {
     "eyebrow": "Kies een doel",
     "title": "Waar wil je beginnen?"
@@ -12,35 +17,63 @@
       "title": "Ik ben nieuw in Torn",
       "text": "Je eerste week, je geld veilig houden, en de valkuilen die nieuwe spelers het meest kosten.",
       "go": "Begin hier",
-      "links": ["Je eerste week", "Houd je geld veilig", "Woordenlijst"]
+      "links": [
+        "Je eerste week",
+        "Houd je geld veilig",
+        "Woordenlijst"
+      ]
     },
     "train": {
       "title": "Sterker worden",
       "text": "Hoe happy jumps werken, welke build je kiest, de beste gym per stat, en hoe een trainingsdag eruitziet.",
       "go": "Trainingsgids",
-      "links": ["De happy jump", "Builds", "Jumpplanner"]
+      "links": [
+        "De happy jump",
+        "Builds",
+        "Jumpplanner"
+      ]
     },
     "money": {
       "title": "Geld verdienen",
       "text": "Vliegen voor bloemen en knuffels, wanneer een Private Island zich terugverdient, en hoe je verkoopt wat je meeneemt.",
       "go": "Vliegen voor geld",
-      "links": ["Manieren om geld te verdienen", "YATA gebruiken", "Items verkopen"]
+      "links": [
+        "Manieren om geld te verdienen",
+        "YATA gebruiken",
+        "Items verkopen"
+      ]
     },
     "plan": {
       "title": "Plan voor de lange termijn",
       "text": "Eerst inkomen, eerst stats of gebalanceerd: tijdlijnen, mijlpalen, en wat je in welke volgorde koopt.",
       "go": "Routes en mijlpalen",
-      "links": ["Interactieve planner", "De drie gidsen", "Faction-upgrades"]
+      "links": [
+        "Interactieve planner",
+        "De drie gidsen",
+        "Faction-upgrades"
+      ]
     }
   },
   "more": {
     "eyebrow": "Ook in het playbook",
     "title": "Crimes, oorlog en tools",
     "items": {
-      "crimes": ["Crimes en OC's", "Welke crimes je doet, hoe je nerve groeit, en hoe organized crimes uitbetalen."],
-      "loadout": ["Oorlogsuitrusting", "Wapens, bepantsering en hoe je boven je gewicht vecht."],
-      "medical": ["Veldgeneeskunde", "Overdoses, medische items, en nuttig blijven in een oorlog."],
-      "scripts": ["Scripts en tools", "TornTools, YATA, FF Scouter en meer, en hoe je je API key veilig houdt."]
+      "crimes": [
+        "Crimes en OC's",
+        "Welke crimes je doet, hoe je nerve groeit, en hoe organized crimes uitbetalen."
+      ],
+      "loadout": [
+        "Oorlogsuitrusting",
+        "Wapens, bepantsering en hoe je boven je gewicht vecht."
+      ],
+      "medical": [
+        "Veldgeneeskunde",
+        "Overdoses, medische items, en nuttig blijven in een oorlog."
+      ],
+      "scripts": [
+        "Scripts en tools",
+        "TornTools, YATA, FF Scouter en meer, en hoe je je API key veilig houdt."
+      ]
     }
   },
   "crew": {
@@ -48,11 +81,31 @@
     "title": "Maak kennis met de crew",
     "lede": "Vijf personages runnen dit playbook. Elk van hen zorgt voor een deel van het spel, en je vindt hun advies op de pagina's die ze behandelen.",
     "members": {
-      "banker": ["Bankier · Economie", "Geld, vastgoed, opleiding, en wanneer je niet moet uitgeven", "Vincent Moretti, de bankier"],
-      "trainer": ["Trainer · Vooruitgang", "Gym, happy, energy, routines en jumps", "Maya Torres, de trainer"],
-      "militia": ["Militie · Factions", "Faction-perks, oorlogsgereedheid en voorbereiding", "Marcus Kane, de militieveteraan"],
-      "fixer": ["Fixer · Kansen", "Snel geld, levelen, flippen en introducties", "Nico Vescari, de fixer"],
-      "medic": ["Medic · Herstel", "Overdoses, medische items, ziekenhuis en oorlogsvoorbereiding", "Dr. Elara Moreau, de medic"]
+      "banker": [
+        "Bankier · Economie",
+        "Geld, vastgoed, opleiding, en wanneer je niet moet uitgeven",
+        "Vincent Moretti, de bankier"
+      ],
+      "trainer": [
+        "Trainer · Vooruitgang",
+        "Gym, happy, energy, routines en jumps",
+        "Maya Torres, de trainer"
+      ],
+      "militia": [
+        "Militie · Factions",
+        "Faction-perks, oorlogsgereedheid en voorbereiding",
+        "Marcus Kane, de militieveteraan"
+      ],
+      "fixer": [
+        "Fixer · Kansen",
+        "Snel geld, levelen, flippen en introducties",
+        "Nico Vescari, de fixer"
+      ],
+      "medic": [
+        "Medic · Herstel",
+        "Overdoses, medische items, ziekenhuis en oorlogsvoorbereiding",
+        "Dr. Elara Moreau, de medic"
+      ]
     }
   },
   "footer": "<strong>Faction Training Playbook.</strong> Gebouwd door onze faction op basis van gidsen van Torn-spelers. Alle bronnen staan op de <a href=\"/credits/\">credits</a>-pagina."
