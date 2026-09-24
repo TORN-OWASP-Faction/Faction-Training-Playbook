@@ -40,7 +40,9 @@
       "scripts": "Scripturi și unelte",
       "glossary": "Glosar",
       "credits": "Mulțumiri",
-      "halloween": "Evenimentul de Halloween"
+      "halloween": "Evenimentul de Halloween",
+      "events": "Calendarul evenimentelor",
+      "racing": "Curse"
     }
   },
   "notice": {

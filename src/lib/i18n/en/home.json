@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Who's talking",
     "title": "Meet the crew",
-    "lede": "Five characters run this playbook. Each one looks after a part of the game, and you'll find their advice on the pages they cover.",
+    "lede": "Six characters run this playbook. Each one looks after a part of the game, and you'll find their advice on the pages they cover.",
     "members": {
       "banker": [
         "Banker · Economy",
@@ -105,6 +105,11 @@
         "Medic · Recovery",
         "Overdoses, medical items, hospital and war prep",
         "Dr. Elara Moreau, the medic"
+      ],
+      "racer": [
+        "Racer · Driving",
+        "Racing, driving skill, cars and upgrades",
+        "Axel Rivera, the racer"
       ]
     }
   },

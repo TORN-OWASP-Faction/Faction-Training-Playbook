@@ -40,7 +40,9 @@
       "scripts": "Scripts at tools",
       "glossary": "Glossary",
       "credits": "Credits",
-      "halloween": "Halloween event"
+      "halloween": "Halloween event",
+      "events": "Kalendaryo ng events",
+      "racing": "Racing"
     }
   },
   "notice": {

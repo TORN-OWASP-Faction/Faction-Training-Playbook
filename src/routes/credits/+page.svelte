@@ -24,6 +24,14 @@
 </div></section>
 
 <section><div class="wrap">
+  <span class="eyebrow">Racing</span>
+  <h2 style="margin-top:.3em">Racing</h2>
+  <div class="credit"><div class="who">Baldr <span class="id">[1847600]</span></div><div class="what">TORN Racing FAQ: the license, first car, class thresholds, saving points and recommended cars behind our <a href="{base}/racing/">Racing</a> page.</div></div>
+  <div class="credit"><div class="who">Grando</div><div class="what">Racing Guide: What to upgrade in each class, the points-per-class recipe for reaching Class A with a full upgrade budget.</div></div>
+  <div class="credit"><div class="who">Madmiketyson <span class="id">[979994]</span></div><div class="what">Quick Route to Racing Merits: 1-lap Speedway races for the 250-win merit.</div></div>
+</div></section>
+
+<section><div class="wrap">
   <span class="eyebrow">Events</span>
   <h2 style="margin-top:.3em">Halloween</h2>
   <div class="credit"><div class="who">IceBlueFire <span class="id">[776]</span></div><div class="what">Halloween Trick or Treat Guide: basket levels, upgrade costs and the event FAQ behind our <a href="{base}/halloween/">Trick or Treat</a> page.</div></div>

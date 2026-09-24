@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Ai đang nói",
     "title": "Gặp gỡ nhóm",
-    "lede": "Năm nhân vật điều hành playbook này. Mỗi người phụ trách một phần của game, và bạn sẽ thấy lời khuyên của họ trên các trang họ phụ trách.",
+    "lede": "Sáu nhân vật điều hành playbook này. Mỗi người phụ trách một phần của game, và bạn sẽ thấy lời khuyên của họ trên các trang họ phụ trách.",
     "members": {
       "banker": [
         "Chủ ngân hàng · Kinh tế",
@@ -105,6 +105,11 @@
         "Y sĩ · Hồi phục",
         "Overdose, item y tế, bệnh viện và chuẩn bị war",
         "Bác sĩ Elara Moreau, y sĩ"
+      ],
+      "racer": [
+        "Tay đua · Lái xe",
+        "Đua xe, kỹ năng lái, xe và nâng cấp",
+        "Axel Rivera, tay đua"
       ]
     }
   },

@@ -40,7 +40,9 @@
       "scripts": "Script'ler ve araçlar",
       "glossary": "Sözlük",
       "credits": "Kaynaklar",
-      "halloween": "Cadılar Bayramı etkinliği"
+      "halloween": "Cadılar Bayramı etkinliği",
+      "events": "Etkinlik takvimi",
+      "racing": "Yarışlar"
     }
   },
   "notice": {

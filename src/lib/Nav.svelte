@@ -27,7 +27,7 @@
       ['Cracking', '/crimes/cracking/'], ['Forgery', '/crimes/forgery/']
     ] },
     { id: 'fight', links: [['loadout', '/loadout/'], ['medical', '/medical/'], ['factionBasics', '/start/#faction'], ['halloween', '/halloween/']] },
-    { id: 'more', links: [['scripts', '/scripts/'], ['glossary', '/glossary/'], ['credits', '/credits/']] }
+    { id: 'more', links: [['events', '/events/'], ['racing', '/racing/'], ['scripts', '/scripts/'], ['glossary', '/glossary/'], ['credits', '/credits/']] }
   ];
 
   const label = (key) => m.nav.links[key] ?? key;

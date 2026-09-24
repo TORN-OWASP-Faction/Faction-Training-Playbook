@@ -40,7 +40,9 @@
       "scripts": "Script và công cụ",
       "glossary": "Thuật ngữ",
       "credits": "Nguồn tham khảo",
-      "halloween": "Sự kiện Halloween"
+      "halloween": "Sự kiện Halloween",
+      "events": "Lịch sự kiện",
+      "racing": "Đua xe"
     }
   },
   "notice": {

@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Cine vorbește",
     "title": "Cunoaște echipa",
-    "lede": "Cinci personaje conduc acest playbook. Fiecare se ocupă de o parte a jocului, iar sfaturile lor le găsești pe paginile de care răspund.",
+    "lede": "Șase personaje conduc acest playbook. Fiecare se ocupă de o parte a jocului, iar sfaturile lor le găsești pe paginile de care răspund.",
     "members": {
       "banker": [
         "Bancher · Economie",
@@ -105,6 +105,11 @@
         "Medic · Recuperare",
         "Supradoze, iteme medicale, spital și pregătire de război",
         "Dr. Elara Moreau, medicul"
+      ],
+      "racer": [
+        "Pilot · Condus",
+        "Curse, abilitatea de condus, mașini și upgrade-uri",
+        "Axel Rivera, pilotul"
       ]
     }
   },

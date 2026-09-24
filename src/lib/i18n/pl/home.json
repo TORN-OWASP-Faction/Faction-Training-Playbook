@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Kto tu mówi",
     "title": "Poznaj ekipę",
-    "lede": "Ten playbook prowadzi pięć postaci. Każda zajmuje się jedną częścią gry, a ich rady znajdziesz na stronach, za które odpowiadają.",
+    "lede": "Ten playbook prowadzi sześć postaci. Każda zajmuje się jedną częścią gry, a ich rady znajdziesz na stronach, za które odpowiadają.",
     "members": {
       "banker": [
         "Bankier · Ekonomia",
@@ -105,6 +105,11 @@
         "Medyk · Regeneracja",
         "Przedawkowania, przedmioty medyczne, szpital i przygotowanie do wojny",
         "Dr Elara Moreau, lekarka"
+      ],
+      "racer": [
+        "Kierowca · Wyścigi",
+        "Wyścigi, umiejętność jazdy, auta i ulepszenia",
+        "Axel Rivera, kierowca wyścigowy"
       ]
     }
   },

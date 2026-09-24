@@ -581,3 +581,8 @@
 :lang(ar) *, :lang(hi) *, :lang(ja) *, :lang(zh-CN) * {letter-spacing:normal!important}
 /* These scripts have no true italics; slanted glyphs just hurt legibility */
 :lang(ar) .say .line, :lang(hi) .say .line, :lang(ja) .say .line, :lang(zh-CN) .say .line {font-style:normal}
+
+/* Gearbox, the racer: the white of his suit and helmet stripes (red is taken by Rook and Patch) */
+:root{ --c-racer:#D8DCE2; --racer-soft:rgba(216,220,226,.12); }
+.say.racer{border-inline-start-color:var(--c-racer)} .say.racer .av{color:var(--c-racer)} .say.racer .tag{color:var(--c-racer);background:var(--racer-soft)}
+.crew.racer{border-top:3px solid var(--c-racer)} .crew.racer .role{color:var(--c-racer)}

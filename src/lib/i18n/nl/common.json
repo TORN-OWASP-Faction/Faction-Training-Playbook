@@ -40,7 +40,9 @@
       "scripts": "Scripts en tools",
       "glossary": "Woordenlijst",
       "credits": "Credits",
-      "halloween": "Halloween-event"
+      "halloween": "Halloween-event",
+      "events": "Evenementenkalender",
+      "racing": "Racen"
     }
   },
   "notice": {

@@ -40,7 +40,9 @@
       "scripts": "脚本和工具",
       "glossary": "术语表",
       "credits": "致谢",
-      "halloween": "万圣节活动"
+      "halloween": "万圣节活动",
+      "events": "活动日历",
+      "racing": "赛车"
     }
   },
   "notice": {

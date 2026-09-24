@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Kim konuşuyor",
     "title": "Ekiple tanış",
-    "lede": "Bu Playbook'u beş karakter yönetiyor. Her biri oyunun bir kısmıyla ilgileniyor ve tavsiyelerini sorumlu oldukları sayfalarda bulacaksın.",
+    "lede": "Bu Playbook'u altı karakter yönetiyor. Her biri oyunun bir kısmıyla ilgileniyor ve tavsiyelerini sorumlu oldukları sayfalarda bulacaksın.",
     "members": {
       "banker": [
         "Bankacı · Ekonomi",
@@ -105,6 +105,11 @@
         "Sıhhiyeci · İyileşme",
         "Overdose'lar, tıbbi eşyalar, hastane ve savaş hazırlığı",
         "Dr. Elara Moreau, sıhhiyeci"
+      ],
+      "racer": [
+        "Yarışçı · Sürüş",
+        "Yarışlar, sürüş becerisi, arabalar ve geliştirmeler",
+        "Axel Rivera, yarışçı"
       ]
     }
   },

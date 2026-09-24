@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Wie er praat",
     "title": "Maak kennis met de crew",
-    "lede": "Vijf personages runnen dit playbook. Elk van hen zorgt voor een deel van het spel, en je vindt hun advies op de pagina's die ze behandelen.",
+    "lede": "Zes personages runnen dit playbook. Elk van hen zorgt voor een deel van het spel, en je vindt hun advies op de pagina's die ze behandelen.",
     "members": {
       "banker": [
         "Bankier · Economie",
@@ -105,6 +105,11 @@
         "Medic · Herstel",
         "Overdoses, medische items, ziekenhuis en oorlogsvoorbereiding",
         "Dr. Elara Moreau, de medic"
+      ],
+      "racer": [
+        "Coureur · Rijden",
+        "Racen, rijvaardigheid, auto's en upgrades",
+        "Axel Rivera, de coureur"
       ]
     }
   },

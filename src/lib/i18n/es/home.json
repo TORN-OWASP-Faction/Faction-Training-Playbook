@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Quién habla",
     "title": "Conoce al equipo",
-    "lede": "Cinco personajes llevan este Playbook. Cada uno se ocupa de una parte del juego, y encontrarás sus consejos en las páginas que cubren.",
+    "lede": "Seis personajes llevan este Playbook. Cada uno se ocupa de una parte del juego, y encontrarás sus consejos en las páginas que cubren.",
     "members": {
       "banker": [
         "Banquero · Economía",
@@ -105,6 +105,11 @@
         "Médica · Recuperación",
         "Sobredosis, ítems médicos, hospital y preparación para la guerra",
         "Dra. Elara Moreau, la médica"
+      ],
+      "racer": [
+        "Piloto · Conducción",
+        "Carreras, habilidad de conducción, coches y mejoras",
+        "Axel Rivera, el piloto"
       ]
     }
   },

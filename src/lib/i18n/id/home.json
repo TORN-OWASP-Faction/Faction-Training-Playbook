@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Siapa yang bicara",
     "title": "Kenalan dengan kru",
-    "lede": "Lima karakter menjalankan playbook ini. Masing-masing mengurus satu bagian game, dan saran mereka ada di halaman yang mereka pegang.",
+    "lede": "Enam karakter menjalankan playbook ini. Masing-masing mengurus satu bagian game, dan saran mereka ada di halaman yang mereka pegang.",
     "members": {
       "banker": [
         "Bankir · Ekonomi",
@@ -105,6 +105,11 @@
         "Medis · Pemulihan",
         "Overdosis, item medis, rumah sakit, dan persiapan perang",
         "Dr. Elara Moreau, sang petugas medis"
+      ],
+      "racer": [
+        "Pembalap · Mengemudi",
+        "Balapan, skill mengemudi, mobil, dan upgrade",
+        "Axel Rivera, sang pembalap"
       ]
     }
   },

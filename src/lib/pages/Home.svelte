@@ -30,7 +30,8 @@
     ['trainer', 'Maya "Rep" Torres', 'trainer.png', 'bg_gym.png', 'M', '/training/'],
     ['militia', 'Marcus "Rook" Kane', 'militia.png', 'bg_militia.png', 'R', '/loadout/'],
     ['fixer', 'Nico "The Line" Vescari', 'nico.png', 'bg_alley.png', 'N', '/start/'],
-    ['medic', 'Dr. "Patch" Moreau', 'medic.png', 'bg_medic.png', 'P', '/medical/']
+    ['medic', 'Dr. "Patch" Moreau', 'medic.png', 'bg_medic.png', 'P', '/medical/'],
+    ['racer', 'Axel "Gearbox" Rivera', 'racer.png', 'bg_racing.png', 'A', '/racing/']
   ];
 </script>
 
@@ -134,6 +135,9 @@
   .more b{display:block;font-weight:600}
   .more small{display:block;color:var(--muted);font-size:.86rem;margin-top:.15rem}
   .mi{flex:none;color:var(--amber);margin-top:.15rem}
+  .hero-crew{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media(max-width:900px){.hero-crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:520px){.hero-crew{grid-template-columns:1fr}}
   a.crew{text-decoration:none;color:var(--ink)}
   a.crew:hover{border-color:var(--amber)}
   :global([dir="rtl"]) .sub a::before{content:'‹'}

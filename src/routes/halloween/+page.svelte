@@ -14,19 +14,42 @@
     ['Petrifying', 1940], ['Nightmarish', 4440, 'Oh My Gourd!']
   ];
 
-  // [upgrade, treat cost, what it does]
-  const FIRST_UPGRADES = [
-    ['I See Dead People', 3, '+10% treat chance while you wear spooky clothing'],
-    ["Here's Johnny!", 5, '+10% treat chance when a spooky weapon lands the final hit'],
-    ['Doubler', 25, '20% chance a treat drop is doubled'],
-    ['Tripler', 50, '10% chance a treat drop is tripled'],
-    ['Quadrupler', 75, '5% chance a treat drop is quadrupled']
+  // Andyman's upgrade order (Oct 2023). [upgrade, treat cost, tier, what it does]
+  // Tier II opens at a Frightful basket, III at Shocking, IV at Horrifying.
+  const ORDER = [
+    ['I See Dead People', 3, 'I', '+10% treat chance while you wear spooky clothing'],
+    ["Here's Johnny!", 5, 'I', '+10% treat chance when a spooky weapon lands the final hit'],
+    ['Doubler', 25, 'I', '20% chance a treat drop is doubled'],
+    ['Tripler', 50, 'I', '10% chance a treat drop is tripled'],
+    ['Quadrupler', 75, 'I', '5% chance a treat drop is quadrupled'],
+    ['Cat in Hell', 13, 'III', 'A 1 in 500,000 chance per attack of 1,000 treats, for only 13'],
+    ['Quintupler', 100, 'I', '1% chance a treat drop is quintupled. The multipliers stack'],
+    ['Shadow of Doubt', 1000, 'IV', 'Gives 1,100 treats, which also count toward your basket level. Saving for it takes about a whole event of attacking'],
+    ['Multipack', 180, 'IV', '3% chance an exchanged item becomes a multipack'],
+    ['Deal with the Devil', 320, 'IV', '3% chance an exchanged item becomes an eDVD, FHC, Business Class Ticket or Casino Pass'],
+    ['Dark Power', 285, 'III', '+5 energy per treat you exchange, up to 1,000'],
+    ['Freebie', 120, 'III', '1 bonus treat for every 10 you exchange'],
+    ['Bloody Mary', 15, 'II', 'Exchanges can give Bottles of Wicked Witch'],
+    ['Nice Chianti', 30, 'II', 'Exchanges can give Bottles of Stinky Swamp Punch'],
+    ['Nightcrawler', 45, 'II', 'Exchanges can give Cans of Munster'],
+    ["It's Alive", 90, 'II', 'Exchanges can give Cans of Red Cow'],
+    ['Cashback', 230, 'III', '10% of your treats back after an exchange'],
+    ['Candyman', 5, 'II', 'Exchanges can give Bags of Bloody Eyeballs'],
+    ['Sweet Release', 10, 'II', 'Exchanges can give Bags of Chocolate Truffles'],
+    ['Cold Sweat', 170, 'III', '+1 nerve per treat you exchange']
   ];
-  let spent = 0;
-  const upgrades = FIRST_UPGRADES.map(([name, cost, what]) => [name, cost, (spent += cost), what]);
+  const TIER_OPENS = { I: 'From the start', II: 'Frightful basket', III: 'Shocking basket', IV: 'Horrifying basket' };
+
+  // Andyman marks these "never". [upgrade, treat cost, what it does]
+  const SKIP = [
+    ['Save Your Tears', 95, '+500 happy per treat exchanged, up to 99,999'],
+    ['Mortal Coil', 500, '1 free treat an hour during the event: about 168 a year, so it pays back in its third year'],
+    ['Inflation', 777, 'Treats you hold grow 0.1% an hour during the event'],
+    ['Summon Cthulhu', 9999, "Summons M'aol, a boss the whole game fights. Years of saving"]
+  ];
 
   // Average treats collected after every 10 attacks (0, 10, 20 … 800), from simulating the wiki's odds: 35% base,
-  // +5% per basket level, +10% each for clothing and weapon, upgrades bought in the order above.
+  // +5% per basket level, +10% each for clothing and weapon, first five upgrades bought in order.
   const TREATS_PER_10 = [0, 4, 9, 15, 21, 28, 35, 42, 51, 59, 67, 76, 85, 95, 106, 116, 127, 138, 149, 160, 172, 185, 198,
     211, 224, 237, 251, 264, 278, 291, 305, 319, 333, 347, 360, 374, 388, 402, 416, 430, 444, 458, 473, 487, 502, 517, 531,
     546, 560, 575, 590, 604, 619, 634, 648, 663, 678, 692, 707, 721, 736, 751, 765, 780, 795, 809, 824, 838, 853, 868, 882,
@@ -63,7 +86,7 @@
   <h1>Trick or <em>Treat</em></h1>
   <p class="lede">For one week a year, every attack you start can drop a treat into a Halloween basket. You spend treats on basket upgrades, and your first 40 earn a merit. This is everything a new player needs.</p>
   <div class="facts">
-    <div class="tile"><span>When</span><b>25 Oct – 1 Nov</b><small>Baskets go on sale at 10:00 TCT</small></div>
+    <div class="tile"><span>When</span><b>25 Oct – 1 Nov</b><small>At your event time, 10:00–16:00 TCT</small></div>
     <div class="tile"><span>You need</span><b>Level 5 + $35</b><small>For the Halloween Basket</small></div>
     <div class="tile"><span>You earn</span><b>Treats</b><small>From attacks you start and win</small></div>
     <div class="tile"><span>Your goal</span><b>40 treats</b><small>Frightful basket = a merit</small></div>
@@ -75,7 +98,7 @@
   <h2>Six steps</h2>
   <ol class="steps" style="margin-top:1.2rem">
     <li><div><b>Be level 5 by 25 October.</b><small>You can't buy a basket before level 5.</small></div></li>
-    <li><div><b>Buy a Halloween Basket.</b><small>$35 at Sally's Sweet Shop in the city. It restocks 1,000 baskets every 15 minutes, so if it's sold out, come back after the next restock. It counts toward your 100 items a day from city shops, so do your other city shopping first.</small></div></li>
+    <li><div><b>Buy a Halloween Basket.</b><small>$35 at Sally's Sweet Shop in the city, from your event start time (shown at the top of the in-game Calendar page). It restocks 1,000 baskets every 15 minutes, so if it's sold out, come back after the next restock. It counts toward your 100 items a day from city shops, so do your other city shopping first.</small></div></li>
     <li><div><b>Buy spooky gear.</b><small>Any spooky clothing and a spooky weapon each add +10% to your treat chance. Cheapest right now: an <b>Axe</b> (about $2–4k) and a <b>Kabuki Mask</b> (about $10k from a city shop), or a Scarred Man or Nun Mask (about $20k on the item market). During the event, an item's description says "Spooky: Yes".</small></div></li>
     <li><div><b>Unlock the two gear upgrades first.</b><small>Open your basket (Items → Special → Use) and buy <b>I See Dead People</b> (3 treats), then <b>Here's Johnny!</b> (5 treats). Until you do, the gear does nothing.</small></div></li>
     <li><div><b>Attack in your gear, and finish with the spooky weapon.</b><small>Only attacks you start <b>and win</b> can drop a treat. Losses and defends don't. Leave, mug or hospitalize: the chance is the same. <a href="#targets">Picking targets →</a></small></div></li>
@@ -86,17 +109,26 @@
 
 <section id="upgrades"><div class="wrap">
   <span class="eyebrow">Spend treats in this order</span>
-  <h2>Your first upgrades</h2>
-  <p class="lede">Upgrades use up treats. Buy them in this order, one as soon as you can afford it.</p>
+  <h2>Upgrade order</h2>
+  <p class="lede">Upgrades use up treats. Buy them in this order, each one as soon as you can afford it. In your first event you'll get through the first five; the rest waits for bigger baskets and later years.</p>
   <div class="tbl-scroll" style="margin-top:1rem"><table>
-    <thead><tr><th>#</th><th>Upgrade</th><th class="num">Cost</th><th class="num">Spent so far</th><th>What it does</th></tr></thead>
+    <thead><tr><th>#</th><th>Upgrade</th><th class="num">Cost</th><th>Opens at</th><th>What it does</th></tr></thead>
     <tbody>
-      {#each upgrades as [name, cost, total, what], i}
-        <tr><td class="mono">{i + 1}</td><td class="nowrap"><b>{name}</b></td><td class="num mono">{cost}</td><td class="num mono">{total}</td><td>{what}</td></tr>
+      {#each ORDER as [name, cost, tier, what], i}
+        <tr class:first={i < 5}>
+          <td class="mono">{i + 1}</td><td class="nowrap"><b>{name}</b></td><td class="num mono">{nf.format(cost)}</td>
+          <td class="nowrap">{TIER_OPENS[tier]}</td><td>{what}</td>
+        </tr>
       {/each}
     </tbody>
   </table></div>
-  <p class="note">After these, the order jumps between tiers. Follow Andyman's full chart in <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16192843&b=0&a=0" target="_blank" rel="noopener">IceBlueFire's forum guide</a>.</p>
+  <div class="callout" style="margin-top:1rem">
+    <h3 style="margin-bottom:.5rem">Skip these</h3>
+    <ul class="rules">
+      {#each SKIP as [name, cost, what]}<li><span class="k">✗</span><div><b>{name}</b> ({nf.format(cost)}): {what}.</div></li>{/each}
+    </ul>
+  </div>
+  <p class="note">Order from Andyman's upgrade chart (October 2023), shared in <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16192843&b=0&a=0" target="_blank" rel="noopener">IceBlueFire's forum guide</a>. His note on Cold Sweat: it assumes you've unlocked Crimes 2.0.</p>
 </div></section>
 
 <section id="levels"><div class="wrap">
@@ -231,7 +263,7 @@
   .note{color:var(--muted);font-size:.9rem;margin-top:.8rem}
   .num{text-align:end;white-space:nowrap}
   .nowrap{white-space:nowrap}
-  tr.goal td{background:var(--amber-soft)}
+  tr.goal td,tr.first td{background:var(--amber-soft)}
   .planner{margin-top:1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1.1rem 1.2rem;display:grid;gap:1rem}
   .presets{display:flex;flex-wrap:wrap;gap:.4rem}
   .sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem 1.4rem}

@@ -40,7 +40,9 @@
       "scripts": "Scripts y herramientas",
       "glossary": "Glosario",
       "credits": "Créditos",
-      "halloween": "Evento de Halloween"
+      "halloween": "Evento de Halloween",
+      "events": "Calendario de eventos",
+      "racing": "Carreras"
     }
   },
   "notice": {

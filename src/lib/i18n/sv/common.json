@@ -40,7 +40,9 @@
       "scripts": "Skript och verktyg",
       "glossary": "Ordlista",
       "credits": "Tack till",
-      "halloween": "Halloween-event"
+      "halloween": "Halloween-event",
+      "events": "Eventkalender",
+      "racing": "Racing"
     }
   },
   "notice": {

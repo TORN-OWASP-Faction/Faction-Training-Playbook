@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Sino ang nagsasalita",
     "title": "Kilalanin ang crew",
-    "lede": "Limang character ang nagpapatakbo ng playbook na ito. Bawat isa ay may hawak na parte ng game, at makikita mo ang advice nila sa mga page na sakop nila.",
+    "lede": "Anim na character ang nagpapatakbo ng playbook na ito. Bawat isa ay may hawak na parte ng game, at makikita mo ang advice nila sa mga page na sakop nila.",
     "members": {
       "banker": [
         "Banker · Economy",
@@ -105,6 +105,11 @@
         "Medic · Recovery",
         "Overdose, medical items, hospital at war prep",
         "Dr. Elara Moreau, ang medic"
+      ],
+      "racer": [
+        "Racer · Driving",
+        "Racing, driving skill, mga kotse at upgrades",
+        "Axel Rivera, ang racer"
       ]
     }
   },

@@ -40,7 +40,9 @@
       "scripts": "Script dan tools",
       "glossary": "Glosarium",
       "credits": "Kredit",
-      "halloween": "Event Halloween"
+      "halloween": "Event Halloween",
+      "events": "Kalender event",
+      "racing": "Balapan"
     }
   },
   "notice": {

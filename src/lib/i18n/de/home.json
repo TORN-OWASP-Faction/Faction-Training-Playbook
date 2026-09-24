@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Wer hier spricht",
     "title": "Die Crew",
-    "lede": "Fünf Charaktere führen durch dieses Playbook. Jeder kümmert sich um einen Teil des Spiels, und ihre Tipps findest du auf den Seiten, die sie betreuen.",
+    "lede": "Sechs Charaktere führen durch dieses Playbook. Jeder kümmert sich um einen Teil des Spiels, und ihre Tipps findest du auf den Seiten, die sie betreuen.",
     "members": {
       "banker": [
         "Banker · Wirtschaft",
@@ -105,6 +105,11 @@
         "Ärztin · Erholung",
         "Overdoses, medizinische Items, Krankenhaus und Kriegsvorbereitung",
         "Dr. Elara Moreau, die Ärztin"
+      ],
+      "racer": [
+        "Rennfahrer · Fahren",
+        "Rennen, Fahrkönnen, Autos und Upgrades",
+        "Axel Rivera, der Rennfahrer"
       ]
     }
   },

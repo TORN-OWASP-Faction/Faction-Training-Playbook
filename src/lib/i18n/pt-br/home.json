@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Quem está falando",
     "title": "Conheça a equipe",
-    "lede": "Cinco personagens comandam este Playbook. Cada um cuida de uma parte do jogo, e você encontra os conselhos deles nas páginas que eles cobrem.",
+    "lede": "Seis personagens comandam este Playbook. Cada um cuida de uma parte do jogo, e você encontra os conselhos deles nas páginas que eles cobrem.",
     "members": {
       "banker": [
         "Banqueiro · Economia",
@@ -105,6 +105,11 @@
         "Médica · Recuperação",
         "Overdoses, itens médicos, hospital e preparação para a guerra",
         "Dra. Elara Moreau, a médica"
+      ],
+      "racer": [
+        "Piloto · Direção",
+        "Corridas, habilidade de direção, carros e upgrades",
+        "Axel Rivera, o piloto"
       ]
     }
   },

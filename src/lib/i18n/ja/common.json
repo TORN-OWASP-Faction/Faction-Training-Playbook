@@ -40,7 +40,9 @@
       "scripts": "スクリプトとツール",
       "glossary": "用語集",
       "credits": "クレジット",
-      "halloween": "ハロウィンイベント"
+      "halloween": "ハロウィンイベント",
+      "events": "イベントカレンダー",
+      "racing": "レース"
     }
   },
   "notice": {

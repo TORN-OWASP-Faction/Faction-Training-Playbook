@@ -79,7 +79,7 @@
   "crew": {
     "eyebrow": "Vem pratar",
     "title": "Möt gänget",
-    "lede": "Fem karaktärer driver den här playbooken. Var och en tar hand om en del av spelet, och du hittar deras råd på sidorna de ansvarar för.",
+    "lede": "Sex karaktärer driver den här playbooken. Var och en tar hand om en del av spelet, och du hittar deras råd på sidorna de ansvarar för.",
     "members": {
       "banker": [
         "Bankir · Ekonomi",
@@ -105,6 +105,11 @@
         "Läkare · Återhämtning",
         "Överdoser, medicinska items, sjukhus och krigsförberedelser",
         "Dr. Elara Moreau, läkaren"
+      ],
+      "racer": [
+        "Racerförare · Körning",
+        "Racing, körskicklighet, bilar och uppgraderingar",
+        "Axel Rivera, racerföraren"
       ]
     }
   },
