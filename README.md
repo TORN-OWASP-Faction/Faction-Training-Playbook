@@ -1,46 +1,59 @@
 # Faction Training Playbook
 
-A self-hosted Torn training guide with a live jump planner. Two pages, no build step,
-no server, no dependencies (fonts load from Google Fonts; everything else ships in-repo).
+A Torn guide site for our faction: training, money, crimes, war prep, and a live jump
+planner. Built with SvelteKit + Tailwind and published as static HTML to GitHub Pages.
 
-- **`index.html`** — the **guide**: happy-jump mechanics, a level-≤15 path, level-15+
-  routines by income bracket, builds & scaling, schedules, item/education references, and
-  an offline jump calculator. Your three guides (Ledger, Rep, Rook) narrate it.
-- **`planner.html`** — the **live jump planner**: pulls live item prices, your gyms, and
-  your profile (stats/happy/energy/perks) from the Torn API and shows happy reached, total
-  stat gain, gain/energy and cost-per-stat, using Training Formula V2.0.
+Live: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
 
-The two pages link to each other. All figures use the accepted community formula.
+## Pages
 
-## Host on GitHub Pages
-1. Push this repo (`index.html`, `planner.html`, and `assets/` at the root).
-2. **Settings → Pages** → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
-3. Live at `https://torn-owasp-faction.github.io/Faction-Training-Playbook/`
-   (planner at `…/planner.html`).
+| Route | What it covers |
+|---|---|
+| `/` | The main guide: happy jumps and the jump routine, level ≤15 path, making money, income brackets, builds, schedules, items, education |
+| `/training/formula/` | Training Formula V2.0 explained, with an interactive gain chart and cost-vs-gain charts |
+| `/travel/` | Flying for money: money ladder, first-PI budget, routes, stats-first vs money-first |
+| `/medical/` | Overdoses, medical items and cooldowns |
+| `/loadout/` | War loadout: which weapons and perks are worth buying |
+| `/crimes/` | Crimes 2.0 and OC 2.0 (checkpoints, CPR) |
+| `/crimes/oc-scenarios/` | Every OC's slots, roles and role weights |
+| `/crimes/{burglary,shoplifting,cracking,forgery}/` | Sortable drop tables |
+| `/planner/` | Live jump planner (uses your Torn API key) |
+| `/scripts/` | Recommended scripts and tools, and how to set them up |
+| `/credits/` | Sources and authors |
 
-Or open the files locally in a browser — they work the same.
+## Develop
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # static site in build/
+```
+
+- Pages live in `src/routes/`; shared components (`Nav`, `Character`, `DataTable`, `Tabs`,
+  `Icon`, `FormulaLab`) in `src/lib/`.
+- Crime and OC tables load JSON from `src/lib/data/`.
+- Character art and backgrounds are in `static/assets/`.
+- Global styles are in `src/app.css`.
+
+## Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes
+it to Pages. In **Settings → Pages**, the source must be set to **GitHub Actions**. The
+workflow sets `BASE_PATH` to the repo name so links work under the project subpath.
 
 ## The live planner & your API key
-- **Save & fetch prices** — needs a **Limited** key. Pulls live item market values *and*
-  the gym list in one call.
-- **Fetch my profile** — needs a **Custom** key with gym + battle-stats access. Auto-fills
-  stat total, active gym (dots + energy), happy baseline, current energy, and detected
-  gym-gain perk %.
+
+- **Save & fetch prices** needs a **Limited** key. It pulls live item values and the gym
+  list in one call.
+- **Fetch my profile** needs a **Custom** key with gym + battle-stats access. It fills in
+  stat total, active gym, happy, energy and gym-gain perks.
 - Your key is stored **only in your browser** (`localStorage`) and sent **only** to
-  `api.torn.com`. Nothing else leaves the page. "Forget key" clears it. Create/revoke keys
-  at **torn.com → Settings → API Key**.
-- Prices use each item's Torn `market_value` (a market average, not the single lowest
-  listing); items are matched by name against the live list, so an unmatched item stays blank.
+  `api.torn.com`. "Forget key" clears it. Create or revoke keys at
+  **torn.com → Settings → API Key**.
+- Read-only: no automation, no writes. Gains use Training Formula V2.0 (Vladar) with
+  randomness excluded, so the numbers are expected values, not guarantees.
 
-## What it does NOT do
-No automation, no writes — read-only API calls only. Gains use Training Formula V2.0
-(Vladar): happy decays ~50% of energy spent per train and randomness is excluded, so the
-gain shown is an expected value, not a guarantee.
+## Sources
 
-## Files
-```
-index.html      the guide (self-contained)
-planner.html    the live jump planner (self-contained)
-assets/         character art + backgrounds (banker/trainer/militia, bg_bank/bg_gym/bg_militia)
-LICENSE
-```
+All game mechanics come from the Torn wiki and community guides; every author is credited
+on `/credits/`.
