@@ -4,7 +4,7 @@
   import PathChart from '$lib/PathChart.svelte';
   import EDU from '$lib/data/education.json';
   import { EDU_PLANS, EDU_WHY } from '$lib/eduplans.js';
-  import { simulate, milestoneDays, gainPerEnergy, naturalEnergy, MONEY_MILESTONES, STAT_MILESTONES, DEFAULTS, GYMS, PATHS } from '$lib/progression.js';
+  import { simulate, milestoneDays, gainPerEnergy, naturalEnergy, MONEY_MILESTONES, STAT_MILESTONES, DEFAULTS, GYMS, PATHS, MERIT_PLANS } from '$lib/progression.js';
 
   const ORDER = ['income', 'balanced', 'stats'];
   // Validated categorical steps for the dark surface (dataviz reference palette, slots 1–3)
@@ -19,7 +19,7 @@
   let startCash = $state(2000000);
   let xanaxPrice = $state(DEFAULTS.xanaxPrice);
   let tripProfitPI = $state(DEFAULTS.tripProfitPI);
-  let bankMerits = $state(DEFAULTS.bankMerits);
+  let startAge = $state(DEFAULTS.startAge);
   let perk = $state(DEFAULTS.perk * 100);
   let stockRate = $state(DEFAULTS.stockRatePerYear * 100);
 
@@ -33,7 +33,7 @@
     daysPerWeek, checkins, donator,
     startStats: num(startStats, 5000), startCash: num(startCash, 0),
     xanaxPrice: num(xanaxPrice, DEFAULTS.xanaxPrice), tripProfitPI: num(tripProfitPI, DEFAULTS.tripProfitPI),
-    bankMerits: +bankMerits, perk: num(perk, 0) / 100,
+    startAge: num(startAge, 60), perk: num(perk, 0) / 100,
     stockRatePerYear: num(stockRate, 0) / 100
   });
   // Education: one course at a time. Merits (−2% each), the WSU block (−10%) and the Education job (−10%) stack to −40%.
@@ -128,7 +128,7 @@
     income: {
       merits: [
         ['Education Length → 10/10', "−20% course time. Baldr's order: early on your bank is too small for interest merits to matter."],
-        ['Bank Interest → 10/10', '+50% interest. In the projection this is worth about $2B of year-5 networth.'],
+        ['Bank Interest → 10/10', '+50% interest: the biggest money upgrade you can buy with merits.'],
         ['Protection, then Evasion', '+3% passive Defense / Dexterity per upgrade: harder to mug and hit.']
       ],
       education: [
@@ -205,6 +205,32 @@
   // Awards the model sees along each path, grouped by the day they land. Multi-name entries are one per stat or country.
   const awardRows = (k) => runs[k].filter((x) => x.awards.length).map((x) => ({ day: x.day, names: x.awards.join(', '), merits: x.awards.join(', ').split(', ').length }));
   const meritPoints = 31357 * 300; // 300 points per merit at the Sep 2026 points price
+  // Faction upgrades: every special branch and what it does for a member (Torn wiki, Faction: special branches).
+  // The projection assumes none, so the two it can measure are run here with and without.
+  const FACTION = [
+    ['Steadfast', 'Gym gains +10% per stat, plus +5% and another +5% on the stats your faction specializes in (up to +20%)', 'Everyone who trains; stats first most'],
+    ['Excursion', 'Up to +10 items every trip, −75% travel fees, +30% hunting income, −20% rehab cost, +25% Cayman bank interest', 'Flyers; income first most'],
+    ['Voracity', 'Booster cooldown up to +24h (stack more eDVDs and FHCs per jump), candy happy +50%, energy-drink energy +50%, alcohol nerve +50%', 'Happy jumpers and heavy trainers'],
+    ['Toleration', 'Drug addiction −50%, overdose chance −30%, drug side effects −30%', 'Anyone on daily Xanax'],
+    ['Aggression', 'Passive Speed and Strength +20%, accuracy +2.0, damage +10%, hospital time you deal +50%', 'Hitters and war fighters'],
+    ['Suppression', 'Passive Defense and Dexterity +20%, max life +20%, Dexterity ×6 when escaping', 'Defenders, and anyone who gets hit a lot'],
+    ['Fortitude', 'Hospital time −25%, medical items +30% effective, revives cost 25 energy, +4% life regen, +3h medical cooldown', 'War fighters and revivers'],
+    ['Criminality', 'Crime experience and skill +10%, max nerve +40, jail time −30%, bust skill +50%', 'Crime grinders and OC players']
+  ];
+  const withEdu = (k, extra) => simulate(k, { ...opts, eduDoneDays: eduDoneDays(k), ...extra });
+  const sooner = (base, boosted, key, mark) => {
+    const [a] = milestoneDays(base, key, [mark]), [b] = milestoneDays(boosted, key, [mark]);
+    if (a === null || b === null) return null;
+    return Math.round((a - b) / 30.4);
+  };
+  const factionImpact = $derived.by(() => {
+    const steadfast = withEdu('stats', { perk: opts.perk + 0.1 });
+    const excursion = withEdu('income', { extraItems: 10 });
+    return {
+      Steadfast: `On stats first, +10% gym gains reaches 100M stats ${sooner(runs.stats, steadfast, 'stats', 1e8) ?? '?'} months sooner and 1B ${sooner(runs.stats, steadfast, 'stats', 1e9) ?? '?'} months sooner.`,
+      Excursion: `On income first, +10 items a trip reaches $1B ${sooner(runs.income, excursion, 'networth', 1e9) ?? '?'} months sooner and $2B ${sooner(runs.income, excursion, 'networth', 2e9) ?? '?'} months sooner.`
+    };
+  });
   const MONEY_ROWS = ['$15M', '$100M', '$500M', '$1B', '$2B', '$5B'];
   let guide = $state('income');
 
@@ -284,14 +310,14 @@
       </label>
       <label>Starting total stats<input type="number" min="0" step="1000" bind:value={startStats} /></label>
       <label>Starting cash<input type="number" min="0" step="1000000" bind:value={startCash} /></label>
+      <label>Account age (days)<input type="number" min="1" step="10" bind:value={startAge} /></label>
     </div>
     <details class="adv">
       <summary>Assumptions you can change</summary>
       <div class="controls">
         <label>Xanax price ($)<input type="number" min="0" step="10000" bind:value={xanaxPrice} /></label>
         <label>Profit per trip with a PI ($)<input type="number" min="0" step="10000" bind:value={tripProfitPI} /></label>
-        <label>Bank interest merits<select bind:value={bankMerits}>{#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as m}<option value={m}>{m} / 10{m === 0 ? ' (none yet)' : m === 10 ? ' (maxed)' : ''}</option>{/each}</select></label>
-        <label>Gym-gain perks (%)<input type="number" min="0" step="1" bind:value={perk} /></label>
+        <label>Gym-gain perks (%): 2 = education only<input type="number" min="0" step="1" bind:value={perk} /></label>
         <label>Shares toward the next block (%/year)<input type="number" min="0" step="1" bind:value={stockRate} /></label>
       </div>
       <p class="note">Defaults: Xanax and XTC at YATA market value. A trip is 15 long-haul plushies at ~$44k profit each (18 once you buy the large suitcase). Bank rates are FFScouter's live APRs (2-week 43%, 3-month 51% with no bank merits; +5% per merit). Stock blocks are bought by return from FFScouter's block table whenever they beat the bank; money waiting for the next block grows at share-price rate. All Sep 2026.</p>
@@ -398,7 +424,7 @@
           <tr><td>Flying</td><td class="mono">+{money(day.fly)}</td></tr>
           <tr class="sub"><td colspan="2">{trips} trips × {money(day.perTrip)} ({day.pi ? (day.suitcase ? 'PI + suitcase, 18 items' : 'PI, 15 items') : 'standard, 10 items'}); a round trip takes two check-ins.</td></tr>
           <tr><td>Bank interest</td><td class="mono">+{money(day.interest)}</td></tr>
-          <tr class="sub"><td colspan="2">{bankMerits}/10 bank merits{day.tci ? ' + TCI' : ''}{day.bank >= 2e9 ? ', 3-month terms at the $2B cap' : ', 2-week terms'}.</td></tr>
+          <tr class="sub"><td colspan="2">{day.merit['Bank Interest'] || 0}/10 bank merits{day.tci ? ' + TCI' : ''}{day.bank >= 2e9 ? ', 3-month terms at the $2B cap' : ', 2-week terms'}.</td></tr>
           {#if day.blockPay}<tr><td>Stock block payouts</td><td class="mono">+{money(day.blockPay)}</td></tr>
           <tr class="sub"><td colspan="2">Own {Object.entries(day.blocks).map(([k, n]) => (n > 1 ? `${k}×${n}` : k)).join(', ')}{day.tci ? ', TCI' : ''}: payouts sold at market value.</td></tr>{/if}
           <tr><td>Rent, pilot, donator</td><td class="mono">−{money(day.spendFixed)}</td></tr>
@@ -419,7 +445,7 @@
         <li><span class="k">E</span><div><b>Energy.</b> A full bar every 5 hours, captured only when you check in (and a night's sleep wastes some). Up to 3 Xanax a day (6–8h cooldown), a daily refill, and happy jumps, each bought from the path's energy budget.</div></li>
         <li><span class="k">S</span><div><b>Stats.</b> Training Formula V2.0 on your current gym. Gyms unlock after the wiki's energy requirement and fee; balanced and stats-first also buy the specialist gyms (Frontline, Gym 3000).</div></li>
         <li><span class="k">$</span><div><b>Money.</b> Flying needs two check-ins per round trip. A PI is rented only when its extra items cover its cost, and the large suitcase follows. Spare cash goes to the bank (to $2B, rate set by your bank merits); a stock block is bought whenever it returns more than the bank would, working down the list by return.</div></li>
-        <li><span class="k">✗</span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts and mugging losses. Education and non-bank merits appear only through the gym-gain perks field. Real players usually earn a little more and lose a little more.</div></li>
+        <li><span class="k">✗</span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts and mugging losses. Merits come from real players' award counts (see Merits in each guide). Faction upgrades are off unless you add them. Real players usually earn a little more and lose a little more.</div></li>
       </ul>
       <div>
         <p style="margin:0 0 .5rem;color:var(--muted)">Checked against the guides' own numbers:</p>
@@ -431,6 +457,25 @@
       </div>
     </div>
   </details>
+</div></section>
+
+<!-- FACTION UPGRADES -->
+<section id="faction"><div class="wrap">
+  <span class="eyebrow">What your faction can add</span>
+  <h2>Faction upgrades</h2>
+  <p class="lede">Factions spend respect on special branches that every member gets. The projection above assumes none, so here's what each branch would do for you. Where the model can measure it, you'll see the difference on your settings.</p>
+  <div class="tbl-scroll" style="margin-top:1rem"><table class="gt">
+    <thead><tr><th>Branch</th><th>What members get (at full upgrade)</th><th>Helps most</th><th>In the projection</th></tr></thead>
+    <tbody>
+      {#each FACTION as [name, what, who]}
+        <tr><td><b>{name}</b></td><td>{what}</td><td>{who}</td><td class:none={!factionImpact[name]}>{factionImpact[name] ?? 'Not modeled'}</td></tr>
+      {/each}
+    </tbody>
+  </table></div>
+  <p class="note" style="margin-top:.6rem">Branches cost roughly 250k–600k respect each at full upgrade, and unlock as a faction's total upgrades grow (at 20, 45, 75, 110 and 150). Want to see your own faction in the numbers? Put its Steadfast % into "Gym-gain perks" under the planner's assumptions.</p>
+  <Character variant="militia" name="Rook" tag="Faction Intel" initial="R" img="militia.png">
+    "Respect you earn in wars and chains buys these for everyone. Steadfast is training for free, Excursion is profit for free. Hit for the faction and the faction hits back for you."
+  </Character>
 </div></section>
 
 <!-- GUIDES -->
@@ -483,11 +528,20 @@
             <ol class="fl">{#each JOBS[k] as [what, why]}<li><b>{what}</b><span>{why}</span></li>{/each}</ol>
           </div>
           <div class="card">
-            <h3>Merits along the way</h3>
-            <p style="margin:.3em 0 .5rem;color:var(--muted);font-size:.9rem">Every medal and honor earns a merit. These are the ones this path picks up that the model can count: <b style="color:var(--ink)">{runs[k][365].meritsEarned}</b> in year one, <b style="color:var(--ink)">{runs[k][runs[k].length - 1].meritsEarned}</b> by year five. Levels, crimes and fights earn plenty more.</p>
-            <div class="awards"><table class="ledger"><tbody>
-              {#each awardRows(k) as r}<tr><td class="mono nowrap">{when(r.day)}</td><td>{r.names}</td><td class="mono">+{r.merits}</td></tr>{/each}
-            </tbody></table></div>
+            <h3>Merits: what to buy, and when</h3>
+            <p style="margin:.3em 0 .5rem;color:var(--muted);font-size:.9rem">Every medal and honor earns a merit. From 90 real players' award counts, a typical account has about <b style="color:var(--ink)">{runs[k][0].meritsAvail}</b> merits at {opts.startAge} days old and <b style="color:var(--ink)">{runs[k][365].meritsAvail}</b> a year later. Spend them in this order:</p>
+            <table class="ledger"><tbody>
+              {#each MERIT_PLANS[k] as [upgrade, level]}
+                {@const done = runs[k].findIndex((x) => (x.merit[upgrade] || 0) >= level)}
+                <tr><td>{upgrade} → {level}/10</td><td class="mono nowrap">{done < 0 ? 'beyond 5 years' : done === 0 ? 'already' : when(done)}</td></tr>
+              {/each}
+            </tbody></table>
+            <details class="adv" style="margin-top:.8rem">
+              <summary>Awards this path earns along the way</summary>
+              <div class="awards"><table class="ledger"><tbody>
+                {#each awardRows(k) as r}<tr><td class="mono nowrap">{when(r.day)}</td><td>{r.names}</td><td class="mono">+{r.merits}</td></tr>{/each}
+              </tbody></table></div>
+            </details>
             <p class="note" style="margin-top:.6rem">You can also buy merits: 300 points each (~{money(meritPoints)}), one per 2 levels. A Bank Interest merit adds ~$51M a year at the $2B cap, so a bought one pays back in about two months; at $500M on 2-week terms it's ~$11M a year, about ten months.</p>
           </div>
         </div>
@@ -536,7 +590,7 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>Progression paths.</strong> Built on Training Formula V2.0 (<strong>Vladar [1996140]</strong>); gym dots and unlock energy from the Torn wiki's Gym page; money order, PI financing and the $2B bank plan from <strong>Baldr [1847600]</strong>'s Basic Advice; energy budgets and happy-jump thresholds from the community guides (Weekly Energy, (Re)Quantify Your Impatience, Gym &amp; Stats Training Like a Pro 2026, Happy Jump Training, Gym Training Guide for Beginners, Training Gains Explained); bank rates and stock block returns from FFScouter's investment calculator; merit mechanics from the Torn wiki's Merit page; education courses, lengths and effects from the Torn API; passive block prices from OP Merit Breakdown; item prices from YATA. Dates are model estimates. Part of the <a href="{base}/">Faction Training Playbook</a>.
+  <strong>Progression paths.</strong> Built on Training Formula V2.0 (<strong>Vladar [1996140]</strong>); gym dots and unlock energy from the Torn wiki's Gym page; money order, PI financing and the $2B bank plan from <strong>Baldr [1847600]</strong>'s Basic Advice; energy budgets and happy-jump thresholds from the community guides (Weekly Energy, (Re)Quantify Your Impatience, Gym &amp; Stats Training Like a Pro 2026, Happy Jump Training, Gym Training Guide for Beginners, Training Gains Explained); bank rates and stock block returns from FFScouter's investment calculator; merit mechanics from the Torn wiki's Merit page, and how fast merits build up from 90 players' public award counts (anonymous); faction branches from the Torn wiki's Faction page; education courses, lengths and effects from the Torn API; passive block prices from OP Merit Breakdown; item prices from YATA. Dates are model estimates. Part of the <a href="{base}/">Faction Training Playbook</a>.
 </div></footer>
 
 <style>

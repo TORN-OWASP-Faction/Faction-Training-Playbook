@@ -84,13 +84,14 @@ export const DEFAULTS = {
   pilotPerDay: 30e3, // Property wiki
   piBudget: 15e6,
   donatorPackMonth: 23.5e6, // resale value of a donator pack (Baldr)
-  bankMerits: 5, // Bank Interest upgrades (0–10, +5% interest each, Merit wiki)
+  startAge: 60, // account age in days when the projection starts (a fresh level 15)
+  extraItems: 0, // extra travel items per trip, e.g. from the faction Excursion upgrade (up to +10)
   eduDoneDays: [], // days on which each course in the path's education plan finishes (from the page)
   bankAprShort: 0.4334, // 2-week terms with no bank merits (FFScouter, Sep 2026)
   bankAprLong: 0.5146, // 3-month terms with no bank merits; used once $2B is invested
   bankCap: 2e9,
   stockRatePerYear: 0.1, // shares held toward the next block: price growth only (~10% a year, Stock Market wiki)
-  perk: 0.1, // gym-gain perks: education + faction Steadfast + job
+  perk: 0.02, // gym-gain perks: Sports Science education. Faction Steadfast and job perks come on top
   happyPre: 1925, // rented Ranch before the PI
   happyPI: 3600 // rented 3,600-happy PI (Baldr's sweet spot)
 };
@@ -169,6 +170,17 @@ function buildAwards() {
 }
 
 
+// Merits on hand by account age, fitted to 90 real players' award counts (each award is a merit):
+// median ~60 under 3 months, ~130 at 3–12 months, ~195 at 1–2 years. merits ≈ 22.6 × age^0.33 (R² 0.49).
+export const meritsByAge = (days) => Math.floor(22.6 * Math.max(1, days) ** 0.329);
+
+// Where each path spends merits, in order: [upgrade, level to reach]. Upgrade n costs n merits (55 for 10/10).
+export const MERIT_PLANS = {
+  income: [['Education Length', 10], ['Bank Interest', 10], ['Protection', 10], ['Evasion', 10]],
+  balanced: [['Education Length', 10], ['Bank Interest', 5], ['Main stat', 10], ['Second stat', 10], ['Bank Interest', 10]],
+  stats: [['Main stat', 10], ['Second stat', 10], ['Education Length', 10], ['Bank Interest', 3], ['Third stat', 10], ['Fourth stat', 10]]
+};
+
 // Daily bank rate: live base APR, +5% per Bank Interest merit, +10% with the TCI block.
 function bankRate(o, capped, tci, merits) {
   return ((capped ? o.bankAprLong : o.bankAprShort) * (1 + 0.05 * merits) * (tci ? 1.1 : 1)) / 365;
@@ -186,7 +198,7 @@ function nextBlock(s, o) {
     if (!best || payout / cost > best.roi) best = { code, cost, payout, roi: payout / cost };
   }
   if (!s.tci) {
-    const extra = 0.1 * Math.min(s.bank, o.bankCap) * bankRate(o, s.bank >= o.bankCap, false, o.bankMerits) * 365;
+    const extra = 0.1 * Math.min(s.bank, o.bankCap) * bankRate(o, s.bank >= o.bankCap, false, s.merit['Bank Interest'] || 0) * 365;
     if (extra / TCI_COST > best.roi) best = { code: 'TCI', cost: TCI_COST, payout: 0, roi: extra / TCI_COST };
   }
   return best;
@@ -198,7 +210,7 @@ function piWorthRenting(o, bank) {
   const cost = o.piRent / 30 + o.pilotPerDay;
   const trips = (o.daysPerWeek / 7) * Math.min(3, o.checkins / 2);
   const uplift = trips * (o.tripProfitPI - o.tripProfitStd);
-  const income = trips * o.tripProfitPI + bank * bankRate(o, false, false, o.bankMerits);
+  const income = trips * o.tripProfitPI + bank * bankRate(o, false, false, 5);
   return uplift > cost || cost < income * 0.15;
 }
 
@@ -211,12 +223,13 @@ export function simulate(pathKey, opts = {}) {
     pi: false, piDue: 0, lastJump: -1e9, suitcase: false,
     blocks: {}, blockValue: 0, blockPayout: 0, tci: false,
     trips: 0, airHours: 0, imports: 0, courses: 0,
-    meritsEarned: 0
+    meritsEarned: 0, meritsSpent: 0, merit: {}, planStep: 0
   };
   const days = [];
   const bar = o.donator === 'no' ? 100 : 150;
   const awards = buildAwards();
   const earned = new Set(), since = {};
+  const meritPlan = MERIT_PLANS[pathKey];
 
   for (let d = 0; d < o.days; d++) {
     const active = evenly(d, o.daysPerWeek, 7);
@@ -225,7 +238,7 @@ export function simulate(pathKey, opts = {}) {
       statGain: 0, fly: 0, interest: 0, spendEnergy: 0, spendFixed: 0, spendGym: 0, dots: 0, happy: 0 };
 
     // Passive income arrives every day, played or not
-    const rate = bankRate(o, s.bank >= o.bankCap, s.tci, o.bankMerits);
+    const rate = bankRate(o, s.bank >= o.bankCap, s.tci, s.merit['Bank Interest'] || 0);
     L.interest = s.bank * rate;
     L.blockPay = s.blockPayout / 365; // block payouts, sold at market value
     L.bought = [];
@@ -280,11 +293,12 @@ export function simulate(pathKey, opts = {}) {
     }
 
     // Earn
-    const perTrip = s.pi ? o.tripProfitPI * (s.suitcase ? 18 / 15 : 1) : o.tripProfitStd;
+    const items = s.pi ? 15 + (s.suitcase ? 3 : 0) + o.extraItems : 10 + o.extraItems;
+    const perTrip = s.pi ? (o.tripProfitPI / 15) * items : (o.tripProfitStd / 10) * items;
     const tripsToday = active ? Math.min(s.pi ? 4 : 3, o.checkins / 2) : 0;
     L.fly = tripsToday * perTrip;
     // Long-haul round trips: ~5h20m with a PI, ~7h40m on standard tickets (China, Travel wiki)
-    s.trips += tripsToday; s.airHours += tripsToday * (s.pi ? 5.33 : 7.63); s.imports += tripsToday * (s.pi ? (s.suitcase ? 18 : 15) : 10);
+    s.trips += tripsToday; s.airHours += tripsToday * (s.pi ? 5.33 : 7.63); s.imports += tripsToday * items;
     L.perTrip = perTrip;
     const income = L.interest + L.fly + L.blockPay;
 
@@ -319,7 +333,7 @@ export function simulate(pathKey, opts = {}) {
     for (let i = 0; i < 5; i++) {
       const capped = s.bank >= o.bankCap;
       const b = nextBlock(s, o);
-      const alternative = capped ? o.stockRatePerYear : bankRate(o, false, s.tci, o.bankMerits) * 365;
+      const alternative = capped ? o.stockRatePerYear : bankRate(o, false, s.tci, s.merit['Bank Interest'] || 0) * 365;
       if (b.roi <= alternative || s.stocks + (capped ? 0 : s.bank) < b.cost) break;
       const fromPool = Math.min(s.stocks, b.cost);
       s.stocks -= fromPool; s.bank -= b.cost - fromPool;
@@ -331,7 +345,7 @@ export function simulate(pathKey, opts = {}) {
     L.cash = s.cash; L.bank = s.bank; L.stocks = s.stocks; L.wallet = s.wallet;
     L.networth = s.cash + s.bank + s.stocks + s.wallet + s.blockValue;
 
-    // Awards earned today, each worth merits. Bank merits stay a setting: levels, crimes and fights earn more than this sees
+    // Awards the model can see (shown on the page). Merits to spend come from the calibrated curve, which counts every award
     s.courses = o.eduDoneDays.filter((x) => x <= d).length;
     L.awards = [];
     for (const a of awards) {
@@ -343,6 +357,16 @@ export function simulate(pathKey, opts = {}) {
       if (got) { earned.add(a); s.meritsEarned += a.merits; L.awards.push(a.name); }
     }
     L.meritsEarned = s.meritsEarned;
+    L.meritsAvail = meritsByAge(o.startAge + d);
+    L.upgrades = [];
+    while (s.planStep < meritPlan.length) {
+      const [upgrade, target] = meritPlan[s.planStep];
+      const level = s.merit[upgrade] || 0;
+      if (level >= target) { s.planStep++; continue; }
+      if (L.meritsAvail - s.meritsSpent < level + 1) break;
+      s.meritsSpent += level + 1; s.merit[upgrade] = level + 1; L.upgrades.push(`${upgrade} ${level + 1}/10`);
+    }
+    L.merit = { ...s.merit };
     L.blockValue = s.blockValue; L.blocks = { ...s.blocks }; L.tci = s.tci;
     L.stats = s.stats; L.gym = s.gym; L.pi = s.pi; L.suitcase = s.suitcase; L.special = { ...s.special };
     days.push(L);
