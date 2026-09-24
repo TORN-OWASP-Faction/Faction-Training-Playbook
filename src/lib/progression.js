@@ -33,6 +33,28 @@ const CHA_CHAS = 19, GEORGES = 23;
 export const MONEY_MILESTONES = [1e8, 5e8, 1e9, 2e9, 5e9];
 export const STAT_MILESTONES = [5e3, 1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7, 5e7, 1e8, 5e8, 1e9];
 
+// Stock benefit blocks: [ticker, what it pays, cost of the first block, payout value per year]. Each extra block of
+// the same stock costs double for the same payout. FFScouter investment calculator, 24 Sep 2026.
+export const BLOCKS = [
+  ['SYM', 'Drug Pack weekly', 378.6e6, 223e6],
+  ['FHG', 'Feathery Hotel Coupon weekly', 1.77e9, 730.9e6],
+  ['TCT', '$1M monthly', 33.4e6, 11.8e6],
+  ['PRN', 'Erotic DVD weekly', 642.8e6, 225.4e6],
+  ['MUN', 'Six-pack of energy drinks weekly', 2.71e9, 837.4e6],
+  ['GRN', '$4M monthly', 164.6e6, 47.1e6],
+  ['IOU', '$12M monthly', 536.9e6, 141.3e6],
+  ['THS', 'Medical supplies weekly', 58.6e6, 14.8e6],
+  ['TMI', '$25M monthly', 1.37e9, 294.4e6],
+  ['HRG', 'Random property monthly', 2.67e9, 535.2e6],
+  ['EWM', 'Grenades weekly', 286.1e6, 56.3e6],
+  ['TSB', '$50M monthly', 3.51e9, 588.7e6],
+  ['LSC', 'Lottery voucher weekly', 293e6, 47e6],
+  ['CNC', '$80M monthly', 6.2e9, 941.9e6],
+  ['ASS', 'Six-pack of alcohol weekly', 360e6, 46.6e6],
+  ['PTS', '100 points weekly', 813.7e6, 163.1e6] // 10M shares; 100 points at $31,357 (Torn API)
+];
+const TCI_COST = 1.75e9; // +10% bank interest, passive: 1.5M shares at the Sep 2026 price (Torn API)
+
 // trainShare: fraction of each day's income that buys energy (stats); the rest builds capital (money).
 // Everyone puts ~90% toward the PI until it's rented (Baldr: PI first).
 export const PATHS = {
@@ -50,9 +72,9 @@ export const DEFAULTS = {
   startCash: 2e6,
   startGym: 4, // Silver Gym
   xanaxPrice: 850e3, // YATA market value, Sep 2026
-  refillPrice: 1.365e6, // 25 points (Gym Training Guide for Beginners)
+  refillPrice: 784e3, // 25 points at $31,357 (Torn API points market, Sep 2026)
   xtcPrice: 37e3, // YATA market value, Sep 2026
-  jumpCost: 16.7e6, // one happy jump (Gym Training Guide for Beginners)
+  jumpCost: 25.8e6, // 5 bought eDVDs ($4.32M each), XTC, 4 Xanax to stack, a refill (Torn API prices, Sep 2026). Job eDVDs make it cheaper
   jumpEnergy: 1150, // Happy Jump Training guide, method B
   jumpHappy: 35000,
   tripProfitPI: 660e3, // 15 long-haul plushies at ~$44k profit each (YATA, Sep 2026)
@@ -62,10 +84,12 @@ export const DEFAULTS = {
   pilotPerDay: 30e3, // Property wiki
   piBudget: 15e6,
   donatorPackMonth: 23.5e6, // resale value of a donator pack (Baldr)
-  bankRateShort: 0.0015, // per day on 2-week terms: between 43% APR (no merits) and 65% (10/10 bank merits), FFScouter, Sep 2026
-  bankRateLong: 0.00211, // per day on 3-month terms with 10/10 bank merits: 77.19% APR, FFScouter, Sep 2026
+  bankMerits: 5, // Bank Interest upgrades (0–10, +5% interest each, Merit wiki)
+  eduDoneDays: [], // days on which each course in the path's education plan finishes (from the page)
+  bankAprShort: 0.4334, // 2-week terms with no bank merits (FFScouter, Sep 2026)
+  bankAprLong: 0.5146, // 3-month terms with no bank merits; used once $2B is invested
   bankCap: 2e9,
-  stockRatePerYear: 0.1, // Stock Market wiki: prices expected to rise ~10% a year
+  stockRatePerYear: 0.1, // shares held toward the next block: price growth only (~10% a year, Stock Market wiki)
   perk: 0.1, // gym-gain perks: education + faction Steadfast + job
   happyPre: 1925, // rented Ranch before the PI
   happyPI: 3600 // rented 3,600-happy PI (Baldr's sweet spot)
@@ -108,13 +132,73 @@ function pay(s, amount) {
   return true;
 }
 
+// Every medal or honor earns one merit (Merit wiki). These are the awards the model can see; thresholds and names
+// come from the Torn API award lists. Levels, crimes and fights earn more that the model doesn't track.
+const NETWORTH_MEDALS = [['Apprentice', 1e5, 3], ['Entrepreneur', 2.5e5, 3], ['Executive', 5e5, 3], ['Millionaire', 1e6, 3],
+  ['Multimillionaire', 2.5e6, 7], ['Capitalist', 1e7, 7], ['Plutocrat', 2.5e7, 14], ['Aristocrat', 1e8, 14], ['Mogul', 2.5e8, 28],
+  ['Billionaire', 1e9, 28], ['Multibillionaire', 2.5e9, 56], ['Baron', 1e10, 56], ['Oligarch', 2.5e10, 112], ['Tycoon', 1e11, 112]];
+const STAT_HONORS = [['Lean', 100], ['Fit', 1e3], ['Healthy', 1e4], ['Toned', 1e5], ['Athletic', 1e6], ['Conditioned', 1e7],
+  ['Pumped', 1e8], ['Jacked', 1e9], ['Ripped', 1e10], ['Shredded', 1e11]];
+// One honor per stat at each size; the model assumes your total is spread across the four stats
+const PER_STAT_HONORS = [[1e6, 'Abaddon, Supersonic, Behemoth, Draco'], [1e7, 'Powerhouse, Turbocharged, Reinforced, Free Runner'],
+  [1e8, 'Mighty Roar, Lightspeed, Bulletproof, Alpinist'], [1e9, 'Well Built, Arrowshot, Shielded, Funambulist']];
+const TRIP_AWARDS = [['Frequent Flyer (medal)', 25], ['Jetlagged', 100], ['Mile High Club (honor)', 100], ['Mile High Club (medal)', 500],
+  ['There And Back Again', 1000]];
+const AIR_DAY_HONORS = [['Tourist', 7], ['Frequent Flyer (honor)', 31], ['Globetrotter', 365]];
+const IMPORT_HONORS = [['Mule', 100], ['Smuggler', 1000], ['Trafficker', 10000]];
+const COURSE_HONORS = [['Smart Alec', 10], ['Clever Dick', 25], ['Wise Guy', 50], ['Whiz Kid', 100]];
+const FACTION_MEDALS = ['Apprentice', 'Committed', 'Loyal', 'Dedicated', 'Faithful', 'Allegiant', 'Devoted', 'Dutiful', 'Flawless', 'Honorable']
+  .map((n, i) => [`${n} Faction Member`, (i + 1) * 100]);
+
+function buildAwards() {
+  const list = [];
+  for (const [name, at, hold] of NETWORTH_MEDALS) list.push({ name, merits: 1, networth: at, hold });
+  for (const [name, at] of STAT_HONORS) list.push({ name, merits: 1, test: (s) => s.stats >= at });
+  for (const [at, names] of PER_STAT_HONORS) list.push({ name: names, merits: 4, test: (s) => s.stats / 4 >= at });
+  for (const [name, at] of TRIP_AWARDS) list.push({ name, merits: 1, test: (s) => s.trips >= at });
+  // 50 trips to each of the four long-haul countries the model flies (Argentina, UAE, China, South Africa)
+  list.push({ name: 'Maradona, Land Of Promise, Year Of The Dragon, Cape Town', merits: 4, test: (s) => s.trips >= 200 });
+  for (const [name, at] of AIR_DAY_HONORS) list.push({ name, merits: 1, test: (s) => s.airHours / 24 >= at });
+  for (const [name, at] of IMPORT_HONORS) list.push({ name, merits: 1, test: (s) => s.imports >= at });
+  for (const [name, at] of COURSE_HONORS) list.push({ name, merits: 1, test: (s) => s.courses >= at });
+  for (const [name, at] of FACTION_MEDALS) list.push({ name, merits: 1, test: (s, d) => d >= at });
+  list.push({ name: 'Pocket Money', merits: 1, test: (s) => s.bank > 0 });
+  list.push({ name: 'Moneybags', merits: 1, test: (s) => s.stocks + s.blockValue >= 1e8 });
+  list.push({ name: 'Green, Green Grass', merits: 1, test: (s) => s.bank >= 1e9 });
+  return list;
+}
+
+
+// Daily bank rate: live base APR, +5% per Bank Interest merit, +10% with the TCI block.
+function bankRate(o, capped, tci, merits) {
+  return ((capped ? o.bankAprLong : o.bankAprShort) * (1 + 0.05 * merits) * (tci ? 1.1 : 1)) / 365;
+}
+
+// The next block to save for: the best yearly return for its price, even if it costs more than you have yet.
+// (Buying whatever is affordable fills up on weak second blocks; working down the list returns more.)
+// TCI's return is the extra bank interest it adds.
+function nextBlock(s, o) {
+  let best = null;
+  for (const [code, , cost1, payout] of BLOCKS) {
+    const owned = s.blocks[code] || 0;
+    const cost = cost1 * 2 ** owned;
+    if (owned >= 3) continue;
+    if (!best || payout / cost > best.roi) best = { code, cost, payout, roi: payout / cost };
+  }
+  if (!s.tci) {
+    const extra = 0.1 * Math.min(s.bank, o.bankCap) * bankRate(o, s.bank >= o.bankCap, false, o.bankMerits) * 365;
+    if (extra / TCI_COST > best.roi) best = { code: 'TCI', cost: TCI_COST, payout: 0, roi: extra / TCI_COST };
+  }
+  return best;
+}
+
 // Rent a PI when its extra flying profit (15 items, no tickets) covers its cost,
 // or once you're earning enough that the rent is small change and you can take it for the happy.
 function piWorthRenting(o, bank) {
   const cost = o.piRent / 30 + o.pilotPerDay;
   const trips = (o.daysPerWeek / 7) * Math.min(3, o.checkins / 2);
   const uplift = trips * (o.tripProfitPI - o.tripProfitStd);
-  const income = trips * o.tripProfitPI + bank * o.bankRateShort;
+  const income = trips * o.tripProfitPI + bank * bankRate(o, false, false, o.bankMerits);
   return uplift > cost || cost < income * 0.15;
 }
 
@@ -124,10 +208,15 @@ export function simulate(pathKey, opts = {}) {
   const s = {
     cash: o.startCash, bank: 0, stocks: 0, wallet: 0, stats: o.startStats,
     gym: o.startGym, gymEnergy: 0, special: { frontline: false, gym3000: false },
-    pi: false, piDue: 0, lastJump: -1e9, suitcase: false
+    pi: false, piDue: 0, lastJump: -1e9, suitcase: false,
+    blocks: {}, blockValue: 0, blockPayout: 0, tci: false,
+    trips: 0, airHours: 0, imports: 0, courses: 0,
+    meritsEarned: 0
   };
   const days = [];
   const bar = o.donator === 'no' ? 100 : 150;
+  const awards = buildAwards();
+  const earned = new Set(), since = {};
 
   for (let d = 0; d < o.days; d++) {
     const active = evenly(d, o.daysPerWeek, 7);
@@ -136,8 +225,10 @@ export function simulate(pathKey, opts = {}) {
       statGain: 0, fly: 0, interest: 0, spendEnergy: 0, spendFixed: 0, spendGym: 0, dots: 0, happy: 0 };
 
     // Passive income arrives every day, played or not
-    const rate = s.bank >= o.bankCap ? o.bankRateLong : o.bankRateShort;
+    const rate = bankRate(o, s.bank >= o.bankCap, s.tci, o.bankMerits);
     L.interest = s.bank * rate;
+    L.blockPay = s.blockPayout / 365; // block payouts, sold at market value
+    L.bought = [];
     s.stocks *= 1 + o.stockRatePerYear / 365;
 
     // Fixed costs. Can't cover the PI? Move out until you can.
@@ -190,9 +281,12 @@ export function simulate(pathKey, opts = {}) {
 
     // Earn
     const perTrip = s.pi ? o.tripProfitPI * (s.suitcase ? 18 / 15 : 1) : o.tripProfitStd;
-    if (active) L.fly = Math.min(s.pi ? 4 : 3, o.checkins / 2) * perTrip;
+    const tripsToday = active ? Math.min(s.pi ? 4 : 3, o.checkins / 2) : 0;
+    L.fly = tripsToday * perTrip;
+    // Long-haul round trips: ~5h20m with a PI, ~7h40m on standard tickets (China, Travel wiki)
+    s.trips += tripsToday; s.airHours += tripsToday * (s.pi ? 5.33 : 7.63); s.imports += tripsToday * (s.pi ? (s.suitcase ? 18 : 15) : 10);
     L.perTrip = perTrip;
-    const income = L.interest + L.fly;
+    const income = L.interest + L.fly + L.blockPay;
 
     // Distribute what's left after running costs: PI first, then the path's split between energy (stats) and capital (money)
     const share = s.pi || !piWorthIt ? path.trainShare(s) : 0.1;
@@ -221,8 +315,35 @@ export function simulate(pathKey, opts = {}) {
       s.bank += toBank; spare -= toBank; s.stocks += spare; s.cash = reserve;
     }
 
+    // Buy a benefit block whenever it returns more than the same money earns where it sits now
+    for (let i = 0; i < 5; i++) {
+      const capped = s.bank >= o.bankCap;
+      const b = nextBlock(s, o);
+      const alternative = capped ? o.stockRatePerYear : bankRate(o, false, s.tci, o.bankMerits) * 365;
+      if (b.roi <= alternative || s.stocks + (capped ? 0 : s.bank) < b.cost) break;
+      const fromPool = Math.min(s.stocks, b.cost);
+      s.stocks -= fromPool; s.bank -= b.cost - fromPool;
+      if (b.code === 'TCI') s.tci = true;
+      else { s.blocks[b.code] = (s.blocks[b.code] || 0) + 1; s.blockPayout += b.payout; }
+      s.blockValue += b.cost; L.bought.push(b.code);
+    }
+
     L.cash = s.cash; L.bank = s.bank; L.stocks = s.stocks; L.wallet = s.wallet;
-    L.networth = s.cash + s.bank + s.stocks + s.wallet;
+    L.networth = s.cash + s.bank + s.stocks + s.wallet + s.blockValue;
+
+    // Awards earned today, each worth merits. Bank merits stay a setting: levels, crimes and fights earn more than this sees
+    s.courses = o.eduDoneDays.filter((x) => x <= d).length;
+    L.awards = [];
+    for (const a of awards) {
+      if (earned.has(a)) continue;
+      let got = false;
+      if (a.networth) {
+        if (L.networth >= a.networth) { since[a.name] ??= d; got = d - since[a.name] >= a.hold; } else delete since[a.name];
+      } else got = a.test(s, d);
+      if (got) { earned.add(a); s.meritsEarned += a.merits; L.awards.push(a.name); }
+    }
+    L.meritsEarned = s.meritsEarned;
+    L.blockValue = s.blockValue; L.blocks = { ...s.blocks }; L.tci = s.tci;
     L.stats = s.stats; L.gym = s.gym; L.pi = s.pi; L.suitcase = s.suitcase; L.special = { ...s.special };
     days.push(L);
   }

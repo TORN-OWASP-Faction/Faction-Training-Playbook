@@ -2,6 +2,8 @@
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import PathChart from '$lib/PathChart.svelte';
+  import EDU from '$lib/data/education.json';
+  import { EDU_PLANS, EDU_WHY } from '$lib/eduplans.js';
   import { simulate, milestoneDays, gainPerEnergy, naturalEnergy, MONEY_MILESTONES, STAT_MILESTONES, DEFAULTS, GYMS, PATHS } from '$lib/progression.js';
 
   const ORDER = ['income', 'balanced', 'stats'];
@@ -17,8 +19,7 @@
   let startCash = $state(2000000);
   let xanaxPrice = $state(DEFAULTS.xanaxPrice);
   let tripProfitPI = $state(DEFAULTS.tripProfitPI);
-  let bankShort = $state(DEFAULTS.bankRateShort * 100);
-  let bankLong = $state(DEFAULTS.bankRateLong * 100);
+  let bankMerits = $state(DEFAULTS.bankMerits);
   let perk = $state(DEFAULTS.perk * 100);
   let stockRate = $state(DEFAULTS.stockRatePerYear * 100);
 
@@ -32,10 +33,13 @@
     daysPerWeek, checkins, donator,
     startStats: num(startStats, 5000), startCash: num(startCash, 0),
     xanaxPrice: num(xanaxPrice, DEFAULTS.xanaxPrice), tripProfitPI: num(tripProfitPI, DEFAULTS.tripProfitPI),
-    bankRateShort: num(bankShort, 0) / 100, bankRateLong: num(bankLong, 0) / 100, perk: num(perk, 0) / 100,
+    bankMerits: +bankMerits, perk: num(perk, 0) / 100,
     stockRatePerYear: num(stockRate, 0) / 100
   });
-  const runs = $derived(Object.fromEntries(ORDER.map((k) => [k, simulate(k, opts)])));
+  // Education: one course at a time. Merits (−2% each), the WSU block (−10%) and the Education job (−10%) stack to −40%.
+  let eduCut = $state(10);
+  const eduDoneDays = (k) => { let t = 0; return EDU_PLANS[k].map((c) => Math.round((t += EDU[c].days * (1 - eduCut / 100)))); };
+  const runs = $derived(Object.fromEntries(ORDER.map((k) => [k, simulate(k, { ...opts, eduDoneDays: eduDoneDays(k) })])));
   const horizon = $derived(runs.income.length - 1);
 
   // Compact numbers: 1.5B, 250M, 12k (no trailing ".0")
@@ -83,10 +87,10 @@
       money: [
         ['Rent a PI with an airstrip and hire a pilot. Nothing else comes first.'],
         ['Large suitcase ($10M, +3 items), a Stock Ticker (50 points) so you have somewhere safe to park cash, and everything else into 1–2 week bank terms. Merits: education length first, then bank interest.'],
-        ["Keep banking. Two cheap blocks that save time: IST (~$32M, free education) and WSU (~$64M, −10% education time)."],
+        ["Keep banking. WSU (~$108M, −10% education time) is worth it; skip IST, since every course in the game costs only ~$230k in total. With fewer than ~7 bank merits, the first SYM block (~$379M, 59% a year) beats the bank, so buy it when you can."],
         ["Still banking. Don't buy a PI yet: a bought PI with a vault runs $0.9–1.95B and would gut your investment."],
-        ["The bank's $2B cap. Switch to 2–3 month terms (about $4.2M/day at today's rates). Training share rises to 50%: the interest now pays for 3 Xanax and a refill every day. Spare money goes into buy-and-hold stock blocks, bought on dips."],
-        ["TCI (~$1.2B, +10% bank interest). Buy your own PI with a vault once it won't dent the $2B. SYS (~$1.4B) if you keep cash in a company vault. WLT (~$4.3B) is the flyer's endgame: a private jet that ignores flight delays."]
+        ["The bank's $2B cap. Switch to 2–3 month terms (about $4.2M/day at today's rates). Training share rises to 50%: the interest now pays for 3 Xanax and a refill every day. Spare money goes into stock blocks, working down the list by return: FHG, TCT, PRN, MUN, GRN, IOU (the first block of each returns 26–41% a year; a second block costs double for the same payout)."],
+        ["Keep working down the block list, and add PTS (~$814M, 100 points a week, ~20% a year). Skip TCI: at ~$1.75B its +10% bank interest earns only ~9% a year. Buy your own PI with a vault once it won't dent the $2B. SYS (~$2.0B) if you keep cash in a company vault. WLT (~$7.3B) is the flyer's endgame: a private jet that ignores flight delays."]
       ]
     },
     balanced: {
@@ -97,10 +101,10 @@
       money: [
         ['Rent a PI with an airstrip and hire a pilot.'],
         ['Large suitcase. 1–2 Xanax a day, and a happy jump about once a week while you\'re under 200k per stat. Everything else into 1–2 week bank terms.'],
-        ["Gym fees get real: Cha Cha's ($20M), then Frontline or Balboas ($50M, needs one pair of stats 25% ahead, so follow Baldr's ratio). IST and WSU. Keep banking."],
+        ["Gym fees get real: Cha Cha's ($20M), then Frontline or Balboas ($50M, needs one pair of stats 25% ahead, so follow Baldr's ratio). WSU for faster courses. Keep banking."],
         ["George's ($100M), then your single-stat specialist gym ($100M, 8.0 dots, needs one stat 25% ahead of the next). Bank the rest."],
-        ['Switch to 2–3 month terms. Training share rises to 70%: max training every day, paid for by interest. Stock blocks with what\'s left.'],
-        ['Same endgame buys as income first: TCI, your own PI with a vault, SYS or WLT.']
+        ['Switch to 2–3 month terms. Training share rises to 70%: max training every day, paid for by interest. What\'s left goes into stock blocks by return (see the focus list).'],
+        ['Same endgame buys as income first: PTS, your own PI with a vault, SYS or WLT. Skip TCI at today\'s price.']
       ]
     },
     stats: {
@@ -110,16 +114,108 @@
       floor: "<b>Your money floor:</b> always hold next month's rent and pilot (~$13.4M) plus a Xanax, and bank your 20% no matter what. Keep flying: it costs time, not energy.",
       money: [
         ['Rent a PI with an airstrip and hire a pilot. Even for stats: its happy (3,600 vs ~1,900) and the extra flying profit both feed your training.'],
-        ['80% into energy: Xanax daily, XTC while small, a happy jump every few days while under 200k per stat (~$16.7M each). The other 20% goes to the bank.'],
+        ['80% into energy: Xanax daily, XTC while small, a happy jump every few days while under 200k per stat (~$26.5M each with bought eDVDs; much less with Adult Novelties eDVDs). The other 20% goes to the bank.'],
         ["Gym fees come first: Cha Cha's ($20M), Frontline or Balboas ($50M). Keep your 20% banking."],
         ["George's ($100M) and your specialist gym ($100M). This is where stats-first spends its first big money."],
         ["You get here late, but it's the turning point: at $2B, interest alone funds max training, and stats-first stops being poor."],
-        ['Endgame buys as the others: TCI, your own PI with a vault, SYS or WLT.']
+        ['Endgame buys as the others: your own PI with a vault, SYS or WLT.']
       ]
     }
   };
+  // Where each path spends merits, education and stock money. Mechanics from the Merit and Education wiki pages,
+  // Educations for War, and FFScouter's block returns; the ordering is this playbook's advice.
+  const FOCUS = {
+    income: {
+      merits: [
+        ['Education Length → 10/10', "−20% course time. Baldr's order: early on your bank is too small for interest merits to matter."],
+        ['Bank Interest → 10/10', '+50% interest. In the projection this is worth about $2B of year-5 networth.'],
+        ['Protection, then Evasion', '+3% passive Defense / Dexterity per upgrade: harder to mug and hit.']
+      ],
+      education: [
+        ['History', 'Unlocks the Museum: trade flower and plushie sets for points. The full module is 175 days, so start early.'],
+        ['Sports Science', '+1% gym gains per course. Cheap insurance for your stat floor.'],
+        ['Skip Business', "Unless you'll run a company, and Baldr says don't."]
+      ],
+      stocks: [
+        ['WSU', '~$108M for −10% course time on every course. Skip IST: all 131 courses cost ~$230k in total, so free education saves almost nothing.'],
+        ['SYM before $2B?', "Only if your bank merits are low: its first block returns 59%, more than a 2-week term pays below ~7 merits."],
+        ['After $2B, by return', 'FHG 41%, TCT 35%, PRN 35%, MUN 31%, GRN 29%, IOU 26%, THS 25% (first blocks). Save for the next one on the list.'],
+        ['Skip TCI; add PTS', 'TCI costs ~$1.75B for ~9% a year. PTS (~$814M, 100 points a week) returns ~20%. SYS or WLT when you need them.']
+      ]
+    },
+    balanced: {
+      merits: [
+        ['Education Length → 10/10', 'Faster courses feed both lanes.'],
+        ['Bank Interest → 5', 'Half the interest boost for half the merits, while the bank is still small.'],
+        ["Your build's fighting stats", 'Brawn / Sharpness for hitters, Protection / Evasion for walls: +3% passive each, +30% at 10/10.']
+      ],
+      education: [
+        ['Sports Science first', "+1% gym gains per course, on every train you'll ever do."],
+        ['Your build\'s passive courses', 'Dexterity +19%, Speed +14%, Defense +11%, Strength +5% in total (Educations for War).'],
+        ['History later', 'Museum sets are a nice extra once your training courses are done.']
+      ],
+      stocks: [
+        ['WSU', '−10% course time on every course. Skip IST (courses are nearly free anyway).'],
+        ['SYM or PRN', 'Their payouts are training supplies: drug packs and a weekly eDVD toward your next jump.'],
+        ['After $2B, by return', 'The same list as income first: FHG, TCT, PRN, MUN, GRN, IOU.']
+      ]
+    },
+    stats: {
+      merits: [
+        ["Your build's fighting stats", '+3% passive per upgrade, +30% at 10/10, in every fight from the moment you spend them.'],
+        ['Your main weapon', 'Rifle Mastery (or your main weapon type): +1% damage and +0.2 accuracy per upgrade. See the war loadout.'],
+        ['Education Length, then a little Bank Interest', 'Faster courses, and enough interest to keep your 20% floor growing.']
+      ],
+      education: [
+        ['Sports Science first', 'The only education that raises the stats you train: +1% gym gains per course.'],
+        ['Passive stat courses', 'Dexterity +19%, Speed +14%, Defense +11%, Strength +5%: buffs on top of your trained stats.'],
+        ['War courses', 'MTH2310 / MTH3330 (−5% / −20% ammo use) and CBT3870 (weapon experience). Fighters call them must-haves.']
+      ],
+      stocks: [
+        ['Bank your 20% first', "Blocks come once there's money to spare."],
+        ['PRN, then SYM', 'A weekly eDVD toward your jumps and weekly drug packs: payouts you train with.'],
+        ['Skip MCS', '100 energy a week for ~$300M is under 1% a year. Xanax is far cheaper energy.']
+      ]
+    }
+  };
+  // Company specials by star level (Torn API company list). 3★ is where most of the good ones unlock.
+  const FIRST_JOB = ['Any 3★ company, now', 'Most useful perks unlock at 3★. Short on work stats? Pay the director to train you: +50 to your main work stat and +25 to your second each time. New hires wait 72 hours before using perks.'];
+  const JOBS = {
+    income: [
+      FIRST_JOB,
+      ['Cruise Line', '3★: +2 travel items. 10★: +3 more (they stack). 7★: Destination Report shows every item in stock in a country.'],
+      ['or Lingerie Store', '3★: +2 travel items. 7★: no property upkeep or staff costs, so your pilot is free.'],
+      ['or Flower / Toy Shop', '7★: +5 flowers or +5 plushies every trip.'],
+      ['Later: Oil Rig', '10★: +50% bank investment limit ($3B instead of $2B). 7★: +10% offshore bank interest.']
+    ],
+    balanced: [
+      FIRST_JOB,
+      ['Music Store', '3★: +30% gym experience, so gyms unlock sooner. 10★: +15% to all battle stats.'],
+      ['or a Strip Club for your build', 'Gents (Dexterity) or Ladies (Defense). 3★: +25% passive. 7★: +10% gym gains in that stat.'],
+      ['Adult Novelties if you jump', '3★: an eDVD for 20 job points (about one a week). 10★: eDVDs give double happy.']
+    ],
+    stats: [
+      FIRST_JOB,
+      ['A Strip Club for your build', 'Gents (Dexterity) or Ladies (Defense). 3★: +25% passive. 7★: +10% gym gains in that stat.'],
+      ['or Music Store', '3★: +30% gym experience, so gyms unlock sooner. 10★: +15% to all battle stats.'],
+      ['or Adult Novelties', '3★: an eDVD for 20 job points toward your jumps. 10★: eDVDs give double happy.'],
+      ['Also worth knowing', 'Fitness Center (3★: half the happy lost training; 10★: +3% gym gains). Nightclub 7★: half the overdose risk.']
+    ]
+  };
+  // Awards the model sees along each path, grouped by the day they land. Multi-name entries are one per stat or country.
+  const awardRows = (k) => runs[k].filter((x) => x.awards.length).map((x) => ({ day: x.day, names: x.awards.join(', '), merits: x.awards.join(', ').split(', ').length }));
+  const meritPoints = 31357 * 300; // 300 points per merit at the Sep 2026 points price
   const MONEY_ROWS = ['$15M', '$100M', '$500M', '$1B', '$2B', '$5B'];
   let guide = $state('income');
+
+  const eduPlan = (k) => {
+    let done = 0;
+    return EDU_PLANS[k].map((code, i) => {
+      const days = EDU[code].days * (1 - eduCut / 100);
+      done += days;
+      return { n: i + 1, code, name: EDU[code].name, why: EDU_WHY[code], days, done };
+    });
+  };
 
   const PLAYBOOK = [
     [5e3, 'Happy is everything', "Below ~100k stats, happy decides most of your gains. Get the PI, take an XTC when you train, top up with candy. Start Sports Science (your first bachelor's, +1% gym gains per course)."],
@@ -194,12 +290,11 @@
       <div class="controls">
         <label>Xanax price ($)<input type="number" min="0" step="10000" bind:value={xanaxPrice} /></label>
         <label>Profit per trip with a PI ($)<input type="number" min="0" step="10000" bind:value={tripProfitPI} /></label>
-        <label>Bank, short terms (%/day)<input type="number" min="0" step="0.01" bind:value={bankShort} /></label>
-        <label>Bank at $2B (%/day)<input type="number" min="0" step="0.01" bind:value={bankLong} /></label>
+        <label>Bank interest merits<select bind:value={bankMerits}>{#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as m}<option value={m}>{m} / 10{m === 0 ? ' (none yet)' : m === 10 ? ' (maxed)' : ''}</option>{/each}</select></label>
         <label>Gym-gain perks (%)<input type="number" min="0" step="1" bind:value={perk} /></label>
-        <label>Stocks past $2B (%/year)<input type="number" min="0" step="1" bind:value={stockRate} /></label>
+        <label>Shares toward the next block (%/year)<input type="number" min="0" step="1" bind:value={stockRate} /></label>
       </div>
-      <p class="note">Defaults: Xanax and XTC at YATA market value; a trip is 15 long-haul plushies at ~$44k profit each (18 once you buy the large suitcase); bank rates are FFScouter's live APRs (2-week terms 43–65% depending on bank merits, 3-month 77% with all 10); stocks count price growth only (~10%/yr, Stock Market wiki). The first benefit blocks return 31–59% a year in payouts, so raise it if you'll buy blocks. All Sep 2026.</p>
+      <p class="note">Defaults: Xanax and XTC at YATA market value. A trip is 15 long-haul plushies at ~$44k profit each (18 once you buy the large suitcase). Bank rates are FFScouter's live APRs (2-week 43%, 3-month 51% with no bank merits; +5% per merit). Stock blocks are bought by return from FFScouter's block table whenever they beat the bank; money waiting for the next block grows at share-price rate. All Sep 2026.</p>
     </details>
 
     <p class="readout">
@@ -216,7 +311,7 @@
       {/each}
     </div>
 
-    <h3 class="ch">Networth <span>(cash + bank + stocks)</span></h3>
+    <h3 class="ch">Networth <span>(cash + bank + stock blocks)</span></h3>
     <PathChart title="Networth over five years" series={moneySeries} {selected} marks={moneyMarks} yMin={1e6} yMax={topMoney} fmt={money} {hover} onhover={(d) => (hover = d)} onpick={pick} />
     <h3 class="ch">Total battle stats</h3>
     <PathChart title="Total battle stats over five years" series={statSeries} {selected} marks={statMarks} yMin={Math.max(100, Math.min(opts.startStats, 1e3))} yMax={topStats} fmt={count} {hover} onhover={(d) => (hover = d)} onpick={pick} />
@@ -303,6 +398,9 @@
           <tr><td>Flying</td><td class="mono">+{money(day.fly)}</td></tr>
           <tr class="sub"><td colspan="2">{trips} trips × {money(day.perTrip)} ({day.pi ? (day.suitcase ? 'PI + suitcase, 18 items' : 'PI, 15 items') : 'standard, 10 items'}); a round trip takes two check-ins.</td></tr>
           <tr><td>Bank interest</td><td class="mono">+{money(day.interest)}</td></tr>
+          <tr class="sub"><td colspan="2">{bankMerits}/10 bank merits{day.tci ? ' + TCI' : ''}{day.bank >= 2e9 ? ', 3-month terms at the $2B cap' : ', 2-week terms'}.</td></tr>
+          {#if day.blockPay}<tr><td>Stock block payouts</td><td class="mono">+{money(day.blockPay)}</td></tr>
+          <tr class="sub"><td colspan="2">Own {Object.entries(day.blocks).map(([k, n]) => (n > 1 ? `${k}×${n}` : k)).join(', ')}{day.tci ? ', TCI' : ''}: payouts sold at market value.</td></tr>{/if}
           <tr><td>Rent, pilot, donator</td><td class="mono">−{money(day.spendFixed)}</td></tr>
           <tr><td>Energy bought</td><td class="mono">−{money(day.spendEnergy)}</td></tr>
           {#if day.spendGym}<tr><td>Gyms &amp; gear</td><td class="mono">−{money(day.spendGym)}</td></tr>{/if}
@@ -320,8 +418,8 @@
       <ul class="rules">
         <li><span class="k">E</span><div><b>Energy.</b> A full bar every 5 hours, captured only when you check in (and a night's sleep wastes some). Up to 3 Xanax a day (6–8h cooldown), a daily refill, and happy jumps, each bought from the path's energy budget.</div></li>
         <li><span class="k">S</span><div><b>Stats.</b> Training Formula V2.0 on your current gym. Gyms unlock after the wiki's energy requirement and fee; balanced and stats-first also buy the specialist gyms (Frontline, Gym 3000).</div></li>
-        <li><span class="k">$</span><div><b>Money.</b> Flying needs two check-ins per round trip. A PI is rented only when its extra items cover its cost. Spare cash goes to the bank (to $2B), then stocks (~10% a year).</div></li>
-        <li><span class="k">✗</span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts, stock dividends and mugging losses. Real players usually earn a little more and lose a little more.</div></li>
+        <li><span class="k">$</span><div><b>Money.</b> Flying needs two check-ins per round trip. A PI is rented only when its extra items cover its cost, and the large suitcase follows. Spare cash goes to the bank (to $2B, rate set by your bank merits); a stock block is bought whenever it returns more than the bank would, working down the list by return.</div></li>
+        <li><span class="k">✗</span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts and mugging losses. Education and non-bank merits appear only through the gym-gain perks field. Real players usually earn a little more and lose a little more.</div></li>
       </ul>
       <div>
         <p style="margin:0 0 .5rem;color:var(--muted)">Checked against the guides' own numbers:</p>
@@ -366,6 +464,57 @@
             {/each}
           </tbody>
         </table></div>
+
+        <h3 style="margin-top:1.6rem">Where to focus: merits, education, stocks</h3>
+        <div class="focus">
+          {#each [['merits', 'Merits'], ['education', 'Education'], ['stocks', 'Stock market']] as [key, title]}
+            <div class="card">
+              <h3>{title}</h3>
+              <ol class="fl">
+                {#each FOCUS[k][key] as [what, why]}<li><b>{what}</b><span>{why}</span></li>{/each}
+              </ol>
+            </div>
+          {/each}
+        </div>
+
+        <div class="grid2 tops" style="margin-top:1.6rem">
+          <div class="card">
+            <h3>Your job</h3>
+            <ol class="fl">{#each JOBS[k] as [what, why]}<li><b>{what}</b><span>{why}</span></li>{/each}</ol>
+          </div>
+          <div class="card">
+            <h3>Merits along the way</h3>
+            <p style="margin:.3em 0 .5rem;color:var(--muted);font-size:.9rem">Every medal and honor earns a merit. These are the ones this path picks up that the model can count: <b style="color:var(--ink)">{runs[k][365].meritsEarned}</b> in year one, <b style="color:var(--ink)">{runs[k][runs[k].length - 1].meritsEarned}</b> by year five. Levels, crimes and fights earn plenty more.</p>
+            <div class="awards"><table class="ledger"><tbody>
+              {#each awardRows(k) as r}<tr><td class="mono nowrap">{when(r.day)}</td><td>{r.names}</td><td class="mono">+{r.merits}</td></tr>{/each}
+            </tbody></table></div>
+            <p class="note" style="margin-top:.6rem">You can also buy merits: 300 points each (~{money(meritPoints)}), one per 2 levels. A Bank Interest merit adds ~$51M a year at the $2B cap, so a bought one pays back in about two months; at $500M on 2-week terms it's ~$11M a year, about ten months.</p>
+          </div>
+        </div>
+
+        <div class="eduhd">
+          <h3>Education plan <span class="lane-note">one course at a time, in this order</span></h3>
+          <label>Your course-time reduction
+            <select bind:value={eduCut}>
+              {#each [0, 10, 20, 30, 40] as c}<option value={c}>{c === 0 ? 'None' : `−${c}%`}</option>{/each}
+            </select>
+          </label>
+        </div>
+        <p class="note" style="margin:.3rem 0 0">Education Length merits take 2% off each, the WSU block 10%, and reaching the top of the Education job another 10%: up to −40% in total.</p>
+        <div class="tbl-scroll" style="margin-top:.6rem"><table class="gt">
+          <thead><tr><th>#</th><th>Course</th><th>Why</th><th>Days</th><th>Done by</th></tr></thead>
+          <tbody>
+            {#each eduPlan(k) as r}
+              <tr>
+                <td class="mono">{r.n}</td>
+                <td><span class="mono">{r.code}</span> {r.name}</td>
+                <td>{r.why}</td>
+                <td class="mono">{r.days.toFixed(r.days < 10 ? 1 : 0)}</td>
+                <td class="mono nowrap">{when(Math.round(r.done))}</td>
+              </tr>
+            {/each}
+          </tbody>
+        </table></div>
       </div>
     {/if}
   {/each}
@@ -387,7 +536,7 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>Progression paths.</strong> Built on Training Formula V2.0 (<strong>Vladar [1996140]</strong>); gym dots and unlock energy from the Torn wiki's Gym page; money order, PI financing and the $2B bank plan from <strong>Baldr [1847600]</strong>'s Basic Advice; energy budgets and happy-jump thresholds from the community guides (Weekly Energy, (Re)Quantify Your Impatience, Gym &amp; Stats Training Like a Pro 2026, Happy Jump Training, Gym Training Guide for Beginners, Training Gains Explained); stock block prices from OP Merit Breakdown; item prices from YATA. Dates are model estimates. Part of the <a href="{base}/">Faction Training Playbook</a>.
+  <strong>Progression paths.</strong> Built on Training Formula V2.0 (<strong>Vladar [1996140]</strong>); gym dots and unlock energy from the Torn wiki's Gym page; money order, PI financing and the $2B bank plan from <strong>Baldr [1847600]</strong>'s Basic Advice; energy budgets and happy-jump thresholds from the community guides (Weekly Energy, (Re)Quantify Your Impatience, Gym &amp; Stats Training Like a Pro 2026, Happy Jump Training, Gym Training Guide for Beginners, Training Gains Explained); bank rates and stock block returns from FFScouter's investment calculator; merit mechanics from the Torn wiki's Merit page; education courses, lengths and effects from the Torn API; passive block prices from OP Merit Breakdown; item prices from YATA. Dates are model estimates. Part of the <a href="{base}/">Faction Training Playbook</a>.
 </div></footer>
 
 <style>
@@ -446,11 +595,23 @@
   .ledger tr.tot td{color:var(--ink);font-weight:600;border-bottom:0}
   .formula{margin:.8rem 0 0;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--faint);line-height:1.6}
 
-  .tabrow{display:flex;gap:.4rem;margin-top:1rem;border-bottom:1px solid var(--border);overflow-x:auto}
+  .tabrow{display:flex;gap:.4rem;margin-top:1rem;border-bottom:1px solid var(--border);overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+  .tabrow::-webkit-scrollbar{display:none}
   .tabrow button{font:inherit;cursor:pointer;background:none;border:0;border-bottom:2px solid transparent;padding:.55rem .9rem;
     color:var(--muted);font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:-1px}
   .tabrow button.on{color:var(--ink);border-bottom-color:var(--pc)}
   .tabrow button:focus-visible{outline:2px solid var(--pc);outline-offset:-2px}
   .gpanel{padding-top:1rem}
   table.gt td{vertical-align:top}
+  .focus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:.8rem}
+  @media(max-width:900px){.focus{grid-template-columns:1fr}}
+  ol.fl{margin:.6rem 0 0;padding-left:1.3rem;display:grid;gap:.7rem;list-style:decimal}
+  ol.fl li::marker{color:var(--pc);font-family:"IBM Plex Mono",monospace;font-weight:600}
+  ol.fl b{display:block;color:var(--ink);font-weight:600}
+  ol.fl span{color:var(--muted);font-size:.88rem}
+  .awards{max-height:17rem;overflow-y:auto}
+  .awards td:last-child{white-space:nowrap}
+  .eduhd{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+  .eduhd h3{margin:0}
+  .eduhd label{min-width:12rem}
 </style>

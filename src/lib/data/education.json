@@ -1,0 +1,1141 @@
+{
+"BUS1100": {
+"name": "Introduction to Business",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"BUS2200": {
+"name": "Statistics",
+"days": 14.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 2% productivity for your company"
+},
+"BUS2300": {
+"name": "Communication",
+"days": 14.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 5 effectiveness for the employees in your company"
+},
+"BUS2400": {
+"name": "Marketing",
+"days": 21.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain a 3% increase in advertising effectiveness for your company"
+},
+"BUS2500": {
+"name": "Corporate Finance",
+"days": 14.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 2% productivity for your company"
+},
+"BUS2600": {
+"name": "Corporate Strategy",
+"days": 28.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 7 effectiveness for the employees in your company"
+},
+"BUS2700": {
+"name": "Pricing Strategy",
+"days": 28.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 10% perceived product value for your company"
+},
+"BUS2800": {
+"name": "Logistics",
+"days": 14.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 2% productivity for your company"
+},
+"BUS2900": {
+"name": "Product Management",
+"days": 21.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 5% perceived product value for your company"
+},
+"BUS2100": {
+"name": "Business Ethics",
+"days": 21.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 2% productivity for your company"
+},
+"BUS2110": {
+"name": "Human Resource Management",
+"days": 21.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain a 20% passive bonus to employee working stats in your company"
+},
+"BUS2120": {
+"name": "E-Commerce",
+"days": 21.0,
+"pre": [
+"BUS1100"
+],
+"perk": "Gain 2% productivity for your company"
+},
+"BUS3130": {
+"name": "Bachelor of Commerce",
+"days": 35.0,
+"pre": [
+"BUS1100",
+"BUS2200",
+"BUS2300",
+"BUS2400",
+"BUS2500",
+"BUS2600",
+"BUS2700",
+"BUS2800",
+"BUS2900",
+"BUS2100",
+"BUS2110",
+"BUS2120"
+],
+"perk": "Unlock new size, storage size & staff room upgrades for your company"
+},
+"HIS1140": {
+"name": "Introduction to History",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"HIS2150": {
+"name": "Aims & Methods in Archaeology",
+"days": 14.0,
+"pre": [
+"HIS1140"
+],
+"perk": ""
+},
+"HIS2160": {
+"name": "Ancient Japanese History",
+"days": 21.0,
+"pre": [
+"HIS1140"
+],
+"perk": "Gain a 10% damage increase with Japanese blade weapons"
+},
+"HIS2170": {
+"name": "Medieval History",
+"days": 28.0,
+"pre": [
+"HIS1140"
+],
+"perk": "Gain a 2% bonus to all melee damage"
+},
+"HIS2180": {
+"name": "Medieval Archaeology",
+"days": 21.0,
+"pre": [
+"HIS1140"
+],
+"perk": "Gain the ability to find medieval coins"
+},
+"HIS2190": {
+"name": "South Asian Archaeology",
+"days": 21.0,
+"pre": [
+"HIS1140"
+],
+"perk": "Gain the ability to find Asian sculptures and Companion pages"
+},
+"HIS2200": {
+"name": "Egyptian Archaeology",
+"days": 21.0,
+"pre": [
+"HIS1140"
+],
+"perk": "Gain the ability to find Senet board pieces and amulets"
+},
+"HIS3210": {
+"name": "Bachelor of History",
+"days": 42.0,
+"pre": [
+"HIS1140",
+"HIS2150",
+"HIS2160",
+"HIS2170",
+"HIS2180",
+"HIS2190",
+"HIS2200"
+],
+"perk": "Unlock the museum, sets of artifacts and other collectibles can be exchanged here for points"
+},
+"MTH1220": {
+"name": "Introduction to Mathematics",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"CMT2230": {
+"name": "Web Design and Development",
+"days": 7.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Unlock the ability to create websites for use in Bootlegging and Scamming"
+},
+"MTH2240": {
+"name": "Essential Foundation Mathematics",
+"days": 21.0,
+"pre": [
+"MTH1220"
+],
+"perk": "Gain a 1% passive bonus to speed"
+},
+"MTH2250": {
+"name": "Intermediate Mathematics",
+"days": 21.0,
+"pre": [
+"MTH1220"
+],
+"perk": "Gain a 1% passive bonus to speed"
+},
+"MTH2260": {
+"name": "Geometry",
+"days": 21.0,
+"pre": [
+"MTH1220"
+],
+"perk": "Gain a 1% passive bonus to defense"
+},
+"MTH2270": {
+"name": "Algebra",
+"days": 14.0,
+"pre": [
+"MTH1220"
+],
+"perk": ""
+},
+"MTH2280": {
+"name": "Probability",
+"days": 21.0,
+"pre": [
+"MTH1220"
+],
+"perk": "Gain 1% productivity for your company"
+},
+"MTH2290": {
+"name": "Trigonometry",
+"days": 21.0,
+"pre": [
+"MTH1220"
+],
+"perk": ""
+},
+"MTH2300": {
+"name": "Calculus",
+"days": 28.0,
+"pre": [
+"MTH1220"
+],
+"perk": ""
+},
+"MTH2310": {
+"name": "Discrete Mathematics",
+"days": 28.0,
+"pre": [
+"MTH1220"
+],
+"perk": "Gain a 5% bonus to ammo conservation"
+},
+"MTH2320": {
+"name": "Geometry 2",
+"days": 21.0,
+"pre": [
+"MTH1220",
+"MTH2260"
+],
+"perk": "Gain a 2% passive bonus to defense"
+},
+"MTH3330": {
+"name": "Bachelor of Mathematics",
+"days": 42.0,
+"pre": [
+"MTH1220",
+"MTH2240",
+"MTH2250",
+"MTH2260",
+"MTH2270",
+"MTH2280",
+"MTH2290",
+"MTH2300",
+"MTH2310",
+"MTH2320"
+],
+"perk": "Gain a 20% bonus to ammo conservation"
+},
+"BIO1340": {
+"name": "Introduction to Biochemistry",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"BIO2350": {
+"name": "Evolution",
+"days": 14.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Gain a 1% damage bonus to all weapons"
+},
+"BIO2360": {
+"name": "Intermediate Biochemistry",
+"days": 28.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Gain a bonus of 10% to medical item effectiveness"
+},
+"BIO2370": {
+"name": "Advanced Biochemistry",
+"days": 28.0,
+"pre": [
+"BIO1340",
+"BIO2360"
+],
+"perk": "Gain a further 10% bonus to medical item effectiveness"
+},
+"BIO2380": {
+"name": "Fundamentals of Neurobiology",
+"days": 21.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Gain a 10% damage increase when hitting an opponent's throat"
+},
+"BIO2390": {
+"name": "Chromosomes and Gene Functions",
+"days": 14.0,
+"pre": [
+"BIO1340"
+],
+"perk": ""
+},
+"BIO2400": {
+"name": "Forensic Science",
+"days": 28.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Decrease an opponent's stealthiness by 0.5"
+},
+"BIO2410": {
+"name": "Anatomy",
+"days": 21.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Gain a 3% chance increase of achieving a critical hit"
+},
+"BIO3420": {
+"name": "Bachelor of Biology",
+"days": 35.0,
+"pre": [
+"BIO1340",
+"BIO2350",
+"BIO2360",
+"BIO2370",
+"BIO2380",
+"BIO2390",
+"BIO2400",
+"BIO2410",
+"BIO2127"
+],
+"perk": "Gain the ability to equip needles in your temporary slot"
+},
+"SPT1430": {
+"name": "Introduction to Sports Science",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"SPT2440": {
+"name": "Strength and Conditioning",
+"days": 21.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 1% bonus to strength gains in the gym"
+},
+"SPT2450": {
+"name": "Physiological Testing",
+"days": 21.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 1% bonus to speed gains in the gym"
+},
+"SPT2460": {
+"name": "Human Movement Analysis",
+"days": 14.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 1% bonus to defense gains in the gym"
+},
+"SPT2470": {
+"name": "Bio Mechanical Determinants of Skill",
+"days": 21.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 1% bonus to dexterity gains in the gym"
+},
+"SPT2480": {
+"name": "Sports Medicine",
+"days": 28.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 10% increase in needle effectiveness"
+},
+"SPT2490": {
+"name": "Nutritional Science",
+"days": 21.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 2% passive bonus to speed and strength"
+},
+"SPT2500": {
+"name": "Analysis and Performance",
+"days": 21.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Gain a 2% passive bonus to defense and dexterity"
+},
+"SPT3510": {
+"name": "Bachelor of Sports Science",
+"days": 42.0,
+"pre": [
+"SPT1430",
+"SPT2440",
+"SPT2450",
+"SPT2460",
+"SPT2470",
+"SPT2480",
+"SPT2490",
+"SPT2500",
+"SPT2126"
+],
+"perk": "Gain a further 1% boost in all gym gains"
+},
+"CMT1520": {
+"name": "Introduction to Computing",
+"days": 7.0,
+"pre": [],
+"perk": "Unlock the Cracking crime\nGain the ability to code Simple viruses"
+},
+"CMT2530": {
+"name": "Intermediate Programming",
+"days": 14.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Gain the ability to code Polymorphic and Tunneling viruses"
+},
+"CMT2540": {
+"name": "Networking",
+"days": 14.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Unlock hacking crimes (Crimes 1.0)"
+},
+"CMT2550": {
+"name": "Computer Repair",
+"days": 14.0,
+"pre": [
+"CMT1520"
+],
+"perk": ""
+},
+"CMT2560": {
+"name": "Algorithms and Advanced Programming",
+"days": 21.0,
+"pre": [
+"CMT1520",
+"CMT2530"
+],
+"perk": "Gain the ability to code Armored, Stealth, and Firewalk viruses"
+},
+"CMT2570": {
+"name": "Fundamentals of Computer Architecture",
+"days": 14.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Gain a 25% reduction in heat generated by rig components"
+},
+"CMT2580": {
+"name": "Software Engineering",
+"days": 21.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Gain a 20% decrease in virus coding times"
+},
+"CMT2590": {
+"name": "Quantum Computing",
+"days": 14.0,
+"pre": [
+"CMT1520"
+],
+"perk": ""
+},
+"CMT2600": {
+"name": "Natural Language Engineering",
+"days": 21.0,
+"pre": [
+"CMT1520"
+],
+"perk": "Gain a 10% decrease in virus coding times"
+},
+"CMT2610": {
+"name": "Computer Security and Defense",
+"days": 28.0,
+"pre": [
+"CMT1520",
+"CMT2540"
+],
+"perk": "Gain a 10% increase in hacking crime success rate (Crimes 1.0)"
+},
+"CMT3620": {
+"name": "Bachelor of Computer Science",
+"days": 49.0,
+"pre": [
+"CMT2230",
+"CMT1520",
+"CMT2530",
+"CMT2540",
+"CMT2550",
+"CMT2560",
+"CMT2570",
+"CMT2580",
+"CMT2590",
+"CMT2600",
+"CMT2610",
+"CMT2128",
+"CMT2129",
+"CMT2130",
+"CMT2131"
+],
+"perk": "Gain the ability to send mails and cash anonymously"
+},
+"PSY1630": {
+"name": "Introduction to Psychology",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"PSY2640": {
+"name": "Memory and Decision",
+"days": 14.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Gain a 1% passive bonus to dexterity"
+},
+"PSY2650": {
+"name": "Brain and Behaviour",
+"days": 21.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Gain a 2% passive bonus to dexterity"
+},
+"PSY2660": {
+"name": "Quantitative Methods in Psychology",
+"days": 21.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Gain a 4% passive bonus to dexterity"
+},
+"PSY2670": {
+"name": "Applied Decision Methods",
+"days": 28.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Gain an 8% passive bonus to dexterity"
+},
+"PSY2680": {
+"name": "Attention and Awareness",
+"days": 28.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Gain a 10% increase to awareness"
+},
+"PSY3690": {
+"name": "Bachelor of Psychological Sciences",
+"days": 49.0,
+"pre": [
+"PSY1630",
+"PSY2640",
+"PSY2650",
+"PSY2660",
+"PSY2670",
+"PSY2680",
+"PSY2132"
+],
+"perk": "Gain a 10% increase in passive crime XP"
+},
+"DEF1700": {
+"name": "Introduction to Self Defense",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"DEF2710": {
+"name": "Judo",
+"days": 21.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Gain a 1% passive bonus to defense"
+},
+"DEF2720": {
+"name": "Kick Boxing",
+"days": 14.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Unlock kick attack when in a battle"
+},
+"DEF2730": {
+"name": "Krav Maga",
+"days": 28.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Gain a 2% passive bonus to defense"
+},
+"DEF2740": {
+"name": "Jujitsu",
+"days": 14.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Gain a 3% passive bonus to defense"
+},
+"DEF2750": {
+"name": "Tae Kwon Do",
+"days": 14.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Gain a 2% passive bonus to speed"
+},
+"DEF2760": {
+"name": "Muay Thai",
+"days": 21.0,
+"pre": [
+"DEF1700"
+],
+"perk": "Gain a 3% passive bonus to speed"
+},
+"DEF3770": {
+"name": "Bachelor of Self Defense",
+"days": 35.0,
+"pre": [
+"DEF1700",
+"DEF2710",
+"DEF2720",
+"DEF2730",
+"DEF2740",
+"DEF2750",
+"DEF2760"
+],
+"perk": "Gain a 100% increase in damage dealt when using fists alone"
+},
+"CBT1780": {
+"name": "Introduction to Combat",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"CBT2790": {
+"name": "Military Psychology",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a 1% passive bonus to speed"
+},
+"CBT2800": {
+"name": "Study of War and Technology",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": ""
+},
+"CBT2810": {
+"name": "Study of Society and Warfare",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": ""
+},
+"CBT2820": {
+"name": "Study of Machine Guns",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Machine Guns"
+},
+"CBT2830": {
+"name": "Study of Submachine Guns",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Submachine guns"
+},
+"CBT2840": {
+"name": "Study of Pistols",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Pistols"
+},
+"CBT2850": {
+"name": "Study of Rifles",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Rifles"
+},
+"CBT2860": {
+"name": "Study of Heavy Artillery",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Heavy Artillery"
+},
+"CBT3870": {
+"name": "Bachelor of Military Arts and Science",
+"days": 49.0,
+"pre": [
+"CBT1780",
+"CBT2790",
+"CBT2800",
+"CBT2810",
+"CBT2820",
+"CBT2830",
+"CBT2840",
+"CBT2850",
+"CBT2860",
+"CBT2125"
+],
+"perk": "Start gaining weapon experience, specializing in individual weapons for increased damage and accuracy"
+},
+"LAW1880": {
+"name": "Introduction to Law",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"LAW2890": {
+"name": "Public Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Reduce the chance of being caught when trying to escape from jail"
+},
+"LAW2900": {
+"name": "Common Law",
+"days": 21.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain the ability to buy yourself and others out of jail while you are in jail yourself"
+},
+"LAW2910": {
+"name": "Property Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 5% discount when buying properties from the estate agents"
+},
+"LAW2920": {
+"name": "Criminal Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 5% bonus to your skill in busting"
+},
+"LAW2930": {
+"name": "Administrative Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 5% discount when buying people out of jail"
+},
+"LAW2940": {
+"name": "Commercial and Consumer Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": ""
+},
+"LAW2950": {
+"name": "Family Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": ""
+},
+"LAW2960": {
+"name": "Labor Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": ""
+},
+"LAW2970": {
+"name": "Social and Economic Law",
+"days": 21.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 10% bonus to your skill in busting"
+},
+"LAW2980": {
+"name": "Use of Force in International Law",
+"days": 21.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 10% discount when buying people out of jail"
+},
+"LAW2990": {
+"name": "International Human Rights",
+"days": 21.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Use less nerve when trying to escape from jail"
+},
+"LAW2100": {
+"name": "Media Law",
+"days": 21.0,
+"pre": [
+"LAW1880"
+],
+"perk": "Gain a 3% increase in advertising effectiveness for your company"
+},
+"LAW2101": {
+"name": "Revenue Law",
+"days": 14.0,
+"pre": [
+"LAW1880"
+],
+"perk": ""
+},
+"LAW3102": {
+"name": "Bachelor of Law",
+"days": 42.0,
+"pre": [
+"LAW1880",
+"LAW2890",
+"LAW2900",
+"LAW2910",
+"LAW2920",
+"LAW2930",
+"LAW2940",
+"LAW2950",
+"LAW2960",
+"LAW2970",
+"LAW2980",
+"LAW2990",
+"LAW2100",
+"LAW2101"
+],
+"perk": "Gain two bonuses: Busting is 50% easier and bailing is 50% cheaper"
+},
+"HAF1103": {
+"name": "Introduction to Health and Fitness",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"HAF2104": {
+"name": "Aerobics",
+"days": 14.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 1% passive bonus to dexterity"
+},
+"HAF2105": {
+"name": "Acrobatics",
+"days": 14.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 1% passive bonus to speed"
+},
+"HAF2106": {
+"name": "Power Lifting",
+"days": 14.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 1% passive bonus to strength"
+},
+"HAF2107": {
+"name": "Yoga",
+"days": 14.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 2% passive bonus to strength"
+},
+"HAF2108": {
+"name": "Swimming",
+"days": 14.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 1% passive bonus to dexterity"
+},
+"HAF2109": {
+"name": "Marathon Training",
+"days": 28.0,
+"pre": [
+"HAF1103"
+],
+"perk": "Gain a 3% passive bonus to speed"
+},
+"HAF2110": {
+"name": "Sailing",
+"days": 21.0,
+"pre": [
+"HAF1103"
+],
+"perk": ""
+},
+"HAF3111": {
+"name": "Bachelor of Health Sciences",
+"days": 35.0,
+"pre": [
+"HAF1103",
+"HAF2104",
+"HAF2105",
+"HAF2106",
+"HAF2107",
+"HAF2108",
+"HAF2109",
+"HAF2110"
+],
+"perk": "Gain a 25% increase in speed during an opponent's escape attempt"
+},
+"GEN1112": {
+"name": "Introduction to General Studies",
+"days": 7.0,
+"pre": [],
+"perk": ""
+},
+"GEN2113": {
+"name": "Driving License",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": "Unlock driving related crimes (Crimes 1.0)"
+},
+"GEN2114": {
+"name": "Astronomy",
+"days": 7.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"GEN2115": {
+"name": "Mechanical Arts",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"GEN2116": {
+"name": "General Mechanics",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": "Gain a +1.00 accuracy increase with Temporary weapons"
+},
+"GEN2117": {
+"name": "Basic English",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"GEN2118": {
+"name": "Creative Writing",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"GEN2119": {
+"name": "General Science",
+"days": 21.0,
+"pre": [
+"GEN1112"
+],
+"perk": "Gain a 5% damage increase with Temporary weapons"
+},
+"GEN2120": {
+"name": "Survival Skills",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": "Gain a 15% hunting bonus"
+},
+"GEN3121": {
+"name": "Bachelor of General Studies",
+"days": 42.0,
+"pre": [
+"GEN1112",
+"GEN2113",
+"GEN2114",
+"GEN2115",
+"GEN2116",
+"GEN2117",
+"GEN2118",
+"GEN2119",
+"GEN2120",
+"GEN2122",
+"GEN2123"
+],
+"perk": "Gain a 10% working stat increase bonus for all future educations that are completed"
+},
+"GEN2122": {
+"name": "Newtonian Physics",
+"days": 14.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"GEN2123": {
+"name": "Ivory Crafting",
+"days": 21.0,
+"pre": [
+"GEN1112"
+],
+"perk": ""
+},
+"CBT2125": {
+"name": "Study of Shotguns",
+"days": 14.0,
+"pre": [
+"CBT1780"
+],
+"perk": "Gain a +1.00 accuracy increase with Shotguns"
+},
+"SPT2126": {
+"name": "Sports Administration",
+"days": 7.0,
+"pre": [
+"SPT1430"
+],
+"perk": "Unlock the sports shop"
+},
+"BIO2127": {
+"name": "Intravenous Therapy",
+"days": 21.0,
+"pre": [
+"BIO1340"
+],
+"perk": "Ability to withdraw and deliver blood"
+},
+"CMT2128": {
+"name": "Overclocking",
+"days": 7.0,
+"pre": [
+"CMT1520",
+"CMT2570"
+],
+"perk": "Unlock rig overclocking up to 30%"
+},
+"CMT2129": {
+"name": "Advanced Overclocking",
+"days": 7.0,
+"pre": [
+"CMT1520",
+"CMT2570"
+],
+"perk": "Unlock rig overclocking up to 50%"
+},
+"CMT2130": {
+"name": "Web Security and Penetration Testing",
+"days": 7.0,
+"pre": [
+"CMT1520",
+"CMT2530"
+],
+"perk": "Unlock the extraction of email addresses through data breaches in Scamming"
+},
+"CMT2131": {
+"name": "Automated Data Mining & Processing",
+"days": 14.0,
+"pre": [
+"CMT1520",
+"CMT2530"
+],
+"perk": "Unlock the development of scrapers to extract email addresses from websites for use in Scamming"
+},
+"PSY2132": {
+"name": "Interpersonal Dynamics",
+"days": 7.0,
+"pre": [
+"PSY1630"
+],
+"perk": "Unlock response range indicators in Scamming"
+}
+}
