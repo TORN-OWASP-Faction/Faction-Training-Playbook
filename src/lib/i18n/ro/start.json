@@ -1,0 +1,203 @@
+{
+  "title": "Începe aici · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Nou în Torn? Citește asta mai întâi",
+    "h1": "Începe <em>aici</em>",
+    "lede": "Lucrurile pe care nu ți le spune nimeni în primele săptămâni: ce să setezi, cum păstrezi ce câștigi și capcanele care îi costă cel mai mult pe jucătorii noi. Apoi alege o <a href=\"/paths/\">cale</a>.",
+    "tocLabel": "Pe această pagină",
+    "quoteTag": "Înainte să cumperi",
+    "quote": "„Cei mai mulți jucători noi nu pierd pentru că sunt slabi. Pierd pentru că umblă cu bani la ei, sar peste setări și cumpără ce nu trebuie. Rezolvă asta întâi și restul devine mai ușor.”"
+  },
+  "toc": {
+    "week": "Prima ta săptămână",
+    "missions": "Misiuni",
+    "safe": "Păstrează-ți banii",
+    "selling": "Vânzare",
+    "books": "Cărți",
+    "drugs": "Droguri și dependență",
+    "scams": "Țepe",
+    "faction": "Facțiuni",
+    "routine": "Rutina ta",
+    "glossary": "Glosar ↗"
+  },
+  "week": {
+    "eyebrow": "Fă-le acum",
+    "title": "Prima ta săptămână",
+    "steps": [
+      ["Ia statut de donator.", "O bară de energie mai mare care se umple mai repede: cam {donatorGain}% mai multă energie naturală în fiecare zi în care joci. Un donator pack dă 31 de zile și se vinde cu ~$24M în joc sau costă cam $5 bani reali. Baldr: „Toată lumea ar trebui să aibă statut de donator.”"],
+      ["Închiriază cel mai bun happy pe care îl poți plăti constant.", "Închiriază un Ranch sau un Mansion (cel puțin un Penthouse cu 925 happy) până la nivelul 15, apoi un Private Island cu pistă de aterizare. Nu cumpăra încă proprietăți. <a href=\"/travel/#pi\">Buget pentru PI →</a>"],
+      ["Intră într-o companie de 3★.", "Majoritatea perk-urilor de job se deblochează la 3★. N-ai destule stats de muncă? Plătește directorul să te antreneze. <a href=\"/paths/#guides\">Ce job pentru calea ta →</a>"],
+      ["Începe Sports Science.", "Primul tău curs: deschide cursurile cu +1% la câștigurile din sală. Ține mereu un curs în desfășurare. <a href=\"/paths/#guides\">Planuri de educație →</a>"],
+      ["Amână misiunile pentru jucători noi.", "Plătesc în energie (până la 500 odată), iar energia aceea antrenează mai bine după ce te muți într-o locuință cu happy mai mare. Întâi închiriezi, apoi le faci. <a href=\"#missions\">Misiuni →</a>"],
+      ["Nu mai umbla cu bani la tine.", "Mug-urile sunt ceva obișnuit. Cumpără Stock Ticker (50 de puncte) și învață ghost trade-urile. <a href=\"#safe\">Păstrează-ți banii →</a>"],
+      ["Fă primul depozit la bancă.", "Chiar și pe o săptămână. E începutul venitului tău pasiv și îți aduce un merit."],
+      ["Configurează-ți cheile API în siguranță.", "O cheie pe unealtă, acces minim, niciodată o cheie Full într-un script. <a href=\"/scripts/\">Scripturi și unelte →</a>"],
+      ["Ia meritele ieftine.", "Fiecare premiu aduce un merit, iar meritele cumpără upgrade-uri permanente. Cele ușoare sunt mai jos."]
+    ],
+    "merits": {
+      "title": "Merite ieftine la început",
+      "intro": "Fiecare dintre aceste onoruri aduce un merit aproape fără efort:",
+      "head": ["Onor", "Cum"],
+      "rows": [
+        ["Historian", "Petrece 5–10 minute citind un Chronicle din ziar."],
+        ["Forgiven", "Roagă-te la biserică de două ori pe zi, la 8–10 ore distanță. Durează cam 7–10 zile."],
+        ["Pious, Saintly", "Donează bisericii $100k, apoi $1M."],
+        ["Pocket Money", "Fă orice investiție la bancă. Merge și pe o săptămână."],
+        ["Energetic", "Ajunge la 1,000 energie: pornește cu bara goală și ia 4 Xanax unul după altul, ca la un jump."],
+        ["Diabetic", "Mănâncă 500 de dulciuri. Lollipops costă cam $1k bucata și îți cresc și happy."],
+        ["Spinner, One in Six", "1,000 de învârtiri la ruletă (cam 14 zile la 75 pe zi) și 50 de victorii la ruleta rusească cu pariuri de $1."],
+        ["Protege", "Termină misiunea „Introduction: Duke”."],
+        ["Mule, Souvenir", "Importă 100 de iteme din străinătate și cumpără „perfect souvenir” într-o călătorie."],
+        ["Luxury Real Estate", "Adaugă o pistă de aterizare la un Private Island. Un prieten ți-l poate împrumuta pe al lui pentru două minute."],
+        ["Holiday logins", "Intră în joc de Anul Nou, de Ziua Îndrăgostiților, de Halloween, pe 15 noiembrie (aniversarea Torn) și de Crăciun."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Creditele de misiune sunt rare",
+    "title": "Misiuni",
+    "newTitle": "Misiuni pentru jucători noi",
+    "new": [
+      "Te învață elementele de bază și plătesc energie, nerve, bani și credite de misiune. Un singur pas plătește 500 energie.",
+      "Mută-te întâi într-o locuință mai bună, ca energia aceea să antreneze la un happy mai mare.",
+      "Îți oferă o singură dată o <b>pușculiță (piggy bank)</b>. E un loc sigur, de unică folosință, pentru bani. Dacă o sari, nu mai primești altă șansă."
+    ],
+    "regTitle": "Misiuni obișnuite și credite",
+    "reg": [
+      "Nu sunt o prioritate înainte de nivelul 15; pot consuma multă energie.",
+      "Păstrează-ți creditele pentru lucruri pe care <b>nu le poți cumpăra cu bani</b>: cărți speciale și upgrade-uri de arme.",
+      "Nu cheltui niciodată credite pe ceva ce poți cumpăra cu bani. Unele cărți sunt excelente, altele inutile (vezi <a href=\"#books\">Cărți</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Principalul mod în care jucătorii noi pierd progres",
+    "title": "Păstrează-ți banii",
+    "lede": "Banii din buzunar pot fi luați prin mug. Pune-i deoparte imediat ce îi ai. Nicio metodă nu e perfectă, așa că majoritatea jucătorilor le combină.",
+    "head": ["Unde", "Cum funcționează", "Capcana"],
+    "rows": [
+      ["Ghost trade", "Deschide un trade cu un prieten, pune banii și niciunul dintre voi nu acceptă. Pui și scoți repede, chiar și din spital.", "Trade-urile se închid după 6 ore, celălalt jucător trebuie să fi fost activ în ultimele 6 ore și folosește doar pe cineva de încredere."],
+      ["Bancă", "Blochează banii pe un termen de la 1 săptămână la 3 luni. Aduc dobândă și nimeni nu ți-i poate lua prin mug.", "Nu te atingi de ei până se termină termenul, iar apoi banii stau degeaba până începi altul."],
+      ["Acțiuni", "Cumpără acțiuni (ai nevoie de Stock Ticker, 50 de puncte). Vinzi oricând cu un comision de 0.1%.", "Prețul poate scădea cât timp le ții."],
+      ["Iteme și puncte", "Ține Xanax, donator pack-uri, flori, plușuri sau puncte. Itemele nu pot fi luate prin mug.", "Când vinzi, pune prețul aproape de cea mai mică ofertă, altfel nu se vând."],
+      ["Banca facțiunii", "Majoritatea facțiunilor țin bani pentru membri.", "Retragerile au nevoie de conducere, iar unele facțiuni și-au pierdut seiful din cauza liderilor răi. Ține acolo doar cât îți trebuie."],
+      ["Piggy bank", "O ofertă unică dintr-o misiune. Ține orice sumă, la adăpost de mug.", "Singura cale de a scoate banii e s-o spargi, totul odată. Dacă ratezi oferta, nu mai primești alta."],
+      ["Seiful de pe PI", "Siguranță nelimitată până la mărimea seifului ($1B pentru cel extra-large).", "Doar pe un PI pe care îl deții, nu pe unul închiriat."]
+    ],
+    "tips": [
+      "Cât ești online, refă ghost trade-ul la fiecare 3–5 ore ca să nu expire niciodată.",
+      "Evită banca din Insulele Cayman pentru depozitare: cei care dau mug îi pândesc pe jucătorii care aterizează să depună sau să retragă.",
+      "Când se termină un termen la bancă, banii rămân în siguranță, dar nu mai aduc nimic. Începe imediat următorul termen."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Cum transformi itemele în bani",
+    "title": "Vinde ce cumperi",
+    "whereTitle": "Unde vinzi",
+    "where": [
+      "<b>Item market:</b> cel mai rapid loc de vânzare. Ia un comision de 5%.",
+      "<b>Bazaar:</b> propriul tău magazin, costă cam 250 de puncte să-l deschizi. Cumpărătorii îl găsesc prin unelte ca weav3r, iar 100 de clienți diferiți îți aduc meritul Middleman.",
+      "<b>Trade Chat:</b> pentru vânzări mari sau en-gros. Folosește mereu o fereastră de trade, niciodată „trimite tu banii întâi”."
+    ],
+    "howTitle": "Cum vinzi bine",
+    "how": [
+      "Pune prețul la nivelul celei mai mici oferte sau aproape de ea ca să vinzi repede. Verifică pe <b>weav3r</b> prețurile din bazaar înainte să cumperi sau să vinzi; bazaar-urile sunt de obicei mai ieftine decât item market-ul.",
+      "Vânzările mari atrag pe cei care dau mug. Mută banii imediat după vânzare.",
+      "Florile și plușurile se vând celor care strâng seturi, sau poți schimba seturi complete la Museum după ce ai diploma de History."
+    ]
+  },
+  "books": {
+    "eyebrow": "Bonusuri mari, folosite prost de cei mai mulți",
+    "title": "Cărți",
+    "lede": "Cărțile vin mai ales din credite de misiune și abonamente. Majoritatea țin 31 de zile, așa că totul ține de momentul ales: citește una când chiar o folosești toată luna.",
+    "head": ["Carte", "Efect", "Când s-o citești"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% câștiguri în sală la un stat (Strength, Defense, Speed, Dexterity) timp de 31 de zile", "Citește-o într-o lună în care te concentrezi pe statul acela"],
+      ["Get Hard Or Go Home", "+20% câștiguri în sală la toate stat-urile timp de 31 de zile", "Orice lună de antrenament intens"],
+      ["Ugly Energy", "+100 energie maximă și +100 la fiecare refill timp de 31 de zile", "Aduce +28–78% dacă te antrenezi la maximum în luna aceea"],
+      ["Smuggling For Beginners", "+10 iteme pe călătorie timp de 31 de zile", "O lună cu multe zboruri sau Tourism Day"],
+      ["Mailing Yourself Abroad", "Zboruri cu 25% mai rapide timp de 31 de zile", "Merge bine cu cea de mai sus"],
+      ["Brawn Over Brains și celelalte cărți de +5% la stat", "+5% la un stat, până la 10M", "Păstrează-le până ajunge statul la 200M, apoi citește-le"],
+      ["Ignorance Is Bliss", "Happy peste maxim nu se resetează timp de 31 de zile", "Doar dacă îți permiți să dai jump-uri non-stop. Atenție la supradoze"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Costul ascuns al Xanax-ului zilnic",
+    "title": "Droguri și dependență",
+    "lede": "Fiecare drog adaugă puțină dependență, chiar înainte să apară iconița cu creierul. Supradozele sunt explicate în <a href=\"/medical/\">Medicină de teren</a>; aici e vorba de acumularea lentă.",
+    "whatTitle": "Ce face dependența",
+    "what": [
+      "Un <b>debuff la battle stats</b>: iconița cu creierul, tot mai roșie pe măsură ce se agravează.",
+      "Eficiență mai mică la job, chiar de la primul drog.",
+      "La niveluri mai mari te poate <b>scoate de la cursul de educație</b>.",
+      "Peste 150 de Xanax și Ecstasy în total îți blochează accesul la sala fără droguri Sports Science Lab."
+    ],
+    "keepTitle": "Cum o ții jos",
+    "keep": [
+      "<b>Dezintoxicarea</b> din Elveția (~$250k) o elimină. Zboară acolo când iconița cu creierul devine roșie.",
+      "Meritul <b>Addiction Mitigation</b> (−2% pe upgrade) atenuează efectele.",
+      "Job-uri: Cruise Line și Flower Shop (5★) pot reduce dependența; un Nightclub de 10★ îți protejează educația de ea.",
+      "Upgrade-uri de facțiune: Toleration reduce dependența până la jumătate. <a href=\"/paths/#faction\">Upgrade-uri de facțiune →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Nu le învăța pe pielea ta",
+    "title": "Țepe și capcane",
+    "items": [
+      "<b>Cumpărători de loss-uri care nu plătesc.</b> Folosește contractele de loss preplătite de la FFScouter. Altfel, verifică întâi cumpărătorul: un cont mai nou de 100 de zile, networth sub $1B sau mulți dușmani e un semnal de alarmă. Urmează-le instrucțiunile exact, altfel le vor folosi ca scuză să nu plătească.",
+      "<b>Ghost trade cu străini.</b> Îți văd banii, pot anula trade-ul și ți-i pot lua prin mug. Folosește doar prieteni sau colegi de facțiune.",
+      "<b>„Pune cheia ta aici.”</b> Nu pune niciodată o cheie API cu acces Full într-un script sau pe un site. <a href=\"/scripts/\">Siguranța cheilor →</a>",
+      "<b>Drumuri la banca din Cayman.</b> Cei care dau mug stau la pândă acolo după jucătorii care duc sau aduc bani.",
+      "<b>Încrederea oarbă în orice seif.</b> Seifurile facțiunilor au fost golite de lideri răi. Împarte-ți banii.",
+      "<b>Cazinoul.</b> Merită doar pentru onorurile cu merit de pe pariuri de $1. În rest e o gaură neagră pentru bani."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Cum funcționează facțiunile",
+    "title": "Bazele facțiunii",
+    "respectTitle": "Respect, într-un minut",
+    "respect": [
+      "Atacurile de facțiune aduc <b>respect</b>, cu care se cumpără upgrade-uri pentru toți membrii.",
+      "Multiplicatorii se cumulează: fair fight până la ×3, lovituri de război ×2, un chain lung până la ×2, un retal ×1.5, atac în străinătate ×1.25.",
+      "Când un membru e lovit, facțiunea pierde un sfert din respectul câștigat de atacator. Țintele ușoare îi costă pe toți."
+    ],
+    "helpTitle": "Cum ajuți, chiar dacă ești mic",
+    "help": [
+      "Ia roluri în crime organizate pe care le poți trece. <a href=\"/crimes/#oc\">OC-uri →</a>",
+      "Lovește în chain ținte pe care le bați ușor; FF Scouter îți arată care.",
+      "Fă retal când cere conducerea.",
+      "Ține iteme medicale pentru războaie. <a href=\"/medical/\">Medicină de teren →</a>",
+      "Nu decola chiar înainte de un război sau de un chain. <a href=\"/travel/#delays\">Întârzieri de zbor →</a>"
+    ],
+    "quoteTag": "Regula lui Rook",
+    "quote": "„Nimeni nu se așteaptă ca un membru nou să ducă un război în spate. Ne așteptăm să fii prezent, să iei loviturile pe care le poți câștiga, să ai medicamente în stoc și să nu fii ținta ușoară care hrănește tabăra cealaltă.”"
+  },
+  "routine": {
+    "eyebrow": "Pune-o la vedere",
+    "title": "Rutina ta",
+    "dayTitle": "În fiecare zi",
+    "day": [
+      "Intră destul de des cât energia să nu stea niciodată plină.",
+      "Antrenează-te. Un stat pe sesiune, în sala cu cele mai multe puncte (dots) pentru el.",
+      "Ia Xanax când ți se termină cooldown-ul, dacă îți permiți. Folosește refill-ul pe puncte (25 de puncte).",
+      "Cheltuie nerve pe cea mai grea crimă pe care o treci sigur.",
+      "Zboară cât ți se reumple energia; verifică YATA întâi.",
+      "Cheltuie punctele de job pe specialele companiei.",
+      "Pune-ți banii deoparte înainte să ieși din joc."
+    ],
+    "weekTitle": "În fiecare săptămână",
+    "week": [
+      "Reînnoiește termenele de bancă de 1–2 săptămâni chiar în ziua în care se termină.",
+      "Revendică plățile săptămânale din acțiuni; dispar după 24 de ore.",
+      "Asigură-te că următorul curs e pus la coadă înainte să se termine cel curent.",
+      "Verifică cu facțiunea locul tău în OC."
+    ],
+    "monthTitle": "În fiecare lună",
+    "month": [
+      "Reînnoiește chiria proprietății. Contractele se termină la 03:30 TCT.",
+      "Reînnoiește statutul de donator (31 de zile pe pack).",
+      "Revendică plățile lunare din acțiuni.",
+      "Programează orice carte de 31 de zile pentru luna care vine."
+    ]
+  },
+  "footer": "<strong>Începe aici.</strong> Sfaturile despre misiuni, păstrarea banilor și vânzare vin din Basic Advice de <strong>Baldr [1847600]</strong>; meritele ieftine din Guide to Easy Merits de <strong>Tempest [1867527]</strong>; cărțile din Guide to Stat Gains from Books de <strong>HandsomePants [1897243]</strong> și pagina Travel de pe wiki; dependența din pagina Drug de pe wiki; respectul de facțiune din paginile Faction și Attack de pe wiki; perk-urile de job și recompensele misiunilor din Torn API și wiki. Parte din <a href=\"/\">Faction Training Playbook</a>."
+}

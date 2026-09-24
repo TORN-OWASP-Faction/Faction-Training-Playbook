@@ -1,0 +1,61 @@
+{
+  "skip": "Skip to content",
+  "homeLabel": "Faction Training Playbook, home page",
+  "menu": "Menu",
+  "language": "Language",
+  "nav": {
+    "label": "Main",
+    "start": "Start here",
+    "groups": {
+      "train": "Train",
+      "money": "Money",
+      "crimes": "Crimes",
+      "fight": "Fight",
+      "more": "More"
+    },
+    "links": {
+      "guide": "Training guide",
+      "idea": "The happy jump",
+      "new": "Before level 15",
+      "builds": "Builds",
+      "schedule": "Daily schedules",
+      "items": "Items to buy",
+      "edu": "Education",
+      "planner": "Jump planner",
+      "math": "Training math",
+      "makeMoney": "Ways to make money",
+      "travel": "Flying for money",
+      "paths": "Paths and milestones",
+      "faction": "Faction upgrades",
+      "safe": "Keep your money safe",
+      "overview": "Overview",
+      "how": "How crimes work",
+      "nerve": "Build your nerve",
+      "oc": "Organized crime",
+      "ocScenarios": "OC scenarios",
+      "dataTables": "Crime data tables",
+      "loadout": "War loadout",
+      "medical": "Field medicine",
+      "factionBasics": "Faction basics",
+      "scripts": "Scripts and tools",
+      "glossary": "Glossary",
+      "credits": "Credits"
+    }
+  },
+  "notice": {
+    "englishOnly": "This page is only in English for now.",
+    "translate": "Open it in Google Translate",
+    "browserTip": "or use your browser's Translate option.",
+    "machine": "This page was machine-translated from English. Game names stay in English, the way Torn shows them.",
+    "improve": "Help improve the translation on GitHub"
+  },
+  "suggest": {
+    "text": "This guide is also in {language}.",
+    "yes": "Read it in {language}",
+    "no": "Keep English"
+  },
+  "repo": {
+    "cta": "View on GitHub ↗",
+    "hint": "Spot a mistake or have a guide to add? Open an issue or send a pull request."
+  }
+}

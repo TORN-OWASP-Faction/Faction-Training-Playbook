@@ -1,0 +1,61 @@
+{
+  "skip": "跳到正文",
+  "homeLabel": "Faction Training Playbook 首页",
+  "menu": "菜单",
+  "language": "语言",
+  "nav": {
+    "label": "主导航",
+    "start": "从这里开始",
+    "groups": {
+      "train": "训练",
+      "money": "赚钱",
+      "crimes": "犯罪",
+      "fight": "战斗",
+      "more": "更多"
+    },
+    "links": {
+      "guide": "训练指南",
+      "idea": "Happy jump",
+      "new": "15 级之前",
+      "builds": "加点路线",
+      "schedule": "每日安排",
+      "items": "值得买的物品",
+      "edu": "教育",
+      "planner": "Jump 规划器",
+      "math": "训练数学",
+      "makeMoney": "赚钱方法",
+      "travel": "飞行赚钱",
+      "paths": "路线与里程碑",
+      "faction": "派系升级",
+      "safe": "保护你的钱",
+      "overview": "概览",
+      "how": "犯罪机制",
+      "nerve": "提升 nerve",
+      "oc": "组织犯罪",
+      "ocScenarios": "OC 场景",
+      "dataTables": "犯罪数据表",
+      "loadout": "战争装备",
+      "medical": "战地医疗",
+      "factionBasics": "派系基础",
+      "scripts": "脚本和工具",
+      "glossary": "术语表",
+      "credits": "致谢"
+    }
+  },
+  "notice": {
+    "englishOnly": "本页目前只有英文版。",
+    "translate": "用 Google Translate 打开",
+    "browserTip": "或使用浏览器自带的翻译功能。",
+    "machine": "本页由英文机器翻译而来。游戏里的名称保留英文，与 Torn 中显示的一致。",
+    "improve": "在 GitHub 上帮忙改进翻译"
+  },
+  "suggest": {
+    "text": "本指南也有{language}版本。",
+    "yes": "阅读{language}版",
+    "no": "继续看英文"
+  },
+  "repo": {
+    "cta": "在 GitHub 上查看 ↗",
+    "hint": "发现错误或想补充指南？提交 issue 或发送 pull request。"
+  }
+}

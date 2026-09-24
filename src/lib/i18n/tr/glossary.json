@@ -1,0 +1,221 @@
+{
+  "title": "Sözlük · Faction Training Playbook",
+  "eyebrow": "Sade dille Torn",
+  "h1": "<em>Sözlük</em>",
+  "lede": "Torn'da ve bu sitede her yerde göreceğin kelimeler ve kısaltmalar. Her biri, onu düzgünce açıklayan sayfaya bağlanır.",
+  "back": "← Buradan başla",
+  "more": "Daha fazla →",
+  "groups": [
+    {
+      "title": "Barların ve statların",
+      "terms": [
+        [
+          "E, energy",
+          "Enerji. Gym'de ve saldırılarda harcanır. Dolu bir bar 5 saatte yenilenir: donator olarak maks. 150, değilsen 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve suçlarda harcanır. NNB, doğal nerve barındır: boost'lar olmadan, suç deneyiminden kazandığın maksimum."
+        ],
+        [
+          "Happy",
+          "Gym kazançlarını katlar. Maksimumu mülkün belirler. Üstündeki her şey :00, :15, :30 ve :45'te sıfırlanır."
+        ],
+        [
+          "Happy jump",
+          "Enerji biriktir ve happy'yi maksimumun çok üstüne çıkar, sonra hepsini tek bir 15 dakikalık pencerede antrenmana harca."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense ve Dexterity. “Total stats” dördünün toplamı demek."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence ve Endurance. İşler bunları kullanır; kurslar ve iş eğitimi bunları artırır."
+        ],
+        [
+          "Gym dots",
+          "Bir gym'in her stat için çarpanı. Daha çok dot, enerji başına daha çok kazanç (George's için 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, oyun saati. Happy sıfırlamaları ve kira bitişleri buna göre işler."
+        ]
+      ]
+    },
+    {
+      "title": "Eşyalar ve boost'lar",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 enerji ve +75 happy. 6–8 saatlik cooldown'u olan bir uyuşturucu."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Mevcut happy'ni ikiye katlar; en ucuz büyük happy boost'u."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (10★ bir Adult Novelties'ten 5,000). Başlıca happy jump boost'u."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Enerji barını dolduran bir booster."
+        ],
+        [
+          "Refill",
+          "Point refill: 25 point karşılığında günde bir kez enerji barını doldurur."
+        ],
+        [
+          "Cooldowns",
+          "Uyuşturucu, booster ve tıbbi cooldown'lar ayrı saatlerdir. Birini kullanmak diğerlerini etkilemez."
+        ],
+        [
+          "OD",
+          "Overdose. Barlarını boşaltır, seni hastaneye yollar ve uyuşturucu cooldown'unu bir güne kadar uzatabilir."
+        ],
+        [
+          "SE",
+          "Stat enhancer: statları doğrudan artıran pahalı bir eşya. Sadece çok yüksek statlarda değer."
+        ]
+      ]
+    },
+    {
+      "title": "Para ve mülk",
+      "terms": [
+        [
+          "PI",
+          "Private Island, en iyi mülk. Pistli bir tane kirala ve daha hızlı, daha büyük yolculuklar için pilot tut."
+        ],
+        [
+          "Donator, DP",
+          "Donator statüsü: daha büyük enerji barı ve daha hızlı dolum. Bir Donator pack 31 gün verir."
+        ],
+        [
+          "IM",
+          "Item market: hızlı satış, 5% komisyon."
+        ],
+        [
+          "Bazaar",
+          "Kendi dükkânın. Alıcılar onu weav3r gibi araçlarla bulur."
+        ],
+        [
+          "Ghost trade",
+          "Güvendiğin biriyle açık bırakılan bir trade; nakitin cebinde değil, onun içinde durur."
+        ],
+        [
+          "Points",
+          "Torn'un ikinci para birimi. Refill, merit, Stock Ticker ve daha fazlası için kullanılır."
+        ],
+        [
+          "Benefit block",
+          "Bir hissenin ödemesini ya da avantajını almaya yetecek kadar hisse."
+        ],
+        [
+          "Museum, sets",
+          "Tam bir çiçek ya da peluş setini point karşılığında takas et. History diploması gerekir."
+        ],
+        [
+          "Loss selling",
+          "Birine saldırıp kaybetmen için para almak. Sadece kısa vadeli para."
+        ]
+      ]
+    },
+    {
+      "title": "İşler, merit'ler ve eğitim",
+      "terms": [
+        [
+          "★ (stars)",
+          "Bir şirketin 0'dan 10'a puanı. Daha çok yıldız, çalışanlar için daha çok avantaj açar."
+        ],
+        [
+          "JP",
+          "İş puanları (job points): günde şirket yıldızı başına bir tane, şirketin özel avantajlarına harcanır."
+        ],
+        [
+          "Specials",
+          "Bir şirketin avantajları, yıldız puanıyla açılır."
+        ],
+        [
+          "Merits",
+          "Ödüllerden (madalya ve honor'lar) kazanılır, Bank Interest gibi kalıcı yükseltmelere harcanır."
+        ],
+        [
+          "Honors, medals",
+          "Kilometre taşları için ödüller. Her biri bir merit kazandırır."
+        ]
+      ]
+    },
+    {
+      "title": "Dövüş ve faction'lar",
+      "terms": [
+        [
+          "Mug",
+          "Birini yen ve üstünde taşıdığı nakitten bir pay al."
+        ],
+        [
+          "Hosp, med out",
+          "Hastane. “Med out” yapmak, erken çıkmak için tıbbi eşya kullanmak demek."
+        ],
+        [
+          "Revive",
+          "Birini hastaneden çıkarmak. Savaşlarda işe yarar."
+        ],
+        [
+          "Bust, bail",
+          "Birini hapisten beceriyle (bust) ya da parayla (bail) çıkarmak."
+        ],
+        [
+          "FF",
+          "Fair fight: statları sana yakın biriyle dövüşmek için bonus respect (×3'e kadar). FF Scouter bunu tahmin eder."
+        ],
+        [
+          "Respect",
+          "Faction saldırılarının kazandırdığı şey. Faction'lar bunu tüm üyeler için yükseltmelere harcar."
+        ],
+        [
+          "Chain",
+          "Arka arkaya faction vuruşları serisi. Chain uzadıkça vuruş başına respect artar."
+        ],
+        [
+          "Retal",
+          "Retaliation: bir faction üyesine az önce saldıran birini vurmak, ×1.5 respect için."
+        ],
+        [
+          "RW",
+          "İki faction arasında ranked war. Savaş vuruşları iki kat respect kazandırır."
+        ],
+        [
+          "OC, CPR",
+          "Organize suç ve o roldeki checkpoint geçme oranın."
+        ],
+        [
+          "CE, CS",
+          "Suç deneyimi ve suç becerisi. Suç yaptıkça artar, nerve'ünü ve başarı şansını yükseltir."
+        ]
+      ]
+    },
+    {
+      "title": "Araçlar",
+      "terms": [
+        [
+          "YATA",
+          "Yurt dışı stokları, uçuş zamanlaması, chain'ler ve ödüller için site."
+        ],
+        [
+          "TT",
+          "TornTools, oyunun her yerine bilgi ekleyen bir tarayıcı eklentisi."
+        ],
+        [
+          "PDA",
+          "Torn PDA, script desteği olan mobil uygulama."
+        ],
+        [
+          "TornStats",
+          "Casusluk, savaş ve faction araçları."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Sözlük.</strong> <a href=\"/\">Faction Training Playbook</a>'un bir parçası. Eksik bir kelime mi var? Bize söyle, ekleyelim."
+}

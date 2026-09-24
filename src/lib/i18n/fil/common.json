@@ -1,0 +1,61 @@
+{
+  "skip": "Lumaktaw sa content",
+  "homeLabel": "Faction Training Playbook, home page",
+  "menu": "Menu",
+  "language": "Wika",
+  "nav": {
+    "label": "Main",
+    "start": "Magsimula dito",
+    "groups": {
+      "train": "Training",
+      "money": "Pera",
+      "crimes": "Crimes",
+      "fight": "Laban",
+      "more": "Iba pa"
+    },
+    "links": {
+      "guide": "Training guide",
+      "idea": "Ang happy jump",
+      "new": "Bago mag-level 15",
+      "builds": "Builds",
+      "schedule": "Araw-araw na schedule",
+      "items": "Mga item na bibilhin",
+      "edu": "Education",
+      "planner": "Jump planner",
+      "math": "Training math",
+      "makeMoney": "Paraan para kumita",
+      "travel": "Lumipad para kumita",
+      "paths": "Paths at milestones",
+      "faction": "Faction upgrades",
+      "safe": "Protektahan ang pera mo",
+      "overview": "Overview",
+      "how": "Paano gumagana ang crimes",
+      "nerve": "Palakihin ang nerve mo",
+      "oc": "Organized crime",
+      "ocScenarios": "Mga OC scenario",
+      "dataTables": "Crime data tables",
+      "loadout": "War loadout",
+      "medical": "Field medicine",
+      "factionBasics": "Faction basics",
+      "scripts": "Scripts at tools",
+      "glossary": "Glossary",
+      "credits": "Credits"
+    }
+  },
+  "notice": {
+    "englishOnly": "Nasa English lang muna ang page na ito.",
+    "translate": "Buksan sa Google Translate",
+    "browserTip": "o gamitin ang Translate option ng browser mo.",
+    "machine": "Machine-translated ang page na ito mula sa English. Nasa English pa rin ang mga pangalan sa game, gaya ng pagkakalabas nila sa Torn.",
+    "improve": "Tumulong na pagandahin ang translation sa GitHub"
+  },
+  "suggest": {
+    "text": "Available din ang guide na ito sa {language}.",
+    "yes": "Basahin sa {language}",
+    "no": "English na lang"
+  },
+  "repo": {
+    "cta": "Tingnan sa GitHub ↗",
+    "hint": "May nakitang mali o may guide kang gustong idagdag? Mag-open ng issue o magpadala ng pull request."
+  }
+}

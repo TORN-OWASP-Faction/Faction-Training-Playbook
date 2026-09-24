@@ -1,0 +1,59 @@
+{
+  "title": "Faction Training Playbook",
+  "badge": "派系训练 · 始于 2004",
+  "h1": "Faction Training <em>Playbook</em>",
+  "lede": "由我们派系用大白话写成的免费指南，帮你在 Torn 里变得更强、更有钱。选一个起点吧。",
+  "choose": {
+    "eyebrow": "选个目标",
+    "title": "你想从哪里开始？"
+  },
+  "goals": {
+    "new": {
+      "title": "我是 Torn 新人",
+      "text": "你的第一周、怎样保住你的钱，以及让新人损失最大的陷阱。",
+      "go": "从这里开始",
+      "links": ["你的第一周", "保护你的钱", "术语表"]
+    },
+    "train": {
+      "title": "变得更强",
+      "text": "happy jump 怎么运作、选哪种加点、每项属性最好的健身房，以及一天的训练是什么样。",
+      "go": "训练指南",
+      "links": ["Happy jump", "加点路线", "Jump 规划器"]
+    },
+    "money": {
+      "title": "赚钱",
+      "text": "飞去海外买花和毛绒玩具、Private Island 什么时候回本，以及怎么卖掉带回来的东西。",
+      "go": "飞行赚钱",
+      "links": ["赚钱方法", "使用 YATA", "出售物品"]
+    },
+    "plan": {
+      "title": "做长期规划",
+      "text": "收入优先、属性优先还是均衡发展：时间线、里程碑，以及按什么顺序买什么。",
+      "go": "路线与里程碑",
+      "links": ["互动规划器", "三种路线指南", "派系升级"]
+    }
+  },
+  "more": {
+    "eyebrow": "Playbook 里还有",
+    "title": "犯罪、战争和工具",
+    "items": {
+      "crimes": ["犯罪和 OC", "该做哪些犯罪、nerve 怎么增长，以及组织犯罪怎么分钱。"],
+      "loadout": ["战争装备", "武器、护甲，以及怎样以弱胜强。"],
+      "medical": ["战地医疗", "过量用药、医疗物品，以及在战争中保持有用。"],
+      "scripts": ["脚本和工具", "TornTools、YATA、FF Scouter 等，以及怎样保护你的 API key。"]
+    }
+  },
+  "crew": {
+    "eyebrow": "谁在说话",
+    "title": "认识一下团队",
+    "lede": "这本 Playbook 由五个角色负责。每人照看游戏的一部分，你会在他们负责的页面上看到他们的建议。",
+    "members": {
+      "banker": ["银行家 · 经济", "钱、房产、教育，以及什么时候别花钱", "银行家 Vincent Moretti"],
+      "trainer": ["教练 · 成长", "健身房、happy、能量、日常安排和 jump", "教练 Maya Torres"],
+      "militia": ["民兵 · 派系", "派系福利、备战和准备工作", "民兵老兵 Marcus Kane"],
+      "fixer": ["中间人 · 机会", "快钱、升级、倒卖和牵线搭桥", "中间人 Nico Vescari"],
+      "medic": ["医生 · 恢复", "过量用药、医疗物品、住院和战前准备", "医生 Dr. Elara Moreau"]
+    }
+  },
+  "footer": "<strong>Faction Training Playbook。</strong>由我们派系根据 Torn 玩家写的指南整理而成。所有来源都列在<a href=\"/credits/\">致谢</a>页面。"
+}

@@ -1,0 +1,221 @@
+{
+  "title": "Glosar · Faction Training Playbook",
+  "eyebrow": "Torn pe înțelesul tuturor",
+  "h1": "<em>Glosar</em>",
+  "lede": "Cuvintele și abrevierile pe care le vei vedea peste tot în Torn și pe acest site. Fiecare duce la pagina care îl explică cum trebuie.",
+  "back": "← Începe aici",
+  "more": "Mai mult →",
+  "groups": [
+    {
+      "title": "Barele și stat-urile tale",
+      "terms": [
+        [
+          "E, energy",
+          "Energie. O cheltui în sală și pe atacuri. O bară plină se reumple la fiecare 5 ore: maximum 150 ca donator, altfel 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve-ul se cheltuie pe crime. NNB e bara ta naturală de nerve: maximul câștigat din experiența de crime, înainte de bonusuri."
+        ],
+        [
+          "Happy",
+          "Îți multiplică câștigurile din sală. Proprietatea îți stabilește maximul. Tot ce e peste se resetează la :00, :15, :30 și :45."
+        ],
+        [
+          "Happy jump",
+          "Strângi energie și împingi happy mult peste maxim, apoi antrenezi tot într-o singură fereastră de 15 minute."
+        ],
+        [
+          "Battle stats",
+          "Stat-urile de luptă: Strength, Speed, Defense și Dexterity. „Total stats” înseamnă toate patru adunate."
+        ],
+        [
+          "Working stats",
+          "Stat-urile de muncă: Manual labor, Intelligence și Endurance. Job-urile le folosesc; cursurile și antrenamentul la job le cresc."
+        ],
+        [
+          "Gym dots",
+          "Multiplicatorul unei săli pentru fiecare stat. Mai multe puncte, câștiguri mai mari pe energie (George's are 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, ceasul jocului. Resetările de happy și finalul chiriilor merg după el."
+        ]
+      ]
+    },
+    {
+      "title": "Iteme și boostere",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energie și +75 happy. Un drog cu cooldown de 6–8 ore."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Îți dublează happy-ul curent; cel mai ieftin boost mare de happy."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 de la un Adult Novelties de 10★). Principalul booster pentru happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Un booster care îți umple bara de energie."
+        ],
+        [
+          "Refill",
+          "Un refill pe puncte: îți umple bara de energie o dată pe zi pentru 25 de puncte."
+        ],
+        [
+          "Cooldowns",
+          "Cooldown-urile de droguri, boostere și medicale sunt ceasuri separate. Dacă folosești unul, celelalte nu sunt afectate."
+        ],
+        [
+          "OD",
+          "Supradoză. Îți golește barele, te trimite la spital și îți poate lungi cooldown-ul de droguri până la o zi."
+        ],
+        [
+          "SE",
+          "Stat enhancer: un item scump care adaugă stats direct. Merită doar la stats foarte mari."
+        ]
+      ]
+    },
+    {
+      "title": "Bani și proprietăți",
+      "terms": [
+        [
+          "PI",
+          "Private Island, cea mai bună proprietate. Închiriază unul cu pistă de aterizare și angajează un pilot pentru călătorii mai rapide și mai profitabile."
+        ],
+        [
+          "Donator, DP",
+          "Statut de donator: bară de energie mai mare și reumplere mai rapidă. Un donator pack dă 31 de zile."
+        ],
+        [
+          "IM",
+          "Item market: vinzi rapid, cu un comision de 5%."
+        ],
+        [
+          "Bazaar",
+          "Propriul tău magazin. Cumpărătorii îl găsesc prin unelte ca weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Un trade lăsat deschis cu cineva de încredere, ca banii să stea în el în loc de buzunar."
+        ],
+        [
+          "Points",
+          "Puncte, a doua monedă din Torn. Cumperi cu ele refill-uri, merite, Stock Ticker și altele."
+        ],
+        [
+          "Benefit block",
+          "Destule acțiuni la o companie ca să primești plata sau perk-ul ei."
+        ],
+        [
+          "Museum, sets",
+          "Schimbă un set complet de flori sau plușuri pe puncte. Ai nevoie de diploma de History."
+        ],
+        [
+          "Loss selling",
+          "Ești plătit să ataci pe cineva și să pierzi. Bani doar pe termen scurt."
+        ]
+      ]
+    },
+    {
+      "title": "Job-uri, merite și educație",
+      "terms": [
+        [
+          "★ (stars)",
+          "Ratingul unei companii, de la 0 la 10. Mai multe stele deblochează mai multe perk-uri pentru angajați."
+        ],
+        [
+          "JP",
+          "Puncte de job: unul pe zi pentru fiecare stea a companiei, cheltuite pe specialele companiei."
+        ],
+        [
+          "Specials",
+          "Perk-urile unei companii, deblocate de ratingul ei în stele."
+        ],
+        [
+          "Merits",
+          "Merite. Le câștigi din premii (medalii și onoruri) și le cheltui pe upgrade-uri permanente, ca Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Premii pentru realizări. Fiecare aduce un merit."
+        ]
+      ]
+    },
+    {
+      "title": "Luptă și facțiuni",
+      "terms": [
+        [
+          "Mug",
+          "Învingi pe cineva și îi iei o parte din banii pe care îi are la el."
+        ],
+        [
+          "Hosp, med out",
+          "Spital. „Medding out” înseamnă să folosești iteme medicale ca să ieși mai devreme."
+        ],
+        [
+          "Revive",
+          "Scoți pe cineva din spital. Util în războaie."
+        ],
+        [
+          "Bust, bail",
+          "Scoți pe cineva din închisoare prin îndemânare (bust) sau plătind (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: respect bonus (până la ×3) când lupți cu cineva cu stats apropiate de ale tale. FF Scouter îl estimează."
+        ],
+        [
+          "Respect",
+          "Ce aduc atacurile de facțiune. Facțiunile îl cheltuie pe upgrade-uri pentru toți membrii."
+        ],
+        [
+          "Chain",
+          "O serie de lovituri de facțiune la rând. Respectul pe lovitură crește pe măsură ce chain-ul se lungește."
+        ],
+        [
+          "Retal",
+          "Retaliation: lovești pe cineva care tocmai a atacat un membru al facțiunii, pentru ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war între două facțiuni. Loviturile de război aduc respect dublu."
+        ],
+        [
+          "OC, CPR",
+          "Crimă organizată și rata ta de trecere a checkpoint-urilor (checkpoint pass rate) în rolul respectiv."
+        ],
+        [
+          "CE, CS",
+          "Experiența și abilitatea la crime. Cresc pe măsură ce faci crime și îți măresc nerve-ul și rata de succes."
+        ]
+      ]
+    },
+    {
+      "title": "Unelte",
+      "terms": [
+        [
+          "YATA",
+          "Site pentru stocurile din străinătate, momentul călătoriilor, chain-uri și premii."
+        ],
+        [
+          "TT",
+          "TornTools, o extensie de browser care adaugă informații peste tot în joc."
+        ],
+        [
+          "PDA",
+          "Torn PDA, aplicația mobilă care suportă scripturi."
+        ],
+        [
+          "TornStats",
+          "Spionaj, unelte de război și de facțiune."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Glosar.</strong> Parte din <a href=\"/\">Faction Training Playbook</a>. Lipsește un cuvânt? Spune-ne și îl adăugăm."
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "İçeriğe geç",
+  "homeLabel": "Faction Training Playbook, ana sayfa",
+  "menu": "Menü",
+  "language": "Dil",
+  "nav": {
+    "label": "Ana menü",
+    "start": "Buradan başla",
+    "groups": {
+      "train": "Antrenman",
+      "money": "Para",
+      "crimes": "Suçlar",
+      "fight": "Dövüş",
+      "more": "Daha fazla"
+    },
+    "links": {
+      "guide": "Antrenman rehberi",
+      "idea": "Happy jump",
+      "new": "15. seviyeden önce",
+      "builds": "Build'ler",
+      "schedule": "Günlük programlar",
+      "items": "Alınacak eşyalar",
+      "edu": "Eğitim",
+      "planner": "Jump planlayıcı",
+      "math": "Antrenman matematiği",
+      "makeMoney": "Para kazanma yolları",
+      "travel": "Para için uçmak",
+      "paths": "Yollar ve hedefler",
+      "faction": "Faction yükseltmeleri",
+      "safe": "Paranı güvende tut",
+      "overview": "Genel bakış",
+      "how": "Suçlar nasıl işler",
+      "nerve": "Nerve geliştirme",
+      "oc": "Organize suç",
+      "ocScenarios": "OC senaryoları",
+      "dataTables": "Suç veri tabloları",
+      "loadout": "Savaş teçhizatı",
+      "medical": "Saha tıbbı",
+      "factionBasics": "Faction temelleri",
+      "scripts": "Script'ler ve araçlar",
+      "glossary": "Sözlük",
+      "credits": "Kaynaklar"
+    }
+  },
+  "notice": {
+    "englishOnly": "Bu sayfa şimdilik yalnızca İngilizce.",
+    "translate": "Google Translate'te aç",
+    "browserTip": "ya da tarayıcının Çevir seçeneğini kullan.",
+    "machine": "Bu sayfa İngilizceden makine çevirisiyle çevrildi. Oyundaki adlar, Torn'da göründüğü gibi İngilizce kaldı.",
+    "improve": "Çeviriyi GitHub'da geliştirmeye yardım et"
+  },
+  "suggest": {
+    "text": "Bu rehber {language} olarak da var.",
+    "yes": "{language} olarak oku",
+    "no": "İngilizce kalsın"
+  },
+  "repo": {
+    "cta": "GitHub'da gör ↗",
+    "hint": "Bir hata mı buldun ya da eklemek istediğin bir rehber mi var? Bir issue aç ya da pull request gönder."
+  }
+}

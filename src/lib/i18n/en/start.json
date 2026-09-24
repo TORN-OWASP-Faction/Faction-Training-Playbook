@@ -1,0 +1,203 @@
+{
+  "title": "Start here · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "New to Torn? Read this first",
+    "h1": "Start <em>here</em>",
+    "lede": "The things nobody tells you in your first weeks: what to set up, how to keep what you earn, and the traps that cost new players the most. Then pick a <a href=\"/paths/\">path</a>.",
+    "tocLabel": "On this page",
+    "quoteTag": "Before You Buy",
+    "quote": "\"Most new players don't lose because they're weak. They lose because they carry cash, skip the setup, and buy the wrong things. Fix that first and everything else gets easier.\""
+  },
+  "toc": {
+    "week": "Your first week",
+    "missions": "Missions",
+    "safe": "Keep your money",
+    "selling": "Selling",
+    "books": "Books",
+    "drugs": "Drugs & addiction",
+    "scams": "Scams",
+    "faction": "Factions",
+    "routine": "Your routine",
+    "glossary": "Glossary ↗"
+  },
+  "week": {
+    "eyebrow": "Do these now",
+    "title": "Your first week",
+    "steps": [
+      ["Get donator status.", "A bigger energy bar that refills faster: about {donatorGain}% more natural energy every day you play. A donator pack gives 31 days and sells for ~$24M in game, or costs about $5 in real money. Baldr: \"Everyone should have donator status.\""],
+      ["Rent the best happy you can keep paying for.", "Rent a Ranch or Mansion (at least a 925-happy Penthouse) until level 15, then a Private Island with an airstrip. Don't buy property yet. <a href=\"/travel/#pi\">PI budget →</a>"],
+      ["Get into a 3★ company.", "Most job perks unlock at 3★. Short on work stats? Pay the director to train you. <a href=\"/paths/#guides\">Which job for your path →</a>"],
+      ["Start Sports Science.", "Your first course: it opens the +1% gym-gain courses. Always keep a course running. <a href=\"/paths/#guides\">Education plans →</a>"],
+      ["Hold off on the new-player missions.", "They pay energy (up to 500 at a time), and that energy trains better once you've moved into higher-happy housing. Rent first, then do them. <a href=\"#missions\">Missions →</a>"],
+      ["Stop carrying cash.", "Mugging is common. Buy the Stock Ticker (50 points) and learn ghost trades. <a href=\"#safe\">Keep your money →</a>"],
+      ["Make your first bank deposit.", "Even a 1-week term. It's the start of your passive income, and it earns a merit."],
+      ["Set up your API keys safely.", "One key per tool, least access, never a Full key in a script. <a href=\"/scripts/\">Scripts &amp; tools →</a>"],
+      ["Grab the cheap merits.", "Every award earns a merit, and merits buy permanent upgrades. The easy ones are below."]
+    ],
+    "merits": {
+      "title": "Cheap early merits",
+      "intro": "Each of these honors earns a merit for almost no effort:",
+      "head": ["Honor", "How"],
+      "rows": [
+        ["Historian", "Spend 5–10 minutes reading a Chronicle in the newspaper."],
+        ["Forgiven", "Pray at the church twice a day, 8–10 hours apart. Takes about 7–10 days."],
+        ["Pious, Saintly", "Donate $100k, then $1M, to the church."],
+        ["Pocket Money", "Make any bank investment. A 1-week term is fine."],
+        ["Energetic", "Reach 1,000 energy: start empty and stack 4 Xanax, like you would for a jump."],
+        ["Diabetic", "Eat 500 candy. Lollipops cost about $1k each and top up your happy too."],
+        ["Spinner, One in Six", "1,000 roulette spins (about 14 days at 75 a day), and 50 Russian roulette wins on $1 bets."],
+        ["Protege", "Finish the mission \"Introduction: Duke\"."],
+        ["Mule, Souvenir", "Import 100 items from abroad, and buy the \"perfect souvenir\" on a trip."],
+        ["Luxury Real Estate", "Upgrade a Private Island with an airstrip. A friend can lend you theirs for two minutes."],
+        ["Holiday logins", "Log in on New Year's Day, Valentine's Day, Halloween, 15 November (Torn's anniversary) and Christmas Day."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Mission credits are rare",
+    "title": "Missions",
+    "newTitle": "New-player missions",
+    "new": [
+      "They teach the basics and pay energy, nerve, cash and mission credits. One step alone pays 500 energy.",
+      "Move into better housing first, so that energy trains at higher happy.",
+      "They offer a <b>piggy bank</b> once. It's a safe, one-time store for cash. Skip it and you never get another chance."
+    ],
+    "regTitle": "Regular missions and credits",
+    "reg": [
+      "Not a priority before level 15; they can use a lot of energy.",
+      "Save your credits for things <b>cash can't buy</b>: special books and weapon upgrades.",
+      "Never spend credits on anything you could buy with money. Some books are great, some are useless (see <a href=\"#books\">Books</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "The #1 way new players lose progress",
+    "title": "Keep your money",
+    "lede": "Cash in your pocket can be mugged. Store it as soon as you have it. No method is perfect, so most players use a mix.",
+    "head": ["Where", "How it works", "The catch"],
+    "rows": [
+      ["Ghost trade", "Open a trade with a friend, add cash, and neither of you accepts. Fast in and out, even from hospital.", "Trades close after 6 hours, the other player must have been active in the last 6 hours, and only use someone you trust."],
+      ["Bank", "Lock money in a 1-week to 3-month term. It earns interest and nobody can mug it.", "You can't touch it until the term ends, and when it ends the money sits idle until you start another."],
+      ["Stocks", "Buy shares (needs the Stock Ticker, 50 points). Sell any time for a 0.1% fee.", "The price can drop while you hold."],
+      ["Items and points", "Hold Xanax, donator packs, flowers, plushies or points. Items can't be mugged.", "Price them near the lowest listing when you sell, or they sit."],
+      ["Faction bank", "Most factions hold money for members.", "Withdrawals need leadership, and factions have lost vaults to bad leaders. Keep only what you need there."],
+      ["Piggy bank", "A one-time mission offer. Holds any amount, safe from muggers.", "The only way out is breaking it, all at once. Miss the offer and you never get another."],
+      ["PI vault", "Unlimited safety up to the vault size ($1B for the extra-large).", "Only in a PI you own, not one you rent."]
+    ],
+    "tips": [
+      "While you're online, reset a ghost trade every 3–5 hours so it never expires.",
+      "Avoid the Cayman Islands bank for storage: muggers wait for players landing to deposit or withdraw.",
+      "When a bank term ends, the money stays safe but stops earning. Start the next term right away."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Turning items into money",
+    "title": "Selling what you buy",
+    "whereTitle": "Where to sell",
+    "where": [
+      "<b>Item market:</b> the quickest place to sell. It takes a 5% fee.",
+      "<b>Bazaar:</b> your own shop, about 250 points to open. Buyers find it through tools like weav3r, and 100 different customers earns the Middleman merit.",
+      "<b>Trade Chat:</b> for big or bulk sales. Always use a trade window, never \"send the money first\"."
+    ],
+    "howTitle": "How to sell well",
+    "how": [
+      "Price at or near the lowest listing to sell fast. Check <b>weav3r</b> for bazaar prices before buying or selling; bazaars are usually cheaper than the item market.",
+      "Selling big amounts draws muggers. Move the money right after the sale.",
+      "Flowers and plushies sell to set-builders, or you can trade full sets at the Museum once you have the History degree."
+    ]
+  },
+  "books": {
+    "eyebrow": "Big boosts, badly timed by most",
+    "title": "Books",
+    "lede": "Books come mostly from mission credits and subscriptions. Most last 31 days, so the whole trick is timing: read one when you'll actually use it all month.",
+    "head": ["Book", "Effect", "When to read it"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% gym gains in one stat (Strength, Defense, Speed, Dexterity) for 31 days", "Read during a month you focus that stat"],
+      ["Get Hard Or Go Home", "+20% gym gains on every stat for 31 days", "Any heavy training month"],
+      ["Ugly Energy", "+100 max energy and +100 per refill for 31 days", "Worth +28–78% if you max-train that month"],
+      ["Smuggling For Beginners", "+10 items per trip for 31 days", "A big flying month, or Tourism Day"],
+      ["Mailing Yourself Abroad", "Flights 25% faster for 31 days", "Pairs with the one above"],
+      ["Brawn Over Brains and the other +5% stat books", "+5% to one stat, up to 10M", "Save them until that stat is at 200M, then read"],
+      ["Ignorance Is Bliss", "Happy above max doesn't reset for 31 days", "Only if you can afford to jump constantly. Watch for overdoses"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "The quiet cost of daily Xanax",
+    "title": "Drugs & addiction",
+    "lede": "Every drug adds a little addiction, even before the brain icon appears. Overdoses are covered in <a href=\"/medical/\">Field medicine</a>; this is about the slow build-up.",
+    "whatTitle": "What addiction does",
+    "what": [
+      "A <b>battle-stat debuff</b>: the brain icon, redder as it gets worse.",
+      "Lower effectiveness at your job, from your very first drug.",
+      "At higher levels it can <b>kick you out of your education course</b>.",
+      "Over 150 Xanax and Ecstasy in total locks you out of the drug-free Sports Science Lab gym."
+    ],
+    "keepTitle": "Keeping it down",
+    "keep": [
+      "<b>Rehab</b> in Switzerland (~$250k) clears it. Fly there when the brain icon turns red.",
+      "The <b>Addiction Mitigation</b> merit (−2% per upgrade) softens the effects.",
+      "Jobs: Cruise Line and Flower Shop (5★) can reduce addiction; a 10★ Nightclub keeps education safe from it.",
+      "Faction upgrades: Toleration cuts addiction by up to half. <a href=\"/paths/#faction\">Faction upgrades →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Don't learn these the hard way",
+    "title": "Scams and traps",
+    "items": [
+      "<b>Loss buyers who don't pay.</b> Use FFScouter's prepaid loss contracts. Otherwise check the buyer first: an account under 100 days old, under $1B networth, or with lots of enemies is a red flag. Follow their instructions exactly, or they'll use it as an excuse not to pay.",
+      "<b>Ghost trades with strangers.</b> They can see your cash, cancel the trade and have it mugged. Only use friends or faction mates.",
+      "<b>\"Paste your key here.\"</b> Never put a Full-access API key into a script or website. <a href=\"/scripts/\">Key safety →</a>",
+      "<b>Cayman bank runs.</b> Muggers camp there for players carrying cash in or out.",
+      "<b>Trusting any vault blindly.</b> Faction vaults have been emptied by bad leaders. Spread your money.",
+      "<b>The casino.</b> Only worth it for the $1-bet merit honors. Beyond that it's a money sink."
+    ]
+  },
+  "faction": {
+    "eyebrow": "How factions work",
+    "title": "Faction basics",
+    "respectTitle": "Respect, in one minute",
+    "respect": [
+      "Faction attacks earn <b>respect</b>, which buys upgrades for every member.",
+      "Multipliers stack: fair fight up to ×3, war hits ×2, a long chain up to ×2, a retaliation ×1.5, attacking abroad ×1.25.",
+      "When a member gets hit, the faction loses a quarter of the respect the attacker gained. Easy targets cost everyone."
+    ],
+    "helpTitle": "How you help, even while small",
+    "help": [
+      "Take organized-crime roles you can pass. <a href=\"/crimes/#oc\">OCs →</a>",
+      "Chain hits on targets you beat easily; FF Scouter shows who.",
+      "Retaliate when leadership calls it.",
+      "Carry medical items for wars. <a href=\"/medical/\">Field medicine →</a>",
+      "Don't take off right before a war or chain. <a href=\"/travel/#delays\">Flight delays →</a>"
+    ],
+    "quoteTag": "Rook's Rule",
+    "quote": "\"Nobody expects a new member to carry a war. We expect you to show up, take the hits you can win, keep your meds stocked, and not be the easy target that feeds the other side.\""
+  },
+  "routine": {
+    "eyebrow": "Pin this",
+    "title": "Your routine",
+    "dayTitle": "Every day",
+    "day": [
+      "Check in often enough that your energy never sits full.",
+      "Train. One stat per session, in the gym with the best dots for it.",
+      "Take Xanax when your cooldown clears, if it's in your budget. Use your point refill (25 points).",
+      "Spend nerve on the hardest crime you pass reliably.",
+      "Fly while your energy refills; check YATA first.",
+      "Spend job points on your company specials.",
+      "Store your cash before you log off."
+    ],
+    "weekTitle": "Every week",
+    "week": [
+      "Renew 1–2 week bank terms the day they end.",
+      "Claim weekly stock payouts; they disappear after 24 hours.",
+      "Make sure the next course is queued before the current one ends.",
+      "Check your OC slot with the faction."
+    ],
+    "monthTitle": "Every month",
+    "month": [
+      "Renew your property lease. Leases end at 03:30 TCT.",
+      "Renew donator status (31 days a pack).",
+      "Claim monthly stock payouts.",
+      "Time any 31-day book for the month ahead."
+    ]
+  },
+  "footer": "<strong>Start here.</strong> Missions, money storage and selling advice from <strong>Baldr [1847600]</strong>'s Basic Advice; cheap merits from <strong>Tempest [1867527]</strong>'s Guide to Easy Merits; books from <strong>HandsomePants [1897243]</strong>'s Guide to Stat Gains from Books and the Travel wiki page; addiction from the Drug wiki page; faction respect from the Faction and Attack wiki pages; job perks and mission rewards from the Torn API and wiki. Part of the <a href=\"/\">Faction Training Playbook</a>."
+}

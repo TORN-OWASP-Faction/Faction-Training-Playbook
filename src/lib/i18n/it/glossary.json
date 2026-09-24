@@ -1,0 +1,221 @@
+{
+  "title": "Glossario · Faction Training Playbook",
+  "eyebrow": "Torn in parole semplici",
+  "h1": "<em>Glossario</em>",
+  "lede": "Le parole e le abbreviazioni che vedrai ovunque su Torn e su questo sito. Ognuna porta alla pagina che la spiega per bene.",
+  "back": "← Inizia da qui",
+  "more": "Altro →",
+  "groups": [
+    {
+      "title": "Le tue barre e stat",
+      "terms": [
+        [
+          "E, energy",
+          "Si spende in palestra e negli attacchi. Una barra piena si ricarica ogni 5 ore: 150 al massimo da donator, 100 altrimenti."
+        ],
+        [
+          "Nerve, NNB",
+          "Il nerve si spende nei crimini. NNB è la tua natural nerve bar: il massimo che ottieni dall'esperienza nei crimini, prima dei boost."
+        ],
+        [
+          "Happy",
+          "Moltiplica i tuoi guadagni in palestra. La tua proprietà fissa il massimo. Tutto quello che lo supera si azzera a :00, :15, :30 e :45."
+        ],
+        [
+          "Happy jump",
+          "Accumula energia e porta l'happy molto sopra il massimo, poi allenati con tutto dentro un'unica finestra di 15 minuti."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense e Dexterity. «Total stats» è la somma di tutte e quattro."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence ed Endurance. Servono per i lavori; i corsi e l'addestramento sul lavoro le aumentano."
+        ],
+        [
+          "Gym dots",
+          "Il moltiplicatore di una palestra per ogni stat. Più dots, più guadagni per energia (George's ha 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, l'orologio del gioco. Gli azzeramenti dell'happy e le scadenze degli affitti seguono questo orario."
+        ]
+      ]
+    },
+    {
+      "title": "Oggetti e booster",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 di energia e +75 di happy. Una droga con un cooldown di 6–8 ore."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Raddoppia il tuo happy attuale; il boost grosso di happy più economico."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 di happy (5,000 da un Adult Novelties da 10★). Il booster principale dell'happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Un booster che riempie la barra dell'energia."
+        ],
+        [
+          "Refill",
+          "Un refill a punti: riempie la barra dell'energia una volta al giorno per 25 punti."
+        ],
+        [
+          "Cooldowns",
+          "I cooldown di droghe, booster e oggetti medici sono orologi separati. Usarne uno non tocca gli altri."
+        ],
+        [
+          "OD",
+          "Overdose. Svuota le tue barre, ti manda in ospedale e può allungare il cooldown delle droghe fino a un giorno."
+        ],
+        [
+          "SE",
+          "Stat enhancer: un oggetto costoso che aggiunge stat direttamente. Conviene solo con stat molto alte."
+        ]
+      ]
+    },
+    {
+      "title": "Soldi e proprietà",
+      "terms": [
+        [
+          "PI",
+          "Private Island, la proprietà migliore. Affittane una con pista d'atterraggio e assumi un pilota per viaggi più veloci e più carichi."
+        ],
+        [
+          "Donator, DP",
+          "Status di donator: una barra dell'energia più grande e una ricarica più veloce. Un donator pack dura 31 giorni."
+        ],
+        [
+          "IM",
+          "Item market: veloce per vendere, con una commissione del 5%."
+        ],
+        [
+          "Bazaar",
+          "Il tuo negozio personale. I compratori lo trovano con strumenti come weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Un trade lasciato aperto con qualcuno di cui ti fidi, così i contanti stanno lì invece che in tasca."
+        ],
+        [
+          "Points",
+          "La seconda valuta di Torn. Compra refill, merit, lo Stock Ticker e altro."
+        ],
+        [
+          "Benefit block",
+          "Abbastanza azioni di una società per ottenere il suo pagamento o vantaggio."
+        ],
+        [
+          "Museum, sets",
+          "Scambia un set completo di fiori o peluche con punti. Serve la laurea in History."
+        ],
+        [
+          "Loss selling",
+          "Farsi pagare per attaccare qualcuno e perdere. Soldi solo a breve termine."
+        ]
+      ]
+    },
+    {
+      "title": "Lavoro, merit e istruzione",
+      "terms": [
+        [
+          "★ (stars)",
+          "La valutazione di un'azienda da 0 a 10. Più stelle sbloccano più vantaggi per i dipendenti."
+        ],
+        [
+          "JP",
+          "Job point: uno per stella dell'azienda al giorno, da spendere negli special dell'azienda."
+        ],
+        [
+          "Specials",
+          "I vantaggi di un'azienda, sbloccati in base alle sue stelle."
+        ],
+        [
+          "Merits",
+          "Si ottengono con i riconoscimenti (medal e honor) e si spendono in potenziamenti permanenti come Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Riconoscimenti per i traguardi raggiunti. Ognuno ti dà un merit."
+        ]
+      ]
+    },
+    {
+      "title": "Combattimento e fazioni",
+      "terms": [
+        [
+          "Mug",
+          "Battere qualcuno e prendersi una parte dei contanti che ha addosso."
+        ],
+        [
+          "Hosp, med out",
+          "Ospedale. «Medding out» significa usare oggetti medici per uscire prima."
+        ],
+        [
+          "Revive",
+          "Tirare fuori qualcuno dall'ospedale. Utile in guerra."
+        ],
+        [
+          "Bust, bail",
+          "Far uscire qualcuno di prigione con l'abilità (bust) o pagando (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: rispetto bonus (fino a ×3) per combattere contro qualcuno con stat vicine alle tue. FF Scouter lo stima."
+        ],
+        [
+          "Respect",
+          "Quello che fanno guadagnare gli attacchi di fazione. Le fazioni lo spendono in upgrade per tutti i membri."
+        ],
+        [
+          "Chain",
+          "Una serie di colpi di fazione di fila. Il rispetto per colpo cresce man mano che la chain si allunga."
+        ],
+        [
+          "Retal",
+          "Retaliation (ritorsione): colpire qualcuno che ha appena attaccato un membro della fazione, per ×1.5 di rispetto."
+        ],
+        [
+          "RW",
+          "Ranked war tra due fazioni. I colpi di guerra valgono il doppio del rispetto."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, e il tuo checkpoint pass rate (tasso di superamento) nel tuo ruolo."
+        ],
+        [
+          "CE, CS",
+          "Crime experience e crime skill. Crescono facendo crimini e aumentano il tuo nerve e la tua probabilità di successo."
+        ]
+      ]
+    },
+    {
+      "title": "Strumenti",
+      "terms": [
+        [
+          "YATA",
+          "Sito per le scorte all'estero, i tempi di viaggio, le chain e i riconoscimenti."
+        ],
+        [
+          "TT",
+          "TornTools, un'estensione del browser che aggiunge informazioni in tutto il gioco."
+        ],
+        [
+          "PDA",
+          "Torn PDA, l'app per cellulare con supporto agli script."
+        ],
+        [
+          "TornStats",
+          "Strumenti per spionaggio, guerre e fazioni."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Glossario.</strong> Parte del <a href=\"/\">Faction Training Playbook</a>. Manca una parola? Diccelo e la aggiungiamo."
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Przejdź do treści",
+  "homeLabel": "Faction Training Playbook, strona główna",
+  "menu": "Menu",
+  "language": "Język",
+  "nav": {
+    "label": "Główna",
+    "start": "Zacznij tutaj",
+    "groups": {
+      "train": "Trening",
+      "money": "Pieniądze",
+      "crimes": "Przestępstwa",
+      "fight": "Walka",
+      "more": "Więcej"
+    },
+    "links": {
+      "guide": "Poradnik treningu",
+      "idea": "Happy jump",
+      "new": "Przed 15. poziomem",
+      "builds": "Buildy",
+      "schedule": "Plany dnia",
+      "items": "Co kupić",
+      "edu": "Edukacja",
+      "planner": "Planer jumpów",
+      "math": "Matematyka treningu",
+      "makeMoney": "Jak zarabiać",
+      "travel": "Latanie za kasę",
+      "paths": "Ścieżki i kamienie milowe",
+      "faction": "Ulepszenia frakcji",
+      "safe": "Chroń swoje pieniądze",
+      "overview": "Przegląd",
+      "how": "Jak działają przestępstwa",
+      "nerve": "Rozwijaj nerve",
+      "oc": "Przestępczość zorganizowana (OC)",
+      "ocScenarios": "Scenariusze OC",
+      "dataTables": "Tabele danych przestępstw",
+      "loadout": "Wyposażenie na wojnę",
+      "medical": "Medycyna polowa",
+      "factionBasics": "Podstawy frakcji",
+      "scripts": "Skrypty i narzędzia",
+      "glossary": "Słowniczek",
+      "credits": "Podziękowania"
+    }
+  },
+  "notice": {
+    "englishOnly": "Ta strona jest na razie tylko po angielsku.",
+    "translate": "Otwórz ją w Google Translate",
+    "browserTip": "albo użyj opcji tłumaczenia w przeglądarce.",
+    "machine": "Ta strona została przetłumaczona maszynowo z angielskiego. Nazwy z gry zostają po angielsku, tak jak pokazuje je Torn.",
+    "improve": "Pomóż ulepszyć tłumaczenie na GitHubie"
+  },
+  "suggest": {
+    "text": "Ten poradnik jest też dostępny w języku: {language}.",
+    "yes": "Czytaj w języku: {language}",
+    "no": "Zostań przy angielskim"
+  },
+  "repo": {
+    "cta": "Zobacz na GitHubie ↗",
+    "hint": "Widzisz błąd albo masz poradnik do dodania? Otwórz issue albo wyślij pull request."
+  }
+}

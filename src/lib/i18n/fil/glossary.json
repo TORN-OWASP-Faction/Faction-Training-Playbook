@@ -1,0 +1,221 @@
+{
+  "title": "Glossary · Faction Training Playbook",
+  "eyebrow": "Torn sa simpleng salita",
+  "h1": "<em>Glossary</em>",
+  "lede": "Ang mga salita at abbreviation na makikita mo kahit saan sa Torn at sa site na ito. Bawat isa ay naka-link sa page na nagpapaliwanag nito nang maayos.",
+  "back": "← Magsimula dito",
+  "more": "Iba pa →",
+  "groups": [
+    {
+      "title": "Ang bars at stats mo",
+      "terms": [
+        [
+          "E, energy",
+          "Ginagamit sa gym at sa attacks. Napupuno ulit ang buong bar kada 5 oras: 150 max kung donator ka, 100 kung hindi."
+        ],
+        [
+          "Nerve, NNB",
+          "Ginagamit ang nerve sa crimes. Ang NNB ay ang natural nerve bar mo: ang max na nakukuha mo mula sa crime experience, bago ang boosts."
+        ],
+        [
+          "Happy",
+          "Pinaparami nito ang gym gains mo. Ang property mo ang nagtatakda ng max. Lahat ng lampas dito ay nare-reset sa :00, :15, :30 at :45."
+        ],
+        [
+          "Happy jump",
+          "Mag-stack ng energy at itulak ang happy nang malayo sa max, tapos i-train lahat sa loob ng isang 15-minute window."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense at Dexterity. Ang \"total stats\" ay ang apat na pinagsama."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence at Endurance. Ginagamit ng jobs; tumataas sila sa courses at job training."
+        ],
+        [
+          "Gym dots",
+          "Ang multiplier ng gym sa bawat stat. Mas maraming dots, mas malaking gains kada energy (7.3 ang George's)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, ang orasan ng game. Dito naka-base ang happy resets at pagtatapos ng lease."
+        ]
+      ]
+    },
+    {
+      "title": "Items at boosters",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energy at +75 happy. Drug na may 6–8 oras na cooldown."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Dino-double ang current happy mo; ang pinakamurang malaking happy boost."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 mula sa 10★ Adult Novelties). Ang pangunahing booster sa happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Booster na nire-refill ang energy bar mo."
+        ],
+        [
+          "Refill",
+          "Point refill: pinupuno ang energy bar mo isang beses kada araw sa halagang 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Magkakahiwalay na orasan ang drug, booster at medical cooldowns. Hindi naaapektuhan ang iba kapag gumamit ka ng isa."
+        ],
+        [
+          "OD",
+          "Overdose. Inuubos ang bars mo, dinadala ka sa hospital at puwedeng umabot ng isang araw ang drug cooldown mo."
+        ],
+        [
+          "SE",
+          "Stat enhancer: mamahaling item na direktang nagdadagdag ng stats. Sulit lang kapag sobrang taas na ng stats mo."
+        ]
+      ]
+    },
+    {
+      "title": "Pera at property",
+      "terms": [
+        [
+          "PI",
+          "Private Island, ang pinakamagandang property. Mag-rent ng may airstrip at kumuha ng pilot para sa mas mabilis at mas malaking trips."
+        ],
+        [
+          "Donator, DP",
+          "Donator status: mas malaking energy bar at mas mabilis na refill. 31 araw ang bigay ng isang donator pack."
+        ],
+        [
+          "IM",
+          "Item market: mabilis pagbentahan, may 5% na fee."
+        ],
+        [
+          "Bazaar",
+          "Sarili mong shop. Nahahanap ito ng buyers gamit ang tools gaya ng weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Trade na iniiwang bukas kasama ang taong pinagkakatiwalaan mo, para nandoon ang cash mo imbes na nasa bulsa mo."
+        ],
+        [
+          "Points",
+          "Pangalawang currency ng Torn. Pambili ng refills, merits, Stock Ticker at iba pa."
+        ],
+        [
+          "Benefit block",
+          "Sapat na shares ng isang stock para makuha ang payout o perk nito."
+        ],
+        [
+          "Museum, sets",
+          "I-trade ang buong set ng flowers o plushies para sa points. Kailangan ang History degree."
+        ],
+        [
+          "Loss selling",
+          "Binabayaran ka para umatake sa isang tao at matalo. Panandaliang pera lang."
+        ]
+      ]
+    },
+    {
+      "title": "Jobs, merits at education",
+      "terms": [
+        [
+          "★ (stars)",
+          "Rating ng company mula 0 hanggang 10. Mas maraming stars, mas maraming perks para sa employees."
+        ],
+        [
+          "JP",
+          "Job points: isa kada company star kada araw, ginagastos sa company specials."
+        ],
+        [
+          "Specials",
+          "Mga perk ng company, na nabubuksan ayon sa star rating nito."
+        ],
+        [
+          "Merits",
+          "Nakukuha mula sa awards (medals at honors), ginagastos sa permanenteng upgrades gaya ng Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Awards para sa milestones. Bawat isa ay may kasamang merit."
+        ]
+      ]
+    },
+    {
+      "title": "Laban at factions",
+      "terms": [
+        [
+          "Mug",
+          "Talunin ang isang tao at kunin ang parte ng cash na dala niya."
+        ],
+        [
+          "Hosp, med out",
+          "Hospital. Ang \"medding out\" ay paggamit ng medical items para makalabas nang maaga."
+        ],
+        [
+          "Revive",
+          "Paglabas sa isang tao mula sa hospital. Useful sa wars."
+        ],
+        [
+          "Bust, bail",
+          "Paglabas sa isang tao mula sa jail gamit ang skill (bust) o sa pagbabayad (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: bonus respect (hanggang ×3) kapag lumaban ka sa taong malapit sa stats mo. Ang FF Scouter ang nag-e-estimate nito."
+        ],
+        [
+          "Respect",
+          "Ang nakukuha sa faction attacks. Ginagastos ito ng factions sa upgrades para sa lahat ng members."
+        ],
+        [
+          "Chain",
+          "Sunod-sunod na faction hits. Lumalaki ang respect kada hit habang humahaba ang chain."
+        ],
+        [
+          "Retal",
+          "Retaliation: pag-hit sa taong kaka-attack lang sa isang faction member, para sa ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war sa pagitan ng dalawang faction. Double respect ang war hits."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, at ang checkpoint pass rate mo sa role mo roon."
+        ],
+        [
+          "CE, CS",
+          "Crime experience at crime skill. Lumalaki sila habang gumagawa ka ng crimes at pinapataas nila ang nerve at success mo."
+        ]
+      ]
+    },
+    {
+      "title": "Tools",
+      "terms": [
+        [
+          "YATA",
+          "Website para sa foreign stock, travel timing, chains at awards."
+        ],
+        [
+          "TT",
+          "TornTools, browser extension na nagdadagdag ng impormasyon sa buong game."
+        ],
+        [
+          "PDA",
+          "Torn PDA, ang mobile app na may script support."
+        ],
+        [
+          "TornStats",
+          "Tools para sa spies, war at faction."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Glossary.</strong> Parte ng <a href=\"/\">Faction Training Playbook</a>. May kulang na salita? Sabihan mo kami at idadagdag namin."
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Vai al contenuto",
+  "homeLabel": "Faction Training Playbook, pagina iniziale",
+  "menu": "Menu",
+  "language": "Lingua",
+  "nav": {
+    "label": "Principale",
+    "start": "Inizia da qui",
+    "groups": {
+      "train": "Allenamento",
+      "money": "Soldi",
+      "crimes": "Crimini",
+      "fight": "Combattimento",
+      "more": "Altro"
+    },
+    "links": {
+      "guide": "Guida all'allenamento",
+      "idea": "L'happy jump",
+      "new": "Prima del livello 15",
+      "builds": "Build",
+      "schedule": "Routine giornaliere",
+      "items": "Cosa comprare",
+      "edu": "Istruzione",
+      "planner": "Pianificatore di jump",
+      "math": "La matematica dell'allenamento",
+      "makeMoney": "Modi per fare soldi",
+      "travel": "Volare per soldi",
+      "paths": "Percorsi e traguardi",
+      "faction": "Upgrade di fazione",
+      "safe": "Proteggi i tuoi soldi",
+      "overview": "Panoramica",
+      "how": "Come funzionano i crimini",
+      "nerve": "Aumenta il tuo nerve",
+      "oc": "Crimine organizzato",
+      "ocScenarios": "Scenari OC",
+      "dataTables": "Tabelle dati dei crimini",
+      "loadout": "Equipaggiamento da guerra",
+      "medical": "Medicina da campo",
+      "factionBasics": "Le basi delle fazioni",
+      "scripts": "Script e strumenti",
+      "glossary": "Glossario",
+      "credits": "Crediti"
+    }
+  },
+  "notice": {
+    "englishOnly": "Per ora questa pagina è solo in inglese.",
+    "translate": "Aprila con Google Translate",
+    "browserTip": "oppure usa l'opzione Traduci del tuo browser.",
+    "machine": "Questa pagina è stata tradotta automaticamente dall'inglese. I nomi del gioco restano in inglese, come li mostra Torn.",
+    "improve": "Aiuta a migliorare la traduzione su GitHub"
+  },
+  "suggest": {
+    "text": "Questa guida è disponibile anche in {language}.",
+    "yes": "Leggila in {language}",
+    "no": "Resta in inglese"
+  },
+  "repo": {
+    "cta": "Vedi su GitHub ↗",
+    "hint": "Hai trovato un errore o hai una guida da aggiungere? Apri una issue o invia una pull request."
+  }
+}

@@ -52,7 +52,7 @@
   <span class="eyebrow">Level 15+ · money</span>
   <h1>Flying for <em style="color:var(--c-fixer)">money</em></h1>
   <p class="lede">Level 15 unlocks travel, and travel is where money gets easy: fly abroad, buy flowers or plushies, fly home, sell to players. Here's how to start, how much cash you need before renting a Private Island, and how your flying changes depending on whether you're building stats or building money.</p>
-  <p style="margin-top:.6rem"><a href="{base}/#money">← Back to Make money</a></p>
+  <p style="margin-top:.6rem"><a href="{base}/training/#money">← Back to Make money</a></p>
 
   <Character variant="fixer" name={'Nico "The Line"'} tag="Between Us" initial="N" img="nico.png">
     "Half this city runs on flowers and stuffed animals. Sounds stupid until you see the margins. Get your wings, get an island with a runway, and the money starts coming in on its own."
@@ -68,7 +68,7 @@
     <div class="card">
       <h3>Costs energy <span class="tag" style="color:var(--c-medic);background:var(--medic-soft)">competes with training</span></h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">$</span><div><b>Selling losses</b>: 25e each. Only as a short burst toward a goal (see <a href="{base}/#sell-losses">Selling losses</a>).</div></li>
+        <li><span class="k">$</span><div><b>Selling losses</b>: 25e each. Only as a short burst toward a goal (see <a href="{base}/training/#sell-losses">Selling losses</a>).</div></li>
         <li><span class="k">⚔</span><div><b>War hits</b>: 25e each, but <b>$450k–$1M</b> a hit depending on respect. Worth it while a war is on.</div></li>
         <li><span class="k">✗</span><div><b>Mugging</b>: uses a lot of energy for uneven returns. Skip it until you're strong.</div></li>
       </ul>

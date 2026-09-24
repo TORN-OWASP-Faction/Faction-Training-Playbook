@@ -26,7 +26,7 @@
   <span class="eyebrow">Training · deep dive</span>
   <h1>The training <em>math</em></h1>
   <p class="lede">Exactly how gym gains are calculated — the accepted community formula, what every term means, and why happy jumps work. If you just want it to do the work for you, use the <a href="{base}/planner/">live planner</a>.</p>
-  <p style="margin-top:.6rem"><a href="{base}/#idea">← Back to the guide</a></p>
+  <p style="margin-top:.6rem"><a href="{base}/training/#idea">← Back to the guide</a></p>
 </div></header>
 
 <section><div class="wrap">

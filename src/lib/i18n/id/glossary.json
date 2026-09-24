@@ -1,0 +1,221 @@
+{
+  "title": "Glosarium · Faction Training Playbook",
+  "eyebrow": "Torn dengan bahasa sederhana",
+  "h1": "<em>Glosarium</em>",
+  "lede": "Kata dan singkatan yang akan sering kamu lihat di Torn dan di situs ini. Masing-masing tertaut ke halaman yang menjelaskannya dengan lengkap.",
+  "back": "← Mulai di sini",
+  "more": "Selengkapnya →",
+  "groups": [
+    {
+      "title": "Bar dan stat kamu",
+      "terms": [
+        [
+          "E, energy",
+          "Dipakai di gym dan untuk menyerang. Bar penuh terisi ulang tiap 5 jam: maksimal 150 kalau donator, selain itu 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve dipakai untuk crimes. NNB adalah natural nerve bar kamu: batas maksimal yang kamu dapat dari crime experience, sebelum boost."
+        ],
+        [
+          "Happy",
+          "Melipatgandakan hasil gym kamu. Properti kamu menentukan batas maksimalnya. Kelebihan di atas batas itu di-reset pada :00, :15, :30 dan :45."
+        ],
+        [
+          "Happy jump",
+          "Tumpuk energy dan dorong happy jauh di atas maksimal, lalu latih semuanya dalam satu jendela 15 menit."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense dan Dexterity. “Total stats” artinya keempatnya dijumlahkan."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence dan Endurance. Dipakai untuk pekerjaan; kursus dan pelatihan kerja menaikkannya."
+        ],
+        [
+          "Gym dots",
+          "Pengali gym untuk tiap stat. Makin banyak titik, makin besar hasil per energy (George's nilainya 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, jam di dalam game. Reset happy dan berakhirnya sewa mengikuti jam ini."
+        ]
+      ]
+    },
+    {
+      "title": "Item dan booster",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energy dan +75 happy. Drug dengan cooldown 6–8 jam."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Menggandakan happy kamu saat ini; boost happy besar yang paling murah."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 dari Adult Novelties 10★). Booster utama untuk happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Booster yang mengisi penuh bar energy kamu."
+        ],
+        [
+          "Refill",
+          "Refill dengan points: mengisi penuh bar energy sekali sehari seharga 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Cooldown drug, booster dan medis punya jam masing-masing. Memakai satu tidak memengaruhi yang lain."
+        ],
+        [
+          "OD",
+          "Overdosis. Mengosongkan bar kamu, memasukkanmu ke rumah sakit, dan bisa memperpanjang cooldown drug sampai sehari."
+        ],
+        [
+          "SE",
+          "Stat enhancer: item mahal yang langsung menambah stat. Baru sepadan kalau stat kamu sudah sangat tinggi."
+        ]
+      ]
+    },
+    {
+      "title": "Uang dan properti",
+      "terms": [
+        [
+          "PI",
+          "Private Island, properti terbaik. Sewa yang ada airstrip-nya dan pakai pilot supaya perjalanan lebih cepat dan muatan lebih banyak."
+        ],
+        [
+          "Donator, DP",
+          "Status donator: bar energy lebih besar dan isi ulang lebih cepat. Satu donator pack berlaku 31 hari."
+        ],
+        [
+          "IM",
+          "Item market: cepat untuk jualan, dengan biaya 5%."
+        ],
+        [
+          "Bazaar",
+          "Toko milikmu sendiri. Pembeli menemukannya lewat tools seperti weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Trade yang dibiarkan terbuka dengan orang yang kamu percaya, jadi uangmu tersimpan di situ, bukan di kantong."
+        ],
+        [
+          "Points",
+          "Mata uang kedua di Torn. Bisa dipakai untuk refill, merit, Stock Ticker dan lainnya."
+        ],
+        [
+          "Benefit block",
+          "Jumlah saham satu perusahaan yang cukup untuk mendapat payout atau perk-nya."
+        ],
+        [
+          "Museum, sets",
+          "Tukar satu set lengkap bunga atau plushie dengan points. Butuh gelar History."
+        ],
+        [
+          "Loss selling",
+          "Dibayar untuk menyerang seseorang lalu kalah. Hanya uang jangka pendek."
+        ]
+      ]
+    },
+    {
+      "title": "Pekerjaan, merit dan pendidikan",
+      "terms": [
+        [
+          "★ (stars)",
+          "Rating perusahaan dari 0 sampai 10. Makin banyak bintang, makin banyak perk untuk karyawan."
+        ],
+        [
+          "JP",
+          "Job points: satu per bintang perusahaan per hari, dipakai untuk special perusahaan."
+        ],
+        [
+          "Specials",
+          "Perk sebuah perusahaan, terbuka sesuai rating bintangnya."
+        ],
+        [
+          "Merits",
+          "Didapat dari award (medal dan honor), dipakai untuk upgrade permanen seperti Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Award untuk pencapaian tertentu. Masing-masing memberi satu merit."
+        ]
+      ]
+    },
+    {
+      "title": "Bertarung dan faction",
+      "terms": [
+        [
+          "Mug",
+          "Kalahkan seseorang dan ambil sebagian uang tunai yang dia bawa."
+        ],
+        [
+          "Hosp, med out",
+          "Rumah sakit. “Med out” artinya memakai item medis supaya keluar lebih cepat."
+        ],
+        [
+          "Revive",
+          "Mengeluarkan seseorang dari rumah sakit. Berguna saat perang."
+        ],
+        [
+          "Bust, bail",
+          "Mengeluarkan seseorang dari penjara dengan skill (bust) atau dengan bayar (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: bonus respect (sampai ×3) karena melawan orang yang stat-nya mirip denganmu. FF Scouter memperkirakannya."
+        ],
+        [
+          "Respect",
+          "Hasil dari serangan faction. Faction memakainya untuk upgrade bagi semua anggota."
+        ],
+        [
+          "Chain",
+          "Rangkaian hit faction berturut-turut. Respect per hit makin besar seiring chain makin panjang."
+        ],
+        [
+          "Retal",
+          "Retaliation: menyerang orang yang baru saja menyerang anggota faction, dapat respect ×1.5."
+        ],
+        [
+          "RW",
+          "Ranked war antara dua faction. Hit saat perang dapat respect dua kali lipat."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, dan checkpoint pass rate kamu di peran tersebut."
+        ],
+        [
+          "CE, CS",
+          "Crime experience dan crime skill. Keduanya naik saat kamu melakukan crime dan menaikkan nerve serta peluang sukses kamu."
+        ]
+      ]
+    },
+    {
+      "title": "Tools",
+      "terms": [
+        [
+          "YATA",
+          "Situs untuk stok luar negeri, waktu perjalanan, chain dan award."
+        ],
+        [
+          "TT",
+          "TornTools, ekstensi browser yang menambahkan info di seluruh bagian game."
+        ],
+        [
+          "PDA",
+          "Torn PDA, aplikasi mobile yang mendukung script."
+        ],
+        [
+          "TornStats",
+          "Tools untuk spy, perang dan faction."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Glosarium.</strong> Bagian dari <a href=\"/\">Faction Training Playbook</a>. Ada kata yang belum ada? Kabari kami dan akan kami tambahkan."
+}

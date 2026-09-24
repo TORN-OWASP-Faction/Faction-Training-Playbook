@@ -1,0 +1,203 @@
+{
+  "title": "Begin hier · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Nieuw in Torn? Lees dit eerst",
+    "h1": "Begin <em>hier</em>",
+    "lede": "Wat niemand je vertelt in je eerste weken: wat je moet instellen, hoe je houdt wat je verdient, en de valkuilen die nieuwe spelers het meest kosten. Kies daarna een <a href=\"/paths/\">route</a>.",
+    "tocLabel": "Op deze pagina",
+    "quoteTag": "Voordat je koopt",
+    "quote": "\"De meeste nieuwe spelers verliezen niet omdat ze zwak zijn. Ze verliezen omdat ze cash bij zich dragen, de basis overslaan en de verkeerde dingen kopen. Los dat eerst op en de rest wordt makkelijker.\""
+  },
+  "toc": {
+    "week": "Je eerste week",
+    "missions": "Missions",
+    "safe": "Houd je geld",
+    "selling": "Verkopen",
+    "books": "Boeken",
+    "drugs": "Drugs & verslaving",
+    "scams": "Oplichting",
+    "faction": "Factions",
+    "routine": "Je routine",
+    "glossary": "Woordenlijst ↗"
+  },
+  "week": {
+    "eyebrow": "Doe dit nu",
+    "title": "Je eerste week",
+    "steps": [
+      ["Neem donatorstatus.", "Een grotere energybalk die sneller bijlaadt: ongeveer {donatorGain}% meer natuurlijke energy per dag dat je speelt. Een donator pack geeft 31 dagen en verkoopt voor ~$24M in het spel, of kost ongeveer $5 in echt geld. Baldr: \"Iedereen zou donatorstatus moeten hebben.\""],
+      ["Huur de beste happy die je kunt blijven betalen.", "Huur een Ranch of Mansion (minstens een Penthouse met 925 happy) tot level 15, en daarna een Private Island met landingsbaan. Koop nog geen property. <a href=\"/travel/#pi\">PI-budget →</a>"],
+      ["Ga werken bij een 3★-bedrijf.", "De meeste jobperks worden ontgrendeld bij 3★. Te weinig working stats? Betaal de director om je te trainen. <a href=\"/paths/#guides\">Welke job bij je route past →</a>"],
+      ["Begin met Sports Science.", "Je eerste cursus: die opent de cursussen met +1% gym-gains. Zorg dat er altijd een cursus loopt. <a href=\"/paths/#guides\">Opleidingsplannen →</a>"],
+      ["Wacht nog met de missions voor nieuwe spelers.", "Ze leveren energy op (tot 500 in één keer), en die energy traint beter zodra je in een woning met meer happy zit. Eerst huren, dan pas doen. <a href=\"#missions\">Missions →</a>"],
+      ["Stop met cash bij je dragen.", "Muggen gebeurt vaak. Koop de Stock Ticker (50 points) en leer ghost trades. <a href=\"#safe\">Houd je geld →</a>"],
+      ["Doe je eerste bankstorting.", "Zelfs voor 1 week. Het is het begin van je passieve inkomen, en het levert een merit op."],
+      ["Stel je API keys veilig in.", "Eén key per tool, zo min mogelijk toegang, nooit een Full key in een script. <a href=\"/scripts/\">Scripts &amp; tools →</a>"],
+      ["Pak de goedkope merits.", "Elke award levert een merit op, en met merits koop je permanente upgrades. De makkelijke staan hieronder."]
+    ],
+    "merits": {
+      "title": "Goedkope merits voor het begin",
+      "intro": "Elk van deze honors levert een merit op voor bijna geen moeite:",
+      "head": ["Honor", "Hoe"],
+      "rows": [
+        ["Historian", "Lees 5–10 minuten een Chronicle in de krant."],
+        ["Forgiven", "Bid twee keer per dag in de kerk, 8–10 uur uit elkaar. Duurt ongeveer 7–10 dagen."],
+        ["Pious, Saintly", "Doneer $100k, en daarna $1M, aan de kerk."],
+        ["Pocket Money", "Doe een willekeurige bankinvestering. 1 week is prima."],
+        ["Energetic", "Bereik 1,000 energy: begin leeg en stapel 4 Xanax, zoals je voor een jump zou doen."],
+        ["Diabetic", "Eet 500 snoepjes. Lollipops kosten ongeveer $1k per stuk en vullen ook je happy aan."],
+        ["Spinner, One in Six", "1,000 keer roulette draaien (ongeveer 14 dagen met 75 per dag), en 50 keer winnen bij Russische roulette met inzetten van $1."],
+        ["Protege", "Rond de mission \"Introduction: Duke\" af."],
+        ["Mule, Souvenir", "Importeer 100 items uit het buitenland, en koop het \"perfect souvenir\" tijdens een trip."],
+        ["Luxury Real Estate", "Upgrade een Private Island met een landingsbaan. Een vriend kan je die van hem twee minuten lenen."],
+        ["Holiday logins", "Log in op Nieuwjaarsdag, Valentijnsdag, Halloween, 15 november (de verjaardag van Torn) en eerste kerstdag."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Mission credits zijn zeldzaam",
+    "title": "Missions",
+    "newTitle": "Missions voor nieuwe spelers",
+    "new": [
+      "Ze leren je de basis en betalen energy, nerve, cash en mission credits uit. Eén stap alleen levert al 500 energy op.",
+      "Verhuis eerst naar een betere woning, zodat die energy traint met meer happy.",
+      "Ze bieden je één keer een <b>piggy bank</b> (spaarvarken) aan. Een veilige, eenmalige opslag voor cash. Sla je hem over, dan krijg je nooit meer de kans."
+    ],
+    "regTitle": "Gewone missions en credits",
+    "reg": [
+      "Geen prioriteit voor level 15; ze kunnen veel energy kosten.",
+      "Bewaar je credits voor dingen die je <b>niet met geld kunt kopen</b>: speciale boeken en wapenupgrades.",
+      "Geef nooit credits uit aan iets wat je ook met geld kunt kopen. Sommige boeken zijn geweldig, andere nutteloos (zie <a href=\"#books\">Boeken</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "De nummer 1 manier waarop nieuwe spelers voortgang verliezen",
+    "title": "Houd je geld",
+    "lede": "Cash in je zak kan gemugd worden. Berg het op zodra je het hebt. Geen enkele methode is perfect, dus de meeste spelers gebruiken een mix.",
+    "head": ["Waar", "Hoe het werkt", "Het addertje"],
+    "rows": [
+      ["Ghost trade", "Open een trade met een vriend, zet er cash in, en geen van jullie accepteert. Snel erin en eruit, zelfs vanuit het ziekenhuis.", "Trades sluiten na 6 uur, de andere speler moet in de afgelopen 6 uur actief zijn geweest, en gebruik alleen iemand die je vertrouwt."],
+      ["Bank", "Zet geld vast voor 1 week tot 3 maanden. Het levert rente op en niemand kan het muggen.", "Je kunt er niet bij tot de termijn afloopt, en daarna staat het geld stil tot je een nieuwe start."],
+      ["Aandelen", "Koop aandelen (hiervoor heb je de Stock Ticker nodig, 50 points). Verkoop wanneer je wilt voor 0.1% kosten.", "De koers kan dalen terwijl je ze vasthoudt."],
+      ["Items en points", "Houd Xanax, donator packs, bloemen, knuffels of points aan. Items kunnen niet gemugd worden.", "Prijs ze bij verkoop rond de laagste listing, anders blijven ze liggen."],
+      ["Faction-bank", "De meeste factions bewaren geld voor hun leden.", "Opnames moeten door de leiding worden goedgekeurd, en factions zijn al hun kluis kwijtgeraakt door slechte leiders. Houd er alleen wat je nodig hebt."],
+      ["Piggy bank", "Een eenmalig mission-aanbod. Kan elk bedrag bevatten, veilig voor muggers.", "Je krijgt het er alleen uit door hem kapot te maken, alles in één keer. Mis je het aanbod, dan krijg je nooit meer een nieuwe."],
+      ["PI-kluis", "Onbeperkte veiligheid tot de grootte van de kluis ($1B voor de extra grote).", "Alleen in een PI die je bezit, niet in een gehuurde."]
+    ],
+    "tips": [
+      "Vernieuw je ghost trade elke 3–5 uur terwijl je online bent, zodat hij nooit verloopt.",
+      "Gebruik de bank op de Kaaimaneilanden niet voor opslag: muggers wachten op spelers die landen om te storten of op te nemen.",
+      "Als een banktermijn afloopt, blijft het geld veilig maar levert het niets meer op. Start meteen de volgende."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Items omzetten in geld",
+    "title": "Verkopen wat je koopt",
+    "whereTitle": "Waar je verkoopt",
+    "where": [
+      "<b>Item market:</b> de snelste plek om te verkopen. Het rekent 5% kosten.",
+      "<b>Bazaar:</b> je eigen winkel, ongeveer 250 points om te openen. Kopers vinden hem via tools zoals weav3r, en 100 verschillende klanten leveren de Middleman-merit op.",
+      "<b>Trade Chat:</b> voor grote verkopen of bulk. Gebruik altijd een tradevenster, nooit \"stuur eerst het geld\"."
+    ],
+    "howTitle": "Zo verkoop je goed",
+    "how": [
+      "Prijs op of vlak bij de laagste listing om snel te verkopen. Check <b>weav3r</b> voor bazaarprijzen voordat je koopt of verkoopt; bazaars zijn meestal goedkoper dan de item market.",
+      "Grote hoeveelheden verkopen trekt muggers aan. Berg het geld direct na de verkoop op.",
+      "Bloemen en knuffels verkoop je aan setverzamelaars, of je ruilt volledige sets in bij het Museum zodra je het History-diploma hebt."
+    ]
+  },
+  "books": {
+    "eyebrow": "Grote boosts, door de meesten slecht getimed",
+    "title": "Boeken",
+    "lede": "Boeken komen vooral van mission credits en abonnementen. De meeste duren 31 dagen, dus het draait allemaal om timing: lees er een als je hem echt de hele maand gaat benutten.",
+    "head": ["Boek", "Effect", "Wanneer lezen"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% gym-gains in één stat (Strength, Defense, Speed, Dexterity) voor 31 dagen", "Lees tijdens een maand waarin je op die stat focust"],
+      ["Get Hard Or Go Home", "+20% gym-gains in alle stats voor 31 dagen", "Elke maand met veel training"],
+      ["Ugly Energy", "+100 max energy en +100 per refill voor 31 dagen", "Levert +28–78% op als je die maand maximaal traint"],
+      ["Smuggling For Beginners", "+10 items per trip voor 31 dagen", "Een maand met veel vliegen, of Tourism Day"],
+      ["Mailing Yourself Abroad", "Vluchten 25% sneller voor 31 dagen", "Combineert goed met het boek hierboven"],
+      ["Brawn Over Brains en de andere +5%-statboeken", "+5% op één stat, tot 10M", "Bewaar ze tot die stat op 200M staat, lees ze dan"],
+      ["Ignorance Is Bliss", "Happy boven het maximum wordt 31 dagen lang niet gereset", "Alleen als je je constant jumpen kunt veroorloven. Pas op voor overdoses"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "De stille kosten van dagelijkse Xanax",
+    "title": "Drugs & verslaving",
+    "lede": "Elke drug voegt een beetje verslaving toe, al voordat het hersenicoontje verschijnt. Overdoses staan in <a href=\"/medical/\">Veldgeneeskunde</a>; dit gaat over de langzame opbouw.",
+    "whatTitle": "Wat verslaving doet",
+    "what": [
+      "Een <b>battle-stat-debuff</b>: het hersenicoontje, dat roder wordt naarmate het erger wordt.",
+      "Minder effectiviteit in je job, vanaf je allereerste drug.",
+      "Op hogere niveaus kan het je <b>uit je cursus schoppen</b>.",
+      "Meer dan 150 Xanax en Ecstasy in totaal sluit je buiten de drugvrije gym Sports Science Lab."
+    ],
+    "keepTitle": "Hem laag houden",
+    "keep": [
+      "<b>Rehab</b> in Zwitserland (~$250k) wist hem. Vlieg erheen als het hersenicoontje rood wordt.",
+      "De merit <b>Addiction Mitigation</b> (−2% per upgrade) verzacht de effecten.",
+      "Jobs: Cruise Line en Flower Shop (5★) kunnen verslaving verlagen; een 10★ Nightclub beschermt je opleiding ertegen.",
+      "Faction-upgrades: Toleration verlaagt verslaving tot de helft. <a href=\"/paths/#faction\">Faction-upgrades →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Leer deze niet op de harde manier",
+    "title": "Oplichting en valkuilen",
+    "items": [
+      "<b>Loss-kopers die niet betalen.</b> Gebruik de vooraf betaalde loss-contracten van FFScouter. Check anders eerst de koper: een account jonger dan 100 dagen, onder $1B networth, of met veel vijanden is een rode vlag. Volg hun instructies precies, anders gebruiken ze dat als excuus om niet te betalen.",
+      "<b>Ghost trades met vreemden.</b> Ze zien je cash, annuleren de trade en laten je muggen. Alleen met vrienden of faction-genoten.",
+      "<b>\"Plak je key hier.\"</b> Stop nooit een API key met Full-toegang in een script of website. <a href=\"/scripts/\">Keyveiligheid →</a>",
+      "<b>Bankritjes naar de Kaaimaneilanden.</b> Muggers kamperen daar voor spelers die cash heen of terug brengen.",
+      "<b>Blind vertrouwen op een kluis.</b> Faction-kluizen zijn al leeggehaald door slechte leiders. Spreid je geld.",
+      "<b>Het casino.</b> Alleen de moeite waard voor de merit-honors met inzetten van $1. Verder is het een geldput."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Hoe factions werken",
+    "title": "Faction-basis",
+    "respectTitle": "Respect, in één minuut",
+    "respect": [
+      "Faction-aanvallen leveren <b>respect</b> op, waarmee upgrades voor alle leden worden gekocht.",
+      "Multipliers stapelen: fair fight tot ×3, oorlogshits ×2, een lange chain tot ×2, een retaliation ×1.5, aanvallen in het buitenland ×1.25.",
+      "Als een lid wordt aangevallen, verliest de faction een kwart van het respect dat de aanvaller kreeg. Makkelijke doelwitten kosten iedereen iets."
+    ],
+    "helpTitle": "Hoe je helpt, ook als je nog klein bent",
+    "help": [
+      "Neem organized-crime-rollen die je kunt halen. <a href=\"/crimes/#oc\">OC's →</a>",
+      "Doe chain-hits op doelwitten die je makkelijk verslaat; FF Scouter laat zien welke.",
+      "Doe retals als de leiding erom vraagt.",
+      "Heb medische items bij je voor oorlogen. <a href=\"/medical/\">Veldgeneeskunde →</a>",
+      "Vertrek niet vlak voor een oorlog of chain. <a href=\"/travel/#delays\">Vluchtvertragingen →</a>"
+    ],
+    "quoteTag": "De regel van Rook",
+    "quote": "\"Niemand verwacht dat een nieuw lid een oorlog draagt. We verwachten dat je er bent, de gevechten pakt die je kunt winnen, je meds op voorraad houdt, en niet het makkelijke doelwit bent dat de andere kant voedt.\""
+  },
+  "routine": {
+    "eyebrow": "Pin dit vast",
+    "title": "Je routine",
+    "dayTitle": "Elke dag",
+    "day": [
+      "Kom vaak genoeg online dat je energy nooit vol blijft staan.",
+      "Train. Eén stat per sessie, in de gym met de beste dots daarvoor.",
+      "Neem Xanax als je cooldown voorbij is, als het in je budget past. Gebruik je points-refill (25 points).",
+      "Besteed nerve aan de zwaarste crime die je betrouwbaar haalt.",
+      "Vlieg terwijl je energy bijlaadt; check eerst YATA.",
+      "Besteed job points aan de specials van je bedrijf.",
+      "Berg je cash op voordat je uitlogt."
+    ],
+    "weekTitle": "Elke week",
+    "week": [
+      "Verleng banktermijnen van 1–2 weken op de dag dat ze aflopen.",
+      "Claim wekelijkse aandelenuitkeringen; ze verdwijnen na 24 uur.",
+      "Zorg dat de volgende cursus klaarstaat voordat de huidige afloopt.",
+      "Check je OC-plek bij de faction."
+    ],
+    "monthTitle": "Elke maand",
+    "month": [
+      "Verleng het huurcontract van je property. Huurcontracten lopen af om 03:30 TCT.",
+      "Verleng je donatorstatus (31 dagen per pack).",
+      "Claim maandelijkse aandelenuitkeringen.",
+      "Plan elk boek van 31 dagen voor de komende maand."
+    ]
+  },
+  "footer": "<strong>Begin hier.</strong> Advies over missions, geld bewaren en verkopen uit Basic Advice van <strong>Baldr [1847600]</strong>; goedkope merits uit Guide to Easy Merits van <strong>Tempest [1867527]</strong>; boeken uit Guide to Stat Gains from Books van <strong>HandsomePants [1897243]</strong> en de wikipagina Travel; verslaving uit de wikipagina Drug; faction-respect uit de wikipagina's Faction en Attack; jobperks en mission-beloningen uit de Torn API en wiki. Onderdeel van het <a href=\"/\">Faction Training Playbook</a>."
+}

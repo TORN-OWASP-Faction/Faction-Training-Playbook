@@ -1,0 +1,61 @@
+{
+  "skip": "Pular para o conteúdo",
+  "homeLabel": "Faction Training Playbook, página inicial",
+  "menu": "Menu",
+  "language": "Idioma",
+  "nav": {
+    "label": "Principal",
+    "start": "Comece aqui",
+    "groups": {
+      "train": "Treinar",
+      "money": "Dinheiro",
+      "crimes": "Crimes",
+      "fight": "Lutar",
+      "more": "Mais"
+    },
+    "links": {
+      "guide": "Guia de treino",
+      "idea": "O happy jump",
+      "new": "Antes do nível 15",
+      "builds": "Builds",
+      "schedule": "Rotinas diárias",
+      "items": "O que comprar",
+      "edu": "Educação",
+      "planner": "Planejador de jumps",
+      "math": "A matemática do treino",
+      "makeMoney": "Formas de ganhar dinheiro",
+      "travel": "Voar por dinheiro",
+      "paths": "Caminhos e metas",
+      "faction": "Upgrades da facção",
+      "safe": "Proteja seu dinheiro",
+      "overview": "Visão geral",
+      "how": "Como os crimes funcionam",
+      "nerve": "Aumente seu nerve",
+      "oc": "Crime organizado",
+      "ocScenarios": "Cenários de OC",
+      "dataTables": "Tabelas de dados de crimes",
+      "loadout": "Equipamento de guerra",
+      "medical": "Medicina de campo",
+      "factionBasics": "O básico das facções",
+      "scripts": "Scripts e ferramentas",
+      "glossary": "Glossário",
+      "credits": "Créditos"
+    }
+  },
+  "notice": {
+    "englishOnly": "Por enquanto, esta página só está em inglês.",
+    "translate": "Abrir no Google Translate",
+    "browserTip": "ou use a opção Traduzir do seu navegador.",
+    "machine": "Esta página foi traduzida automaticamente do inglês. Os nomes do jogo ficam em inglês, do jeito que o Torn mostra.",
+    "improve": "Ajude a melhorar a tradução no GitHub"
+  },
+  "suggest": {
+    "text": "Este guia também está disponível em {language}.",
+    "yes": "Ler em {language}",
+    "no": "Continuar em inglês"
+  },
+  "repo": {
+    "cta": "Ver no GitHub ↗",
+    "hint": "Achou um erro ou tem um guia para adicionar? Abra uma issue ou envie um pull request."
+  }
+}

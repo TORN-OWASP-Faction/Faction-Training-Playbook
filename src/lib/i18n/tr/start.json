@@ -1,0 +1,203 @@
+{
+  "title": "Buradan başla · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Torn'da yeni misin? Önce bunu oku",
+    "h1": "<em>Buradan</em> başla",
+    "lede": "İlk haftalarında kimsenin sana söylemediği şeyler: neyi kurmalısın, kazandığını nasıl korursun ve yeni oyunculara en pahalıya patlayan tuzaklar. Sonra bir <a href=\"/paths/\">yol</a> seç.",
+    "tocLabel": "Bu sayfada",
+    "quoteTag": "Almadan Önce",
+    "quote": "“Çoğu yeni oyuncu zayıf olduğu için kaybetmez. Üstünde nakit taşıdığı, kurulumu atladığı ve yanlış şeyler aldığı için kaybeder. Önce bunu düzelt, gerisi kolaylaşır.”"
+  },
+  "toc": {
+    "week": "İlk haftan",
+    "missions": "Görevler",
+    "safe": "Paranı koru",
+    "selling": "Satış",
+    "books": "Kitaplar",
+    "drugs": "Uyuşturucu ve bağımlılık",
+    "scams": "Dolandırıcılıklar",
+    "faction": "Faction'lar",
+    "routine": "Rutinin",
+    "glossary": "Sözlük ↗"
+  },
+  "week": {
+    "eyebrow": "Bunları şimdi yap",
+    "title": "İlk haftan",
+    "steps": [
+      ["Donator statüsü al.", "Daha büyük ve daha hızlı dolan bir enerji barı: oynadığın her gün yaklaşık {donatorGain}% daha fazla doğal enerji. Bir Donator pack 31 gün verir; oyunda ~$24M eder ya da gerçek parayla yaklaşık $5 tutar. Baldr: “Herkesin donator statüsü olmalı.”"],
+      ["Ödemeye devam edebileceğin en yüksek happy'yi kirala.", "15. seviyeye kadar bir Ranch ya da Mansion kirala (en az 925 happy'lik bir Penthouse), sonra pistli bir Private Island. Henüz mülk satın alma. <a href=\"/travel/#pi\">PI bütçesi →</a>"],
+      ["3★ bir şirkete gir.", "İş avantajlarının çoğu 3★'da açılır. Çalışma statların yetersiz mi? Direktöre para ver, seni eğitsin. <a href=\"/paths/#guides\">Yoluna uygun iş →</a>"],
+      ["Sports Science'a başla.", "İlk kursun: +1% gym kazancı veren kursların kilidini açar. Her zaman devam eden bir kursun olsun. <a href=\"/paths/#guides\">Eğitim planları →</a>"],
+      ["Yeni oyuncu görevlerini beklet.", "Enerji verirler (tek seferde 500'e kadar) ve bu enerji, daha yüksek happy'li bir eve taşındığında daha iyi antrenman sağlar. Önce kirala, sonra görevleri yap. <a href=\"#missions\">Görevler →</a>"],
+      ["Üstünde nakit taşıma.", "Mug'lanmak çok yaygın. Stock Ticker'ı al (50 point) ve ghost trade'i öğren. <a href=\"#safe\">Paranı koru →</a>"],
+      ["İlk banka yatırımını yap.", "1 haftalık vade bile olur. Pasif gelirinin başlangıcıdır ve bir merit kazandırır."],
+      ["API anahtarlarını güvenli kur.", "Her araca bir anahtar, en az erişim, bir script'e asla Full anahtar verme. <a href=\"/scripts/\">Script'ler ve araçlar →</a>"],
+      ["Ucuz merit'leri topla.", "Her ödül bir merit kazandırır ve merit'lerle kalıcı yükseltmeler alınır. Kolay olanlar aşağıda."]
+    ],
+    "merits": {
+      "title": "Ucuz erken merit'ler",
+      "intro": "Bu honor'ların her biri neredeyse hiç çaba harcamadan bir merit kazandırır:",
+      "head": ["Honor", "Nasıl"],
+      "rows": [
+        ["Historian", "Gazetede bir Chronicle okumak için 5–10 dakika harca."],
+        ["Forgiven", "Kilisede günde iki kez, 8–10 saat arayla dua et. Yaklaşık 7–10 gün sürer."],
+        ["Pious, Saintly", "Kiliseye önce $100k, sonra $1M bağışla."],
+        ["Pocket Money", "Herhangi bir banka yatırımı yap. 1 haftalık vade yeterli."],
+        ["Energetic", "1,000 enerjiye ulaş: boş barla başla ve jump yapar gibi üst üste 4 Xanax al."],
+        ["Diabetic", "500 şeker ye. Lollipops tanesi yaklaşık $1k ve happy'ni de yükseltir."],
+        ["Spinner, One in Six", "1,000 rulet çevirme (günde 75'le yaklaşık 14 gün) ve $1 bahisle 50 Rus ruleti galibiyeti."],
+        ["Protege", "“Introduction: Duke” görevini bitir."],
+        ["Mule, Souvenir", "Yurt dışından 100 eşya getir ve bir yolculukta “perfect souvenir” satın al."],
+        ["Luxury Real Estate", "Bir Private Island'a pist ekle. Bir arkadaşın iki dakikalığına kendi adasını ödünç verebilir."],
+        ["Bayram girişleri", "Yılbaşı, Sevgililer Günü, Cadılar Bayramı, 15 Kasım (Torn'un yıl dönümü) ve Noel günü oyuna gir."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Görev kredisi nadirdir",
+    "title": "Görevler",
+    "newTitle": "Yeni oyuncu görevleri",
+    "new": [
+      "Temelleri öğretir; enerji, nerve, nakit ve görev kredisi verirler. Tek bir adım bile 500 enerji verir.",
+      "Önce daha iyi bir eve taşın ki bu enerjiyle daha yüksek happy'de antrenman yapabilesin.",
+      "Bir kez <b>kumbara</b> (piggy bank) teklif ederler. Nakit için güvenli, tek seferlik bir depodur. Atlarsan bir daha şansın olmaz."
+    ],
+    "regTitle": "Normal görevler ve krediler",
+    "reg": [
+      "15. seviyeden önce öncelik değil; çok enerji harcatabilirler.",
+      "Kredilerini <b>parayla alınamayan</b> şeylere sakla: özel kitaplar ve silah yükseltmeleri.",
+      "Parayla alabileceğin bir şeye asla kredi harcama. Bazı kitaplar harika, bazıları işe yaramaz (bkz. <a href=\"#books\">Kitaplar</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Yeni oyuncuların ilerlemeyi kaybetmesinin 1 numaralı yolu",
+    "title": "Paranı koru",
+    "lede": "Cebindeki nakit mug'lanabilir. Eline geçer geçmez sakla. Hiçbir yöntem kusursuz değil, o yüzden çoğu oyuncu birkaçını birlikte kullanır.",
+    "head": ["Nerede", "Nasıl çalışır", "Dezavantajı"],
+    "rows": [
+      ["Ghost trade", "Bir arkadaşınla trade aç, nakit ekle ve ikiniz de onaylamayın. Hızlı yatır, hızlı çek; hastanedeyken bile.", "Trade'ler 6 saat sonra kapanır, diğer oyuncu son 6 saat içinde aktif olmuş olmalı ve sadece güvendiğin birini kullan."],
+      ["Banka", "Parayı 1 haftadan 3 aya kadar bir vadeye kilitle. Faiz kazanır ve kimse mug'layamaz.", "Vade bitene kadar dokunamazsın; bittiğinde de yenisini başlatana kadar para boşta bekler."],
+      ["Hisseler", "Hisse al (Stock Ticker gerekir, 50 point). İstediğin zaman 0.1% ücretle sat.", "Sen elinde tutarken fiyat düşebilir."],
+      ["Eşyalar ve point'ler", "Xanax, donator pack, çiçek, peluş ya da point tut. Eşyalar mug'lanamaz.", "Satarken en düşük ilana yakın fiyat koy, yoksa satılmaz."],
+      ["Faction bankası", "Çoğu faction üyeleri için para tutar.", "Para çekmek için yönetim gerekir ve faction'lar kötü liderler yüzünden kasalarını kaybetti. Orada sadece ihtiyacın kadarını tut."],
+      ["Kumbara", "Tek seferlik bir görev teklifi. Her miktarı tutar, soygunculardan güvende.", "Tek çıkış yolu onu kırmak, hepsi bir anda. Teklifi kaçırırsan bir daha gelmez."],
+      ["PI kasası", "Kasa boyutuna kadar sınırsız güvenlik (extra-large için $1B).", "Sadece sahibi olduğun bir PI'da, kiraladığında değil."]
+    ],
+    "tips": [
+      "Çevrimiçiyken ghost trade'i her 3–5 saatte bir yenile ki süresi hiç dolmasın.",
+      "Parayı Cayman Adaları bankasında saklama: soyguncular para yatırmaya ya da çekmeye inen oyuncuları bekler.",
+      "Banka vadesi bitince para güvende kalır ama kazanmayı bırakır. Bir sonraki vadeyi hemen başlat."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Eşyaları paraya çevirmek",
+    "title": "Aldıklarını satmak",
+    "whereTitle": "Nerede satılır",
+    "where": [
+      "<b>Item market:</b> satmanın en hızlı yolu. 5% komisyon alır.",
+      "<b>Bazaar:</b> kendi dükkânın, açması yaklaşık 250 point. Alıcılar onu weav3r gibi araçlarla bulur ve 100 farklı müşteri Middleman merit'ini kazandırır.",
+      "<b>Trade Chat:</b> büyük ya da toplu satışlar için. Her zaman trade penceresi kullan, asla “önce parayı gönder” oyununa gelme."
+    ],
+    "howTitle": "İyi satmanın yolu",
+    "how": [
+      "Hızlı satmak için en düşük ilana eşit ya da yakın fiyat koy. Alıp satmadan önce bazaar fiyatları için <b>weav3r</b>'a bak; bazaar'lar genelde item market'ten ucuzdur.",
+      "Büyük satışlar soyguncuları çeker. Satıştan hemen sonra parayı taşı.",
+      "Çiçek ve peluşlar set toplayanlara satılır ya da History diplomasını aldıktan sonra tam setleri Museum'da takas edebilirsin."
+    ]
+  },
+  "books": {
+    "eyebrow": "Büyük boost'lar, çoğu kişi yanlış zamanda kullanır",
+    "title": "Kitaplar",
+    "lede": "Kitaplar çoğunlukla görev kredilerinden ve aboneliklerden gelir. Çoğu 31 gün sürer, yani bütün mesele zamanlama: bir kitabı, bütün ay gerçekten kullanacağın zaman oku.",
+    "head": ["Kitap", "Etkisi", "Ne zaman okunmalı"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "31 gün boyunca tek bir statta (Strength, Defense, Speed, Dexterity) +30% gym kazancı", "O stata odaklandığın bir ayda oku"],
+      ["Get Hard Or Go Home", "31 gün boyunca tüm statlarda +20% gym kazancı", "Yoğun antrenman yaptığın herhangi bir ay"],
+      ["Ugly Energy", "31 gün boyunca +100 maks. enerji ve her refill'de +100", "O ay tam gaz antrenman yaparsan +28–78% değerinde"],
+      ["Smuggling For Beginners", "31 gün boyunca yolculuk başına +10 eşya", "Yoğun uçuş yaptığın bir ay ya da Tourism Day"],
+      ["Mailing Yourself Abroad", "31 gün boyunca uçuşlar 25% daha hızlı", "Bir üstteki kitapla iyi gider"],
+      ["Brawn Over Brains ve diğer +5% stat kitapları", "Tek bir stata +5%, en fazla 10M", "O stat 200M olana kadar sakla, sonra oku"],
+      ["Ignorance Is Bliss", "31 gün boyunca maksimumun üstündeki happy sıfırlanmaz", "Sadece sürekli jump yapmaya gücün yetiyorsa. Overdose'a dikkat et"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Günlük Xanax'ın sessiz bedeli",
+    "title": "Uyuşturucu ve bağımlılık",
+    "lede": "Her uyuşturucu, beyin ikonu çıkmadan önce bile biraz bağımlılık ekler. Overdose'lar <a href=\"/medical/\">Saha tıbbı</a> sayfasında anlatılıyor; burası yavaş birikimle ilgili.",
+    "whatTitle": "Bağımlılık ne yapar",
+    "what": [
+      "Bir <b>savaş statı debuff'ı</b>: beyin ikonu, kötüleştikçe daha kırmızı.",
+      "İlk uyuşturucundan itibaren işte daha düşük verim.",
+      "Yüksek seviyelerde <b>seni eğitim kursundan atabilir</b>.",
+      "Toplamda 150'den fazla Xanax ve Ecstasy, uyuşturucusuz Sports Science Lab gym'ine girişini kapatır."
+    ],
+    "keepTitle": "Düşük tutmak",
+    "keep": [
+      "İsviçre'deki <b>Rehab</b> (~$250k) bağımlılığı temizler. Beyin ikonu kırmızıya dönünce oraya uç.",
+      "<b>Addiction Mitigation</b> merit'i (yükseltme başına −2%) etkileri hafifletir.",
+      "İşler: Cruise Line ve Flower Shop (5★) bağımlılığı azaltabilir; 10★ bir Nightclub eğitimini ondan korur.",
+      "Faction yükseltmeleri: Toleration bağımlılığı yarıya kadar azaltır. <a href=\"/paths/#faction\">Faction yükseltmeleri →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Bunları acı yoldan öğrenme",
+    "title": "Dolandırıcılıklar ve tuzaklar",
+    "items": [
+      "<b>Ödeme yapmayan loss alıcıları.</b> FFScouter'ın ön ödemeli loss sözleşmelerini kullan. Yoksa önce alıcıyı kontrol et: 100 günden genç bir hesap, $1B altında net değer ya da çok sayıda düşman tehlike işaretidir. Talimatlarına harfiyen uy, yoksa bunu ödememek için bahane yaparlar.",
+      "<b>Yabancılarla ghost trade.</b> Nakitini görebilir, trade'i iptal edip seni mug'latabilirler. Sadece arkadaşlarını ya da faction arkadaşlarını kullan.",
+      "<b>“Anahtarını buraya yapıştır.”</b> Full erişimli bir API anahtarını asla bir script'e ya da siteye koyma. <a href=\"/scripts/\">Anahtar güvenliği →</a>",
+      "<b>Cayman bankası seferleri.</b> Soyguncular, oraya nakitle gidip gelen oyuncuları pusuda bekler.",
+      "<b>Herhangi bir kasaya körü körüne güvenmek.</b> Faction kasaları kötü liderler tarafından boşaltıldı. Paranı dağıt.",
+      "<b>Kumarhane.</b> Sadece $1 bahisli merit honor'ları için değer. Ötesi paranı yutan bir kuyu."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Faction'lar nasıl işler",
+    "title": "Faction temelleri",
+    "respectTitle": "Bir dakikada respect",
+    "respect": [
+      "Faction saldırıları <b>respect</b> kazandırır; bununla tüm üyeler için yükseltmeler alınır.",
+      "Çarpanlar üst üste biner: fair fight ×3'e kadar, savaş vuruşları ×2, uzun bir chain ×2'ye kadar, retaliation ×1.5, yurt dışında saldırı ×1.25.",
+      "Bir üye vurulduğunda faction, saldırganın kazandığı respect'in dörtte birini kaybeder. Kolay hedefler herkese pahalıya patlar."
+    ],
+    "helpTitle": "Küçükken bile nasıl yardım edersin",
+    "help": [
+      "Geçebileceğin organize suç rollerini al. <a href=\"/crimes/#oc\">OC'ler →</a>",
+      "Kolayca yendiğin hedeflere chain vuruşu yap; FF Scouter kim olduklarını gösterir.",
+      "Yönetim retal çağrısı yaptığında karşılık ver.",
+      "Savaşlar için tıbbi eşya taşı. <a href=\"/medical/\">Saha tıbbı →</a>",
+      "Bir savaş ya da chain'den hemen önce uçağa binme. <a href=\"/travel/#delays\">Uçuş gecikmeleri →</a>"
+    ],
+    "quoteTag": "Rook'un Kuralı",
+    "quote": "“Kimse yeni bir üyenin savaşı sırtlamasını beklemez. Senden beklediğimiz; ortada olman, kazanabileceğin vuruşları yapman, ilaçlarını stokta tutman ve karşı tarafı besleyen kolay hedef olmaman.”"
+  },
+  "routine": {
+    "eyebrow": "Bunu sabitle",
+    "title": "Rutinin",
+    "dayTitle": "Her gün",
+    "day": [
+      "Enerjin hiç dolu beklemeyecek kadar sık giriş yap.",
+      "Antrenman yap. Seans başına tek stat, o stat için en iyi dot'lara sahip gym'de.",
+      "Cooldown'un bitince, bütçen yetiyorsa Xanax al. Point refill'ini kullan (25 point).",
+      "Nerve'ünü rahatça geçtiğin en zor suça harca.",
+      "Enerjin dolarken uç; önce YATA'ya bak.",
+      "İş puanlarını şirketinin özel avantajlarına harca.",
+      "Oyundan çıkmadan önce nakitini sakla."
+    ],
+    "weekTitle": "Her hafta",
+    "week": [
+      "1–2 haftalık banka vadelerini bittikleri gün yenile.",
+      "Haftalık hisse ödemelerini al; 24 saat sonra kaybolurlar.",
+      "Mevcut kurs bitmeden bir sonrakinin sırada olduğundan emin ol.",
+      "OC'deki yerini faction'la kontrol et."
+    ],
+    "monthTitle": "Her ay",
+    "month": [
+      "Mülk kiranı yenile. Kiralar 03:30 TCT'de biter.",
+      "Donator statüsünü yenile (pack başına 31 gün).",
+      "Aylık hisse ödemelerini al.",
+      "31 günlük kitapları önündeki aya göre zamanla."
+    ]
+  },
+  "footer": "<strong>Buradan başla.</strong> Görevler, para saklama ve satış tavsiyeleri <strong>Baldr [1847600]</strong>'ın Basic Advice rehberinden; ucuz merit'ler <strong>Tempest [1867527]</strong>'in Guide to Easy Merits rehberinden; kitaplar <strong>HandsomePants [1897243]</strong>'in Guide to Stat Gains from Books rehberinden ve Travel wiki sayfasından; bağımlılık Drug wiki sayfasından; faction respect'i Faction ve Attack wiki sayfalarından; iş avantajları ve görev ödülleri Torn API'den ve wiki'den. <a href=\"/\">Faction Training Playbook</a>'un bir parçası."
+}

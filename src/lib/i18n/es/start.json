@@ -1,0 +1,203 @@
+{
+  "title": "Empieza aquí · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "¿Nuevo en Torn? Lee esto primero",
+    "h1": "Empieza <em>aquí</em>",
+    "lede": "Lo que nadie te dice en tus primeras semanas: qué configurar, cómo conservar lo que ganas y las trampas que más les cuestan a los nuevos. Después elige una <a href=\"/paths/\">ruta</a>.",
+    "tocLabel": "En esta página",
+    "quoteTag": "Antes de comprar",
+    "quote": "«La mayoría de los nuevos no pierden por ser débiles. Pierden porque llevan efectivo encima, se saltan la configuración y compran lo que no deben. Arregla eso primero y todo lo demás se vuelve más fácil.»"
+  },
+  "toc": {
+    "week": "Tu primera semana",
+    "missions": "Misiones",
+    "safe": "Protege tu dinero",
+    "selling": "Vender",
+    "books": "Libros",
+    "drugs": "Drogas y adicción",
+    "scams": "Estafas",
+    "faction": "Facciones",
+    "routine": "Tu rutina",
+    "glossary": "Glosario ↗"
+  },
+  "week": {
+    "eyebrow": "Haz esto ya",
+    "title": "Tu primera semana",
+    "steps": [
+      ["Consigue el estatus de donator.", "Una barra de energía más grande que se recarga más rápido: cerca de {donatorGain}% más energía natural cada día que juegas. Un donator pack da 31 días y se vende por ~$24M en el juego, o cuesta unos $5 de dinero real. Baldr: «Todos deberían tener estatus de donator.»"],
+      ["Alquila el mejor happy que puedas seguir pagando.", "Alquila un Ranch o una Mansion (como mínimo un Penthouse de 925 de happy) hasta el nivel 15, y luego una Private Island con pista de aterrizaje. Todavía no compres propiedades. <a href=\"/travel/#pi\">Presupuesto para la PI →</a>"],
+      ["Entra en una empresa de 3★.", "La mayoría de los beneficios de trabajo se desbloquean con 3★. ¿Te faltan stats de trabajo? Págale al director para que te entrene. <a href=\"/paths/#guides\">Qué trabajo para tu ruta →</a>"],
+      ["Empieza Sports Science.", "Tu primer curso: abre los cursos de +1% de ganancias en el gym. Ten siempre un curso en marcha. <a href=\"/paths/#guides\">Planes de educación →</a>"],
+      ["Deja para después las misiones de jugador nuevo.", "Pagan energía (hasta 500 de una vez), y esa energía rinde más en el gym cuando ya vives en una casa con más happy. Primero alquila, luego hazlas. <a href=\"#missions\">Misiones →</a>"],
+      ["Deja de llevar efectivo encima.", "Los asaltos (mugs) son comunes. Compra el Stock Ticker (50 puntos) y aprende a hacer ghost trades. <a href=\"#safe\">Protege tu dinero →</a>"],
+      ["Haz tu primer depósito en el banco.", "Aunque sea a 1 semana. Es el comienzo de tus ingresos pasivos, y te da un mérito."],
+      ["Configura tus API keys de forma segura.", "Una key por herramienta, el acceso mínimo, y nunca una key Full en un script. <a href=\"/scripts/\">Scripts y herramientas →</a>"],
+      ["Consigue los méritos baratos.", "Cada premio da un mérito, y los méritos compran mejoras permanentes. Los fáciles están abajo."]
+    ],
+    "merits": {
+      "title": "Méritos baratos para empezar",
+      "intro": "Cada uno de estos honors da un mérito casi sin esfuerzo:",
+      "head": ["Honor", "Cómo"],
+      "rows": [
+        ["Historian", "Pasa 5–10 minutos leyendo una Chronicle en el periódico."],
+        ["Forgiven", "Reza en la iglesia dos veces al día, con 8–10 horas de diferencia. Toma unos 7–10 días."],
+        ["Pious, Saintly", "Dona $100k y luego $1M a la iglesia."],
+        ["Pocket Money", "Haz cualquier inversión en el banco. Un plazo de 1 semana sirve."],
+        ["Energetic", "Llega a 1,000 de energía: empieza vacío y acumula 4 Xanax, como harías para un jump."],
+        ["Diabetic", "Come 500 caramelos. Los Lollipops cuestan unos $1k cada uno y además te suben el happy."],
+        ["Spinner, One in Six", "1,000 giros de ruleta (unos 14 días a 75 por día) y 50 victorias en la ruleta rusa con apuestas de $1."],
+        ["Protege", "Termina la misión «Introduction: Duke»."],
+        ["Mule, Souvenir", "Importa 100 ítems del extranjero y compra el «perfect souvenir» en un viaje."],
+        ["Luxury Real Estate", "Mejora una Private Island con pista de aterrizaje. Un amigo te puede prestar la suya por dos minutos."],
+        ["Conexiones en días festivos", "Conéctate en Año Nuevo, San Valentín, Halloween, el 15 de noviembre (aniversario de Torn) y Navidad."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Los créditos de misión son escasos",
+    "title": "Misiones",
+    "newTitle": "Misiones de jugador nuevo",
+    "new": [
+      "Enseñan lo básico y pagan energía, nerve, efectivo y créditos de misión. Un solo paso paga 500 de energía.",
+      "Múdate primero a una casa mejor, para que esa energía entrene con más happy.",
+      "Te ofrecen un <b>piggy bank</b> (alcancía) una sola vez. Es un lugar seguro para guardar efectivo, de un solo uso. Si lo rechazas, no tienes otra oportunidad."
+    ],
+    "regTitle": "Misiones normales y créditos",
+    "reg": [
+      "No son prioridad antes del nivel 15; pueden gastar mucha energía.",
+      "Guarda tus créditos para lo que <b>el dinero no puede comprar</b>: libros especiales y mejoras de armas.",
+      "Nunca gastes créditos en algo que podrías comprar con dinero. Algunos libros son geniales y otros inútiles (mira <a href=\"#books\">Libros</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "La forma n.º 1 en que los nuevos pierden progreso",
+    "title": "Protege tu dinero",
+    "lede": "El efectivo en tu bolsillo te lo pueden robar con un mug. Guárdalo en cuanto lo tengas. Ningún método es perfecto, así que la mayoría combina varios.",
+    "head": ["Dónde", "Cómo funciona", "La trampa"],
+    "rows": [
+      ["Ghost trade", "Abre un trade con un amigo, pon el efectivo y ninguno de los dos acepta. Entras y sales rápido, incluso desde el hospital.", "Los trades se cierran a las 6 horas, el otro jugador tiene que haber estado activo en las últimas 6 horas, y úsalo solo con alguien de confianza."],
+      ["Banco", "Deja el dinero a plazo fijo, de 1 semana a 3 meses. Gana intereses y nadie te lo puede robar.", "No puedes tocarlo hasta que termine el plazo, y al terminar el dinero queda quieto hasta que empieces otro."],
+      ["Acciones", "Compra acciones (necesitas el Stock Ticker, 50 puntos). Vende cuando quieras con una comisión del 0.1%.", "El precio puede bajar mientras las tienes."],
+      ["Ítems y puntos", "Guarda Xanax, donator packs, flores, plushies o puntos. Los ítems no se pueden robar con un mug.", "Cuando vendas, ponles precio cerca del listado más bajo, o no se venden."],
+      ["Banco de la facción", "La mayoría de las facciones guardan dinero para sus miembros.", "Los retiros necesitan a los líderes, y hay facciones que perdieron la bóveda por malos líderes. Deja ahí solo lo que necesites."],
+      ["Piggy bank", "Una oferta de misión única. Guarda cualquier cantidad, a salvo de los asaltantes.", "La única forma de sacar el dinero es romperlo, todo de una vez. Si pierdes la oferta, no hay otra."],
+      ["Bóveda de la PI", "Seguridad ilimitada hasta el tamaño de la bóveda ($1B para la extragrande).", "Solo en una PI que sea tuya, no en una alquilada."]
+    ],
+    "tips": [
+      "Mientras estés conectado, reinicia el ghost trade cada 3–5 horas para que nunca expire.",
+      "No uses el banco de las Islas Caimán para guardar dinero: los asaltantes esperan a los jugadores que aterrizan para depositar o retirar.",
+      "Cuando termina un plazo en el banco, el dinero sigue seguro pero deja de ganar. Empieza el siguiente plazo enseguida."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Convertir ítems en dinero",
+    "title": "Vender lo que compras",
+    "whereTitle": "Dónde vender",
+    "where": [
+      "<b>Item market:</b> el lugar más rápido para vender. Cobra una comisión del 5%.",
+      "<b>Bazaar:</b> tu propia tienda; abrirla cuesta unos 250 puntos. Los compradores la encuentran con herramientas como weav3r, y 100 clientes distintos te dan el mérito Middleman.",
+      "<b>Trade Chat:</b> para ventas grandes o al por mayor. Usa siempre una ventana de trade, nunca «manda el dinero primero»."
+    ],
+    "howTitle": "Cómo vender bien",
+    "how": [
+      "Pon el precio igual o cerca del listado más bajo para vender rápido. Revisa <b>weav3r</b> para ver los precios de los bazaars antes de comprar o vender; los bazaars suelen ser más baratos que el item market.",
+      "Vender grandes cantidades atrae asaltantes. Mueve el dinero justo después de la venta.",
+      "Las flores y los plushies se venden a quienes arman sets, o puedes cambiar sets completos en el Museum cuando tengas el título de History."
+    ]
+  },
+  "books": {
+    "eyebrow": "Grandes boosts que casi todos usan a destiempo",
+    "title": "Libros",
+    "lede": "Los libros salen sobre todo de créditos de misión y suscripciones. La mayoría dura 31 días, así que todo está en el momento: lee uno cuando de verdad lo vayas a aprovechar todo el mes.",
+    "head": ["Libro", "Efecto", "Cuándo leerlo"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% de ganancias en el gym en un stat (Strength, Defense, Speed, Dexterity) durante 31 días", "Léelo en un mes en que te enfoques en ese stat"],
+      ["Get Hard Or Go Home", "+20% de ganancias en el gym en todos los stats durante 31 días", "Cualquier mes de entrenamiento fuerte"],
+      ["Ugly Energy", "+100 de energía máxima y +100 por refill durante 31 días", "Vale +28–78% si entrenas al máximo ese mes"],
+      ["Smuggling For Beginners", "+10 ítems por viaje durante 31 días", "Un mes de muchos vuelos, o el Tourism Day"],
+      ["Mailing Yourself Abroad", "Vuelos 25% más rápidos durante 31 días", "Combínalo con el de arriba"],
+      ["Brawn Over Brains y los demás libros de +5% a un stat", "+5% a un stat, hasta 10M", "Guárdalos hasta que ese stat llegue a 200M, y luego léelos"],
+      ["Ignorance Is Bliss", "El happy por encima del máximo no se reinicia durante 31 días", "Solo si puedes pagar jumps todo el tiempo. Cuidado con las sobredosis"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "El costo silencioso del Xanax diario",
+    "title": "Drogas y adicción",
+    "lede": "Cada droga suma un poco de adicción, incluso antes de que aparezca el ícono del cerebro. Las sobredosis están en <a href=\"/medical/\">Medicina de campo</a>; esto trata de la acumulación lenta.",
+    "whatTitle": "Qué hace la adicción",
+    "what": [
+      "Un <b>debuff a los battle stats</b>: el ícono del cerebro, más rojo cuanto peor está.",
+      "Menos efectividad en tu trabajo, desde tu primera droga.",
+      "En niveles altos te puede <b>sacar de tu curso de educación</b>.",
+      "Más de 150 Xanax y Ecstasy en total te bloquean el acceso al gym sin drogas Sports Science Lab."
+    ],
+    "keepTitle": "Cómo mantenerla baja",
+    "keep": [
+      "La <b>Rehab</b> en Suiza (~$250k) la elimina. Vuela allá cuando el ícono del cerebro se ponga rojo.",
+      "El mérito <b>Addiction Mitigation</b> (−2% por mejora) suaviza los efectos.",
+      "Trabajos: Cruise Line y Flower Shop (5★) pueden reducir la adicción; un Nightclub de 10★ protege tu educación de ella.",
+      "Mejoras de facción: Toleration reduce la adicción hasta la mitad. <a href=\"/paths/#faction\">Mejoras de facción →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "No los aprendas por las malas",
+    "title": "Estafas y trampas",
+    "items": [
+      "<b>Compradores de derrotas que no pagan.</b> Usa los contratos de derrota prepagados de FFScouter. Si no, revisa antes al comprador: una cuenta de menos de 100 días, con menos de $1B de networth o con muchos enemigos es una señal de alarma. Sigue sus instrucciones al pie de la letra, o las usarán como excusa para no pagar.",
+      "<b>Ghost trades con desconocidos.</b> Pueden ver tu efectivo, cancelar el trade y hacer que te lo roben con un mug. Hazlos solo con amigos o compañeros de facción.",
+      "<b>«Pega tu key aquí.»</b> Nunca pongas una API key con acceso Full en un script o sitio web. <a href=\"/scripts/\">Seguridad de las keys →</a>",
+      "<b>Idas al banco de las Caimán.</b> Los asaltantes acampan ahí esperando a los jugadores que llevan o sacan efectivo.",
+      "<b>Confiar a ciegas en cualquier bóveda.</b> Hay bóvedas de facción que malos líderes vaciaron. Reparte tu dinero.",
+      "<b>El casino.</b> Solo vale la pena por los honors de apuestas de $1. Fuera de eso, es un pozo sin fondo para tu dinero."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Cómo funcionan las facciones",
+    "title": "Lo básico de las facciones",
+    "respectTitle": "El respeto, en un minuto",
+    "respect": [
+      "Los ataques de facción dan <b>respeto</b> (respect), que compra mejoras para todos los miembros.",
+      "Los multiplicadores se acumulan: fair fight hasta ×3, golpes de guerra ×2, una chain larga hasta ×2, una represalia ×1.5, atacar en el extranjero ×1.25.",
+      "Cuando golpean a un miembro, la facción pierde un cuarto del respeto que ganó el atacante. Los blancos fáciles le cuestan a todos."
+    ],
+    "helpTitle": "Cómo ayudas, aunque todavía seas pequeño",
+    "help": [
+      "Toma roles de crimen organizado que puedas pasar. <a href=\"/crimes/#oc\">OCs →</a>",
+      "Haz golpes de chain contra objetivos que vences fácil; FF Scouter te muestra cuáles.",
+      "Toma represalias cuando los líderes lo pidan.",
+      "Lleva ítems médicos para las guerras. <a href=\"/medical/\">Medicina de campo →</a>",
+      "No despegues justo antes de una guerra o una chain. <a href=\"/travel/#delays\">Retrasos de vuelo →</a>"
+    ],
+    "quoteTag": "La regla de Rook",
+    "quote": "«Nadie espera que un miembro nuevo cargue con una guerra. Esperamos que aparezcas, des los golpes que puedes ganar, tengas tus médicos al día y no seas el blanco fácil que alimenta al otro bando.»"
+  },
+  "routine": {
+    "eyebrow": "Guarda esto",
+    "title": "Tu rutina",
+    "dayTitle": "Todos los días",
+    "day": [
+      "Entra lo bastante seguido para que tu energía nunca se quede llena.",
+      "Entrena. Un stat por sesión, en el gym con los mejores dots para él.",
+      "Toma Xanax cuando termine tu cooldown, si te alcanza el presupuesto. Usa tu refill de puntos (25 puntos).",
+      "Gasta el nerve en el crimen más difícil que pases de forma confiable.",
+      "Vuela mientras se recarga tu energía; revisa YATA primero.",
+      "Gasta los job points en los specials de tu empresa.",
+      "Guarda tu efectivo antes de desconectarte."
+    ],
+    "weekTitle": "Cada semana",
+    "week": [
+      "Renueva los plazos bancarios de 1–2 semanas el día que terminan.",
+      "Cobra los pagos semanales de acciones; desaparecen después de 24 horas.",
+      "Asegúrate de que el siguiente curso esté en cola antes de que termine el actual.",
+      "Revisa tu puesto en la OC con la facción."
+    ],
+    "monthTitle": "Cada mes",
+    "month": [
+      "Renueva el alquiler de tu propiedad. Los alquileres terminan a las 03:30 TCT.",
+      "Renueva el estatus de donator (31 días por pack).",
+      "Cobra los pagos mensuales de acciones.",
+      "Planifica cualquier libro de 31 días para el mes que viene."
+    ]
+  },
+  "footer": "<strong>Empieza aquí.</strong> Consejos sobre misiones, cómo guardar dinero y vender, de Basic Advice de <strong>Baldr [1847600]</strong>; méritos baratos, de Guide to Easy Merits de <strong>Tempest [1867527]</strong>; libros, de Guide to Stat Gains from Books de <strong>HandsomePants [1897243]</strong> y la página Travel de la wiki; adicción, de la página Drug de la wiki; respeto de facción, de las páginas Faction y Attack de la wiki; beneficios de trabajo y recompensas de misiones, de la Torn API y la wiki. Parte del <a href=\"/\">Faction Training Playbook</a>."
+}

@@ -13,7 +13,14 @@
   <h2 style="margin-top:.3em">Gym, happy jumps &amp; books</h2>
   <div class="credit"><div class="who">Vladar <span class="id">[1996140]</span></div><div class="what">Training Formula V2.0 — the gym-gains formula and per-stat constants behind the planner and the training math.</div></div>
   <div class="credit"><div class="who">Baldr <span class="id">[1847600]</span></div><div class="what">Baldr's Basic Advice (new-player path, flowers/plushies, property/happy guidance) and Hank's Ratio / Baldr's Ratio (happy-jump ratios).</div></div>
+  <div class="credit"><div class="who">HandsomePants <span class="id">[1897243]</span></div><div class="what">Handsome Guide to Stat Gains from Books: which books to read and when.</div></div>
   <div class="note">Happy, gym, property, marriage, travel and energy mechanics also draw on the official <a href="https://wiki.torn.com/" target="_blank" rel="noopener">Torn wiki</a>.</div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="eyebrow">Getting started</span>
+  <h2 style="margin-top:.3em">Merits &amp; first steps</h2>
+  <div class="credit"><div class="who">Tempest <span class="id">[1867527]</span></div><div class="what">Guide to Easy Merits: Honor Edition, the cheap early merits on our <a href="{base}/start/">Start here</a> page.</div></div>
 </div></section>
 
 <section><div class="wrap">

@@ -1,0 +1,203 @@
+{
+  "title": "从这里开始 · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Torn 新人？先读这篇",
+    "h1": "从<em>这里</em>开始",
+    "lede": "头几周没人告诉你的事：该设置什么、怎样保住赚到的钱，以及让新人损失最大的陷阱。然后选一条<a href=\"/paths/\">路线</a>。",
+    "tocLabel": "本页内容",
+    "quoteTag": "买之前先看",
+    "quote": "“大多数新人输，不是因为弱。而是因为身上带现金、跳过基础设置、买错东西。先把这些改掉，其他一切都会变容易。”"
+  },
+  "toc": {
+    "week": "你的第一周",
+    "missions": "任务",
+    "safe": "保住你的钱",
+    "selling": "出售",
+    "books": "书籍",
+    "drugs": "药物与成瘾",
+    "scams": "骗局",
+    "faction": "派系",
+    "routine": "你的日常",
+    "glossary": "术语表 ↗"
+  },
+  "week": {
+    "eyebrow": "现在就做",
+    "title": "你的第一周",
+    "steps": [
+      ["获得 donator 身份。", "更大的能量条，回复更快：你每玩一天，自然能量多出约 {donatorGain}%。一个 donator pack 提供 31 天，游戏内售价约 $24M，或用现实货币约 $5 购买。Baldr：“每个人都应该有 donator 身份。”"],
+      ["租你付得起的最高 happy 房产。", "15 级之前租 Ranch 或 Mansion（至少是 925 happy 的 Penthouse），之后租带跑道的 Private Island。暂时别买房产。<a href=\"/travel/#pi\">PI 预算 →</a>"],
+      ["进一家 3★ 公司。", "大多数工作福利在 3★ 解锁。工作属性不够？付钱让老板培训你。<a href=\"/paths/#guides\">你的路线适合哪份工作 →</a>"],
+      ["开始学 Sports Science。", "你的第一门课：它会解锁健身收益 +1% 的课程。永远保持有一门课在进行。<a href=\"/paths/#guides\">教育规划 →</a>"],
+      ["先别急着做新人任务。", "它们奖励能量（一次最多 500），搬进 happy 更高的房子后再用这些能量训练效果更好。先租房，再做任务。<a href=\"#missions\">任务 →</a>"],
+      ["别再带着现金。", "被 mug 很常见。买 Stock Ticker（50 points），学会 ghost trade。<a href=\"#safe\">保住你的钱 →</a>"],
+      ["第一次存银行。", "哪怕只存 1 周也行。这是被动收入的开始，还能拿一个 merit。"],
+      ["安全地设置 API key。", "每个工具一个 key，只给最低权限，绝不在脚本里用 Full key。<a href=\"/scripts/\">脚本和工具 →</a>"],
+      ["拿下便宜的 merits。", "每个奖励都给一个 merit，merit 能换永久升级。简单的几个见下方。"]
+    ],
+    "merits": {
+      "title": "早期便宜的 merits",
+      "intro": "下面每个 honor 几乎不费力就能拿到一个 merit：",
+      "head": ["Honor", "方法"],
+      "rows": [
+        ["Historian", "花 5–10 分钟阅读报纸上的 Chronicle。"],
+        ["Forgiven", "每天在教堂祈祷两次，间隔 8–10 小时。大约需要 7–10 天。"],
+        ["Pious, Saintly", "向教堂捐 $100k，然后再捐 $1M。"],
+        ["Pocket Money", "做任意一笔银行投资。1 周期限就行。"],
+        ["Energetic", "达到 1,000 能量：从空条开始，叠 4 颗 Xanax，就像准备 jump 一样。"],
+        ["Diabetic", "吃 500 颗糖果。Lollipops 每颗约 $1k，还能顺便补 happy。"],
+        ["Spinner, One in Six", "转 1,000 次轮盘（每天 75 次约 14 天），以及在 $1 赌注的俄罗斯轮盘中赢 50 次。"],
+        ["Protege", "完成任务 “Introduction: Duke”。"],
+        ["Mule, Souvenir", "从海外进口 100 件物品，并在一次旅行中买下 “perfect souvenir”。"],
+        ["Luxury Real Estate", "升级一座带跑道的 Private Island。朋友可以把他的借你两分钟。"],
+        ["节日登录", "在元旦、情人节、万圣节、11 月 15 日（Torn 周年纪念）和圣诞节登录。"]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "任务积分很稀有",
+    "title": "任务",
+    "newTitle": "新人任务",
+    "new": [
+      "它们教你基础知识，奖励能量、nerve、现金和任务积分。光一步就给 500 能量。",
+      "先搬进更好的房子，让这些能量在更高的 happy 下训练。",
+      "它们会提供一次 <b>piggy bank</b>（存钱罐）。这是一个安全的一次性现金存放处。错过了就再也没机会。"
+    ],
+    "regTitle": "常规任务和积分",
+    "reg": [
+      "15 级之前不是重点；它们可能消耗大量能量。",
+      "把积分留给<b>钱买不到的东西</b>：特殊书籍和武器升级。",
+      "绝不用积分买能用钱买到的东西。有些书很棒，有些没用（见<a href=\"#books\">书籍</a>）。"
+    ]
+  },
+  "safe": {
+    "eyebrow": "新人丢失进度的头号原因",
+    "title": "保住你的钱",
+    "lede": "口袋里的现金会被 mug。一拿到钱就存起来。没有完美的方法，所以大多数玩家会混合使用。",
+    "head": ["存放处", "怎么用", "缺点"],
+    "rows": [
+      ["Ghost trade", "和朋友开一个交易，放入现金，双方都不确认。存取都快，住院时也能用。", "交易 6 小时后关闭，对方必须在过去 6 小时内活跃过，而且只找你信任的人。"],
+      ["银行", "把钱锁定 1 周到 3 个月。能赚利息，没人能 mug。", "到期前动不了，到期后钱会闲置，直到你开始下一期。"],
+      ["股票", "买股票（需要 Stock Ticker，50 points）。随时可卖，手续费 0.1%。", "持有期间价格可能下跌。"],
+      ["物品和 points", "持有 Xanax、donator pack、花、毛绒玩具或 points。物品不会被 mug。", "卖的时候定价要接近最低挂单，否则卖不掉。"],
+      ["派系银行", "大多数派系会替成员保管钱。", "取钱需要领导层批准，也有派系因为糟糕的领导丢了金库。只在那里放你需要的钱。"],
+      ["Piggy bank", "一次性的任务奖励。能存任意金额，不怕 mug。", "唯一的取法是一次性打碎它。错过这个机会就再也没有了。"],
+      ["PI vault", "在金库容量内无限安全（特大号为 $1B）。", "只能在你自己拥有的 PI 里用，租的不行。"]
+    ],
+    "tips": [
+      "在线时每 3–5 小时重开一次 ghost trade，让它永不过期。",
+      "别用 Cayman Islands 的银行存钱：mugger 会守着落地去存取钱的玩家。",
+      "银行存期结束后，钱仍然安全但不再生息。马上开始下一期。"
+    ]
+  },
+  "selling": {
+    "eyebrow": "把物品变成钱",
+    "title": "出售你买的东西",
+    "whereTitle": "在哪里卖",
+    "where": [
+      "<b>Item market：</b>卖得最快的地方。收 5% 手续费。",
+      "<b>Bazaar：</b>你自己的小店，开店约 250 points。买家通过 weav3r 等工具找到它，卖给 100 个不同顾客能拿到 Middleman merit。",
+      "<b>Trade Chat：</b>适合大单或批量出售。一定要用交易窗口，绝不“先打钱”。"
+    ],
+    "howTitle": "怎样卖得好",
+    "how": [
+      "定价等于或接近最低挂单，才能卖得快。买卖前先在 <b>weav3r</b> 查 bazaar 价格；bazaar 通常比 item market 便宜。",
+      "大额出售会招来 mugger。卖完马上把钱转走。",
+      "花和毛绒玩具可以卖给凑套的人；拿到 History 学位后，也可以在 Museum 用整套兑换。"
+    ]
+  },
+  "books": {
+    "eyebrow": "大加成，但多数人用错了时机",
+    "title": "书籍",
+    "lede": "书主要来自任务积分和订阅。大多数持续 31 天，所以关键全在时机：在你整个月都能用上时再读。",
+    "head": ["书", "效果", "何时读"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "单项属性（Strength、Defense、Speed、Dexterity）健身收益 +30%，持续 31 天", "在专练该属性的月份读"],
+      ["Get Hard Or Go Home", "所有属性健身收益 +20%，持续 31 天", "任何高强度训练的月份"],
+      ["Ugly Energy", "能量上限 +100，每次回复 +100，持续 31 天", "如果那个月练满，收益 +28–78%"],
+      ["Smuggling For Beginners", "每趟多带 10 件物品，持续 31 天", "大量飞行的月份，或 Tourism Day"],
+      ["Mailing Yourself Abroad", "飞行速度快 25%，持续 31 天", "和上一本搭配使用"],
+      ["Brawn Over Brains 和其他 +5% 属性书", "单项属性 +5%，最多 10M", "留到该属性达到 200M 再读"],
+      ["Ignorance Is Bliss", "超出上限的 happy 在 31 天内不重置", "只有你负担得起持续 jump 时才用。小心过量用药"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "每天吃 Xanax 的隐性代价",
+    "title": "药物与成瘾",
+    "lede": "每种药物都会增加一点成瘾，哪怕脑子图标还没出现。过量用药见<a href=\"/medical/\">战地医疗</a>；这里讲的是慢慢累积的成瘾。",
+    "whatTitle": "成瘾有什么影响",
+    "what": [
+      "<b>战斗属性减益</b>：脑子图标，越严重越红。",
+      "从你吃第一颗药开始，工作效率就会下降。",
+      "成瘾较高时会<b>把你踢出正在上的课程</b>。",
+      "Xanax 和 Ecstasy 累计超过 150 颗，你就进不了禁药的 Sports Science Lab 健身房。"
+    ],
+    "keepTitle": "降低成瘾",
+    "keep": [
+      "去瑞士 <b>Rehab</b>（约 $250k）可以清除。脑子图标变红时飞过去。",
+      "<b>Addiction Mitigation</b> merit（每级 −2%）可以减轻影响。",
+      "工作：Cruise Line 和 Flower Shop（5★）能降低成瘾；10★ Nightclub 能让教育不受成瘾影响。",
+      "派系升级：Toleration 最多能把成瘾减半。<a href=\"/paths/#faction\">派系升级 →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "别用惨痛的方式学会这些",
+    "title": "骗局和陷阱",
+    "items": [
+      "<b>不付钱的 loss 买家。</b>用 FFScouter 的预付 loss 合约。否则先查买家：账号不到 100 天、净资产不到 $1B 或仇人很多，都是危险信号。严格按他们的要求做，否则他们会以此为借口不付钱。",
+      "<b>和陌生人 ghost trade。</b>他们能看到你的现金，取消交易后再把你 mug 掉。只找朋友或派系成员。",
+      "<b>“把你的 key 贴到这里。”</b>绝不把 Full 权限的 API key 放进脚本或网站。<a href=\"/scripts/\">Key 安全 →</a>",
+      "<b>去 Cayman 银行存取钱。</b>mugger 蹲守在那里，专等带着现金进出的玩家。",
+      "<b>盲目信任任何金库。</b>派系金库曾被糟糕的领导掏空。把钱分散存放。",
+      "<b>赌场。</b>只值得为了 $1 赌注的 merit honors 去。除此之外就是烧钱。"
+    ]
+  },
+  "faction": {
+    "eyebrow": "派系怎么运作",
+    "title": "派系基础",
+    "respectTitle": "一分钟了解 respect",
+    "respect": [
+      "派系攻击能获得 <b>respect</b>（声望），用来为所有成员购买升级。",
+      "倍率可以叠加：fair fight 最多 ×3，战争攻击 ×2，长 chain 最多 ×2，报复 ×1.5，在海外攻击 ×1.25。",
+      "成员被打时，派系会损失攻击者所得 respect 的四分之一。软柿子会拖累所有人。"
+    ],
+    "helpTitle": "就算还弱小，也能这样帮忙",
+    "help": [
+      "接你能通过的组织犯罪角色。<a href=\"/crimes/#oc\">OC →</a>",
+      "chain 时打你能轻松赢的目标；FF Scouter 会告诉你是谁。",
+      "领导层喊报复时就去报复。",
+      "为战争备好医疗物品。<a href=\"/medical/\">战地医疗 →</a>",
+      "战争或 chain 开始前别起飞。<a href=\"/travel/#delays\">航班延误 →</a>"
+    ],
+    "quoteTag": "Rook 的规矩",
+    "quote": "“没人指望新成员扛起一场战争。我们只希望你到场，打能赢的仗，备好药品，别当那个给对面送分的软柿子。”"
+  },
+  "routine": {
+    "eyebrow": "把这个钉住",
+    "title": "你的日常",
+    "dayTitle": "每天",
+    "day": [
+      "经常上线，别让能量一直满着。",
+      "训练。每次只练一项属性，去该属性点数最高的健身房。",
+      "冷却结束且预算允许时吃 Xanax。用掉你的点数回复（25 points）。",
+      "把 nerve 花在你能稳定通过的最难犯罪上。",
+      "能量回复期间去飞；先看 YATA。",
+      "把工作点数花在公司 specials 上。",
+      "下线前把现金存好。"
+    ],
+    "weekTitle": "每周",
+    "week": [
+      "1–2 周的银行存期到期当天就续存。",
+      "领取每周股票分红；24 小时后就会消失。",
+      "确保当前课程结束前，下一门已经排好。",
+      "和派系确认你的 OC 位置。"
+    ],
+    "monthTitle": "每月",
+    "month": [
+      "续租房产。租约在 03:30 TCT 到期。",
+      "续 donator 身份（每个 pack 31 天）。",
+      "领取每月股票分红。",
+      "为下个月安排好 31 天的书。"
+    ]
+  },
+  "footer": "<strong>从这里开始。</strong>任务、存钱和出售建议来自 <strong>Baldr [1847600]</strong> 的 Basic Advice；便宜的 merits 来自 <strong>Tempest [1867527]</strong> 的 Guide to Easy Merits；书籍来自 <strong>HandsomePants [1897243]</strong> 的 Guide to Stat Gains from Books 和 Travel wiki 页面；成瘾来自 Drug wiki 页面；派系 respect 来自 Faction 和 Attack wiki 页面；工作福利和任务奖励来自 Torn API 和 wiki。<a href=\"/\">Faction Training Playbook</a> 的一部分。"
+}

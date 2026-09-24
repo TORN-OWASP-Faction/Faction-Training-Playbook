@@ -1,0 +1,61 @@
+{
+  "skip": "Saltar al contenido",
+  "homeLabel": "Faction Training Playbook, página de inicio",
+  "menu": "Menú",
+  "language": "Idioma",
+  "nav": {
+    "label": "Principal",
+    "start": "Empieza aquí",
+    "groups": {
+      "train": "Entrenar",
+      "money": "Dinero",
+      "crimes": "Crímenes",
+      "fight": "Pelear",
+      "more": "Más"
+    },
+    "links": {
+      "guide": "Guía de entrenamiento",
+      "idea": "El happy jump",
+      "new": "Antes del nivel 15",
+      "builds": "Builds",
+      "schedule": "Horarios diarios",
+      "items": "Qué comprar",
+      "edu": "Educación",
+      "planner": "Planificador de jumps",
+      "math": "Matemáticas del entrenamiento",
+      "makeMoney": "Formas de ganar dinero",
+      "travel": "Volar por dinero",
+      "paths": "Rutas y metas",
+      "faction": "Mejoras de facción",
+      "safe": "Protege tu dinero",
+      "overview": "Resumen",
+      "how": "Cómo funcionan los crímenes",
+      "nerve": "Sube tu nerve",
+      "oc": "Crimen organizado",
+      "ocScenarios": "Escenarios de OC",
+      "dataTables": "Tablas de datos de crímenes",
+      "loadout": "Equipo de guerra",
+      "medical": "Medicina de campo",
+      "factionBasics": "Lo básico de las facciones",
+      "scripts": "Scripts y herramientas",
+      "glossary": "Glosario",
+      "credits": "Créditos"
+    }
+  },
+  "notice": {
+    "englishOnly": "Por ahora esta página solo está en inglés.",
+    "translate": "Ábrela en Google Translate",
+    "browserTip": "o usa la opción Traducir de tu navegador.",
+    "machine": "Esta página se tradujo automáticamente del inglés. Los nombres del juego se quedan en inglés, tal como los muestra Torn.",
+    "improve": "Ayuda a mejorar la traducción en GitHub"
+  },
+  "suggest": {
+    "text": "Esta guía también está en {language}.",
+    "yes": "Leer en {language}",
+    "no": "Seguir en inglés"
+  },
+  "repo": {
+    "cta": "Ver en GitHub ↗",
+    "hint": "¿Viste un error o tienes una guía para agregar? Abre un issue o envía un pull request."
+  }
+}

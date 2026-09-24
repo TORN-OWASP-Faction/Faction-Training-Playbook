@@ -233,6 +233,12 @@
   });
   const MONEY_ROWS = ['$15M', '$100M', '$500M', '$1B', '$2B', '$5B'];
   let guide = $state('income');
+  function guideKey(e) {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!step) return;
+    guide = ORDER[(ORDER.indexOf(guide) + step + ORDER.length) % ORDER.length];
+    document.getElementById(`gtab-${guide}`)?.focus();
+  }
 
   const eduPlan = (k) => {
     let done = 0;
@@ -482,16 +488,17 @@
 <section id="guides"><div class="wrap">
   <span class="eyebrow">Where the money goes</span>
   <h2>The three guides</h2>
-  <div class="tabrow" role="tablist">
+  <div class="tabrow" role="tablist" tabindex="-1" onkeydown={guideKey}>
     {#each ORDER as k}
-      <button role="tab" aria-selected={guide === k} class:on={guide === k} style="--pc:{COLORS[k]}" onclick={() => (guide = k)}>{PATHS[k].label}</button>
+      <button role="tab" id="gtab-{k}" aria-controls="gpanel" aria-selected={guide === k} tabindex={guide === k ? 0 : -1}
+        class:on={guide === k} style="--pc:{COLORS[k]}" onclick={() => (guide = k)}>{PATHS[k].label}</button>
     {/each}
   </div>
 
   {#each ORDER as k, j}
     {#if guide === k}
       {@const g = GUIDES[k]}
-      <div class="gpanel" style="--pc:{g.color}">
+      <div class="gpanel" id="gpanel" role="tabpanel" aria-labelledby="gtab-{k}" style="--pc:{g.color}">
         <p class="lede" style="margin-top:0">{g.who}</p>
         <div class="grid2" style="margin-top:.8rem">
           <div class="callout"><p style="margin:0;color:var(--muted)">{@html g.split}</p></div>

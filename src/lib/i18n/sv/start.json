@@ -1,0 +1,203 @@
+{
+  "title": "Börja här · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Ny i Torn? Läs det här först",
+    "h1": "Börja <em>här</em>",
+    "lede": "Det ingen berättar för dig de första veckorna: vad du ska ställa in, hur du behåller det du tjänar och fällorna som kostar nya spelare mest. Välj sedan en <a href=\"/paths/\">väg</a>.",
+    "tocLabel": "På den här sidan",
+    "quoteTag": "Innan du köper",
+    "quote": "”De flesta nya spelare förlorar inte för att de är svaga. De förlorar för att de bär kontanter, hoppar över grundinställningarna och köper fel saker. Fixa det först, så blir allt annat lättare.”"
+  },
+  "toc": {
+    "week": "Din första vecka",
+    "missions": "Uppdrag",
+    "safe": "Behåll pengarna",
+    "selling": "Sälja",
+    "books": "Böcker",
+    "drugs": "Droger och beroende",
+    "scams": "Bedrägerier",
+    "faction": "Factions",
+    "routine": "Din rutin",
+    "glossary": "Ordlista ↗"
+  },
+  "week": {
+    "eyebrow": "Gör det här nu",
+    "title": "Din första vecka",
+    "steps": [
+      ["Skaffa donatorstatus.", "En större energimätare som fylls på snabbare: ungefär {donatorGain}% mer naturlig energi varje dag du spelar. Ett donator pack ger 31 dagar och säljs för ~$24M i spelet, eller kostar ungefär $5 i riktiga pengar. Baldr: ”Alla borde ha donatorstatus.”"],
+      ["Hyr bästa happy du har råd att fortsätta betala.", "Hyr en Ranch eller Mansion (minst en Penthouse med 925 happy) fram till nivå 15, sedan en Private Island med landningsbana. Köp inte fastighet än. <a href=\"/travel/#pi\">PI-budget →</a>"],
+      ["Kom in i ett 3★-företag.", "De flesta jobbförmåner låses upp vid 3★. För låga arbetsstats? Betala chefen för att träna dig. <a href=\"/paths/#guides\">Vilket jobb för din väg →</a>"],
+      ["Börja med Sports Science.", "Din första kurs: den öppnar kurserna som ger +1% gymvinster. Ha alltid en kurs igång. <a href=\"/paths/#guides\">Utbildningsplaner →</a>"],
+      ["Vänta med uppdragen för nya spelare.", "De betalar energi (upp till 500 åt gången), och den energin tränar bättre när du har flyttat till ett boende med högre happy. Hyr först, gör dem sedan. <a href=\"#missions\">Uppdrag →</a>"],
+      ["Sluta bära kontanter.", "Mugging är vanligt. Köp Stock Ticker (50 points) och lär dig ghost trades. <a href=\"#safe\">Behåll pengarna →</a>"],
+      ["Gör din första bankinsättning.", "Även en veckas bindningstid räcker. Det är starten på din passiva inkomst, och det ger en merit."],
+      ["Sätt upp dina API-nycklar säkert.", "En nyckel per verktyg, minsta möjliga åtkomst, aldrig en Full-nyckel i ett skript. <a href=\"/scripts/\">Skript och verktyg →</a>"],
+      ["Plocka de billiga meriterna.", "Varje utmärkelse ger en merit, och meriter köper permanenta uppgraderingar. De enkla står nedan."]
+    ],
+    "merits": {
+      "title": "Billiga meriter tidigt",
+      "intro": "Var och en av dessa honors ger en merit nästan utan ansträngning:",
+      "head": ["Honor", "Hur"],
+      "rows": [
+        ["Historian", "Lägg 5–10 minuter på att läsa en Chronicle i tidningen."],
+        ["Forgiven", "Be i kyrkan två gånger om dagen, med 8–10 timmar emellan. Tar ungefär 7–10 dagar."],
+        ["Pious, Saintly", "Skänk $100k och sedan $1M till kyrkan."],
+        ["Pocket Money", "Gör vilken bankinvestering som helst. En vecka räcker."],
+        ["Energetic", "Nå 1,000 energi: börja tom och stacka 4 Xanax, som inför en jump."],
+        ["Diabetic", "Ät 500 godisbitar. Lollipops kostar ungefär $1k styck och fyller på din happy också."],
+        ["Spinner, One in Six", "1,000 snurr på roulette (ungefär 14 dagar med 75 om dagen) och 50 vinster i rysk roulette med $1-insatser."],
+        ["Protege", "Klara uppdraget ”Introduction: Duke”."],
+        ["Mule, Souvenir", "Importera 100 items från utlandet och köp ”perfect souvenir” på en resa."],
+        ["Luxury Real Estate", "Uppgradera en Private Island med landningsbana. En kompis kan låna ut sin i två minuter."],
+        ["Holiday logins", "Logga in på nyårsdagen, alla hjärtans dag, halloween, 15 november (Torns årsdag) och juldagen."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Uppdragskrediter är sällsynta",
+    "title": "Uppdrag",
+    "newTitle": "Uppdrag för nya spelare",
+    "new": [
+      "De lär ut grunderna och betalar energi, nerve, kontanter och uppdragskrediter. Ett enda steg ger 500 energi.",
+      "Flytta till ett bättre boende först, så att energin tränar med högre happy.",
+      "De erbjuder en <b>spargris (piggy bank)</b> en gång. Det är ett säkert förråd för kontanter som du bara får en gång. Hoppar du över den får du aldrig en ny chans."
+    ],
+    "regTitle": "Vanliga uppdrag och krediter",
+    "reg": [
+      "Inte prioriterat före nivå 15; de kan kräva mycket energi.",
+      "Spara krediterna till saker <b>pengar inte kan köpa</b>: specialböcker och vapenuppgraderingar.",
+      "Lägg aldrig krediter på något du kan köpa för pengar. Vissa böcker är grymma, andra värdelösa (se <a href=\"#books\">Böcker</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Det vanligaste sättet nya spelare tappar framsteg",
+    "title": "Behåll pengarna",
+    "lede": "Kontanter i fickan kan bli muggade. Stoppa undan dem så fort du har dem. Ingen metod är perfekt, så de flesta spelare kombinerar flera.",
+    "head": ["Var", "Så fungerar det", "Haken"],
+    "rows": [
+      ["Ghost trade", "Öppna en trade med en kompis, lägg in kontanter och ingen av er accepterar. Snabbt in och ut, till och med från sjukhuset.", "Trades stängs efter 6 timmar, den andra spelaren måste ha varit aktiv de senaste 6 timmarna, och använd bara någon du litar på."],
+      ["Bank", "Lås in pengar med 1 veckas till 3 månaders bindningstid. De ger ränta och ingen kan mugga dem.", "Du kommer inte åt dem förrän tiden är slut, och sedan ligger pengarna stilla tills du startar en ny."],
+      ["Aktier", "Köp aktier (kräver Stock Ticker, 50 points). Sälj när som helst mot en avgift på 0.1%.", "Priset kan sjunka medan du äger dem."],
+      ["Items och points", "Håll Xanax, donator packs, blommor, gosedjur eller points. Items kan inte muggas.", "Prissätt nära lägsta annonsen när du säljer, annars blir de liggande."],
+      ["Factionbank", "De flesta factions förvarar pengar åt medlemmarna.", "Uttag kräver ledningen, och factions har förlorat valv på grund av dåliga ledare. Ha bara det du behöver där."],
+      ["Piggy bank", "Ett engångserbjudande från ett uppdrag. Rymmer valfri summa, säker mot muggare.", "Enda sättet att få ut pengarna är att slå sönder den, allt på en gång. Missar du erbjudandet får du aldrig ett nytt."],
+      ["PI-valv", "Obegränsad säkerhet upp till valvets storlek ($1B för extra-large).", "Bara på en PI du äger, inte en du hyr."]
+    ],
+    "tips": [
+      "Medan du är online, gör om din ghost trade var 3–5:e timme så att den aldrig går ut.",
+      "Undvik banken på Caymanöarna för förvaring: muggare väntar på spelare som landar för att sätta in eller ta ut.",
+      "När en bindningstid tar slut är pengarna säkra men slutar ge ränta. Starta nästa direkt."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Gör items till pengar",
+    "title": "Sälj det du köper",
+    "whereTitle": "Var du säljer",
+    "where": [
+      "<b>Item market:</b> snabbaste stället att sälja på. Tar 5% i avgift.",
+      "<b>Bazaar:</b> din egen butik, kostar ungefär 250 points att öppna. Köpare hittar den via verktyg som weav3r, och 100 olika kunder ger meriten Middleman.",
+      "<b>Trade Chat:</b> för stora affärer eller bulkförsäljning. Använd alltid ett tradefönster, aldrig ”skicka pengarna först”."
+    ],
+    "howTitle": "Så säljer du bra",
+    "how": [
+      "Prissätt på eller nära lägsta annonsen för att sälja snabbt. Kolla bazaarpriser på <b>weav3r</b> innan du köper eller säljer; bazaars är oftast billigare än item market.",
+      "Stora försäljningar lockar muggare. Flytta pengarna direkt efter affären.",
+      "Blommor och gosedjur säljs till dem som samlar set, eller så byter du in hela set på Museum när du har History-examen."
+    ]
+  },
+  "books": {
+    "eyebrow": "Stora boostar som de flesta tajmar dåligt",
+    "title": "Böcker",
+    "lede": "Böcker kommer mest från uppdragskrediter och prenumerationer. De flesta varar 31 dagar, så hela knepet är tajming: läs en när du faktiskt använder den hela månaden.",
+    "head": ["Bok", "Effekt", "När du ska läsa den"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% gymvinster i en stat (Strength, Defense, Speed, Dexterity) i 31 dagar", "Läs under en månad då du fokuserar på den staten"],
+      ["Get Hard Or Go Home", "+20% gymvinster i alla stats i 31 dagar", "Vilken tung träningsmånad som helst"],
+      ["Ugly Energy", "+100 max energi och +100 per refill i 31 dagar", "Värd +28–78% om du maxtränar den månaden"],
+      ["Smuggling For Beginners", "+10 items per resa i 31 dagar", "En månad med mycket flygande, eller Tourism Day"],
+      ["Mailing Yourself Abroad", "25% snabbare flyg i 31 dagar", "Passar ihop med boken ovan"],
+      ["Brawn Over Brains och de andra +5%-statböckerna", "+5% på en stat, upp till 10M", "Spara dem tills staten är på 200M, läs dem då"],
+      ["Ignorance Is Bliss", "Happy över max nollställs inte på 31 dagar", "Bara om du har råd att jumpa hela tiden. Se upp för överdoser"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Den tysta kostnaden för Xanax varje dag",
+    "title": "Droger och beroende",
+    "lede": "Varje drog lägger till lite beroende, redan innan hjärnikonen syns. Överdoser tas upp i <a href=\"/medical/\">Fältsjukvård</a>; det här handlar om den långsamma uppbyggnaden.",
+    "whatTitle": "Vad beroende gör",
+    "what": [
+      "En <b>debuff på battle stats</b>: hjärnikonen, rödare ju värre det blir.",
+      "Sämre effektivitet på jobbet, redan från din allra första drog.",
+      "På högre nivåer kan det <b>kasta ut dig från din utbildningskurs</b>.",
+      "Över 150 Xanax och Ecstasy totalt stänger dig ute från det drogfria gymmet Sports Science Lab."
+    ],
+    "keepTitle": "Så håller du det nere",
+    "keep": [
+      "<b>Rehab</b> i Schweiz (~$250k) tar bort det. Flyg dit när hjärnikonen blir röd.",
+      "Meriten <b>Addiction Mitigation</b> (−2% per uppgradering) mildrar effekterna.",
+      "Jobb: Cruise Line och Flower Shop (5★) kan minska beroendet; en 10★ Nightclub skyddar din utbildning från det.",
+      "Factionuppgraderingar: Toleration minskar beroendet med upp till hälften. <a href=\"/paths/#faction\">Factionuppgraderingar →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Lär dig inte de här den hårda vägen",
+    "title": "Bedrägerier och fällor",
+    "items": [
+      "<b>Loss-köpare som inte betalar.</b> Använd FFScouters förbetalda loss-kontrakt. Annars, kolla köparen först: ett konto yngre än 100 dagar, networth under $1B eller massor av fiender är en varningsflagga. Följ deras instruktioner exakt, annars använder de det som ursäkt för att inte betala.",
+      "<b>Ghost trades med främlingar.</b> De ser dina kontanter, kan avbryta traden och få dem muggade. Använd bara kompisar eller factionkamrater.",
+      "<b>”Klistra in din nyckel här.”</b> Lägg aldrig en API-nyckel med Full-åtkomst i ett skript eller på en webbplats. <a href=\"/scripts/\">Nyckelsäkerhet →</a>",
+      "<b>Bankturer till Cayman.</b> Muggare ligger och väntar där på spelare som för in eller ut kontanter.",
+      "<b>Att blint lita på ett valv.</b> Factionvalv har tömts av dåliga ledare. Sprid ut dina pengar.",
+      "<b>Kasinot.</b> Bara värt det för merit-honors med $1-insatser. Utöver det är det ett svart hål för pengar."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Så fungerar factions",
+    "title": "Grunderna om factions",
+    "respectTitle": "Respect på en minut",
+    "respect": [
+      "Factionattacker ger <b>respect</b>, som köper uppgraderingar till alla medlemmar.",
+      "Multiplikatorer staplas: fair fight upp till ×3, krigsträffar ×2, en lång chain upp till ×2, en retal ×1.5, attack utomlands ×1.25.",
+      "När en medlem blir träffad förlorar factionen en fjärdedel av den respect angriparen fick. Lätta mål kostar alla."
+    ],
+    "helpTitle": "Så hjälper du till, även som liten",
+    "help": [
+      "Ta roller i organiserade brott som du klarar. <a href=\"/crimes/#oc\">OC →</a>",
+      "Chaina på mål du lätt slår; FF Scouter visar vilka.",
+      "Gör retal när ledningen säger till.",
+      "Bär med dig medicinska items till krig. <a href=\"/medical/\">Fältsjukvård →</a>",
+      "Flyg inte iväg precis före ett krig eller en chain. <a href=\"/travel/#delays\">Flygförseningar →</a>"
+    ],
+    "quoteTag": "Rooks regel",
+    "quote": "”Ingen förväntar sig att en ny medlem ska bära ett krig. Vi förväntar oss att du dyker upp, tar de träffar du kan vinna, har medicin i lager och inte är det lätta målet som matar motståndarsidan.”"
+  },
+  "routine": {
+    "eyebrow": "Fäst den här",
+    "title": "Din rutin",
+    "dayTitle": "Varje dag",
+    "day": [
+      "Logga in så ofta att din energi aldrig står full.",
+      "Träna. En stat per pass, på gymmet med flest dots för den.",
+      "Ta Xanax när cooldownen är klar, om det ryms i budgeten. Använd din points-refill (25 points).",
+      "Lägg nerve på det svåraste brottet du klarar pålitligt.",
+      "Flyg medan energin fylls på; kolla YATA först.",
+      "Lägg jobbpoäng på företagets specials.",
+      "Stoppa undan dina kontanter innan du loggar ut."
+    ],
+    "weekTitle": "Varje vecka",
+    "week": [
+      "Förnya bindningstider på 1–2 veckor samma dag som de tar slut.",
+      "Hämta veckoutdelningar från aktier; de försvinner efter 24 timmar.",
+      "Se till att nästa kurs står i kö innan den nuvarande tar slut.",
+      "Kolla din OC-plats med factionen."
+    ],
+    "monthTitle": "Varje månad",
+    "month": [
+      "Förnya hyreskontraktet för din fastighet. Kontrakt går ut 03:30 TCT.",
+      "Förnya donatorstatus (31 dagar per pack).",
+      "Hämta månadsutdelningar från aktier.",
+      "Tajma varje 31-dagarsbok för månaden som kommer."
+    ]
+  },
+  "footer": "<strong>Börja här.</strong> Råd om uppdrag, att förvara pengar och att sälja från Basic Advice av <strong>Baldr [1847600]</strong>; billiga meriter från Guide to Easy Merits av <strong>Tempest [1867527]</strong>; böcker från Guide to Stat Gains from Books av <strong>HandsomePants [1897243]</strong> och wikisidan Travel; beroende från wikisidan Drug; factionrespect från wikisidorna Faction och Attack; jobbförmåner och uppdragsbelöningar från Torn API och wikin. En del av <a href=\"/\">Faction Training Playbook</a>."
+}

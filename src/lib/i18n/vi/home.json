@@ -1,0 +1,59 @@
+{
+  "title": "Faction Training Playbook",
+  "badge": "Luyện tập faction · từ 2004",
+  "h1": "Faction Training <em>Playbook</em>",
+  "lede": "Hướng dẫn miễn phí giúp bạn mạnh hơn và giàu hơn trong Torn, được faction của chúng tôi viết bằng lời dễ hiểu. Chọn nơi bạn muốn bắt đầu.",
+  "choose": {
+    "eyebrow": "Chọn mục tiêu",
+    "title": "Bạn muốn bắt đầu từ đâu?"
+  },
+  "goals": {
+    "new": {
+      "title": "Mình mới chơi Torn",
+      "text": "Tuần đầu tiên của bạn, cách giữ tiền an toàn, và những cái bẫy khiến người mới mất nhiều nhất.",
+      "go": "Bắt đầu tại đây",
+      "links": ["Tuần đầu tiên", "Giữ tiền an toàn", "Thuật ngữ"]
+    },
+    "train": {
+      "title": "Mạnh hơn",
+      "text": "Happy jump hoạt động thế nào, nên chọn build nào, gym tốt nhất cho từng stat, và một ngày luyện tập trông ra sao.",
+      "go": "Hướng dẫn luyện tập",
+      "links": ["Happy jump", "Build", "Công cụ lên kế hoạch jump"]
+    },
+    "money": {
+      "title": "Kiếm tiền",
+      "text": "Bay đi mua hoa và thú nhồi bông, khi nào Private Island đáng tiền, và cách bán những gì bạn mang về.",
+      "go": "Bay để kiếm tiền",
+      "links": ["Cách kiếm tiền", "Dùng YATA", "Bán item"]
+    },
+    "plan": {
+      "title": "Tính đường dài",
+      "text": "Ưu tiên thu nhập, ưu tiên stat hay cân bằng: mốc thời gian, cột mốc, và nên mua gì theo thứ tự nào.",
+      "go": "Lộ trình và cột mốc",
+      "links": ["Công cụ lập kế hoạch", "Ba hướng dẫn", "Nâng cấp faction"]
+    }
+  },
+  "more": {
+    "eyebrow": "Cũng có trong playbook",
+    "title": "Crimes, war và công cụ",
+    "items": {
+      "crimes": ["Crimes và OC", "Nên làm crime nào, nerve của bạn tăng thế nào, và organized crime trả thưởng ra sao."],
+      "loadout": ["Trang bị khi war", "Vũ khí, giáp và cách đánh đối thủ mạnh hơn mình."],
+      "medical": ["Y tế chiến trường", "Overdose, item y tế, và cách vẫn có ích trong war."],
+      "scripts": ["Script và công cụ", "TornTools, YATA, FF Scouter và nhiều thứ khác, cùng cách giữ API key an toàn."]
+    }
+  },
+  "crew": {
+    "eyebrow": "Ai đang nói",
+    "title": "Gặp gỡ nhóm",
+    "lede": "Năm nhân vật điều hành playbook này. Mỗi người phụ trách một phần của game, và bạn sẽ thấy lời khuyên của họ trên các trang họ phụ trách.",
+    "members": {
+      "banker": ["Chủ ngân hàng · Kinh tế", "Tiền, nhà đất, học vấn, và khi nào không nên tiêu", "Vincent Moretti, chủ ngân hàng"],
+      "trainer": ["Huấn luyện viên · Tiến độ", "Gym, happy, energy, thói quen và jump", "Maya Torres, huấn luyện viên"],
+      "militia": ["Dân quân · Faction", "Perk faction, sẵn sàng cho war và chuẩn bị", "Marcus Kane, cựu binh dân quân"],
+      "fixer": ["Fixer · Cơ hội", "Tiền nhanh, lên level, lướt hàng và giới thiệu", "Nico Vescari, tay fixer"],
+      "medic": ["Y sĩ · Hồi phục", "Overdose, item y tế, bệnh viện và chuẩn bị war", "Bác sĩ Elara Moreau, y sĩ"]
+    }
+  },
+  "footer": "<strong>Faction Training Playbook.</strong> Do faction của chúng tôi xây dựng từ các hướng dẫn của người chơi Torn. Mọi nguồn đều được liệt kê ở trang <a href=\"/credits/\">nguồn tham khảo</a>."
+}

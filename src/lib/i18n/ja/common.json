@@ -1,0 +1,61 @@
+{
+  "skip": "本文へスキップ",
+  "homeLabel": "Faction Training Playbook、ホームページ",
+  "menu": "メニュー",
+  "language": "言語",
+  "nav": {
+    "label": "メイン",
+    "start": "はじめに",
+    "groups": {
+      "train": "トレーニング",
+      "money": "お金",
+      "crimes": "犯罪",
+      "fight": "戦闘",
+      "more": "その他"
+    },
+    "links": {
+      "guide": "トレーニングガイド",
+      "idea": "ハッピージャンプ",
+      "new": "レベル15まで",
+      "builds": "ビルド",
+      "schedule": "毎日のスケジュール",
+      "items": "買うべきアイテム",
+      "edu": "教育",
+      "planner": "ジャンププランナー",
+      "math": "トレーニングの計算",
+      "makeMoney": "お金の稼ぎ方",
+      "travel": "海外飛行で稼ぐ",
+      "paths": "ルートと目標",
+      "faction": "ファクションアップグレード",
+      "safe": "お金を守る",
+      "overview": "概要",
+      "how": "犯罪のしくみ",
+      "nerve": "ナーブを伸ばす",
+      "oc": "組織犯罪",
+      "ocScenarios": "OCシナリオ",
+      "dataTables": "犯罪データ表",
+      "loadout": "戦争の装備",
+      "medical": "戦場医療",
+      "factionBasics": "ファクションの基本",
+      "scripts": "スクリプトとツール",
+      "glossary": "用語集",
+      "credits": "クレジット"
+    }
+  },
+  "notice": {
+    "englishOnly": "このページは今のところ英語のみです。",
+    "translate": "Google Translate で開く",
+    "browserTip": "またはブラウザの翻訳機能を使ってください。",
+    "machine": "このページは英語から機械翻訳されています。ゲーム内の名称は、Torn の表示どおり英語のままにしています。",
+    "improve": "GitHub で翻訳の改善に協力する"
+  },
+  "suggest": {
+    "text": "このガイドには{language}版もあります。",
+    "yes": "{language}で読む",
+    "no": "英語のままにする"
+  },
+  "repo": {
+    "cta": "GitHub で見る ↗",
+    "hint": "間違いを見つけた、またはガイドを追加したいですか？ Issue を作成するか、プルリクエストを送ってください。"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Chuyển đến nội dung",
+  "homeLabel": "Faction Training Playbook, trang chủ",
+  "menu": "Menu",
+  "language": "Ngôn ngữ",
+  "nav": {
+    "label": "Chính",
+    "start": "Bắt đầu tại đây",
+    "groups": {
+      "train": "Luyện tập",
+      "money": "Tiền",
+      "crimes": "Crimes",
+      "fight": "Chiến đấu",
+      "more": "Thêm"
+    },
+    "links": {
+      "guide": "Hướng dẫn luyện tập",
+      "idea": "Happy jump",
+      "new": "Trước level 15",
+      "builds": "Build",
+      "schedule": "Lịch hằng ngày",
+      "items": "Item nên mua",
+      "edu": "Học vấn",
+      "planner": "Công cụ lên kế hoạch jump",
+      "math": "Tính toán luyện tập",
+      "makeMoney": "Cách kiếm tiền",
+      "travel": "Bay để kiếm tiền",
+      "paths": "Lộ trình và cột mốc",
+      "faction": "Nâng cấp faction",
+      "safe": "Giữ tiền an toàn",
+      "overview": "Tổng quan",
+      "how": "Crimes hoạt động thế nào",
+      "nerve": "Tăng nerve",
+      "oc": "Organized crime",
+      "ocScenarios": "Các kịch bản OC",
+      "dataTables": "Bảng dữ liệu crimes",
+      "loadout": "Trang bị khi war",
+      "medical": "Y tế chiến trường",
+      "factionBasics": "Cơ bản về faction",
+      "scripts": "Script và công cụ",
+      "glossary": "Thuật ngữ",
+      "credits": "Nguồn tham khảo"
+    }
+  },
+  "notice": {
+    "englishOnly": "Trang này hiện chỉ có tiếng Anh.",
+    "translate": "Mở bằng Google Translate",
+    "browserTip": "hoặc dùng tính năng Dịch của trình duyệt.",
+    "machine": "Trang này được dịch máy từ tiếng Anh. Tên trong game vẫn giữ nguyên tiếng Anh, đúng như Torn hiển thị.",
+    "improve": "Giúp cải thiện bản dịch trên GitHub"
+  },
+  "suggest": {
+    "text": "Hướng dẫn này cũng có bằng {language}.",
+    "yes": "Đọc bằng {language}",
+    "no": "Giữ tiếng Anh"
+  },
+  "repo": {
+    "cta": "Xem trên GitHub ↗",
+    "hint": "Thấy lỗi hoặc muốn thêm hướng dẫn? Mở issue hoặc gửi pull request."
+  }
+}

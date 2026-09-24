@@ -40,7 +40,7 @@
   <h2>This is endgame min-maxing</h2>
   <div class="callout">
     <ul class="rules">
-      <li><span class="k">1</span><div><b>Stats beat gear.</b> If you're still building, put your money into <a href="{base}/#money">income</a> and training — come back for the loadout when you're actually warring.</div></li>
+      <li><span class="k">1</span><div><b>Stats beat gear.</b> If you're still building, put your money into <a href="{base}/training/#money">income</a> and training — come back for the loadout when you're actually warring.</div></li>
       <li><span class="k">2</span><div><b>Most weapons are temporary.</b> Treat the ones you loot or buy as resell fodder. The only <b>permanent</b> keepers are the <b>red</b> (upgraded) versions of the weapons below.</div></li>
       <li><span class="k">3</span><div><b>The perk is half the weapon.</b> A viable weapon with the wrong perk is a mediocre weapon — chase the perks called out below, not just the base gun.</div></li>
     </ul>

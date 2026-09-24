@@ -1,0 +1,221 @@
+{
+  "title": "术语表 · Faction Training Playbook",
+  "eyebrow": "用大白话讲 Torn",
+  "h1": "<em>术语表</em>",
+  "lede": "在 Torn 和本站随处可见的词汇和缩写。每一条都链接到详细讲解它的页面。",
+  "back": "← 从这里开始",
+  "more": "更多 →",
+  "groups": [
+    {
+      "title": "状态条和属性",
+      "terms": [
+        [
+          "E, energy",
+          "能量，用于健身房训练和攻击。满条每 5 小时回满：donator 上限 150，否则 100。"
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve 用于犯罪。NNB 是你的自然 nerve 条：靠犯罪经验获得的上限，不含加成。"
+        ],
+        [
+          "Happy",
+          "快乐值，会放大健身收益。房产决定上限。超出上限的部分会在 :00、:15、:30 和 :45 重置。"
+        ],
+        [
+          "Happy jump",
+          "囤积能量，把 happy 推到远超上限，然后在一个 15 分钟窗口内全部练掉。"
+        ],
+        [
+          "Battle stats",
+          "战斗属性：Strength、Speed、Defense 和 Dexterity。“总属性”指四项相加。"
+        ],
+        [
+          "Working stats",
+          "工作属性：Manual labor、Intelligence 和 Endurance。工作要用到；课程和工作培训能提升它们。"
+        ],
+        [
+          "Gym dots",
+          "健身房对每项属性的倍率。点数越多，每点能量收益越高（George's 是 7.3）。"
+        ],
+        [
+          "TCT",
+          "Torn City Time，游戏时钟。happy 重置和租约到期都按它计算。"
+        ]
+      ]
+    },
+    {
+      "title": "物品和加成道具",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 能量和 +75 happy。一种药物，冷却时间 6–8 小时。"
+        ],
+        [
+          "XTC",
+          "Ecstasy。让当前 happy 翻倍；最便宜的大幅 happy 加成。"
+        ],
+        [
+          "eDVD",
+          "Erotic DVD。+2,500 happy（10★ Adult Novelties 出品为 5,000）。happy jump 的主要加成道具。"
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon。一种能回满能量条的加成道具。"
+        ],
+        [
+          "Refill",
+          "点数回复：每天一次，花 25 points 回满能量条。"
+        ],
+        [
+          "Cooldowns",
+          "冷却：药物、加成道具和医疗的冷却是各自独立的计时，用一种不影响其他。"
+        ],
+        [
+          "OD",
+          "过量用药。清空你的状态条，把你送进医院，药物冷却可能延长到一天。"
+        ],
+        [
+          "SE",
+          "属性增强剂：直接加属性的昂贵物品。只有属性很高时才值得。"
+        ]
+      ]
+    },
+    {
+      "title": "钱和房产",
+      "terms": [
+        [
+          "PI",
+          "Private Island，最好的房产。租一个带跑道的，再雇飞行员，出行更快、带货更多。"
+        ],
+        [
+          "Donator, DP",
+          "Donator 身份：更大的能量条和更快的回复。一个 donator pack 提供 31 天。"
+        ],
+        [
+          "IM",
+          "Item market（物品市场）：卖得快，收 5% 手续费。"
+        ],
+        [
+          "Bazaar",
+          "你自己的小店。买家通过 weav3r 等工具找到它。"
+        ],
+        [
+          "Ghost trade",
+          "和信任的人保持一个不确认的交易，让现金放在里面而不是口袋里。"
+        ],
+        [
+          "Points",
+          "Torn 的第二种货币。可以买回复、merits、Stock Ticker 等。"
+        ],
+        [
+          "Benefit block",
+          "持有某支股票足够多的股份，以获得它的分红或福利。"
+        ],
+        [
+          "Museum, sets",
+          "用整套花或毛绒玩具换 points。需要 History 学位。"
+        ],
+        [
+          "Loss selling",
+          "收钱去攻击别人并故意输掉。只适合短期赚钱。"
+        ]
+      ]
+    },
+    {
+      "title": "工作、merits 和教育",
+      "terms": [
+        [
+          "★ (stars)",
+          "公司评级，0 到 10 星。星越多，员工解锁的福利越多。"
+        ],
+        [
+          "JP",
+          "工作点数：公司每颗星每天给一点，用来兑换公司 specials。"
+        ],
+        [
+          "Specials",
+          "公司的福利，按星级解锁。"
+        ],
+        [
+          "Merits",
+          "通过奖励（medals 和 honors）获得，用于 Bank Interest 等永久升级。"
+        ],
+        [
+          "Honors, medals",
+          "达成里程碑的奖励。每个都会给一个 merit。"
+        ]
+      ]
+    },
+    {
+      "title": "战斗和派系",
+      "terms": [
+        [
+          "Mug",
+          "打败某人，抢走他身上一部分现金。"
+        ],
+        [
+          "Hosp, med out",
+          "医院。“med out”指用医疗物品提前出院。"
+        ],
+        [
+          "Revive",
+          "把别人从医院救出来。战争中很有用。"
+        ],
+        [
+          "Bust, bail",
+          "把人从监狱里弄出来：靠技术（bust）或花钱（bail）。"
+        ],
+        [
+          "FF",
+          "Fair fight：打属性和你接近的人能拿到额外 respect（最多 ×3）。FF Scouter 可以估算。"
+        ],
+        [
+          "Respect",
+          "派系攻击获得的声望。派系用它为所有成员购买升级。"
+        ],
+        [
+          "Chain",
+          "派系连续的一串攻击。chain 越长，每次攻击的 respect 越高。"
+        ],
+        [
+          "Retal",
+          "报复：攻击刚打过派系成员的人，获得 ×1.5 respect。"
+        ],
+        [
+          "RW",
+          "两个派系之间的排位战。战争攻击获得双倍 respect。"
+        ],
+        [
+          "OC, CPR",
+          "组织犯罪，以及你在其角色中的检查点通过率。"
+        ],
+        [
+          "CE, CS",
+          "犯罪经验和犯罪技能。做犯罪会提升它们，从而提高 nerve 和成功率。"
+        ]
+      ]
+    },
+    {
+      "title": "工具",
+      "terms": [
+        [
+          "YATA",
+          "查询海外库存、出行时机、chain 和奖励的网站。"
+        ],
+        [
+          "TT",
+          "TornTools，一个在游戏各处添加信息的浏览器扩展。"
+        ],
+        [
+          "PDA",
+          "Torn PDA，支持脚本的手机应用。"
+        ],
+        [
+          "TornStats",
+          "侦察、战争和派系工具。"
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>术语表。</strong><a href=\"/\">Faction Training Playbook</a> 的一部分。缺了哪个词？告诉我们，我们来补上。"
+}

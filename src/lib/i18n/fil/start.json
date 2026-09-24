@@ -1,0 +1,203 @@
+{
+  "title": "Magsimula dito · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Bago sa Torn? Basahin mo muna ito",
+    "h1": "Magsimula <em>dito</em>",
+    "lede": "Ang mga bagay na walang nagsasabi sa'yo sa mga unang linggo mo: ano ang ise-setup, paano itatago ang kinikita mo, at ang mga bitag na pinakamahal ang singil sa mga bagong player. Pagkatapos, pumili ng <a href=\"/paths/\">path</a>.",
+    "tocLabel": "Sa page na ito",
+    "quoteTag": "Bago Ka Bumili",
+    "quote": "\"Karamihan ng bagong player ay hindi natatalo dahil mahina sila. Natatalo sila dahil nagdadala sila ng cash, nilalaktawan ang setup, at maling bagay ang binibili. Ayusin mo muna 'yan at gagaan ang lahat.\""
+  },
+  "toc": {
+    "week": "Ang unang linggo mo",
+    "missions": "Missions",
+    "safe": "Itago ang pera mo",
+    "selling": "Pagbenta",
+    "books": "Books",
+    "drugs": "Drugs at addiction",
+    "scams": "Scams",
+    "faction": "Factions",
+    "routine": "Ang routine mo",
+    "glossary": "Glossary ↗"
+  },
+  "week": {
+    "eyebrow": "Gawin mo na ngayon",
+    "title": "Ang unang linggo mo",
+    "steps": [
+      ["Kumuha ng donator status.", "Mas malaking energy bar na mas mabilis mapuno: mga {donatorGain}% na dagdag na natural energy bawat araw na naglalaro ka. 31 araw ang bigay ng isang donator pack at nabebenta ito ng ~$24M sa game, o mga $5 sa totoong pera. Baldr: \"Dapat may donator status ang lahat.\""],
+      ["Mag-rent ng pinakamataas na happy na kaya mong bayaran nang tuloy-tuloy.", "Mag-rent ng Ranch o Mansion (kahit man lang 925-happy na Penthouse) hanggang level 15, tapos Private Island na may airstrip. Huwag munang bumili ng property. <a href=\"/travel/#pi\">PI budget →</a>"],
+      ["Pumasok sa isang 3★ company.", "Sa 3★ nabubuksan ang karamihan ng job perks. Kulang ang working stats mo? Bayaran ang director para i-train ka. <a href=\"/paths/#guides\">Aling job para sa path mo →</a>"],
+      ["Simulan ang Sports Science.", "Ang una mong course: binubuksan nito ang mga +1% gym-gain course. Laging may course na tumatakbo. <a href=\"/paths/#guides\">Education plans →</a>"],
+      ["Huwag munang gawin ang new-player missions.", "Nagbabayad sila ng energy (hanggang 500 isang bagsakan), at mas sulit i-train ang energy na 'yon kapag nakalipat ka na sa bahay na mas mataas ang happy. Mag-rent muna, saka gawin. <a href=\"#missions\">Missions →</a>"],
+      ["Tigilan ang pagdadala ng cash.", "Karaniwan ang mugging. Bilhin ang Stock Ticker (50 points) at pag-aralan ang ghost trades. <a href=\"#safe\">Itago ang pera mo →</a>"],
+      ["Gawin ang unang bank deposit mo.", "Kahit 1-week term lang. Simula ito ng passive income mo, at may merit pa."],
+      ["I-setup nang ligtas ang API keys mo.", "Isang key kada tool, pinakamababang access, at huwag kailanman maglagay ng Full key sa script. <a href=\"/scripts/\">Scripts &amp; tools →</a>"],
+      ["Kunin ang mga madaling merits.", "Bawat award ay may merit, at pambili ng permanenteng upgrades ang merits. Nasa ibaba ang mga madali."]
+    ],
+    "merits": {
+      "title": "Madaling merits sa simula",
+      "intro": "Bawat isa sa mga honor na ito ay may merit na halos walang effort:",
+      "head": ["Honor", "Paano"],
+      "rows": [
+        ["Historian", "Gumugol ng 5–10 minuto sa pagbabasa ng Chronicle sa newspaper."],
+        ["Forgiven", "Magdasal sa church dalawang beses kada araw, 8–10 oras ang pagitan. Mga 7–10 araw ito."],
+        ["Pious, Saintly", "Mag-donate ng $100k, tapos $1M, sa church."],
+        ["Pocket Money", "Gumawa ng kahit anong bank investment. Okay na ang 1-week term."],
+        ["Energetic", "Umabot sa 1,000 energy: magsimula sa zero at mag-stack ng 4 na Xanax, gaya ng ginagawa sa jump."],
+        ["Diabetic", "Kumain ng 500 candy. Mga $1k bawat isa ang Lollipops at nagdadagdag din sila ng happy mo."],
+        ["Spinner, One in Six", "1,000 roulette spins (mga 14 na araw sa 75 kada araw), at 50 panalo sa Russian roulette sa $1 na taya."],
+        ["Protege", "Tapusin ang mission na \"Introduction: Duke\"."],
+        ["Mule, Souvenir", "Mag-import ng 100 items mula abroad, at bilhin ang \"perfect souvenir\" sa isang trip."],
+        ["Luxury Real Estate", "I-upgrade ang Private Island gamit ang airstrip. Puwedeng ipahiram ng kaibigan ang kanya nang dalawang minuto."],
+        ["Holiday logins", "Mag-log in sa New Year's Day, Valentine's Day, Halloween, 15 November (anniversary ng Torn) at Christmas Day."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Bihira ang mission credits",
+    "title": "Missions",
+    "newTitle": "New-player missions",
+    "new": [
+      "Tinuturo nila ang basics at nagbabayad ng energy, nerve, cash at mission credits. Isang step pa lang, 500 energy na.",
+      "Lumipat muna sa mas magandang bahay, para mas mataas ang happy kapag tinrain mo ang energy na 'yon.",
+      "Isang beses lang sila mag-o-offer ng <b>piggy bank</b>. Ligtas at one-time na taguan ito ng cash. Kapag nilaktawan mo, wala ka nang ibang chance."
+    ],
+    "regTitle": "Regular missions at credits",
+    "reg": [
+      "Hindi priority bago mag-level 15; puwede silang kumain ng maraming energy.",
+      "Itabi ang credits mo para sa mga bagay na <b>hindi nabibili ng cash</b>: special books at weapon upgrades.",
+      "Huwag kailanman gastusin ang credits sa kahit anong kaya mong bilhin ng pera. May books na magaling, may walang silbi (tingnan ang <a href=\"#books\">Books</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Ang #1 dahilan kung bakit nawawalan ng progress ang bagong players",
+    "title": "Itago ang pera mo",
+    "lede": "Puwedeng ma-mug ang cash sa bulsa mo. Itago agad pagkakuha mo. Walang perpektong paraan, kaya halo-halo ang ginagamit ng karamihan.",
+    "head": ["Saan", "Paano gumagana", "Ang catch"],
+    "rows": [
+      ["Ghost trade", "Mag-open ng trade kasama ang kaibigan, maglagay ng cash, at walang mag-a-accept sa inyo. Mabilis maglabas-pasok, kahit nasa hospital ka.", "Nagsasara ang trades pagkalipas ng 6 na oras, dapat active ang kabilang player sa huling 6 na oras, at gamitin lang sa taong pinagkakatiwalaan mo."],
+      ["Bank", "I-lock ang pera sa term na 1 linggo hanggang 3 buwan. May interest at walang makaka-mug nito.", "Hindi mo magagalaw hanggang matapos ang term, at pagkatapos nito ay nakatengga lang ang pera hanggang magsimula ka ng bago."],
+      ["Stocks", "Bumili ng shares (kailangan ang Stock Ticker, 50 points). Ibenta kahit kailan sa 0.1% na fee.", "Puwedeng bumaba ang presyo habang hawak mo."],
+      ["Items at points", "Mag-hold ng Xanax, donator packs, flowers, plushies o points. Hindi nama-mug ang items.", "Ipresyo malapit sa pinakamababang listing kapag nagbenta ka, kundi matetengga."],
+      ["Faction bank", "Karamihan ng factions ay nagtatago ng pera para sa members.", "Kailangan ng leadership sa withdrawals, at may factions nang nawalan ng vault dahil sa masamang leaders. Doon mo lang ilagay ang kailangan mo."],
+      ["Piggy bank", "One-time na mission offer. Kahit magkano kaya nitong itago, safe sa muggers.", "Ang tanging paraan para ilabas ay basagin ito, sabay-sabay lahat. Kapag na-miss mo ang offer, wala nang iba."],
+      ["PI vault", "Walang limitasyong safety hanggang sa laki ng vault ($1B para sa extra-large).", "Sa PI na pag-aari mo lang, hindi sa nirerentahan."]
+    ],
+    "tips": [
+      "Habang online ka, i-reset ang ghost trade kada 3–5 oras para hindi ito ma-expire.",
+      "Iwasan ang Cayman Islands bank bilang taguan: may muggers na nag-aabang sa players na lumalapag para mag-deposit o mag-withdraw.",
+      "Kapag natapos ang bank term, safe pa rin ang pera pero hindi na kumikita. Simulan agad ang susunod na term."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Gawing pera ang items",
+    "title": "Pagbenta ng mga binili mo",
+    "whereTitle": "Saan magbebenta",
+    "where": [
+      "<b>Item market:</b> ang pinakamabilis na bentahan. May 5% na fee.",
+      "<b>Bazaar:</b> sarili mong shop, mga 250 points para buksan. Nahahanap ito ng buyers gamit ang tools gaya ng weav3r, at may Middleman merit kapag umabot ka ng 100 magkakaibang customers.",
+      "<b>Trade Chat:</b> para sa malaki o bultuhang benta. Laging gumamit ng trade window, huwag kailanman \"ipadala muna ang pera\"."
+    ],
+    "howTitle": "Paano magbenta nang maayos",
+    "how": [
+      "Ipresyo sa o malapit sa pinakamababang listing para mabilis mabenta. Tingnan ang <b>weav3r</b> para sa bazaar prices bago bumili o magbenta; kadalasang mas mura ang bazaars kaysa sa item market.",
+      "Nakaka-akit ng muggers ang malalaking benta. Ilipat agad ang pera pagkatapos ng sale.",
+      "Nabebenta ang flowers at plushies sa mga nagbubuo ng sets, o puwede mong i-trade ang buong sets sa Museum kapag may History degree ka na."
+    ]
+  },
+  "books": {
+    "eyebrow": "Malalaking boost, pero mali ang timing ng karamihan",
+    "title": "Books",
+    "lede": "Kadalasang galing sa mission credits at subscriptions ang books. 31 araw ang tagal ng karamihan, kaya timing ang buong sikreto: basahin ito kapag magagamit mo talaga buong buwan.",
+    "head": ["Book", "Epekto", "Kailan babasahin"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% gym gains sa isang stat (Strength, Defense, Speed, Dexterity) sa loob ng 31 araw", "Basahin sa buwang naka-focus ka sa stat na 'yon"],
+      ["Get Hard Or Go Home", "+20% gym gains sa lahat ng stat sa loob ng 31 araw", "Kahit anong buwan na mabigat ang training"],
+      ["Ugly Energy", "+100 max energy at +100 kada refill sa loob ng 31 araw", "Sulit ng +28–78% kung max-train ka sa buwang 'yon"],
+      ["Smuggling For Beginners", "+10 items kada trip sa loob ng 31 araw", "Isang buwan ng maraming paglipad, o Tourism Day"],
+      ["Mailing Yourself Abroad", "25% mas mabilis ang flights sa loob ng 31 araw", "Ipares sa nasa itaas"],
+      ["Brawn Over Brains at iba pang +5% stat books", "+5% sa isang stat, hanggang 10M", "Itabi hanggang umabot ng 200M ang stat na 'yon, saka basahin"],
+      ["Ignorance Is Bliss", "Hindi nare-reset ang happy na lampas sa max sa loob ng 31 araw", "Kung kaya mo lang mag-jump nang tuloy-tuloy. Mag-ingat sa overdose"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Ang tahimik na kapalit ng araw-araw na Xanax",
+    "title": "Drugs at addiction",
+    "lede": "Bawat drug ay nagdadagdag ng kaunting addiction, kahit bago pa lumabas ang brain icon. Nasa <a href=\"/medical/\">Field medicine</a> ang tungkol sa overdose; ito naman ay tungkol sa unti-unting pag-ipon.",
+    "whatTitle": "Ano ang ginagawa ng addiction",
+    "what": [
+      "<b>Debuff sa battle stats</b>: ang brain icon, na lalong pumupula habang lumalala.",
+      "Mas mababang effectiveness sa job mo, mula pa sa unang drug mo.",
+      "Sa mas mataas na level, puwede ka nitong <b>ma-kick out sa education course mo</b>.",
+      "Kapag lumampas sa 150 Xanax at Ecstasy lahat-lahat, hindi ka na makakapasok sa drug-free na Sports Science Lab gym."
+    ],
+    "keepTitle": "Paano ito pababain",
+    "keep": [
+      "Nililinis ito ng <b>Rehab</b> sa Switzerland (~$250k). Lumipad doon kapag pula na ang brain icon.",
+      "Pinapahina ng <b>Addiction Mitigation</b> merit (−2% kada upgrade) ang epekto.",
+      "Jobs: puwedeng magbawas ng addiction ang Cruise Line at Flower Shop (5★); pinoprotektahan naman ng 10★ Nightclub ang education mo mula rito.",
+      "Faction upgrades: kayang bawasan ng Toleration ang addiction hanggang kalahati. <a href=\"/paths/#faction\">Faction upgrades →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Huwag mo nang pag-aralan 'to sa mahirap na paraan",
+    "title": "Scams at bitag",
+    "items": [
+      "<b>Loss buyers na hindi nagbabayad.</b> Gamitin ang prepaid loss contracts ng FFScouter. Kung hindi, i-check muna ang buyer: red flag ang account na wala pang 100 araw, wala pang $1B ang networth, o maraming enemies. Sundin nang eksakto ang instructions nila, kundi gagawin nilang dahilan 'yon para hindi magbayad.",
+      "<b>Ghost trades sa mga hindi kakilala.</b> Nakikita nila ang cash mo, puwede nilang i-cancel ang trade at ipa-mug ka. Sa kaibigan o ka-faction lang.",
+      "<b>\"I-paste mo ang key mo dito.\"</b> Huwag kailanman maglagay ng Full-access API key sa script o website. <a href=\"/scripts/\">Key safety →</a>",
+      "<b>Pabalik-balik sa Cayman bank.</b> Nag-aabang doon ang muggers sa players na may dalang cash papasok o palabas.",
+      "<b>Bulag na pagtitiwala sa kahit anong vault.</b> May faction vaults nang naubos dahil sa masamang leaders. Ikalat ang pera mo.",
+      "<b>Ang casino.</b> Sulit lang para sa $1-bet merit honors. Lampas doon, tapunan lang ng pera."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Paano gumagana ang factions",
+    "title": "Faction basics",
+    "respectTitle": "Respect, sa loob ng isang minuto",
+    "respect": [
+      "Nagbibigay ng <b>respect</b> ang faction attacks, na pambili ng upgrades para sa lahat ng members.",
+      "Nagpapatong-patong ang multipliers: fair fight hanggang ×3, war hits ×2, mahabang chain hanggang ×2, retaliation ×1.5, pag-attack abroad ×1.25.",
+      "Kapag na-hit ang isang member, nawawalan ang faction ng isang-kapat ng respect na nakuha ng attacker. Talo ang lahat sa madadaling target."
+    ],
+    "helpTitle": "Paano ka makakatulong, kahit maliit ka pa",
+    "help": [
+      "Kumuha ng organized-crime roles na kaya mong ipasa. <a href=\"/crimes/#oc\">OCs →</a>",
+      "Mag-chain hit sa targets na madali mong natatalo; ipinapakita ng FF Scouter kung sino.",
+      "Mag-retal kapag inutos ng leadership.",
+      "Magdala ng medical items para sa wars. <a href=\"/medical/\">Field medicine →</a>",
+      "Huwag lumipad bago mismo ang war o chain. <a href=\"/travel/#delays\">Flight delays →</a>"
+    ],
+    "quoteTag": "Rule ni Rook",
+    "quote": "\"Walang umaasa na bubuhatin ng bagong member ang war. Ang inaasahan namin, sumipot ka, kunin ang hits na kaya mong ipanalo, laging may stock ng meds, at huwag maging madaling target na nagpapakain sa kabila.\""
+  },
+  "routine": {
+    "eyebrow": "I-pin mo ito",
+    "title": "Ang routine mo",
+    "dayTitle": "Araw-araw",
+    "day": [
+      "Mag-check in nang madalas para hindi nakatenggang puno ang energy mo.",
+      "Mag-train. Isang stat kada session, sa gym na may pinakamagandang dots para doon.",
+      "Mag-Xanax kapag tapos na ang cooldown mo, kung pasok sa budget. Gamitin ang point refill mo (25 points).",
+      "Gastusin ang nerve sa pinakamahirap na crime na palagi mong naipapasa.",
+      "Lumipad habang nagre-refill ang energy mo; i-check muna ang YATA.",
+      "Gastusin ang job points sa company specials mo.",
+      "Itago ang cash mo bago ka mag-log off."
+    ],
+    "weekTitle": "Kada linggo",
+    "week": [
+      "I-renew ang 1–2 week bank terms sa araw na matapos sila.",
+      "I-claim ang weekly stock payouts; nawawala sila pagkalipas ng 24 oras.",
+      "Siguraduhing naka-queue na ang susunod na course bago matapos ang kasalukuyan.",
+      "I-check ang OC slot mo sa faction."
+    ],
+    "monthTitle": "Kada buwan",
+    "month": [
+      "I-renew ang property lease mo. Natatapos ang leases nang 03:30 TCT.",
+      "I-renew ang donator status (31 araw kada pack).",
+      "I-claim ang monthly stock payouts.",
+      "I-timing ang kahit anong 31-day book para sa susunod na buwan."
+    ]
+  },
+  "footer": "<strong>Magsimula dito.</strong> Ang payo sa missions, pagtatago ng pera at pagbenta ay mula sa Basic Advice ni <strong>Baldr [1847600]</strong>; ang madaling merits mula sa Guide to Easy Merits ni <strong>Tempest [1867527]</strong>; ang books mula sa Guide to Stat Gains from Books ni <strong>HandsomePants [1897243]</strong> at sa Travel wiki page; ang addiction mula sa Drug wiki page; ang faction respect mula sa Faction at Attack wiki pages; ang job perks at mission rewards mula sa Torn API at wiki. Parte ng <a href=\"/\">Faction Training Playbook</a>."
+}

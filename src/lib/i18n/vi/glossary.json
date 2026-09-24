@@ -1,0 +1,221 @@
+{
+  "title": "Thuật ngữ · Faction Training Playbook",
+  "eyebrow": "Torn bằng lời dễ hiểu",
+  "h1": "<em>Thuật ngữ</em>",
+  "lede": "Những từ và chữ viết tắt bạn sẽ gặp khắp Torn và trên trang này. Mỗi từ đều dẫn đến trang giải thích kỹ về nó.",
+  "back": "← Bắt đầu tại đây",
+  "more": "Xem thêm →",
+  "groups": [
+    {
+      "title": "Các thanh và stat của bạn",
+      "terms": [
+        [
+          "E, energy",
+          "Dùng ở gym và khi tấn công. Thanh đầy hồi lại sau mỗi 5 giờ: tối đa 150 nếu là donator, còn lại là 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve dùng để làm crime. NNB là natural nerve bar của bạn: mức tối đa bạn đạt được từ crime experience, chưa tính boost."
+        ],
+        [
+          "Happy",
+          "Nhân lượng tăng ở gym. Nhà của bạn quyết định mức tối đa. Phần vượt quá sẽ bị reset vào :00, :15, :30 và :45."
+        ],
+        [
+          "Happy jump",
+          "Tích energy và đẩy happy vượt xa mức tối đa, rồi tập hết trong một khung 15 phút."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense và Dexterity. “Total stats” là tổng cả bốn."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence và Endurance. Công việc dùng các stat này; khóa học và job training làm chúng tăng."
+        ],
+        [
+          "Gym dots",
+          "Hệ số nhân của gym cho từng stat. Càng nhiều chấm, mỗi energy càng tăng nhiều (George's là 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, giờ trong game. Reset happy và hết hạn thuê nhà đều theo giờ này."
+        ]
+      ]
+    },
+    {
+      "title": "Item và booster",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energy và +75 happy. Một loại drug có cooldown 6–8 giờ."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Nhân đôi happy hiện tại; cách tăng happy mạnh rẻ nhất."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 nếu từ Adult Novelties 10★). Booster chính cho happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Booster hồi đầy thanh energy."
+        ],
+        [
+          "Refill",
+          "Refill bằng points: hồi đầy thanh energy mỗi ngày một lần với giá 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Cooldown của drug, booster và y tế là các đồng hồ riêng. Dùng cái này không ảnh hưởng cái kia."
+        ],
+        [
+          "OD",
+          "Overdose. Làm cạn các thanh, đưa bạn vào bệnh viện và có thể kéo dài cooldown drug đến một ngày."
+        ],
+        [
+          "SE",
+          "Stat enhancer: item đắt tiền cộng thẳng vào stat. Chỉ đáng khi stat đã rất cao."
+        ]
+      ]
+    },
+    {
+      "title": "Tiền và nhà đất",
+      "terms": [
+        [
+          "PI",
+          "Private Island, nhà tốt nhất. Thuê căn có airstrip và thuê pilot để bay nhanh hơn, chở nhiều hơn."
+        ],
+        [
+          "Donator, DP",
+          "Trạng thái donator: thanh energy lớn hơn và hồi nhanh hơn. Một donator pack cho 31 ngày."
+        ],
+        [
+          "IM",
+          "Item market: bán nhanh, phí 5%."
+        ],
+        [
+          "Bazaar",
+          "Cửa hàng riêng của bạn. Người mua tìm thấy qua các công cụ như weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Một giao dịch để mở với người bạn tin tưởng, để tiền nằm trong đó thay vì trong túi."
+        ],
+        [
+          "Points",
+          "Loại tiền thứ hai của Torn. Dùng mua refill, merit, Stock Ticker và nhiều thứ khác."
+        ],
+        [
+          "Benefit block",
+          "Đủ số cổ phiếu của một mã để nhận cổ tức hoặc perk của nó."
+        ],
+        [
+          "Museum, sets",
+          "Đổi trọn bộ hoa hoặc thú nhồi bông lấy points. Cần bằng History."
+        ],
+        [
+          "Loss selling",
+          "Được trả tiền để tấn công ai đó và thua. Chỉ là tiền ngắn hạn."
+        ]
+      ]
+    },
+    {
+      "title": "Công việc, merit và học vấn",
+      "terms": [
+        [
+          "★ (stars)",
+          "Xếp hạng công ty từ 0 đến 10. Càng nhiều sao, nhân viên càng mở được nhiều perk."
+        ],
+        [
+          "JP",
+          "Job points: mỗi sao công ty cho một điểm mỗi ngày, dùng cho special của công ty."
+        ],
+        [
+          "Specials",
+          "Các perk của công ty, mở theo số sao."
+        ],
+        [
+          "Merits",
+          "Nhận từ award (medal và honor), dùng cho nâng cấp vĩnh viễn như Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Award cho các cột mốc. Mỗi cái cho một merit."
+        ]
+      ]
+    },
+    {
+      "title": "Chiến đấu và faction",
+      "terms": [
+        [
+          "Mug",
+          "Đánh bại ai đó và lấy một phần tiền mặt họ đang mang."
+        ],
+        [
+          "Hosp, med out",
+          "Bệnh viện. “Med out” là dùng item y tế để ra viện sớm."
+        ],
+        [
+          "Revive",
+          "Kéo ai đó ra khỏi bệnh viện. Hữu ích khi war."
+        ],
+        [
+          "Bust, bail",
+          "Đưa ai đó ra khỏi tù bằng kỹ năng (bust) hoặc bằng tiền (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: thưởng thêm respect (tới ×3) khi đánh người có stat gần bạn. FF Scouter ước tính chỉ số này."
+        ],
+        [
+          "Respect",
+          "Thứ nhận được từ các đòn tấn công của faction. Faction dùng nó để nâng cấp cho mọi thành viên."
+        ],
+        [
+          "Chain",
+          "Chuỗi hit liên tiếp của faction. Respect mỗi hit tăng khi chain dài ra."
+        ],
+        [
+          "Retal",
+          "Retaliation: đánh người vừa tấn công một thành viên faction, được ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war giữa hai faction. Hit trong war được gấp đôi respect."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, và checkpoint pass rate của bạn ở vai trò trong đó."
+        ],
+        [
+          "CE, CS",
+          "Crime experience và crime skill. Chúng tăng khi bạn làm crime, giúp tăng nerve và tỉ lệ thành công."
+        ]
+      ]
+    },
+    {
+      "title": "Công cụ",
+      "terms": [
+        [
+          "YATA",
+          "Trang web xem hàng nước ngoài, thời gian bay, chain và award."
+        ],
+        [
+          "TT",
+          "TornTools, tiện ích trình duyệt thêm thông tin khắp game."
+        ],
+        [
+          "PDA",
+          "Torn PDA, ứng dụng di động hỗ trợ script."
+        ],
+        [
+          "TornStats",
+          "Công cụ spy, war và faction."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Thuật ngữ.</strong> Một phần của <a href=\"/\">Faction Training Playbook</a>. Thiếu từ nào? Báo cho chúng tôi, chúng tôi sẽ thêm vào."
+}

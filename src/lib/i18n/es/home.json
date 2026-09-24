@@ -1,0 +1,59 @@
+{
+  "title": "Faction Training Playbook",
+  "badge": "Entrenamiento de facción · desde 2004",
+  "h1": "Faction Training <em>Playbook</em>",
+  "lede": "Guías gratis para hacerte más fuerte y más rico en Torn, escritas en palabras simples por nuestra facción. Elige por dónde quieres empezar.",
+  "choose": {
+    "eyebrow": "Elige un objetivo",
+    "title": "¿Por dónde quieres empezar?"
+  },
+  "goals": {
+    "new": {
+      "title": "Soy nuevo en Torn",
+      "text": "Tu primera semana, cómo proteger tu dinero y las trampas que más les cuestan a los nuevos.",
+      "go": "Empieza aquí",
+      "links": ["Tu primera semana", "Protege tu dinero", "Glosario"]
+    },
+    "train": {
+      "title": "Hazte más fuerte",
+      "text": "Cómo funcionan los happy jumps, qué build elegir, el mejor gym para cada stat y cómo es un día de entrenamiento.",
+      "go": "Guía de entrenamiento",
+      "links": ["El happy jump", "Builds", "Planificador de jumps"]
+    },
+    "money": {
+      "title": "Gana dinero",
+      "text": "Volar por flores y plushies, cuándo vale la pena una Private Island y cómo vender lo que traes.",
+      "go": "Volar por dinero",
+      "links": ["Formas de ganar dinero", "Cómo usar YATA", "Vender ítems"]
+    },
+    "plan": {
+      "title": "Planea a largo plazo",
+      "text": "Primero ingresos, primero stats o equilibrado: plazos, metas y qué comprar en qué orden.",
+      "go": "Rutas y metas",
+      "links": ["Planificador interactivo", "Las tres guías", "Mejoras de facción"]
+    }
+  },
+  "more": {
+    "eyebrow": "También en el Playbook",
+    "title": "Crímenes, guerra y herramientas",
+    "items": {
+      "crimes": ["Crímenes y OCs", "Qué crímenes hacer, cómo crece tu nerve y cómo pagan los crímenes organizados."],
+      "loadout": ["Equipo de guerra", "Armas, armadura y cómo pelear por encima de tu nivel."],
+      "medical": ["Medicina de campo", "Sobredosis, ítems médicos y cómo seguir siendo útil en una guerra."],
+      "scripts": ["Scripts y herramientas", "TornTools, YATA, FF Scouter y más, y cómo mantener segura tu API key."]
+    }
+  },
+  "crew": {
+    "eyebrow": "Quién habla",
+    "title": "Conoce al equipo",
+    "lede": "Cinco personajes llevan este Playbook. Cada uno se ocupa de una parte del juego, y encontrarás sus consejos en las páginas que cubren.",
+    "members": {
+      "banker": ["Banquero · Economía", "Dinero, propiedades, educación y cuándo no gastar", "Vincent Moretti, el banquero"],
+      "trainer": ["Entrenadora · Progreso", "Gym, happy, energía, rutinas y jumps", "Maya Torres, la entrenadora"],
+      "militia": ["Miliciano · Facciones", "Beneficios de facción, estar listo para la guerra y preparación", "Marcus Kane, el veterano de la milicia"],
+      "fixer": ["Intermediario · Oportunidades", "Dinero rápido, subir de nivel, reventa y contactos", "Nico Vescari, el intermediario"],
+      "medic": ["Médica · Recuperación", "Sobredosis, ítems médicos, hospital y preparación para la guerra", "Dra. Elara Moreau, la médica"]
+    }
+  },
+  "footer": "<strong>Faction Training Playbook.</strong> Hecho por nuestra facción a partir de guías escritas por jugadores de Torn. Todas las fuentes están en la página de <a href=\"/credits/\">créditos</a>."
+}

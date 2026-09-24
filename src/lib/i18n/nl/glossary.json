@@ -1,0 +1,221 @@
+{
+  "title": "Woordenlijst · Faction Training Playbook",
+  "eyebrow": "Torn in gewone taal",
+  "h1": "<em>Woordenlijst</em>",
+  "lede": "De woorden en afkortingen die je overal in Torn en op deze site tegenkomt. Elk ervan linkt naar de pagina die het goed uitlegt.",
+  "back": "← Begin hier",
+  "more": "Meer →",
+  "groups": [
+    {
+      "title": "Je balken en stats",
+      "terms": [
+        [
+          "E, energy",
+          "Gebruik je in de gym en voor aanvallen. Een volle balk laadt elke 5 uur bij: 150 max als donator, anders 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve gebruik je voor crimes. NNB is je natural nerve bar: het maximum dat je verdient met crime-ervaring, zonder boosts."
+        ],
+        [
+          "Happy",
+          "Vermenigvuldigt je gym-gains. Je property bepaalt het maximum. Alles daarboven wordt gereset om :00, :15, :30 en :45."
+        ],
+        [
+          "Happy jump",
+          "Energy opsparen en happy ver boven het maximum duwen, en dan alles trainen binnen één venster van 15 minuten."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense en Dexterity. \"Total stats\" betekent alle vier bij elkaar opgeteld."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence en Endurance. Jobs gebruiken ze; cursussen en jobtraining verhogen ze."
+        ],
+        [
+          "Gym dots",
+          "De multiplier van een gym per stat. Meer dots, meer gains per energy (George's heeft 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, de klok van het spel. Happy-resets en het einde van huurcontracten lopen hierop."
+        ]
+      ]
+    },
+    {
+      "title": "Items en boosters",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energy en +75 happy. Een drug met een cooldown van 6–8 uur."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Verdubbelt je huidige happy; de goedkoopste grote happy-boost."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 van een 10★ Adult Novelties). De belangrijkste booster voor een happy jump."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. Een booster die je energybalk bijvult."
+        ],
+        [
+          "Refill",
+          "Een points-refill: vult je energybalk één keer per dag voor 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Drug-, booster- en medische cooldowns zijn aparte klokken. Als je er één gebruikt, blijven de andere onaangeroerd."
+        ],
+        [
+          "OD",
+          "Overdose. Leegt je balken, stuurt je naar het ziekenhuis en kan je drug-cooldown oprekken tot een dag."
+        ],
+        [
+          "SE",
+          "Stat enhancer: een duur item dat direct stats toevoegt. Alleen de moeite waard bij heel hoge stats."
+        ]
+      ]
+    },
+    {
+      "title": "Geld en property",
+      "terms": [
+        [
+          "PI",
+          "Private Island, de beste property. Huur er een met een landingsbaan en neem een piloot in dienst voor snellere, grotere trips."
+        ],
+        [
+          "Donator, DP",
+          "Donatorstatus: een grotere energybalk en sneller bijladen. Een donator pack geeft 31 dagen."
+        ],
+        [
+          "IM",
+          "Item market: snel om op te verkopen, met 5% kosten."
+        ],
+        [
+          "Bazaar",
+          "Je eigen winkel. Kopers vinden hem via tools zoals weav3r."
+        ],
+        [
+          "Ghost trade",
+          "Een trade die openstaat met iemand die je vertrouwt, zodat je geld daarin zit in plaats van in je zak."
+        ],
+        [
+          "Points",
+          "De tweede munteenheid van Torn. Koopt refills, merits, de Stock Ticker en meer."
+        ],
+        [
+          "Benefit block",
+          "Genoeg aandelen van één bedrijf om de uitkering of perk te krijgen."
+        ],
+        [
+          "Museum, sets",
+          "Ruil een volledige set bloemen of knuffels in voor points. Vereist het History-diploma."
+        ],
+        [
+          "Loss selling",
+          "Betaald worden om iemand aan te vallen en te verliezen. Alleen geld op korte termijn."
+        ]
+      ]
+    },
+    {
+      "title": "Jobs, merits en opleiding",
+      "terms": [
+        [
+          "★ (stars)",
+          "De beoordeling van een bedrijf, van 0 tot 10. Meer sterren ontgrendelen meer perks voor werknemers."
+        ],
+        [
+          "JP",
+          "Job points: één per bedrijfsster per dag, te besteden aan bedrijfsspecials."
+        ],
+        [
+          "Specials",
+          "De perks van een bedrijf, ontgrendeld door het aantal sterren."
+        ],
+        [
+          "Merits",
+          "Verdiend met awards (medailles en honors), besteed aan permanente upgrades zoals Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Awards voor mijlpalen. Elk ervan levert een merit op."
+        ]
+      ]
+    },
+    {
+      "title": "Vechten en factions",
+      "terms": [
+        [
+          "Mug",
+          "Iemand verslaan en een deel van het geld afpakken dat hij bij zich heeft."
+        ],
+        [
+          "Hosp, med out",
+          "Ziekenhuis. \"Medding out\" betekent medische items gebruiken om er eerder uit te komen."
+        ],
+        [
+          "Revive",
+          "Iemand uit het ziekenhuis halen. Handig in oorlogen."
+        ],
+        [
+          "Bust, bail",
+          "Iemand uit de gevangenis halen met skill (bust) of door te betalen (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: bonus-respect (tot ×3) als je vecht tegen iemand met stats vergelijkbaar met de jouwe. FF Scouter schat het in."
+        ],
+        [
+          "Respect",
+          "Wat faction-aanvallen opleveren. Factions besteden het aan upgrades voor alle leden."
+        ],
+        [
+          "Chain",
+          "Een reeks faction-hits achter elkaar. Het respect per hit stijgt naarmate de chain langer wordt."
+        ],
+        [
+          "Retal",
+          "Retaliation (vergelding): iemand aanvallen die net een faction-lid heeft aangevallen, voor ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war tussen twee factions. Oorlogshits leveren dubbel respect op."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, en je checkpoint pass rate in je rol daarin."
+        ],
+        [
+          "CE, CS",
+          "Crime experience en crime skill. Ze groeien als je crimes doet en verhogen je nerve en slagingskans."
+        ]
+      ]
+    },
+    {
+      "title": "Tools",
+      "terms": [
+        [
+          "YATA",
+          "Website voor buitenlandse voorraad, reistiming, chains en awards."
+        ],
+        [
+          "TT",
+          "TornTools, een browserextensie die overal in het spel informatie toevoegt."
+        ],
+        [
+          "PDA",
+          "Torn PDA, de mobiele app met scriptondersteuning."
+        ],
+        [
+          "TornStats",
+          "Tools voor spionage, oorlog en factions."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Woordenlijst.</strong> Onderdeel van het <a href=\"/\">Faction Training Playbook</a>. Mis je een woord? Laat het ons weten en we voegen het toe."
+}

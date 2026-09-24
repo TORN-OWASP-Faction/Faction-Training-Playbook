@@ -1,0 +1,59 @@
+{
+  "title": "Faction Training Playbook",
+  "badge": "Faction training · since 2004",
+  "h1": "Faction Training <em>Playbook</em>",
+  "lede": "Free guides to getting stronger and richer in Torn, written in plain words by our faction. Pick where you want to start.",
+  "choose": {
+    "eyebrow": "Pick a goal",
+    "title": "Where do you want to start?"
+  },
+  "goals": {
+    "new": {
+      "title": "I'm new to Torn",
+      "text": "Your first week, keeping your money safe, and the traps that cost new players the most.",
+      "go": "Start here",
+      "links": ["Your first week", "Keep your money safe", "Glossary"]
+    },
+    "train": {
+      "title": "Get stronger",
+      "text": "How happy jumps work, which build to pick, the best gym for each stat, and what a day of training looks like.",
+      "go": "Training guide",
+      "links": ["The happy jump", "Builds", "Jump planner"]
+    },
+    "money": {
+      "title": "Make money",
+      "text": "Flying for flowers and plushies, when a Private Island pays off, and how to sell what you bring back.",
+      "go": "Flying for money",
+      "links": ["Ways to make money", "Using YATA", "Selling items"]
+    },
+    "plan": {
+      "title": "Plan the long game",
+      "text": "Income first, stats first or balanced: timelines, milestones, and what to buy in which order.",
+      "go": "Paths and milestones",
+      "links": ["Interactive planner", "The three guides", "Faction upgrades"]
+    }
+  },
+  "more": {
+    "eyebrow": "Also in the playbook",
+    "title": "Crimes, war and tools",
+    "items": {
+      "crimes": ["Crimes and OCs", "Which crimes to do, how your nerve grows, and how organized crimes pay out."],
+      "loadout": ["War loadout", "Weapons, armor and how to fight above your weight."],
+      "medical": ["Field medicine", "Overdoses, medical items, and staying useful in a war."],
+      "scripts": ["Scripts and tools", "TornTools, YATA, FF Scouter and more, and how to keep your API key safe."]
+    }
+  },
+  "crew": {
+    "eyebrow": "Who's talking",
+    "title": "Meet the crew",
+    "lede": "Five characters run this playbook. Each one looks after a part of the game, and you'll find their advice on the pages they cover.",
+    "members": {
+      "banker": ["Banker · Economy", "Money, property, education, and when not to spend", "Vincent Moretti, the banker"],
+      "trainer": ["Trainer · Progress", "Gym, happy, energy, routines and jumps", "Maya Torres, the trainer"],
+      "militia": ["Militia · Factions", "Faction perks, war readiness and preparation", "Marcus Kane, the militia veteran"],
+      "fixer": ["Fixer · Opportunity", "Quick cash, leveling, flipping and introductions", "Nico Vescari, the fixer"],
+      "medic": ["Medic · Recovery", "Overdoses, medical items, hospital and war prep", "Dr. Elara Moreau, the medic"]
+    }
+  },
+  "footer": "<strong>Faction Training Playbook.</strong> Built by our faction from guides written by Torn players. Every source is listed on the <a href=\"/credits/\">credits</a> page."
+}

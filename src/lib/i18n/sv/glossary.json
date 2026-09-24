@@ -1,0 +1,221 @@
+{
+  "title": "Ordlista · Faction Training Playbook",
+  "eyebrow": "Torn med enkla ord",
+  "h1": "<em>Ordlista</em>",
+  "lede": "Orden och förkortningarna du ser överallt i Torn och på den här sajten. Varje ord länkar till sidan som förklarar det ordentligt.",
+  "back": "← Börja här",
+  "more": "Mer →",
+  "groups": [
+    {
+      "title": "Dina mätare och stats",
+      "terms": [
+        [
+          "E, energy",
+          "Energi. Används på gymmet och till attacker. En full mätare fylls på var 5:e timme: max 150 som donator, annars 100."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve används till brott. NNB är din naturliga nerve-mätare: maxvärdet du får från brottserfarenhet, före boostar."
+        ],
+        [
+          "Happy",
+          "Multiplicerar dina gymvinster. Din fastighet bestämmer max. Allt över det nollställs vid :00, :15, :30 och :45."
+        ],
+        [
+          "Happy jump",
+          "Samla energi och pressa happy långt över max, träna sedan allt inom ett enda 15-minutersfönster."
+        ],
+        [
+          "Battle stats",
+          "Stridsstats: Strength, Speed, Defense och Dexterity. ”Total stats” betyder alla fyra ihopräknade."
+        ],
+        [
+          "Working stats",
+          "Arbetsstats: Manual labor, Intelligence och Endurance. Jobb använder dem; kurser och jobbträning höjer dem."
+        ],
+        [
+          "Gym dots",
+          "Ett gyms multiplikator för varje stat. Fler dots, större vinster per energi (George's har 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, spelets klocka. Happy-nollställningar och slut på hyreskontrakt går efter den."
+        ]
+      ]
+    },
+    {
+      "title": "Items och boosters",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energi och +75 happy. En drog med 6–8 timmars cooldown."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Dubblar din nuvarande happy; den billigaste stora happy-boosten."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 från en 10★ Adult Novelties). Den viktigaste boostern för happy jumps."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. En booster som fyller din energimätare."
+        ],
+        [
+          "Refill",
+          "En points-refill: fyller energimätaren en gång om dagen för 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Cooldowns för droger, boosters och medicin är separata klockor. Att använda en påverkar inte de andra."
+        ],
+        [
+          "OD",
+          "Överdos. Tömmer dina mätare, skickar dig till sjukhuset och kan dra ut din drog-cooldown till ett dygn."
+        ],
+        [
+          "SE",
+          "Stat enhancer: ett dyrt item som lägger till stats direkt. Bara värt det vid väldigt höga stats."
+        ]
+      ]
+    },
+    {
+      "title": "Pengar och fastigheter",
+      "terms": [
+        [
+          "PI",
+          "Private Island, den bästa fastigheten. Hyr en med landningsbana och anlita en pilot för snabbare och större resor."
+        ],
+        [
+          "Donator, DP",
+          "Donatorstatus: större energimätare och snabbare påfyllning. Ett donator pack ger 31 dagar."
+        ],
+        [
+          "IM",
+          "Item market: snabbt att sälja på, med 5% avgift."
+        ],
+        [
+          "Bazaar",
+          "Din egen butik. Köpare hittar den via verktyg som weav3r."
+        ],
+        [
+          "Ghost trade",
+          "En trade som lämnas öppen med någon du litar på, så att dina kontanter ligger i den i stället för i fickan."
+        ],
+        [
+          "Points",
+          "Torns andra valuta. Köper refills, meriter, Stock Ticker med mera."
+        ],
+        [
+          "Benefit block",
+          "Tillräckligt många aktier i ett bolag för att få dess utdelning eller förmån."
+        ],
+        [
+          "Museum, sets",
+          "Byt in ett helt set blommor eller gosedjur mot points. Kräver History-examen."
+        ],
+        [
+          "Loss selling",
+          "Att få betalt för att attackera någon och förlora. Bara pengar på kort sikt."
+        ]
+      ]
+    },
+    {
+      "title": "Jobb, meriter och utbildning",
+      "terms": [
+        [
+          "★ (stars)",
+          "Ett företags betyg från 0 till 10. Fler stjärnor låser upp fler förmåner för de anställda."
+        ],
+        [
+          "JP",
+          "Jobbpoäng: en per företagsstjärna och dag, används på företagets specials."
+        ],
+        [
+          "Specials",
+          "Ett företags förmåner, som låses upp av dess stjärnbetyg."
+        ],
+        [
+          "Merits",
+          "Meriter. Fås från utmärkelser (medaljer och honors) och används på permanenta uppgraderingar som Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Utmärkelser för milstolpar. Var och en ger en merit."
+        ]
+      ]
+    },
+    {
+      "title": "Strid och factions",
+      "terms": [
+        [
+          "Mug",
+          "Besegra någon och ta en del av kontanterna de bär på."
+        ],
+        [
+          "Hosp, med out",
+          "Sjukhus. ”Medding out” betyder att använda medicinska items för att komma ut tidigare."
+        ],
+        [
+          "Revive",
+          "Att få ut någon från sjukhuset. Användbart i krig."
+        ],
+        [
+          "Bust, bail",
+          "Att få ut någon ur fängelset med skicklighet (bust) eller genom att betala (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: bonus-respect (upp till ×3) för att slåss mot någon med liknande stats. FF Scouter uppskattar den."
+        ],
+        [
+          "Respect",
+          "Det factionattacker ger. Factions lägger det på uppgraderingar till alla medlemmar."
+        ],
+        [
+          "Chain",
+          "En serie factionträffar i rad. Respect per träff ökar ju längre chainen blir."
+        ],
+        [
+          "Retal",
+          "Retaliation: att träffa någon som just attackerat en factionmedlem, för ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war mellan två factions. Krigsträffar ger dubbel respect."
+        ],
+        [
+          "OC, CPR",
+          "Organiserat brott, och din checkpoint pass rate (andel klarade checkpoints) i din roll."
+        ],
+        [
+          "CE, CS",
+          "Brottserfarenhet och brottsskicklighet. De växer när du gör brott och höjer din nerve och chans att lyckas."
+        ]
+      ]
+    },
+    {
+      "title": "Verktyg",
+      "terms": [
+        [
+          "YATA",
+          "Webbplats för utländskt lager, restajming, chains och utmärkelser."
+        ],
+        [
+          "TT",
+          "TornTools, ett webbläsartillägg som lägger till information överallt i spelet."
+        ],
+        [
+          "PDA",
+          "Torn PDA, mobilappen med stöd för skript."
+        ],
+        [
+          "TornStats",
+          "Spionage, krigs- och factionverktyg."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Ordlista.</strong> En del av <a href=\"/\">Faction Training Playbook</a>. Saknar du ett ord? Säg till så lägger vi till det."
+}

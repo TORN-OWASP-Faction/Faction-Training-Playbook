@@ -1,0 +1,203 @@
+{
+  "title": "Bắt đầu tại đây · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Mới chơi Torn? Đọc cái này trước",
+    "h1": "Bắt đầu <em>tại đây</em>",
+    "lede": "Những điều không ai nói với bạn trong mấy tuần đầu: cần thiết lập gì, cách giữ những gì bạn kiếm được, và những cái bẫy khiến người mới mất nhiều nhất. Sau đó chọn một <a href=\"/paths/\">lộ trình</a>.",
+    "tocLabel": "Trên trang này",
+    "quoteTag": "Trước Khi Bạn Mua",
+    "quote": "“Hầu hết người mới không thua vì yếu. Họ thua vì mang tiền mặt, bỏ qua bước thiết lập, và mua sai thứ. Sửa mấy cái đó trước, mọi thứ khác sẽ dễ hơn.”"
+  },
+  "toc": {
+    "week": "Tuần đầu tiên",
+    "missions": "Nhiệm vụ",
+    "safe": "Giữ tiền",
+    "selling": "Bán hàng",
+    "books": "Sách",
+    "drugs": "Drug & nghiện",
+    "scams": "Lừa đảo",
+    "faction": "Faction",
+    "routine": "Thói quen hằng ngày",
+    "glossary": "Thuật ngữ ↗"
+  },
+  "week": {
+    "eyebrow": "Làm ngay",
+    "title": "Tuần đầu tiên",
+    "steps": [
+      ["Lấy trạng thái donator.", "Thanh energy lớn hơn và hồi nhanh hơn: khoảng {donatorGain}% energy tự nhiên nhiều hơn mỗi ngày bạn chơi. Một donator pack cho 31 ngày, bán ~$24M trong game, hoặc tốn khoảng $5 tiền thật. Baldr: “Ai cũng nên có donator.”"],
+      ["Thuê chỗ ở có happy cao nhất mà bạn trả nổi lâu dài.", "Thuê Ranch hoặc Mansion (ít nhất là Penthouse 925 happy) cho đến level 15, sau đó là Private Island có airstrip. Đừng mua nhà vội. <a href=\"/travel/#pi\">Ngân sách PI →</a>"],
+      ["Vào một công ty 3★.", "Hầu hết perk công việc mở ở 3★. Thiếu working stats? Trả tiền cho giám đốc để họ train cho bạn. <a href=\"/paths/#guides\">Công việc hợp với lộ trình của bạn →</a>"],
+      ["Học Sports Science.", "Khóa học đầu tiên: nó mở các khóa +1% gym gain. Luôn giữ một khóa học đang chạy. <a href=\"/paths/#guides\">Kế hoạch học vấn →</a>"],
+      ["Khoan làm nhiệm vụ cho người mới.", "Chúng trả energy (tới 500 một lần), và energy đó tập hiệu quả hơn khi bạn đã chuyển sang chỗ ở có happy cao hơn. Thuê nhà trước, rồi mới làm. <a href=\"#missions\">Nhiệm vụ →</a>"],
+      ["Đừng mang tiền mặt.", "Bị mug là chuyện thường. Mua Stock Ticker (50 points) và học cách ghost trade. <a href=\"#safe\">Giữ tiền →</a>"],
+      ["Gửi ngân hàng lần đầu.", "Dù chỉ kỳ hạn 1 tuần. Đó là khởi đầu của thu nhập thụ động, và còn được một merit."],
+      ["Thiết lập API key an toàn.", "Mỗi công cụ một key, quyền truy cập tối thiểu, không bao giờ dùng key Full trong script. <a href=\"/scripts/\">Script &amp; công cụ →</a>"],
+      ["Lấy các merit dễ.", "Mỗi award cho một merit, và merit dùng để mua nâng cấp vĩnh viễn. Các merit dễ ở ngay bên dưới."]
+    ],
+    "merits": {
+      "title": "Merit dễ lấy lúc đầu",
+      "intro": "Mỗi honor này cho một merit mà gần như không tốn công:",
+      "head": ["Honor", "Cách làm"],
+      "rows": [
+        ["Historian", "Dành 5–10 phút đọc một Chronicle trên báo."],
+        ["Forgiven", "Cầu nguyện ở nhà thờ hai lần mỗi ngày, cách nhau 8–10 giờ. Mất khoảng 7–10 ngày."],
+        ["Pious, Saintly", "Quyên góp $100k, rồi $1M, cho nhà thờ."],
+        ["Pocket Money", "Đầu tư ngân hàng bất kỳ. Kỳ hạn 1 tuần là đủ."],
+        ["Energetic", "Đạt 1,000 energy: bắt đầu từ trống rồi stack 4 Xanax, giống như khi chuẩn bị jump."],
+        ["Diabetic", "Ăn 500 kẹo. Lollipops giá khoảng $1k mỗi cái và còn tăng happy cho bạn."],
+        ["Spinner, One in Six", "1,000 lượt quay roulette (khoảng 14 ngày với 75 lượt mỗi ngày), và 50 lần thắng Russian roulette với cược $1."],
+        ["Protege", "Hoàn thành nhiệm vụ “Introduction: Duke”."],
+        ["Mule, Souvenir", "Nhập 100 item từ nước ngoài, và mua “perfect souvenir” trong một chuyến đi."],
+        ["Luxury Real Estate", "Nâng cấp Private Island với airstrip. Bạn bè có thể cho bạn mượn của họ trong hai phút."],
+        ["Holiday logins", "Đăng nhập vào ngày đầu năm mới, Valentine, Halloween, 15 tháng 11 (sinh nhật Torn) và Giáng sinh."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Mission credit rất hiếm",
+    "title": "Nhiệm vụ",
+    "newTitle": "Nhiệm vụ cho người mới",
+    "new": [
+      "Chúng dạy những điều cơ bản và trả energy, nerve, tiền mặt và mission credit. Riêng một bước đã trả 500 energy.",
+      "Chuyển sang chỗ ở tốt hơn trước, để energy đó được tập ở mức happy cao hơn.",
+      "Chúng chỉ đề nghị <b>piggy bank</b> một lần. Đó là chỗ cất tiền an toàn, dùng một lần. Bỏ qua là không bao giờ có cơ hội nữa."
+    ],
+    "regTitle": "Nhiệm vụ thường và credit",
+    "reg": [
+      "Không ưu tiên trước level 15; chúng có thể tốn nhiều energy.",
+      "Để dành credit cho những thứ <b>tiền không mua được</b>: sách đặc biệt và nâng cấp vũ khí.",
+      "Đừng bao giờ tiêu credit vào thứ bạn có thể mua bằng tiền. Có sách rất tốt, có sách vô dụng (xem <a href=\"#books\">Sách</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Lý do số 1 khiến người mới mất tiến độ",
+    "title": "Giữ tiền",
+    "lede": "Tiền mặt trong túi có thể bị mug. Cất ngay khi có. Không cách nào hoàn hảo, nên hầu hết người chơi kết hợp nhiều cách.",
+    "head": ["Ở đâu", "Cách hoạt động", "Điểm trừ"],
+    "rows": [
+      ["Ghost trade", "Mở trade với một người bạn, bỏ tiền vào, và không ai bấm accept. Cất vào lấy ra nhanh, kể cả khi đang ở bệnh viện.", "Trade tự đóng sau 6 giờ, người kia phải online trong 6 giờ gần nhất, và chỉ dùng với người bạn tin tưởng."],
+      ["Ngân hàng", "Khóa tiền trong kỳ hạn từ 1 tuần đến 3 tháng. Có lãi và không ai mug được.", "Không rút được đến khi hết kỳ hạn, và khi hết kỳ hạn tiền nằm yên cho đến khi bạn mở kỳ mới."],
+      ["Cổ phiếu", "Mua cổ phiếu (cần Stock Ticker, 50 points). Bán bất cứ lúc nào với phí 0.1%.", "Giá có thể giảm trong lúc bạn giữ."],
+      ["Item và points", "Giữ Xanax, donator pack, hoa, thú nhồi bông hoặc points. Item không bị mug.", "Khi bán hãy đặt giá gần listing thấp nhất, không thì sẽ ế."],
+      ["Ngân hàng faction", "Hầu hết faction giữ tiền cho thành viên.", "Rút tiền cần leadership duyệt, và đã có faction mất sạch vault vì leader tệ. Chỉ để ở đó số bạn cần."],
+      ["Piggy bank", "Đề nghị nhiệm vụ chỉ có một lần. Chứa bao nhiêu cũng được, an toàn trước mugger.", "Cách duy nhất để lấy ra là đập vỡ, lấy hết một lần. Lỡ đề nghị là không bao giờ có lại."],
+      ["PI vault", "An toàn không giới hạn trong phạm vi dung lượng vault ($1B với loại extra-large).", "Chỉ có ở PI bạn sở hữu, không phải PI đi thuê."]
+    ],
+    "tips": [
+      "Khi đang online, reset ghost trade mỗi 3–5 giờ để nó không bao giờ hết hạn.",
+      "Tránh cất tiền ở ngân hàng Cayman Islands: mugger rình người chơi vừa hạ cánh để gửi hoặc rút tiền.",
+      "Khi kỳ hạn ngân hàng kết thúc, tiền vẫn an toàn nhưng không sinh lãi nữa. Mở kỳ hạn mới ngay."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Biến item thành tiền",
+    "title": "Bán những gì bạn mua",
+    "whereTitle": "Bán ở đâu",
+    "where": [
+      "<b>Item market:</b> nơi bán nhanh nhất. Phí 5%.",
+      "<b>Bazaar:</b> cửa hàng riêng của bạn, mở mất khoảng 250 points. Người mua tìm thấy qua các công cụ như weav3r, và đủ 100 khách khác nhau sẽ được merit Middleman.",
+      "<b>Trade Chat:</b> cho các đơn lớn hoặc bán sỉ. Luôn dùng cửa sổ trade, không bao giờ “gửi tiền trước”."
+    ],
+    "howTitle": "Cách bán cho tốt",
+    "how": [
+      "Đặt giá bằng hoặc gần listing thấp nhất để bán nhanh. Xem giá bazaar trên <b>weav3r</b> trước khi mua hoặc bán; bazaar thường rẻ hơn item market.",
+      "Bán số lượng lớn sẽ thu hút mugger. Chuyển tiền đi ngay sau khi bán.",
+      "Hoa và thú nhồi bông bán được cho người gom bộ, hoặc bạn có thể đổi trọn bộ ở Museum khi đã có bằng History."
+    ]
+  },
+  "books": {
+    "eyebrow": "Buff lớn, nhưng hầu hết mọi người dùng sai thời điểm",
+    "title": "Sách",
+    "lede": "Sách chủ yếu đến từ mission credit và gói đăng ký. Hầu hết kéo dài 31 ngày, nên mấu chốt là thời điểm: đọc khi bạn thật sự dùng hết được cả tháng.",
+    "head": ["Sách", "Hiệu ứng", "Khi nào đọc"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% gym gain cho một stat (Strength, Defense, Speed, Dexterity) trong 31 ngày", "Đọc vào tháng bạn tập trung stat đó"],
+      ["Get Hard Or Go Home", "+20% gym gain cho mọi stat trong 31 ngày", "Bất kỳ tháng nào tập nặng"],
+      ["Ugly Energy", "+100 energy tối đa và +100 mỗi lần refill trong 31 ngày", "Đáng +28–78% nếu bạn tập tối đa tháng đó"],
+      ["Smuggling For Beginners", "+10 item mỗi chuyến trong 31 ngày", "Tháng bay nhiều, hoặc Tourism Day"],
+      ["Mailing Yourself Abroad", "Bay nhanh hơn 25% trong 31 ngày", "Kết hợp với cuốn ở trên"],
+      ["Brawn Over Brains và các sách +5% stat khác", "+5% cho một stat, tối đa 10M", "Để dành đến khi stat đó đạt 200M rồi mới đọc"],
+      ["Ignorance Is Bliss", "Happy vượt tối đa không bị reset trong 31 ngày", "Chỉ khi bạn đủ tiền để jump liên tục. Coi chừng overdose"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Cái giá âm thầm của Xanax mỗi ngày",
+    "title": "Drug & nghiện",
+    "lede": "Mỗi lần dùng drug đều cộng thêm chút nghiện, kể cả trước khi biểu tượng bộ não xuất hiện. Overdose được nói ở <a href=\"/medical/\">Y tế chiến trường</a>; phần này nói về sự tích tụ từ từ.",
+    "whatTitle": "Nghiện gây ra gì",
+    "what": [
+      "Một <b>debuff battle stat</b>: biểu tượng bộ não, càng đỏ càng nặng.",
+      "Giảm hiệu quả công việc, ngay từ lần dùng drug đầu tiên.",
+      "Ở mức cao hơn nó có thể <b>đá bạn khỏi khóa học</b>.",
+      "Tổng cộng hơn 150 Xanax và Ecstasy sẽ khiến bạn không vào được gym không-drug Sports Science Lab."
+    ],
+    "keepTitle": "Giữ mức nghiện thấp",
+    "keep": [
+      "<b>Rehab</b> ở Thụy Sĩ (~$250k) xóa nghiện. Bay tới đó khi biểu tượng bộ não chuyển đỏ.",
+      "Merit <b>Addiction Mitigation</b> (−2% mỗi nâng cấp) làm nhẹ tác hại.",
+      "Công việc: Cruise Line và Flower Shop (5★) có thể giảm nghiện; Nightclub 10★ giữ việc học an toàn khỏi nó.",
+      "Nâng cấp faction: Toleration giảm nghiện tới một nửa. <a href=\"/paths/#faction\">Nâng cấp faction →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Đừng học mấy bài này bằng cách đau đớn",
+    "title": "Lừa đảo và bẫy",
+    "items": [
+      "<b>Người mua loss không trả tiền.</b> Dùng hợp đồng loss trả trước của FFScouter. Nếu không, kiểm tra người mua trước: tài khoản dưới 100 ngày tuổi, networth dưới $1B, hoặc có nhiều kẻ thù là dấu hiệu đáng ngờ. Làm đúng y hướng dẫn của họ, không thì họ sẽ lấy đó làm cớ để không trả.",
+      "<b>Ghost trade với người lạ.</b> Họ thấy được tiền của bạn, hủy trade rồi cho người mug bạn. Chỉ dùng với bạn bè hoặc đồng đội trong faction.",
+      "<b>“Dán key của bạn vào đây.”</b> Đừng bao giờ đưa API key quyền Full vào script hay website. <a href=\"/scripts/\">An toàn key →</a>",
+      "<b>Chạy ra ngân hàng Cayman.</b> Mugger phục sẵn ở đó chờ người chơi mang tiền vào hoặc ra.",
+      "<b>Tin mù quáng vào bất kỳ vault nào.</b> Vault faction từng bị leader tệ rút sạch. Hãy chia tiền ra nhiều nơi.",
+      "<b>Casino.</b> Chỉ đáng để lấy các honor merit với cược $1. Ngoài ra chỉ là chỗ đốt tiền."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Faction hoạt động thế nào",
+    "title": "Cơ bản về faction",
+    "respectTitle": "Respect, trong một phút",
+    "respect": [
+      "Các đòn tấn công của faction tạo ra <b>respect</b>, dùng để mua nâng cấp cho mọi thành viên.",
+      "Các hệ số cộng dồn: fair fight tới ×3, hit trong war ×2, chain dài tới ×2, retaliation ×1.5, tấn công ở nước ngoài ×1.25.",
+      "Khi một thành viên bị hit, faction mất một phần tư lượng respect mà kẻ tấn công nhận được. Mục tiêu dễ ăn làm cả faction thiệt."
+    ],
+    "helpTitle": "Cách bạn giúp đỡ, dù còn yếu",
+    "help": [
+      "Nhận các vai organized crime mà bạn qua được. <a href=\"/crimes/#oc\">OC →</a>",
+      "Hit chain vào những mục tiêu bạn thắng dễ; FF Scouter cho biết là ai.",
+      "Retal khi leadership kêu gọi.",
+      "Mang theo item y tế cho war. <a href=\"/medical/\">Y tế chiến trường →</a>",
+      "Đừng cất cánh ngay trước war hoặc chain. <a href=\"/travel/#delays\">Trễ chuyến bay →</a>"
+    ],
+    "quoteTag": "Luật của Rook",
+    "quote": "“Không ai mong thành viên mới gánh cả trận war. Chúng tôi chỉ mong bạn có mặt, nhận những hit bạn thắng được, giữ đủ thuốc men, và đừng làm mục tiêu dễ ăn nuôi phe bên kia.”"
+  },
+  "routine": {
+    "eyebrow": "Ghim cái này lại",
+    "title": "Thói quen hằng ngày",
+    "dayTitle": "Mỗi ngày",
+    "day": [
+      "Vào game đủ thường xuyên để energy không bao giờ nằm đầy.",
+      "Tập. Mỗi lượt một stat, ở gym có số chấm tốt nhất cho stat đó.",
+      "Dùng Xanax khi hết cooldown, nếu vừa túi tiền. Dùng refill bằng points (25 points).",
+      "Tiêu nerve vào crime khó nhất mà bạn qua ổn định.",
+      "Bay trong lúc energy hồi; xem YATA trước.",
+      "Dùng job points cho special của công ty.",
+      "Cất tiền mặt trước khi thoát game."
+    ],
+    "weekTitle": "Mỗi tuần",
+    "week": [
+      "Gia hạn kỳ hạn ngân hàng 1–2 tuần ngay ngày nó kết thúc.",
+      "Nhận cổ tức cổ phiếu hằng tuần; chúng biến mất sau 24 giờ.",
+      "Đảm bảo khóa học tiếp theo đã xếp hàng trước khi khóa hiện tại kết thúc.",
+      "Kiểm tra slot OC của bạn với faction."
+    ],
+    "monthTitle": "Mỗi tháng",
+    "month": [
+      "Gia hạn hợp đồng thuê nhà. Hợp đồng hết hạn lúc 03:30 TCT.",
+      "Gia hạn donator (31 ngày mỗi pack).",
+      "Nhận cổ tức cổ phiếu hằng tháng.",
+      "Canh thời điểm cho sách 31 ngày cho tháng tới."
+    ]
+  },
+  "footer": "<strong>Bắt đầu tại đây.</strong> Lời khuyên về nhiệm vụ, cất tiền và bán hàng từ Basic Advice của <strong>Baldr [1847600]</strong>; merit dễ từ Guide to Easy Merits của <strong>Tempest [1867527]</strong>; sách từ Guide to Stat Gains from Books của <strong>HandsomePants [1897243]</strong> và trang wiki Travel; nghiện từ trang wiki Drug; respect faction từ các trang wiki Faction và Attack; perk công việc và phần thưởng nhiệm vụ từ Torn API và wiki. Một phần của <a href=\"/\">Faction Training Playbook</a>."
+}

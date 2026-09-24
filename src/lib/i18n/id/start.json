@@ -1,0 +1,203 @@
+{
+  "title": "Mulai di sini · Faction Training Playbook",
+  "hero": {
+    "eyebrow": "Baru di Torn? Baca ini dulu",
+    "h1": "Mulai di <em>sini</em>",
+    "lede": "Hal-hal yang nggak ada yang kasih tahu di minggu-minggu pertamamu: apa yang perlu disiapkan, cara menjaga hasil yang kamu dapat, dan jebakan yang paling merugikan pemain baru. Setelah itu pilih <a href=\"/paths/\">jalur</a>.",
+    "tocLabel": "Di halaman ini",
+    "quoteTag": "Sebelum Kamu Beli",
+    "quote": "“Kebanyakan pemain baru kalah bukan karena lemah. Mereka kalah karena bawa uang tunai, melewatkan persiapan, dan beli barang yang salah. Perbaiki itu dulu, dan semuanya jadi lebih mudah.”"
+  },
+  "toc": {
+    "week": "Minggu pertamamu",
+    "missions": "Misi",
+    "safe": "Jaga uangmu",
+    "selling": "Jualan",
+    "books": "Buku",
+    "drugs": "Drug & kecanduan",
+    "scams": "Penipuan",
+    "faction": "Faction",
+    "routine": "Rutinitasmu",
+    "glossary": "Glosarium ↗"
+  },
+  "week": {
+    "eyebrow": "Lakukan sekarang",
+    "title": "Minggu pertamamu",
+    "steps": [
+      ["Ambil status donator.", "Bar energy lebih besar yang terisi lebih cepat: sekitar {donatorGain}% lebih banyak energy alami setiap hari kamu main. Satu donator pack berlaku 31 hari dan dijual ~$24M di game, atau sekitar $5 uang asli. Baldr: “Semua orang harus punya status donator.”"],
+      ["Sewa happy terbaik yang sanggup kamu bayar terus.", "Sewa Ranch atau Mansion (minimal Penthouse 925 happy) sampai level 15, lalu Private Island dengan airstrip. Jangan beli properti dulu. <a href=\"/travel/#pi\">Budget PI →</a>"],
+      ["Masuk ke perusahaan 3★.", "Sebagian besar perk pekerjaan terbuka di 3★. Working stats kurang? Bayar direkturnya untuk melatihmu. <a href=\"/paths/#guides\">Pekerjaan untuk jalurmu →</a>"],
+      ["Mulai Sports Science.", "Kursus pertamamu: ini membuka kursus +1% hasil gym. Selalu pastikan ada kursus yang berjalan. <a href=\"/paths/#guides\">Rencana pendidikan →</a>"],
+      ["Tahan dulu misi pemain baru.", "Misi ini membayar energy (sampai 500 sekaligus), dan energy itu lebih efektif untuk latihan setelah kamu pindah ke tempat tinggal dengan happy lebih tinggi. Sewa dulu, baru kerjakan. <a href=\"#missions\">Misi →</a>"],
+      ["Berhenti bawa uang tunai.", "Mug itu sering terjadi. Beli Stock Ticker (50 points) dan pelajari ghost trade. <a href=\"#safe\">Jaga uangmu →</a>"],
+      ["Lakukan deposit bank pertamamu.", "Walau cuma jangka 1 minggu. Ini awal passive income kamu, dan dapat merit juga."],
+      ["Atur API key kamu dengan aman.", "Satu key per tool, akses seminimal mungkin, jangan pernah pakai key Full di script. <a href=\"/scripts/\">Script &amp; tools →</a>"],
+      ["Ambil merit yang gampang.", "Setiap award memberi satu merit, dan merit bisa dipakai untuk upgrade permanen. Yang gampang ada di bawah."]
+    ],
+    "merits": {
+      "title": "Merit awal yang gampang",
+      "intro": "Setiap honor ini memberi satu merit dengan usaha yang hampir nol:",
+      "head": ["Honor", "Caranya"],
+      "rows": [
+        ["Historian", "Luangkan 5–10 menit membaca Chronicle di koran."],
+        ["Forgiven", "Berdoa di gereja dua kali sehari, jeda 8–10 jam. Butuh sekitar 7–10 hari."],
+        ["Pious, Saintly", "Donasi $100k, lalu $1M, ke gereja."],
+        ["Pocket Money", "Lakukan investasi bank apa saja. Jangka 1 minggu sudah cukup."],
+        ["Energetic", "Capai 1,000 energy: mulai dari kosong dan tumpuk 4 Xanax, seperti saat mau jump."],
+        ["Diabetic", "Makan 500 permen. Lollipops harganya sekitar $1k per buah dan sekalian menambah happy kamu."],
+        ["Spinner, One in Six", "1,000 kali putar roulette (sekitar 14 hari dengan 75 per hari), dan 50 kali menang Russian roulette dengan taruhan $1."],
+        ["Protege", "Selesaikan misi “Introduction: Duke”."],
+        ["Mule, Souvenir", "Impor 100 item dari luar negeri, dan beli “perfect souvenir” saat perjalanan."],
+        ["Luxury Real Estate", "Upgrade Private Island dengan airstrip. Teman bisa meminjamkan punyanya selama dua menit."],
+        ["Holiday logins", "Login di Tahun Baru, Hari Valentine, Halloween, 15 November (ulang tahun Torn) dan Hari Natal."]
+      ]
+    }
+  },
+  "missions": {
+    "eyebrow": "Mission credit itu langka",
+    "title": "Misi",
+    "newTitle": "Misi pemain baru",
+    "new": [
+      "Misi ini mengajarkan dasar-dasar dan membayar energy, nerve, uang, dan mission credit. Satu langkah saja membayar 500 energy.",
+      "Pindah ke tempat tinggal yang lebih baik dulu, supaya energy itu dipakai latihan dengan happy yang lebih tinggi.",
+      "Misi ini menawarkan <b>piggy bank</b> sekali saja. Ini tempat simpan uang yang aman dan hanya sekali pakai. Kalau dilewatkan, kamu nggak akan dapat kesempatan lagi."
+    ],
+    "regTitle": "Misi reguler dan credit",
+    "reg": [
+      "Bukan prioritas sebelum level 15; misi ini bisa makan banyak energy.",
+      "Simpan credit kamu untuk hal yang <b>nggak bisa dibeli pakai uang</b>: buku khusus dan upgrade senjata.",
+      "Jangan pernah pakai credit untuk sesuatu yang bisa dibeli pakai uang. Ada buku yang bagus, ada yang nggak berguna (lihat <a href=\"#books\">Buku</a>)."
+    ]
+  },
+  "safe": {
+    "eyebrow": "Penyebab #1 pemain baru kehilangan progres",
+    "title": "Jaga uangmu",
+    "lede": "Uang tunai di kantong bisa kena mug. Simpan begitu kamu dapat. Nggak ada cara yang sempurna, jadi kebanyakan pemain memakai kombinasi.",
+    "head": ["Di mana", "Cara kerjanya", "Kekurangannya"],
+    "rows": [
+      ["Ghost trade", "Buka trade dengan teman, masukkan uang, dan jangan ada yang menekan accept. Cepat untuk masuk dan keluar, bahkan dari rumah sakit.", "Trade tertutup setelah 6 jam, pemain lainnya harus aktif dalam 6 jam terakhir, dan hanya pakai dengan orang yang kamu percaya."],
+      ["Bank", "Kunci uang dalam jangka 1 minggu sampai 3 bulan. Dapat bunga dan nggak ada yang bisa mug.", "Nggak bisa diambil sampai jangkanya selesai, dan setelah selesai uangnya menganggur sampai kamu mulai jangka baru."],
+      ["Saham", "Beli saham (butuh Stock Ticker, 50 points). Jual kapan saja dengan biaya 0.1%.", "Harganya bisa turun selama kamu pegang."],
+      ["Item dan points", "Simpan Xanax, donator pack, bunga, plushie atau points. Item nggak bisa kena mug.", "Pasang harga dekat listing termurah saat jual, atau barangnya nggak laku."],
+      ["Bank faction", "Kebanyakan faction menyimpan uang untuk anggotanya.", "Penarikan butuh leadership, dan ada faction yang kehilangan vault karena leader yang buruk. Simpan di sana secukupnya saja."],
+      ["Piggy bank", "Tawaran misi sekali saja. Bisa menampung berapa pun, aman dari mugger.", "Satu-satunya cara ambil uangnya adalah memecahkannya, sekaligus semua. Lewatkan tawarannya dan kamu nggak akan dapat lagi."],
+      ["PI vault", "Aman tanpa batas sampai ukuran vault ($1B untuk yang extra-large).", "Hanya di PI milikmu sendiri, bukan yang disewa."]
+    ],
+    "tips": [
+      "Selama online, reset ghost trade setiap 3–5 jam supaya nggak pernah kedaluwarsa.",
+      "Hindari bank Cayman Islands untuk menyimpan: mugger menunggu pemain yang mendarat untuk setor atau tarik uang.",
+      "Saat jangka bank selesai, uangnya tetap aman tapi berhenti menghasilkan. Langsung mulai jangka berikutnya."
+    ]
+  },
+  "selling": {
+    "eyebrow": "Mengubah item jadi uang",
+    "title": "Menjual barang yang kamu beli",
+    "whereTitle": "Jual di mana",
+    "where": [
+      "<b>Item market:</b> tempat paling cepat untuk jualan. Kena biaya 5%.",
+      "<b>Bazaar:</b> toko milikmu sendiri, sekitar 250 points untuk membukanya. Pembeli menemukannya lewat tools seperti weav3r, dan 100 pelanggan berbeda memberi merit Middleman.",
+      "<b>Trade Chat:</b> untuk penjualan besar atau borongan. Selalu pakai jendela trade, jangan pernah “kirim uangnya duluan”."
+    ],
+    "howTitle": "Cara jualan yang benar",
+    "how": [
+      "Pasang harga sama atau dekat dengan listing termurah supaya cepat laku. Cek <b>weav3r</b> untuk harga bazaar sebelum beli atau jual; bazaar biasanya lebih murah dari item market.",
+      "Jualan dalam jumlah besar menarik perhatian mugger. Pindahkan uangnya langsung setelah transaksi.",
+      "Bunga dan plushie laku ke kolektor set, atau kamu bisa tukar set lengkap di Museum setelah punya gelar History."
+    ]
+  },
+  "books": {
+    "eyebrow": "Boost besar, tapi kebanyakan salah timing",
+    "title": "Buku",
+    "lede": "Buku kebanyakan didapat dari mission credit dan langganan. Sebagian besar berlaku 31 hari, jadi kuncinya adalah timing: baca saat kamu benar-benar akan memakainya sebulan penuh.",
+    "head": ["Buku", "Efek", "Kapan dibaca"],
+    "rows": [
+      ["Gym Grunting, Self Defence In The Workplace, Speed 3, Limbo Lovers 101", "+30% hasil gym untuk satu stat (Strength, Defense, Speed, Dexterity) selama 31 hari", "Baca di bulan kamu fokus ke stat itu"],
+      ["Get Hard Or Go Home", "+20% hasil gym untuk semua stat selama 31 hari", "Bulan mana pun dengan latihan berat"],
+      ["Ugly Energy", "+100 energy maksimal dan +100 per refill selama 31 hari", "Bernilai +28–78% kalau kamu latihan maksimal bulan itu"],
+      ["Smuggling For Beginners", "+10 item per perjalanan selama 31 hari", "Bulan banyak terbang, atau Tourism Day"],
+      ["Mailing Yourself Abroad", "Penerbangan 25% lebih cepat selama 31 hari", "Cocok dipasangkan dengan yang di atas"],
+      ["Brawn Over Brains dan buku stat +5% lainnya", "+5% untuk satu stat, sampai 10M", "Simpan sampai stat itu di 200M, lalu baca"],
+      ["Ignorance Is Bliss", "Happy di atas maksimal nggak di-reset selama 31 hari", "Hanya kalau kamu sanggup jump terus-terusan. Hati-hati overdosis"]
+    ]
+  },
+  "drugs": {
+    "eyebrow": "Harga tersembunyi dari Xanax harian",
+    "title": "Drug & kecanduan",
+    "lede": "Setiap drug menambah sedikit kecanduan, bahkan sebelum ikon otak muncul. Overdosis dibahas di <a href=\"/medical/\">Medis lapangan</a>; ini tentang penumpukan yang pelan-pelan.",
+    "whatTitle": "Efek kecanduan",
+    "what": [
+      "<b>Debuff battle stat</b>: ikon otak, makin merah makin parah.",
+      "Efektivitas kerja menurun, sejak drug pertamamu.",
+      "Di level yang lebih tinggi bisa <b>mengeluarkanmu dari kursus pendidikan</b>.",
+      "Lebih dari total 150 Xanax dan Ecstasy membuatmu nggak bisa masuk gym bebas drug Sports Science Lab."
+    ],
+    "keepTitle": "Cara menekannya",
+    "keep": [
+      "<b>Rehab</b> di Swiss (~$250k) menghapusnya. Terbang ke sana saat ikon otak jadi merah.",
+      "Merit <b>Addiction Mitigation</b> (−2% per upgrade) mengurangi efeknya.",
+      "Pekerjaan: Cruise Line dan Flower Shop (5★) bisa mengurangi kecanduan; Nightclub 10★ menjaga pendidikan kamu aman darinya.",
+      "Upgrade faction: Toleration memangkas kecanduan sampai setengahnya. <a href=\"/paths/#faction\">Upgrade faction →</a>"
+    ]
+  },
+  "scams": {
+    "eyebrow": "Jangan belajar dari pengalaman pahit",
+    "title": "Penipuan dan jebakan",
+    "items": [
+      "<b>Pembeli loss yang nggak bayar.</b> Pakai kontrak loss prabayar dari FFScouter. Kalau nggak, cek pembelinya dulu: akun di bawah 100 hari, networth di bawah $1B, atau punya banyak musuh itu tanda bahaya. Ikuti instruksi mereka persis, atau mereka akan menjadikannya alasan untuk nggak bayar.",
+      "<b>Ghost trade dengan orang asing.</b> Mereka bisa melihat uangmu, membatalkan trade, lalu menyuruh orang mug kamu. Hanya lakukan dengan teman atau sesama anggota faction.",
+      "<b>“Tempel key kamu di sini.”</b> Jangan pernah memasukkan API key akses Full ke script atau situs web. <a href=\"/scripts/\">Keamanan key →</a>",
+      "<b>Bolak-balik ke bank Cayman.</b> Mugger berkemah di sana menunggu pemain yang membawa uang masuk atau keluar.",
+      "<b>Percaya buta pada vault mana pun.</b> Vault faction pernah dikuras oleh leader yang buruk. Sebar uangmu.",
+      "<b>Kasino.</b> Cuma sepadan untuk honor merit dengan taruhan $1. Selebihnya cuma buang uang."
+    ]
+  },
+  "faction": {
+    "eyebrow": "Cara kerja faction",
+    "title": "Dasar-dasar faction",
+    "respectTitle": "Respect, dalam satu menit",
+    "respect": [
+      "Serangan faction menghasilkan <b>respect</b>, yang dipakai untuk upgrade bagi semua anggota.",
+      "Pengali bisa ditumpuk: fair fight sampai ×3, hit perang ×2, chain panjang sampai ×2, retaliation ×1.5, menyerang di luar negeri ×1.25.",
+      "Saat anggota kena hit, faction kehilangan seperempat respect yang didapat penyerang. Target empuk merugikan semua orang."
+    ],
+    "helpTitle": "Cara kamu membantu, walau masih kecil",
+    "help": [
+      "Ambil peran organized crime yang bisa kamu lewati. <a href=\"/crimes/#oc\">OC →</a>",
+      "Hit untuk chain pada target yang gampang kamu kalahkan; FF Scouter menunjukkan siapa saja.",
+      "Retaliate saat leadership memintanya.",
+      "Bawa item medis untuk perang. <a href=\"/medical/\">Medis lapangan →</a>",
+      "Jangan terbang tepat sebelum perang atau chain. <a href=\"/travel/#delays\">Penundaan penerbangan →</a>"
+    ],
+    "quoteTag": "Aturan Rook",
+    "quote": "“Nggak ada yang berharap anggota baru memikul perang. Kami berharap kamu hadir, ambil hit yang bisa kamu menangkan, jaga stok obat, dan jangan jadi target empuk yang memberi makan pihak lawan.”"
+  },
+  "routine": {
+    "eyebrow": "Pin ini",
+    "title": "Rutinitasmu",
+    "dayTitle": "Setiap hari",
+    "day": [
+      "Cek cukup sering supaya energy kamu nggak pernah diam dalam kondisi penuh.",
+      "Latihan. Satu stat per sesi, di gym dengan titik terbaik untuk stat itu.",
+      "Minum Xanax saat cooldown selesai, kalau budget cukup. Pakai refill points kamu (25 points).",
+      "Pakai nerve untuk crime tersulit yang bisa kamu lewati dengan konsisten.",
+      "Terbang selagi energy terisi ulang; cek YATA dulu.",
+      "Pakai job points untuk special perusahaan kamu.",
+      "Simpan uang tunaimu sebelum logout."
+    ],
+    "weekTitle": "Setiap minggu",
+    "week": [
+      "Perpanjang jangka bank 1–2 minggu di hari berakhirnya.",
+      "Klaim payout saham mingguan; hilang setelah 24 jam.",
+      "Pastikan kursus berikutnya sudah diantrekan sebelum yang sekarang selesai.",
+      "Cek slot OC kamu dengan faction."
+    ],
+    "monthTitle": "Setiap bulan",
+    "month": [
+      "Perpanjang sewa properti. Sewa berakhir pukul 03:30 TCT.",
+      "Perpanjang status donator (31 hari per pack).",
+      "Klaim payout saham bulanan.",
+      "Atur waktu buku 31 hari untuk bulan depan."
+    ]
+  },
+  "footer": "<strong>Mulai di sini.</strong> Saran misi, penyimpanan uang dan jualan dari Basic Advice milik <strong>Baldr [1847600]</strong>; merit gampang dari Guide to Easy Merits milik <strong>Tempest [1867527]</strong>; buku dari Guide to Stat Gains from Books milik <strong>HandsomePants [1897243]</strong> dan halaman wiki Travel; kecanduan dari halaman wiki Drug; respect faction dari halaman wiki Faction dan Attack; perk pekerjaan dan hadiah misi dari Torn API dan wiki. Bagian dari <a href=\"/\">Faction Training Playbook</a>."
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Aller au contenu",
+  "homeLabel": "Faction Training Playbook, page d'accueil",
+  "menu": "Menu",
+  "language": "Langue",
+  "nav": {
+    "label": "Principal",
+    "start": "Commence ici",
+    "groups": {
+      "train": "Entraînement",
+      "money": "Argent",
+      "crimes": "Crimes",
+      "fight": "Combat",
+      "more": "Plus"
+    },
+    "links": {
+      "guide": "Guide d'entraînement",
+      "idea": "Le happy jump",
+      "new": "Avant le niveau 15",
+      "builds": "Builds",
+      "schedule": "Plannings quotidiens",
+      "items": "Objets à acheter",
+      "edu": "Éducation",
+      "planner": "Planificateur de jump",
+      "math": "Calculs d'entraînement",
+      "makeMoney": "Gagner de l'argent",
+      "travel": "Voyager pour l'argent",
+      "paths": "Parcours et étapes",
+      "faction": "Améliorations de faction",
+      "safe": "Protéger ton argent",
+      "overview": "Vue d'ensemble",
+      "how": "Comment marchent les crimes",
+      "nerve": "Augmenter ton nerve",
+      "oc": "Crime organisé",
+      "ocScenarios": "Scénarios d'OC",
+      "dataTables": "Tableaux de données des crimes",
+      "loadout": "Équipement de guerre",
+      "medical": "Médecine de terrain",
+      "factionBasics": "Bases des factions",
+      "scripts": "Scripts et outils",
+      "glossary": "Glossaire",
+      "credits": "Crédits"
+    }
+  },
+  "notice": {
+    "englishOnly": "Cette page n'existe qu'en anglais pour l'instant.",
+    "translate": "L'ouvrir dans Google Translate",
+    "browserTip": "ou utilise l'option Traduire de ton navigateur.",
+    "machine": "Cette page a été traduite automatiquement depuis l'anglais. Les noms du jeu restent en anglais, comme Torn les affiche.",
+    "improve": "Aide à améliorer la traduction sur GitHub"
+  },
+  "suggest": {
+    "text": "Ce guide existe aussi en {language}.",
+    "yes": "Le lire en {language}",
+    "no": "Rester en anglais"
+  },
+  "repo": {
+    "cta": "Voir sur GitHub ↗",
+    "hint": "Tu as repéré une erreur ou tu veux ajouter un guide ? Ouvre une issue ou envoie une pull request."
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "title": "Glossary · Faction Training Playbook",
+  "eyebrow": "Torn in plain words",
+  "h1": "<em>Glossary</em>",
+  "lede": "The words and abbreviations you'll see all over Torn and this site. Each one links to the page that explains it properly.",
+  "back": "← Start here",
+  "more": "More →",
+  "groups": [
+    {
+      "title": "Your bars and stats",
+      "terms": [
+        [
+          "E, energy",
+          "Spent in the gym and on attacks. A full bar refills every 5 hours: 150 max as a donator, 100 otherwise."
+        ],
+        [
+          "Nerve, NNB",
+          "Nerve is spent on crimes. NNB is your natural nerve bar: the maximum you earn from crime experience, before boosts."
+        ],
+        [
+          "Happy",
+          "Multiplies your gym gains. Your property sets the max. Anything above it resets at :00, :15, :30 and :45."
+        ],
+        [
+          "Happy jump",
+          "Stack energy and push happy far above max, then train it all inside one 15-minute window."
+        ],
+        [
+          "Battle stats",
+          "Strength, Speed, Defense and Dexterity. \"Total stats\" means all four added up."
+        ],
+        [
+          "Working stats",
+          "Manual labor, Intelligence and Endurance. Jobs use them; courses and job training raise them."
+        ],
+        [
+          "Gym dots",
+          "A gym's multiplier for each stat. More dots, more gains per energy (George's is 7.3)."
+        ],
+        [
+          "TCT",
+          "Torn City Time, the game clock. Happy resets and lease endings run on it."
+        ]
+      ]
+    },
+    {
+      "title": "Items and boosters",
+      "terms": [
+        [
+          "Xanax, Xan",
+          "+250 energy and +75 happy. A drug with a 6–8 hour cooldown."
+        ],
+        [
+          "XTC",
+          "Ecstasy. Doubles your current happy; the cheapest big happy boost."
+        ],
+        [
+          "eDVD",
+          "Erotic DVD. +2,500 happy (5,000 from a 10★ Adult Novelties). The main happy-jump booster."
+        ],
+        [
+          "FHC",
+          "Feathery Hotel Coupon. A booster that refills your energy bar."
+        ],
+        [
+          "Refill",
+          "A point refill: fills your energy bar once a day for 25 points."
+        ],
+        [
+          "Cooldowns",
+          "Drug, booster and medical cooldowns are separate clocks. Using one does not touch the others."
+        ],
+        [
+          "OD",
+          "Overdose. Empties your bars, puts you in hospital and can stretch your drug cooldown to a day."
+        ],
+        [
+          "SE",
+          "Stat enhancer: an expensive item that adds stats directly. Worth it only at very high stats."
+        ]
+      ]
+    },
+    {
+      "title": "Money and property",
+      "terms": [
+        [
+          "PI",
+          "Private Island, the best property. Rent one with an airstrip and hire a pilot for faster, bigger trips."
+        ],
+        [
+          "Donator, DP",
+          "Donator status: a bigger energy bar and faster refill. A donator pack gives 31 days."
+        ],
+        [
+          "IM",
+          "Item market: quick to sell on, with a 5% fee."
+        ],
+        [
+          "Bazaar",
+          "Your own shop. Buyers find it through tools like weav3r."
+        ],
+        [
+          "Ghost trade",
+          "A trade left open with someone you trust, so your cash sits in it instead of your pocket."
+        ],
+        [
+          "Points",
+          "Torn's second currency. Buys refills, merits, the stock ticker and more."
+        ],
+        [
+          "Benefit block",
+          "Enough shares of one stock to earn its payout or perk."
+        ],
+        [
+          "Museum, sets",
+          "Trade a full set of flowers or plushies for points. Needs the History degree."
+        ],
+        [
+          "Loss selling",
+          "Getting paid to attack someone and lose. Short-term money only."
+        ]
+      ]
+    },
+    {
+      "title": "Jobs, merits and education",
+      "terms": [
+        [
+          "★ (stars)",
+          "A company's rating from 0 to 10. More stars unlock more perks for employees."
+        ],
+        [
+          "JP",
+          "Job points: one per company star per day, spent on company specials."
+        ],
+        [
+          "Specials",
+          "A company's perks, unlocked by its star rating."
+        ],
+        [
+          "Merits",
+          "Earned from awards (medals and honors), spent on permanent upgrades like Bank Interest."
+        ],
+        [
+          "Honors, medals",
+          "Awards for milestones. Each one earns a merit."
+        ]
+      ]
+    },
+    {
+      "title": "Fighting and factions",
+      "terms": [
+        [
+          "Mug",
+          "Beat someone and take a cut of the cash they are carrying."
+        ],
+        [
+          "Hosp, med out",
+          "Hospital. \"Medding out\" means using medical items to leave early."
+        ],
+        [
+          "Revive",
+          "Pulling someone out of hospital. Useful in wars."
+        ],
+        [
+          "Bust, bail",
+          "Getting someone out of jail by skill (bust) or by paying (bail)."
+        ],
+        [
+          "FF",
+          "Fair fight: bonus respect (up to ×3) for fighting someone near your stats. FF Scouter estimates it."
+        ],
+        [
+          "Respect",
+          "What faction attacks earn. Factions spend it on upgrades for every member."
+        ],
+        [
+          "Chain",
+          "A run of faction hits in a row. Respect per hit grows as the chain gets longer."
+        ],
+        [
+          "Retal",
+          "Retaliation: hitting someone who just attacked a faction member, for ×1.5 respect."
+        ],
+        [
+          "RW",
+          "Ranked war between two factions. War hits earn double respect."
+        ],
+        [
+          "OC, CPR",
+          "Organized crime, and your checkpoint pass rate in its role."
+        ],
+        [
+          "CE, CS",
+          "Crime experience and crime skill. They grow as you do crimes and raise your nerve and success."
+        ]
+      ]
+    },
+    {
+      "title": "Tools",
+      "terms": [
+        [
+          "YATA",
+          "Website for foreign stock, travel timing, chains and awards."
+        ],
+        [
+          "TT",
+          "TornTools, a browser extension that adds information all over the game."
+        ],
+        [
+          "PDA",
+          "Torn PDA, the mobile app with script support."
+        ],
+        [
+          "TornStats",
+          "Spies, war and faction tools."
+        ]
+      ]
+    }
+  ],
+  "footer": "<strong>Glossary.</strong> Part of the <a href=\"/\">Faction Training Playbook</a>. Missing a word? Tell us and we'll add it."
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Zum Inhalt springen",
+  "homeLabel": "Faction Training Playbook, Startseite",
+  "menu": "Menü",
+  "language": "Sprache",
+  "nav": {
+    "label": "Hauptmenü",
+    "start": "Hier starten",
+    "groups": {
+      "train": "Training",
+      "money": "Geld",
+      "crimes": "Crimes",
+      "fight": "Kampf",
+      "more": "Mehr"
+    },
+    "links": {
+      "guide": "Trainingsguide",
+      "idea": "Der Happy Jump",
+      "new": "Vor Level 15",
+      "builds": "Builds",
+      "schedule": "Tagespläne",
+      "items": "Was du kaufen solltest",
+      "edu": "Bildung",
+      "planner": "Jump-Planer",
+      "math": "Trainingsmathe",
+      "makeMoney": "Wege, Geld zu verdienen",
+      "travel": "Mit Reisen Geld verdienen",
+      "paths": "Wege und Meilensteine",
+      "faction": "Faction-Upgrades",
+      "safe": "Dein Geld schützen",
+      "overview": "Überblick",
+      "how": "So funktionieren Crimes",
+      "nerve": "Nerve aufbauen",
+      "oc": "Organized Crime",
+      "ocScenarios": "OC-Szenarien",
+      "dataTables": "Crime-Datentabellen",
+      "loadout": "Kriegsausrüstung",
+      "medical": "Feldmedizin",
+      "factionBasics": "Faction-Grundlagen",
+      "scripts": "Scripts und Tools",
+      "glossary": "Glossar",
+      "credits": "Credits"
+    }
+  },
+  "notice": {
+    "englishOnly": "Diese Seite gibt es vorerst nur auf Englisch.",
+    "translate": "In Google Translate öffnen",
+    "browserTip": "oder nutze die Übersetzen-Funktion deines Browsers.",
+    "machine": "Diese Seite wurde maschinell aus dem Englischen übersetzt. Namen aus dem Spiel bleiben auf Englisch, so wie Torn sie anzeigt.",
+    "improve": "Hilf mit, die Übersetzung auf GitHub zu verbessern"
+  },
+  "suggest": {
+    "text": "Diesen Guide gibt es auch auf {language}.",
+    "yes": "Auf {language} lesen",
+    "no": "Englisch behalten"
+  },
+  "repo": {
+    "cta": "Auf GitHub ansehen ↗",
+    "hint": "Einen Fehler gefunden oder einen Guide zum Ergänzen? Eröffne ein Issue oder schick einen Pull Request."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "skip": "Langsung ke konten",
+  "homeLabel": "Faction Training Playbook, halaman utama",
+  "menu": "Menu",
+  "language": "Bahasa",
+  "nav": {
+    "label": "Utama",
+    "start": "Mulai di sini",
+    "groups": {
+      "train": "Latihan",
+      "money": "Uang",
+      "crimes": "Crimes",
+      "fight": "Bertarung",
+      "more": "Lainnya"
+    },
+    "links": {
+      "guide": "Panduan latihan",
+      "idea": "Happy jump",
+      "new": "Sebelum level 15",
+      "builds": "Build",
+      "schedule": "Jadwal harian",
+      "items": "Item yang perlu dibeli",
+      "edu": "Pendidikan",
+      "planner": "Perencana jump",
+      "math": "Hitungan latihan",
+      "makeMoney": "Cara cari uang",
+      "travel": "Terbang cari uang",
+      "paths": "Jalur dan target",
+      "faction": "Upgrade faction",
+      "safe": "Amankan uangmu",
+      "overview": "Ringkasan",
+      "how": "Cara kerja crimes",
+      "nerve": "Naikkan nerve",
+      "oc": "Organized crime",
+      "ocScenarios": "Skenario OC",
+      "dataTables": "Tabel data crimes",
+      "loadout": "Loadout perang",
+      "medical": "Medis lapangan",
+      "factionBasics": "Dasar-dasar faction",
+      "scripts": "Script dan tools",
+      "glossary": "Glosarium",
+      "credits": "Kredit"
+    }
+  },
+  "notice": {
+    "englishOnly": "Halaman ini untuk sementara hanya tersedia dalam bahasa Inggris.",
+    "translate": "Buka di Google Translate",
+    "browserTip": "atau pakai fitur Terjemahkan di browser kamu.",
+    "machine": "Halaman ini diterjemahkan otomatis oleh mesin dari bahasa Inggris. Nama-nama di game tetap dalam bahasa Inggris, sama seperti yang ditampilkan Torn.",
+    "improve": "Bantu perbaiki terjemahan ini di GitHub"
+  },
+  "suggest": {
+    "text": "Panduan ini juga tersedia dalam {language}.",
+    "yes": "Baca dalam {language}",
+    "no": "Tetap bahasa Inggris"
+  },
+  "repo": {
+    "cta": "Lihat di GitHub ↗",
+    "hint": "Nemu kesalahan atau punya panduan untuk ditambahkan? Buka issue atau kirim pull request."
+  }
+}

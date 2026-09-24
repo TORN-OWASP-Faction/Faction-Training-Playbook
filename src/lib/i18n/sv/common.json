@@ -1,0 +1,61 @@
+{
+  "skip": "Hoppa till innehållet",
+  "homeLabel": "Faction Training Playbook, startsida",
+  "menu": "Meny",
+  "language": "Språk",
+  "nav": {
+    "label": "Huvudmeny",
+    "start": "Börja här",
+    "groups": {
+      "train": "Träna",
+      "money": "Pengar",
+      "crimes": "Brott",
+      "fight": "Strid",
+      "more": "Mer"
+    },
+    "links": {
+      "guide": "Träningsguide",
+      "idea": "Happy jump",
+      "new": "Före nivå 15",
+      "builds": "Builds",
+      "schedule": "Dagsscheman",
+      "items": "Saker att köpa",
+      "edu": "Utbildning",
+      "planner": "Jumpplanerare",
+      "math": "Träningsmatte",
+      "makeMoney": "Sätt att tjäna pengar",
+      "travel": "Flyga för pengar",
+      "paths": "Vägar och milstolpar",
+      "faction": "Factionuppgraderingar",
+      "safe": "Håll pengarna säkra",
+      "overview": "Översikt",
+      "how": "Så fungerar brott",
+      "nerve": "Bygg upp din nerve",
+      "oc": "Organiserad brottslighet (OC)",
+      "ocScenarios": "OC-scenarier",
+      "dataTables": "Datatabeller för brott",
+      "loadout": "Krigsutrustning",
+      "medical": "Fältsjukvård",
+      "factionBasics": "Grunderna om factions",
+      "scripts": "Skript och verktyg",
+      "glossary": "Ordlista",
+      "credits": "Tack till"
+    }
+  },
+  "notice": {
+    "englishOnly": "Den här sidan finns bara på engelska än så länge.",
+    "translate": "Öppna den i Google Translate",
+    "browserTip": "eller använd webbläsarens översättningsfunktion.",
+    "machine": "Den här sidan är maskinöversatt från engelska. Namn från spelet står kvar på engelska, så som Torn visar dem.",
+    "improve": "Hjälp till att förbättra översättningen på GitHub"
+  },
+  "suggest": {
+    "text": "Den här guiden finns också på {language}.",
+    "yes": "Läs den på {language}",
+    "no": "Behåll engelska"
+  },
+  "repo": {
+    "cta": "Visa på GitHub ↗",
+    "hint": "Hittat ett fel eller har en guide att lägga till? Öppna ett issue eller skicka en pull request."
+  }
+}

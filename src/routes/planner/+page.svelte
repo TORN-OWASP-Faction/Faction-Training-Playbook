@@ -5,7 +5,7 @@
 
 (function(){
   var nf=new Intl.NumberFormat('en-US');
-  var $=function(id){return document.getElementById(id);};
+  var byId=function(id){return document.getElementById(id);};
 
   var STAT={str:{A:1600,B:1700},spd:{A:1600,B:2000},dex:{A:1800,B:1500},def:{A:2100,B:-600}};
   var PROPS=[['Shack',100],['Trailer',165],['Apartment',188],['Semi-Detached',275],['Detached',500],
@@ -31,7 +31,7 @@
   ITEMS.forEach(function(it){qty[it.id]=0;price[it.id]=null;live[it.id]=false;});
 
   // property dropdown
-  PROPS.forEach(function(p){var o=document.createElement('option');o.value=p[1];o.textContent=p[0]+' · '+nf.format(p[1]);if(p[0]==='Castle')o.selected=true;$('p-prop').appendChild(o);});
+  PROPS.forEach(function(p){var o=document.createElement('option');o.value=p[1];o.textContent=p[0]+' · '+nf.format(p[1]);if(p[0]==='Castle')o.selected=true;byId('p-prop').appendChild(o);});
 
   // item rows
   ITEMS.forEach(function(it){
@@ -40,20 +40,20 @@
       '<div class="stepper"><button type="button" aria-label="less">−</button><span class="q" id="q-'+it.id+'">0</span><button type="button" aria-label="more">+</button></div>'+
       '<div class="price"><input type="number" min="0" inputmode="numeric" placeholder="$ each" id="pr-'+it.id+'"></div>';
     var b=row.querySelectorAll('button');
-    b[0].addEventListener('click',function(){qty[it.id]=Math.max(0,qty[it.id]-1);$('q-'+it.id).textContent=qty[it.id];calc();});
-    b[1].addEventListener('click',function(){qty[it.id]++;$('q-'+it.id).textContent=qty[it.id];calc();});
+    b[0].addEventListener('click',function(){qty[it.id]=Math.max(0,qty[it.id]-1);byId('q-'+it.id).textContent=qty[it.id];calc();});
+    b[1].addEventListener('click',function(){qty[it.id]++;byId('q-'+it.id).textContent=qty[it.id];calc();});
     var pin=row.querySelector('input');
     pin.addEventListener('input',function(e){var v=parseFloat(e.target.value);price[it.id]=isNaN(v)?null:v;live[it.id]=false;e.target.classList.remove('live');calc();});
-    $('p-items').appendChild(row);
+    byId('p-items').appendChild(row);
   });
 
   var candyMult=1;
-  Array.prototype.forEach.call($('p-mults').querySelectorAll('.chip'),function(ch){
+  Array.prototype.forEach.call(byId('p-mults').querySelectorAll('.chip'),function(ch){
     ch.addEventListener('click',function(){ch.setAttribute('aria-pressed',(ch.getAttribute('aria-pressed')!=='true').toString());recalcMult();calc();});
   });
-  function recalcMult(){candyMult=1;Array.prototype.forEach.call($('p-mults').querySelectorAll('.chip'),function(ch){if(ch.getAttribute('aria-pressed')==='true')candyMult*=parseFloat(ch.dataset.mult);});}
-  $('p-xtc').addEventListener('click',function(){this.setAttribute('aria-pressed',(this.getAttribute('aria-pressed')!=='true').toString());calc();});
-  ['p-prop','p-stat','p-total','p-dots','p-e','p-budget','p-perk','p-cd'].forEach(function(id){$(id).addEventListener('input',calc);$(id).addEventListener('change',calc);});
+  function recalcMult(){candyMult=1;Array.prototype.forEach.call(byId('p-mults').querySelectorAll('.chip'),function(ch){if(ch.getAttribute('aria-pressed')==='true')candyMult*=parseFloat(ch.dataset.mult);});}
+  byId('p-xtc').addEventListener('click',function(){this.setAttribute('aria-pressed',(this.getAttribute('aria-pressed')!=='true').toString());calc();});
+  ['p-prop','p-stat','p-total','p-dots','p-e','p-budget','p-perk','p-cd'].forEach(function(id){byId(id).addEventListener('input',calc);byId(id).addEventListener('change',calc);});
 
   function dS(H,S,dots,E,A,B,perkMult){
     var Sc=Math.min(S,50000000);
@@ -61,36 +61,36 @@
     return br*(1/200000)*dots*E*perkMult;
   }
   function calc(){
-    var baseline=parseFloat($('p-prop').value)||100, st=STAT[$('p-stat').value];
-    var S=Math.max(0,parseFloat($('p-total').value)||0), dots=Math.max(0.1,parseFloat($('p-dots').value)||0.1);
-    var E=parseFloat($('p-e').value)||10, budget=Math.max(0,parseFloat($('p-budget').value)||0);
-    var perkMult=1+(Math.max(0,parseFloat($('p-perk').value)||0)/100), cdRed=parseFloat($('p-cd').value)||1;
+    var baseline=parseFloat(byId('p-prop').value)||100, st=STAT[byId('p-stat').value];
+    var S=Math.max(0,parseFloat(byId('p-total').value)||0), dots=Math.max(0.1,parseFloat(byId('p-dots').value)||0.1);
+    var E=parseFloat(byId('p-e').value)||10, budget=Math.max(0,parseFloat(byId('p-budget').value)||0);
+    var perkMult=1+(Math.max(0,parseFloat(byId('p-perk').value)||0)/100), cdRed=parseFloat(byId('p-cd').value)||1;
     var addHappy=0,cd=0,cost=0,anyPrice=false,units=0;
     ITEMS.forEach(function(it){var q=qty[it.id];if(!q)return;units+=q;
       addHappy+=it.happy*q*(it.kind==='candy'?candyMult:1);
       cd+=it.cd*q*(it.kind==='candy'?cdRed:1);
       if(price[it.id]!=null){anyPrice=true;cost+=price[it.id]*q;}});
     var peak=baseline+addHappy;
-    if($('p-xtc').getAttribute('aria-pressed')==='true')peak*=2;
+    if(byId('p-xtc').getAttribute('aria-pressed')==='true')peak*=2;
     peak=Math.min(99999,peak);
     var H=peak,eLeft=budget,gain=0,trains=0,guard=0;
     while(eLeft>=E && guard<200000){gain+=dS(H,S,dots,E,st.A,st.B,perkMult);H=Math.max(baseline,H-0.5*E);eLeft-=E;trains++;guard++;}
     var perE=trains>0?gain/(trains*E):0;
-    $('r-happy').textContent=nf.format(Math.round(peak));
-    $('r-happy-sub').textContent='baseline '+nf.format(Math.round(baseline));
-    $('r-gain').textContent=gain>=1?nf.format(Math.round(gain)):gain.toFixed(2);
-    $('r-gain-sub').textContent=units+' item'+(units===1?'':'s')+' eaten';
-    $('r-per').textContent=perE>=1?nf.format(Math.round(perE)):perE.toFixed(2);
-    $('r-cd').textContent=cd>=60?(cd/60).toFixed(1)+' h':Math.round(cd)+' m';
-    $('r-trains').textContent=nf.format(trains);
-    $('r-trains-sub').textContent=nf.format(trains*E)+' energy used';
-    if(anyPrice&&gain>0){$('r-cost').textContent='$'+nf.format(Math.round(cost/gain));$('r-cost-sub').textContent='$'+nf.format(Math.round(cost))+' total';}
-    else{$('r-cost').textContent='—';$('r-cost-sub').textContent='fetch or type prices';}
+    byId('r-happy').textContent=nf.format(Math.round(peak));
+    byId('r-happy-sub').textContent='baseline '+nf.format(Math.round(baseline));
+    byId('r-gain').textContent=gain>=1?nf.format(Math.round(gain)):gain.toFixed(2);
+    byId('r-gain-sub').textContent=units+' item'+(units===1?'':'s')+' eaten';
+    byId('r-per').textContent=perE>=1?nf.format(Math.round(perE)):perE.toFixed(2);
+    byId('r-cd').textContent=cd>=60?(cd/60).toFixed(1)+' h':Math.round(cd)+' m';
+    byId('r-trains').textContent=nf.format(trains);
+    byId('r-trains-sub').textContent=nf.format(trains*E)+' energy used';
+    if(anyPrice&&gain>0){byId('r-cost').textContent='$'+nf.format(Math.round(cost/gain));byId('r-cost-sub').textContent='$'+nf.format(Math.round(cost))+' total';}
+    else{byId('r-cost').textContent='—';byId('r-cost-sub').textContent='fetch or type prices';}
   }
 
   // ---- live prices via Torn API ----
-  function setStatus(msg,cls){var s=$('status');s.textContent=msg;s.className='status'+(cls?' '+cls:'');}
-  try{var saved=localStorage.getItem('tornApiKey'); if(saved){$('apikey').value=saved;setStatus('Saved key loaded. Click "Save & fetch prices" to refresh.','');}}catch(e){}
+  function setStatus(msg,cls){var s=byId('status');s.textContent=msg;s.className='status'+(cls?' '+cls:'');}
+  try{var saved=localStorage.getItem('tornApiKey'); if(saved){byId('apikey').value=saved;setStatus('Saved key loaded. Click "Save & fetch prices" to refresh.','');}}catch(e){}
 
   function priceOf(rec){
     if(!rec) return null;
@@ -99,8 +99,8 @@
     return (typeof v==='number' && v>0) ? v : null;
   }
 
-  $('fetch').addEventListener('click',async function(){
-    var key=$('apikey').value.trim();
+  byId('fetch').addEventListener('click',async function(){
+    var key=byId('apikey').value.trim();
     if(!key){setStatus('Enter your Limited API key first.','err');return;}
     try{localStorage.setItem('tornApiKey',key);}catch(e){}
     setStatus('Fetching item prices…','');
@@ -115,7 +115,7 @@
       var hit=0,miss=[];
       ITEMS.forEach(function(it){
         var rec=byName[it.name.toLowerCase()]; var p=priceOf(rec);
-        var input=$('pr-'+it.id);
+        var input=byId('pr-'+it.id);
         if(p!=null){price[it.id]=p;live[it.id]=true;input.value=Math.round(p);input.classList.add('live');hit++;}
         else{miss.push(it.name);}
       });
@@ -127,10 +127,10 @@
       setStatus('Could not reach the Torn API ('+(err&&err.message?err.message:'network/CORS')+'). Check the key and your connection.','err');
     }
   });
-  $('forget').addEventListener('click',function(){
+  byId('forget').addEventListener('click',function(){
     try{localStorage.removeItem('tornApiKey');}catch(e){}
-    $('apikey').value='';
-    ITEMS.forEach(function(it){if(live[it.id]){price[it.id]=null;live[it.id]=false;var i=$('pr-'+it.id);i.value='';i.classList.remove('live');}});
+    byId('apikey').value='';
+    ITEMS.forEach(function(it){if(live[it.id]){price[it.id]=null;live[it.id]=false;var i=byId('pr-'+it.id);i.value='';i.classList.remove('live');}});
     calc();setStatus('Key removed from this browser.','');
   });
 
@@ -138,7 +138,7 @@
   var gymsData=null;
   var STATNAME={str:'strength',spd:'speed',dex:'dexterity',def:'defense'};
   function populateGyms(gyms){
-    gymsData=gyms; var sel=$('p-gym'); sel.innerHTML='<option value="">— pick a gym —</option>';
+    gymsData=gyms; var sel=byId('p-gym'); sel.innerHTML='<option value="">— pick a gym —</option>';
     var ids=Object.keys(gyms).sort(function(a,b){var ga=gyms[a],gb=gyms[b];return (ga.energy||0)-(gb.energy||0)||String(ga.name).localeCompare(String(gb.name));});
     var n=0;
     ids.forEach(function(id){var g=gyms[id]; if(!g||!g.name)return;
@@ -149,19 +149,19 @@
     return n;
   }
   function applyGymDots(){
-    if(!gymsData) return; var id=$('p-gym').value; if(!id||!gymsData[id]) return;
-    var g=gymsData[id], dots=g[STATNAME[$('p-stat').value]];
-    if(dots&&dots>0) $('p-dots').value=(dots/10);
-    if(g.energy) $('p-e').value=String(g.energy);
+    if(!gymsData) return; var id=byId('p-gym').value; if(!id||!gymsData[id]) return;
+    var g=gymsData[id], dots=g[STATNAME[byId('p-stat').value]];
+    if(dots&&dots>0) byId('p-dots').value=(dots/10);
+    if(g.energy) byId('p-e').value=String(g.energy);
   }
-  $('p-gym').addEventListener('change',function(){applyGymDots();calc();});
-  $('p-stat').addEventListener('change',function(){applyGymDots();calc();});
+  byId('p-gym').addEventListener('change',function(){applyGymDots();calc();});
+  byId('p-stat').addEventListener('change',function(){applyGymDots();calc();});
 
   // ---- energy quick-adds ----
-  Array.prototype.forEach.call($('p-eadd').querySelectorAll('.chip'),function(ch){
+  Array.prototype.forEach.call(byId('p-eadd').querySelectorAll('.chip'),function(ch){
     ch.addEventListener('click',function(){
-      var add=parseFloat(ch.dataset.add)||0, cur=parseFloat($('p-budget').value)||0;
-      $('p-budget').value = add===0 ? 0 : Math.round(cur+add); calc();
+      var add=parseFloat(ch.dataset.add)||0, cur=parseFloat(byId('p-budget').value)||0;
+      byId('p-budget').value = add===0 ? 0 : Math.round(cur+add); calc();
     });
   });
 
@@ -179,8 +179,8 @@
     });
     return Math.round(total*100)/100;
   }
-  $('profile').addEventListener('click',async function(){
-    var key=$('apikey').value.trim();
+  byId('profile').addEventListener('click',async function(){
+    var key=byId('apikey').value.trim();
     if(!key){setStatus('Enter your API key first.','err');return;}
     try{localStorage.setItem('tornApiKey',key);}catch(e){}
     setStatus('Fetching your profile…','');
@@ -190,19 +190,19 @@
       if(d&&d.error){setStatus('Torn API error '+d.error.code+': '+d.error.error+' — profile needs a Custom key with gym + battle-stats access.','err');return;}
       var got=[];
       var total=(typeof d.total==='number')?d.total:((d.strength||0)+(d.speed||0)+(d.defense||0)+(d.dexterity||0));
-      if(total>0){$('p-total').value=Math.round(total);got.push('stat total');}
+      if(total>0){byId('p-total').value=Math.round(total);got.push('stat total');}
       if(d.happy&&d.happy.maximum){
-        var mh=d.happy.maximum, sel=$('p-prop'), ex=document.getElementById('opt-fetched'); if(ex)ex.remove();
+        var mh=d.happy.maximum, sel=byId('p-prop'), ex=document.getElementById('opt-fetched'); if(ex)ex.remove();
         var o=document.createElement('option'); o.id='opt-fetched'; o.value=mh; o.textContent='Your max happy · '+nf.format(mh);
         sel.insertBefore(o,sel.firstChild); o.selected=true; got.push('happy baseline');
       }
-      if(d.energy&&typeof d.energy.current==='number'){$('p-budget').value=d.energy.current;got.push('energy');}
+      if(d.energy&&typeof d.energy.current==='number'){byId('p-budget').value=d.energy.current;got.push('energy');}
       if(d.active_gym){
-        if(gymsData&&gymsData[d.active_gym]){$('p-gym').value=String(d.active_gym);applyGymDots();got.push('active gym');}
+        if(gymsData&&gymsData[d.active_gym]){byId('p-gym').value=String(d.active_gym);applyGymDots();got.push('active gym');}
         else got.push('gym id (fetch prices first to load the gym list)');
       }
-      var pk=perkPct(d,$('p-stat').value);
-      if(pk>0){$('p-perk').value=pk;got.push('perks '+pk+'%');}
+      var pk=perkPct(d,byId('p-stat').value);
+      if(pk>0){byId('p-perk').value=pk;got.push('perks '+pk+'%');}
       calc();
       setStatus(got.length?('Loaded '+got.join(', ')+' · '+new Date().toLocaleTimeString()):'Fetched, but nothing to fill — check the key has gym + battle-stats access.', got.length?'ok':'err');
     }catch(err){
@@ -279,8 +279,8 @@
         <div class="field"><label for="p-cd">Cooldown reduction</label>
           <select id="p-cd"><option value="1">None</option><option value="0.9">Fast Metabolism −10%</option><option value="0.75">Professional −25%</option><option value="0.675">Both −32.5%</option></select></div>
       </div>
-      <div class="field" style="margin-bottom:0"><label>Candy happy multipliers</label>
-        <div class="chips" id="p-mults">
+      <div class="field" style="margin-bottom:0"><span class="flabel" id="lbl-mults">Candy happy multipliers</span>
+        <div class="chips" id="p-mults" role="group" aria-labelledby="lbl-mults">
           <button class="chip" data-mult="3" aria-pressed="false">World Diabetes Day ×3</button>
           <button class="chip" data-mult="2" aria-pressed="false">Book ×2</button>
           <button class="chip" data-mult="1.5" aria-pressed="false">Voracity ×1.5</button>
@@ -293,8 +293,8 @@
       <h3>Your sweets &amp; items</h3>
       <div class="price-hint">qty · price each ($)</div>
       <div class="items" id="p-items" style="margin-top:6px"></div>
-      <div class="field" style="margin-top:14px;margin-bottom:0"><label>Multiplier (applied to current happy)</label>
-        <div class="chips"><button class="chip" id="p-xtc" aria-pressed="false">Ecstasy ×2 (doubles happy)</button></div>
+      <div class="field" style="margin-top:14px;margin-bottom:0"><span class="flabel" id="lbl-xtc">Multiplier (applied to current happy)</span>
+        <div class="chips" role="group" aria-labelledby="lbl-xtc"><button class="chip" id="p-xtc" aria-pressed="false">Ecstasy ×2 (doubles happy)</button></div>
       </div>
     </div>
   </div>

@@ -1,0 +1,61 @@
+{
+  "skip": "Naar de inhoud",
+  "homeLabel": "Faction Training Playbook, startpagina",
+  "menu": "Menu",
+  "language": "Taal",
+  "nav": {
+    "label": "Hoofdmenu",
+    "start": "Begin hier",
+    "groups": {
+      "train": "Trainen",
+      "money": "Geld",
+      "crimes": "Crimes",
+      "fight": "Vechten",
+      "more": "Meer"
+    },
+    "links": {
+      "guide": "Trainingsgids",
+      "idea": "De happy jump",
+      "new": "Voor level 15",
+      "builds": "Builds",
+      "schedule": "Dagschema's",
+      "items": "Items om te kopen",
+      "edu": "Opleiding",
+      "planner": "Jumpplanner",
+      "math": "Trainingsrekensom",
+      "makeMoney": "Manieren om geld te verdienen",
+      "travel": "Vliegen voor geld",
+      "paths": "Routes en mijlpalen",
+      "faction": "Faction-upgrades",
+      "safe": "Houd je geld veilig",
+      "overview": "Overzicht",
+      "how": "Hoe crimes werken",
+      "nerve": "Bouw je nerve op",
+      "oc": "Organized crime",
+      "ocScenarios": "OC-scenario's",
+      "dataTables": "Crime-datatabellen",
+      "loadout": "Oorlogsuitrusting",
+      "medical": "Veldgeneeskunde",
+      "factionBasics": "Faction-basis",
+      "scripts": "Scripts en tools",
+      "glossary": "Woordenlijst",
+      "credits": "Credits"
+    }
+  },
+  "notice": {
+    "englishOnly": "Deze pagina is voorlopig alleen in het Engels.",
+    "translate": "Open hem in Google Translate",
+    "browserTip": "of gebruik de vertaaloptie van je browser.",
+    "machine": "Deze pagina is automatisch vertaald uit het Engels. Namen uit het spel blijven Engels, zoals Torn ze toont.",
+    "improve": "Help de vertaling te verbeteren op GitHub"
+  },
+  "suggest": {
+    "text": "Deze gids is ook beschikbaar in het {language}.",
+    "yes": "Lees hem in het {language}",
+    "no": "Engels houden"
+  },
+  "repo": {
+    "cta": "Bekijk op GitHub ↗",
+    "hint": "Een fout gezien of een gids om toe te voegen? Open een issue of stuur een pull request."
+  }
+}

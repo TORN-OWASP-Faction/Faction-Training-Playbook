@@ -9,7 +9,11 @@ Live: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
 
 | Route | What it covers |
 |---|---|
-| `/` | The main guide: happy jumps and the jump routine, level ≤15 path, making money, income brackets, builds, schedules, items, education |
+| `/` | Front page: pick a goal (new, stronger, money, long game) and meet the crew |
+| `/start/` | New players: first week, missions, keeping money safe, selling, books, drugs, scams, factions, routine |
+| `/glossary/` | Torn words and abbreviations in plain language |
+| `/training/` | The training guide: happy jumps and the jump routine, level ≤15 path, making money, income brackets, builds, schedules, items, education |
+| `/paths/` | Income first, stats first or balanced: interactive planner, milestones, merits, education and faction upgrades |
 | `/training/formula/` | Training Formula V2.0 explained, with an interactive gain chart and cost-vs-gain charts |
 | `/travel/` | Flying for money: money ladder, first-PI budget, routes, stats-first vs money-first |
 | `/medical/` | Overdoses, medical items and cooldowns |
@@ -34,6 +38,18 @@ npm run build      # static site in build/
 - Crime and OC tables load JSON from `src/lib/data/`.
 - Character art and backgrounds are in `static/assets/`.
 - Global styles are in `src/app.css`.
+
+## Languages
+
+The menu, front page, Start here and Glossary are in 20 languages; `/es/start/`, `/ja/`, and so on.
+The other pages are English only and offer Google Translate in the reader's language.
+
+- Text lives in `src/lib/i18n/<language>/{common,home,start,glossary}.json`. English (`en/`) is the source.
+- The translations were machine-drafted. Corrections from native speakers are welcome as pull requests.
+- Keep game names (items, books, honors, properties, companies) in English, the way Torn shows them.
+- Keep the HTML tags, `href` paths and `{placeholders}` exactly as in English. Missing strings fall back to English.
+- `npm run i18n:check` compares every language with English and lists anything missing or broken.
+- To add a language, add it to `LOCALES` in `src/lib/i18n/index.js` and create its folder.
 
 ## Deploy
 

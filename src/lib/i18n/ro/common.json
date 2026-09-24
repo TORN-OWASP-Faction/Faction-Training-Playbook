@@ -1,0 +1,61 @@
+{
+  "skip": "Sari la conținut",
+  "homeLabel": "Faction Training Playbook, pagina principală",
+  "menu": "Meniu",
+  "language": "Limbă",
+  "nav": {
+    "label": "Principal",
+    "start": "Începe aici",
+    "groups": {
+      "train": "Antrenament",
+      "money": "Bani",
+      "crimes": "Crime",
+      "fight": "Luptă",
+      "more": "Mai mult"
+    },
+    "links": {
+      "guide": "Ghid de antrenament",
+      "idea": "Happy jump",
+      "new": "Înainte de nivelul 15",
+      "builds": "Build-uri",
+      "schedule": "Programe zilnice",
+      "items": "Ce să cumperi",
+      "edu": "Educație",
+      "planner": "Planificator de jump",
+      "math": "Matematica antrenamentului",
+      "makeMoney": "Cum să faci bani",
+      "travel": "Zboruri pentru bani",
+      "paths": "Căi și repere",
+      "faction": "Upgrade-uri de facțiune",
+      "safe": "Ține-ți banii în siguranță",
+      "overview": "Prezentare generală",
+      "how": "Cum funcționează crimele",
+      "nerve": "Crește-ți nerve-ul",
+      "oc": "Crimă organizată (OC)",
+      "ocScenarios": "Scenarii OC",
+      "dataTables": "Tabele cu date despre crime",
+      "loadout": "Echipament de război",
+      "medical": "Medicină de teren",
+      "factionBasics": "Bazele facțiunii",
+      "scripts": "Scripturi și unelte",
+      "glossary": "Glosar",
+      "credits": "Mulțumiri"
+    }
+  },
+  "notice": {
+    "englishOnly": "Pagina aceasta e deocamdată doar în engleză.",
+    "translate": "Deschide-o în Google Translate",
+    "browserTip": "sau folosește opțiunea de traducere a browserului.",
+    "machine": "Pagina aceasta a fost tradusă automat din engleză. Numele din joc rămân în engleză, așa cum le arată Torn.",
+    "improve": "Ajută la îmbunătățirea traducerii pe GitHub"
+  },
+  "suggest": {
+    "text": "Ghidul acesta există și în {language}.",
+    "yes": "Citește-l în {language}",
+    "no": "Rămân la engleză"
+  },
+  "repo": {
+    "cta": "Vezi pe GitHub ↗",
+    "hint": "Ai găsit o greșeală sau ai un ghid de adăugat? Deschide un issue sau trimite un pull request."
+  }
+}

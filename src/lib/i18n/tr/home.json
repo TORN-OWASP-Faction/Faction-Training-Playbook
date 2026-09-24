@@ -1,0 +1,59 @@
+{
+  "title": "Faction Training Playbook",
+  "badge": "Faction antrenmanı · 2004'ten beri",
+  "h1": "Faction Training <em>Playbook</em>",
+  "lede": "Torn'da daha güçlü ve daha zengin olman için faction'ımızın sade bir dille yazdığı ücretsiz rehberler. Nereden başlamak istediğini seç.",
+  "choose": {
+    "eyebrow": "Bir hedef seç",
+    "title": "Nereden başlamak istersin?"
+  },
+  "goals": {
+    "new": {
+      "title": "Torn'da yeniyim",
+      "text": "İlk haftan, paranı güvende tutmak ve yeni oyunculara en pahalıya patlayan tuzaklar.",
+      "go": "Buradan başla",
+      "links": ["İlk haftan", "Paranı güvende tut", "Sözlük"]
+    },
+    "train": {
+      "title": "Güçlen",
+      "text": "Happy jump nasıl işler, hangi build'i seçmelisin, her stat için en iyi gym hangisi ve bir antrenman günü neye benzer.",
+      "go": "Antrenman rehberi",
+      "links": ["Happy jump", "Build'ler", "Jump planlayıcı"]
+    },
+    "money": {
+      "title": "Para kazan",
+      "text": "Çiçek ve peluş için uçmak, Private Island ne zaman kendini amorti eder ve getirdiklerini nasıl satarsın.",
+      "go": "Para için uçmak",
+      "links": ["Para kazanma yolları", "YATA kullanımı", "Eşya satmak"]
+    },
+    "plan": {
+      "title": "Uzun vadeyi planla",
+      "text": "Önce gelir, önce statlar ya da dengeli: zaman çizelgeleri, hedefler ve neyi hangi sırayla alacağın.",
+      "go": "Yollar ve hedefler",
+      "links": ["Etkileşimli planlayıcı", "Üç rehber", "Faction yükseltmeleri"]
+    }
+  },
+  "more": {
+    "eyebrow": "Playbook'ta ayrıca",
+    "title": "Suçlar, savaş ve araçlar",
+    "items": {
+      "crimes": ["Suçlar ve OC'ler", "Hangi suçları yapmalısın, nerve'ün nasıl artar ve organize suçlar nasıl ödeme yapar."],
+      "loadout": ["Savaş teçhizatı", "Silahlar, zırh ve senden güçlülerle nasıl dövüşülür."],
+      "medical": ["Saha tıbbı", "Overdose'lar, tıbbi eşyalar ve savaşta işe yarar kalmak."],
+      "scripts": ["Script'ler ve araçlar", "TornTools, YATA, FF Scouter ve daha fazlası; bir de API anahtarını nasıl güvende tutarsın."]
+    }
+  },
+  "crew": {
+    "eyebrow": "Kim konuşuyor",
+    "title": "Ekiple tanış",
+    "lede": "Bu Playbook'u beş karakter yönetiyor. Her biri oyunun bir kısmıyla ilgileniyor ve tavsiyelerini sorumlu oldukları sayfalarda bulacaksın.",
+    "members": {
+      "banker": ["Bankacı · Ekonomi", "Para, mülk, eğitim ve ne zaman harcamaman gerektiği", "Vincent Moretti, bankacı"],
+      "trainer": ["Antrenör · İlerleme", "Gym, happy, enerji, rutinler ve jump'lar", "Maya Torres, antrenör"],
+      "militia": ["Milis · Faction'lar", "Faction avantajları, savaşa hazır olmak ve hazırlık", "Marcus Kane, milis gazisi"],
+      "fixer": ["İş bitirici · Fırsatlar", "Hızlı para, seviye atlama, al-sat ve tanıştırmalar", "Nico Vescari, iş bitirici"],
+      "medic": ["Sıhhiyeci · İyileşme", "Overdose'lar, tıbbi eşyalar, hastane ve savaş hazırlığı", "Dr. Elara Moreau, sıhhiyeci"]
+    }
+  },
+  "footer": "<strong>Faction Training Playbook.</strong> Faction'ımız tarafından, Torn oyuncularının yazdığı rehberlerden hazırlandı. Tüm kaynaklar <a href=\"/credits/\">kaynaklar</a> sayfasında listeleniyor."
+}
