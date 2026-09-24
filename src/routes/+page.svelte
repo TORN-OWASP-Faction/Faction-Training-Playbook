@@ -369,7 +369,7 @@
     <div class="callout">
       <h3>Pre-flight — all true before you start</h3>
       <ul class="rules" style="margin-top:10px">
-        <li><span class="k">opt</span><div><b>Pay your insurance</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — arson/bounty protection. A jump leaves you sitting full and idle; if someone <b>arsons</b> you or you're carrying a <b>bounty</b>, a hit puts you in hospital mid-jump and the whole stacked happy is gone. Clear it first so nothing can interrupt you.</div></li>
+        <li><span class="k">opt</span><div><b>Pay your insurance</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — arson/bounty protection. A jump leaves you sitting full and idle; if someone <b>arsons</b> you or you're carrying a <b>bounty</b>, a hit puts you in hospital mid-jump and the whole stacked happy is gone. Clear it first so nothing can interrupt you. You can also buy <b>OD insurance</b>: send the insurer a small fee (often a Xanax) just before you jump, and if you overdose soon after they pay back a set amount toward your next jump. Several players run these, so pick one leadership trusts.</div></li>
         <li><span class="k">0</span><div><b>No drug cooldown</b> — you need it clear to take your XTC (and Xanax).</div></li>
         <li><span class="k">0</span><div><b>No boost cooldown</b> — so your eDVDs and energy items all count.</div></li>
         <li><span class="k"><Icon name="pill"/></span><div><b>The right gym</b> — be in the best gym for the stat you're training (dots differ per stat).</div></li>
@@ -409,7 +409,7 @@
     <li><div><b>Start a long education course now.</b><small>The gym-gain line (Sports Science) and permanent stat courses run in the background for days — start them early.</small></div></li>
     <li><div><b>Move off the Shack.</b><small>Even a Trailer/Apartment lifts your happy baseline cheaply (100 → 165 → 188). Buy the best property whose upkeep you can actually sustain.</small></div></li>
     <li><div><b>Top up happy with cheap candy.</b><small>Lollipops / Box of Chocolate Bars (+25) — often dropped by Shoplifting. Keep happy above the regen floor before you train.</small></div></li>
-    <li><div><b>Fly Mexico for starter cash.</b><small>Shortest trip (17–24 min). Buy plushies/flowers at the General Store, sell back home.</small></div></li>
+    <li><div><b>Flip shop items for starter cash.</b><small>Travel doesn't unlock until level 15. Until then, buy your 100 items/day at Bits N Bobs and the Sweet Shop (beer, basic plushies, lollipops) and resell them to players for about $50–70k/day.</small></div></li>
     <li><div><b>Ask the faction for Xanax.</b><small>+250 energy per pill — the single biggest boost to how fast you grow early. Take what leadership offers.</small></div></li>
   </ol>
 
@@ -453,7 +453,7 @@
   <div class="callout" style="margin-top:10px">
     <ul class="rules">
       <li><span class="k">↧15</span><div>Getting to 15: <b>rent</b> a Mansion/Ranch (bare minimum a Penthouse, 925 happy) for <b>30–45 days</b>. Don't buy, don't rent long-term.</div></li>
-      <li><span class="k">15+</span><div>At 15 you can afford a <b>Private Island</b> — ~$12–13M / 30 days for the 3,600-happy sweet spot. First PI: grab the cheapest one <b>with a landing strip</b> (even a 2,550 will do).</div></li>
+      <li><span class="k">15+</span><div>At 15 you can afford a <b>Private Island</b> — ~$12–13M / 30 days for the 3,600-happy sweet spot. First PI: grab the cheapest one <b>with a landing strip</b> (even a 2,550 will do). Have about <b>$15M</b> ready first; see the <a href="{base}/travel/#pi">PI budget</a>.</div></li>
     </ul>
   </div>
   <div class="say banker">
@@ -470,7 +470,7 @@
     </div>
     <div class="card">
       <h3>After 15 — flowers &amp; plushies <span class="tag" style="color:var(--c-trainer);background:var(--ok-soft)">the big one</span></h3>
-      <p style="margin:.3em 0 0;color:var(--muted)">Fly abroad, buy flowers/plushies from the General Store, fly home, sell to players. Huge demand — <b>$3–6M/day</b> active. See <a href="#schedule">Schedules</a> and the <a href="{base}/planner/">live planner</a> for destinations and timing.</p>
+      <p style="margin:.3em 0 0;color:var(--muted)">Fly abroad, buy flowers/plushies from the General Store, fly home, sell to players. Huge demand — <b>$2–3M/day</b> with a PI, $5–6M if you're very active. See <a href="{base}/travel/">Flying for money</a> for routes, timing, and how much you need before renting a PI.</p>
     </div>
     <div class="card" id="sell-losses" style="border-left:3px solid var(--c-fixer)">
       <h3>Selling losses <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">A means to an end</span></h3>

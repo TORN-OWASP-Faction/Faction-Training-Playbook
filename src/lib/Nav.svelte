@@ -49,6 +49,7 @@
     {/if}
   </div>
 
+  <a class="top" href="{base}/travel/">Travel</a>
   <a class="top" href="{base}/planner/">Planner</a>
   <a class="top" href="{base}/scripts/">Scripts</a>
   <a class="top" href="{base}/credits/">Credits</a>

@@ -120,8 +120,8 @@
       <thead><tr><th>Source</th><th>Energy</th><th>~ $/energy</th><th>Cooldown</th><th>Notes</th></tr></thead>
       <tbody>
         <tr><td>Natural regen</td><td class="mono">5 / 10–15 min</td><td class="mono">free</td><td class="mono">—</td><td>Never let it cap.</td></tr>
-        <tr><td>LSD</td><td class="mono">+50</td><td class="mono">~$410</td><td class="mono">2 h drug</td><td>Cheapest cash energy; some happy too.</td></tr>
-        <tr><td>Xanax</td><td class="mono">+250</td><td class="mono">~$3,400</td><td class="mono">8 h drug</td><td>Daily backbone: energy <em>and</em> +75 happy. OD risk.</td></tr>
+        <tr><td>LSD</td><td class="mono">+50</td><td class="mono">~$410</td><td class="mono">~7 h drug</td><td>Cheapest per point, plus +200–500 happy. But its cooldown blocks a Xanax for ~7h, so only use it when you can't afford Xanax.</td></tr>
+        <tr><td>Xanax</td><td class="mono">+250</td><td class="mono">~$3,400</td><td class="mono">6–8 h drug</td><td>Daily backbone: energy <em>and</em> +75 happy. OD risk.</td></tr>
         <tr><td>Energy drink</td><td class="mono">+5–30</td><td class="mono">~$45k–86k</td><td class="mono">none</td><td>Expensive per point — for cooldowns/emergencies, not bulk.</td></tr>
         <tr><td>Point refill</td><td class="mono">+150</td><td class="mono">points</td><td class="mono">none</td><td>For pushes, not daily.</td></tr>
       </tbody>

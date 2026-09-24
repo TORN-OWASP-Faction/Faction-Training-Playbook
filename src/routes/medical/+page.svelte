@@ -32,7 +32,7 @@
     <div class="card">
       <h3>How to not do it</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k"><Icon name="timer"/></span><div><b>Respect the drug cooldown</b> — cooldowns run 1h (Cannabis) to 8h (Xanax). Don't re-dose early.</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div><b>Respect the drug cooldown</b> — cooldowns run from under an hour (Ketamine, Cannabis) up to 6–8h (Xanax). Don't re-dose early.</div></li>
         <li><span class="k">↑</span><div>OD risk rises the more you push drugs — <b>don't stack</b> multiple drugs back-to-back chasing a jump.</div></li>
         <li><span class="k"><Icon name="pill"/></span><div>Manage addiction; a heavily-addicted player ODs more and gains less. Rehab (Switzerland) resets it.</div></li>
       </ul>
