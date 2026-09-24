@@ -213,7 +213,119 @@
       {/each}
     </tbody>
   </table></div>
-  <p class="note" style="margin-top:.6rem">Buy and sell prices change constantly, so check <b>YATA</b>'s foreign-stock page before you fly (it shows what's in stock abroad right now) and <b>weav3r</b> for bazaar sell prices. Both are on the <a href="{base}/scripts/">Scripts</a> page. Each country's <b>Black Market</b> also sells contraband, which is priced like flowers and plushies and often profitable.</p>
+  <p class="note" style="margin-top:.6rem">Buy and sell prices change constantly, so check <a href="#yata">YATA</a> before every flight (how to use it is below) and <b>weav3r</b> for bazaar sell prices. Each country's <b>Black Market</b> also sells contraband, which is priced like flowers and plushies and often profitable.</p>
+</div></section>
+
+<!-- YATA -->
+<section id="yata"><div class="wrap">
+  <span class="eyebrow">Before every flight</span>
+  <h2>Pick your run with YATA</h2>
+  <p class="lede">YATA's <a href="https://yata.yt/bazaar/abroad/" target="_blank" rel="noopener">Abroad stocks</a> page shows what's on the shelf in every country right now, what it costs there, and what it resells for back home. Players' scripts report the stock as they land, so the numbers are usually minutes old. You don't need to log in to view it.</p>
+
+  <ol class="steps" style="margin-top:1.2rem">
+    <li><div><b>Open YATA → Bazaar → Abroad.</b><small><a href="https://yata.yt/bazaar/abroad/" target="_blank" rel="noopener">yata.yt/bazaar/abroad</a>. Bookmark it.</small></div></li>
+    <li><div><b>Pick one item type.</b><small>The filter shows one type at a time: Flower, Plushie, Drug, Material, or All.</small></div></li>
+    <li><div><b>Sort by Profit / hour, highest first.</b><small>Click the column header. If the lowest comes first, click it again.</small></div></li>
+    <li><div><b>Skip anything sold out.</b><small>A 0 in Stock means there's nothing to buy, however good the profit looks. Low stock can also be gone by the time you land.</small></div></li>
+    <li><div><b>Click the Stock number to see its restock chart.</b><small>It opens the last 24 hours of that item's stock (with a link to 48 hours), plus its market value and price trend. Use it to see how often the shelf refills and how fast it empties.</small></div></li>
+    <li><div><b>Check Update and Weekly tendency.</b><small>A stock count from a few minutes ago is reliable; one from hours ago could be anything. "Low" tendency means the resale price has been falling this week.</small></div></li>
+    <li><div><b>Do the math for your load.</b><small>Profit × items you carry = what the trip earns. Price × items you carry = cash you need before you take off.</small></div></li>
+  </ol>
+
+  <figure class="shot">
+    <a href="{base}/assets/yata/yata-plushies-by-profit-hour.jpg" target="_blank" rel="noopener" title="Open full size"><img src="{base}/assets/yata/yata-plushies-by-profit-hour.jpg" width="1280" height="598" loading="lazy"
+      alt="YATA Abroad stocks page filtered to plushies and sorted by Profit per hour. The Plushie filter and Profit per hour header are outlined in amber; the Nessie Plushie row, which has 0 stock, is outlined in red." /></a>
+    <figcaption>Plushies sorted by Profit / hour. <b class="amb">Amber</b>: the two things to click. <b class="red">Red</b>: Nessie ranks near the top, but it's sold out. Captured 23 Sep 2026; the live numbers change every few minutes.</figcaption>
+  </figure>
+
+  <div class="grid2" style="margin-top:1.2rem">
+    <div class="card">
+      <h3>Reading the columns</h3>
+      <ul class="rules" style="margin-top:.6rem">
+        <li><span class="k">Stock</span><div>How many are on the shelf abroad.</div></li>
+        <li><span class="k">Price</span><div>What you pay abroad, per item.</div></li>
+        <li><span class="k">Profit</span><div>Resale minus cost, <b>per item</b>, after the 5% item-market fee.</div></li>
+        <li><span class="k">/hour</span><div><b>Per single item</b>, over a standard-ticket round trip. Use it to rank routes. With a PI and a full load you earn much more per hour than it shows.</div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Worked example from that capture</h3>
+      <p style="margin:.3em 0 .6rem;color:var(--muted)">A full 15-item load with a PI airstrip:</p>
+      <div class="tbl-scroll"><table>
+        <thead><tr><th>Load</th><th>Per trip</th><th>Round trip</th><th>Per hour</th><th>Cash up front</th></tr></thead>
+        <tbody>
+          <tr><td>15 Camels (UAE)</td><td class="mono">$813k</td><td class="mono">6h 00m</td><td class="mono">~$136k</td><td class="mono">$210k</td></tr>
+          <tr><td>15 Pandas (China)</td><td class="mono">$667k</td><td class="mono">5h 20m</td><td class="mono">~$125k</td><td class="mono">$6k</td></tr>
+          <tr><td>15 Jaguars (Mexico)</td><td class="mono">$41k</td><td class="mono">34m</td><td class="mono">~$73k</td><td class="mono">$150k</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin:.6rem 0 0;color:var(--muted);font-size:.88rem">Here the long hauls earned more per hour <em>and</em> left you free for five or six hours. That won't always hold, so run the numbers before every flight.</p>
+    </div>
+  </div>
+
+  <div class="grid2 restock" style="margin-top:1.2rem">
+    <figure class="shot" style="margin:0">
+      <a href="{base}/assets/yata/yata-restock-chart.jpg" target="_blank" rel="noopener" title="Open full size"><img src="{base}/assets/yata/yata-restock-chart.jpg" width="800" height="460" loading="lazy"
+        alt="YATA restock chart for Monkey Plushie in Argentina over the last 24 hours. Stock jumps to about 2,500, drains to zero, and refills again, dozens of times a day in a sawtooth pattern." /></a>
+      <figcaption>Click any Stock number to open this. Monkey Plushie, last 24h: a sawtooth. It refills to about 2,500, gets bought out, and sits empty until the next refill. Captured 24 Sep 2026.</figcaption>
+    </figure>
+    <div class="card">
+      <h3>Timing the restock</h3>
+      <p style="margin:.3em 0 .6rem;color:var(--muted)">Measured from 48 hours of YATA's data:</p>
+      <div class="tbl-scroll"><table>
+        <thead><tr><th>Item</th><th>Refills about every</th><th>Shelf empty</th></tr></thead>
+        <tbody>
+          <tr><td>Camel (UAE)</td><td class="mono">42 min</td><td class="mono">35% of the time</td></tr>
+          <tr><td>Monkey (Argentina)</td><td class="mono">40 min</td><td class="mono">36%</td></tr>
+          <tr><td>Panda (China)</td><td class="mono">50 min</td><td class="mono">29%</td></tr>
+        </tbody>
+      </table></div>
+      <ul class="rules" style="margin-top:.8rem">
+        <li><span class="k">⅓</span><div>Land at a random time and there's roughly a <b>1-in-3 chance</b> your item is sold out.</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div>The next refill is usually <b>under an hour away</b>. You can wait abroad for it, but anyone in that country can attack you while you do.</div></li>
+        <li><span class="k">↘</span><div>A <b>steep drop</b> after each refill means lots of people fly that route. Keep a backup item picked there.</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="shot">
+    <a href="{base}/assets/yata/yata-all-by-profit-hour.jpg" target="_blank" rel="noopener" title="Open full size"><img src="{base}/assets/yata/yata-all-by-profit-hour.jpg" width="1280" height="598" loading="lazy"
+      alt="YATA Abroad stocks page with All types selected and sorted by Profit per hour. Five of the top ten rows have 0 stock and are outlined in red, including a $20,000,000 ArmaLite rifle at the top." /></a>
+    <figcaption>All types sorted by Profit / hour. <b class="red">Half the top 10 are sold out</b>, and #1 is a $20M rifle. Switch to <b>All</b> now and then to catch items that beat flowers and plushies, but read Stock and Price before you get excited. Captured 23 Sep 2026.</figcaption>
+  </figure>
+
+  <Character variant="fixer" name={'Nico "The Line"'} tag="Word on the Street" initial="N" img="nico.png">
+    "Everyone sees the same top row, so everyone flies there. Check the stock, check how fresh it is, and have a second item picked in case the first one's gone when you land."
+  </Character>
+</div></section>
+
+<!-- DELAYS -->
+<section id="delays"><div class="wrap">
+  <span class="eyebrow">Plan for the worst flight</span>
+  <h2>Flight delays</h2>
+  <p class="lede">A player working at a <b>7★ Detective Agency</b> can use the <b>Watchlist</b> special to anonymously add <b>1h 30m – 2h</b> to someone's flight, for 50 job points. You can't block it and you won't know who did it. Plan every flight as if it might run two hours long.</p>
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card">
+      <h3>What a delay can cost you</h3>
+      <ul class="rules" style="margin-top:.6rem">
+        <li><span class="k">⚔</span><div><b>Wars and chains.</b> Don't take off within two hours of a war start or a scheduled chain.</div></li>
+        <li><span class="k">OC</span><div><b>Organized crimes.</b> Torn warns you when your OC will be ready before you're back. Give that warning two extra hours of room.</div></li>
+        <li><span class="k">E</span><div><b>Energy.</b> Your bar keeps refilling in the air, and anything past full is wasted. Take off with an empty bar.</div></li>
+        <li><span class="k">0</span><div><b>Stock.</b> You land later, so a low-stock item may be gone. Pick a backup item in the same country, or check its <a href="#yata">restock chart</a> to see when it refills.</div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Flying around it</h3>
+      <ul class="rules" style="margin-top:.6rem">
+        <li><span class="k"><Icon name="timer"/></span><div>Before anything time-critical, fly a <b>short hop</b>. Even with a delay you're back in about 2½ hours.</div></li>
+        <li><span class="k">✈</span><div>Save <b>long hauls</b> for when your next 8 hours are clear.</div></li>
+        <li><span class="k">↻</span><div><b>Check YATA again when you land</b> and buy whatever's best in stock.</div></li>
+      </ul>
+    </div>
+  </div>
+  <Character variant="militia" name="Rook" tag="Rook's Rule" initial="R" img="militia.png">
+    "If we're hitting at 20:00, you're not over the ocean at 18:30. A Watchlist delay costs the other side fifty job points and costs us a hitter. Don't hand it to them."
+  </Character>
 </div></section>
 
 <!-- WHY IT SELLS -->
@@ -265,7 +377,7 @@
       <tr><th>You buy</th><td><b>Consumables that become stats</b>: Xanax, XTC, eDVDs, candy, gym-gain education</td><td><b>Capital that compounds</b>: suitcase, Smuggling book, bank deposits, stock blocks, History degree</td></tr>
       <tr><th>Property</th><td>The highest-happy PI you can afford, with an airstrip</td><td>The cheapest PI that has an airstrip; happy matters less</td></tr>
       <tr><th>How you fly</th><td>Long hauls timed to your recharge: dump energy, take off, and land to a full bar</td><td>Back-to-back runs, aiming for the most items per hour you're online</td></tr>
-      <tr><th>Routes</th><td>China, UAE, South Africa (5–6.5h round trip with PI, about one energy refill or one Xanax cooldown)</td><td>Short hops if you can be there for every landing, or the highest-margin items if you can't</td></tr>
+      <tr><th>Routes</th><td>Japan or China (about 5h round trip with a PI, one energy refill). UAE and South Africa run an hour or more past that, so save them for when you're also waiting out a Xanax cooldown</td><td>Whatever tops YATA's Profit / hour with stock available, checked before every flight</td></tr>
       <tr><th>Grows fast</th><td>Battle stats</td><td>Networth</td></tr>
       <tr><th>Grows slow</th><td>Networth. The bank waits.</td><td>Battle stats. You're more likely to get mugged or bullied.</td></tr>
     </tbody>
@@ -352,6 +464,13 @@
   .rt .bar.long{fill:var(--amber)}
   .rt .val{fill:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:11px}
   .rt g:hover .bar{fill:var(--c-fixer)}
+
+  .restock{align-items:start}
+  .shot{margin:1.2rem 0 0}
+  .shot img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:3px}
+  .shot figcaption{margin-top:.5rem;color:var(--faint);font-size:.82rem;max-width:70ch}
+  .shot .amb{color:#d98a1c}
+  .shot .red{color:var(--c-medic)}
 
   .capbars .bar-row{grid-template-columns:13rem 1fr}
   @media(max-width:560px){.capbars .bar-row{grid-template-columns:1fr}.capbars .bar-row .lbl{text-align:left}}

@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import DataTable from '$lib/DataTable.svelte';
+  import ScoutChart from '$lib/ScoutChart.svelte';
   import Character from '$lib/Character.svelte';
   import data from '$lib/data/burglary.json';
 </script>
@@ -44,10 +45,21 @@
 <section><div class="wrap">
   <span class="eyebrow">Scouting</span>
   <h2>Scouted targets by skill level</h2>
-  <p class="lede">Distribution of targets you'll scout at each Crime Skill level (columns = CS). Wide table — scroll sideways.</p>
-  <DataTable columns={data.scouting.columns} rows={data.scouting.rows} caption="Scouted target distribution by CS level" />
+  <p class="lede">What you'll find when you scout, by Crime Skill. Each line is one target's share of the scouts in its category: new targets appear as your CS rises, and the early ones fade out. Hover (or tab in and use the arrow keys) to see every target at a given level.</p>
+  <ScoutChart columns={data.scouting.columns} rows={data.scouting.rows} />
+  <details class="raw">
+    <summary>Show the raw numbers</summary>
+    <DataTable columns={data.scouting.columns} rows={data.scouting.rows} caption="Scouted target distribution by CS level (counts, then percentages). Wide table, so scroll sideways." />
+  </details>
 </div></section>
 
 <footer><div class="wrap">
   <strong>Burglary data.</strong> Droptables, casing rates and scouting distribution compiled by <strong>Emforus [2535044]</strong> in the Burglary Consolidated spreadsheet, linked from the in-depth guide. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
 </div></footer>
+
+<style>
+  .raw{margin-top:1rem}
+  .raw summary{cursor:pointer;color:var(--muted);font-size:.85rem;padding:.3rem 0}
+  .raw summary:hover{color:var(--ink)}
+  .raw summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+</style>
