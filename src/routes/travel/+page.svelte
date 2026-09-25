@@ -46,6 +46,17 @@
     { l: '+ Smuggling for Beginners', v: 38 },
     { l: '+ 10★ Cruise Line job', v: 43 }
   ];
+
+  // Tourism Day doubles everything except the Flower and Toy Shop item bonuses. [setup, normal, Tourism Day]
+  const TOURISM = [['Standard ticket', 10], ['PI airstrip & pilot', 15], ['PI + large suitcase', 18], ['+ Faction Excursion (max)', 28], ['Everything', 43]];
+
+  // Contraband added December 2025. [items, where they sell]
+  const CONTRABAND = [
+    ['Arrowheads', 'The Museum, as a full set of six'],
+    ['Meteorite Fragments, Patagonian Fossils', 'The Museum, one at a time. Simpler than full sets'],
+    ['Ephedrine Powder, Safrole Oil, Ergotamine Ampoules', 'Switzerland; sell them at the Pharmacy for cash'],
+    ['Uncut Diamonds, Natural Pearls, Counterfeit Manga', 'Various city stores, for cash']
+  ];
 </script>
 
 <header class="hero"><div class="wrap">
@@ -403,10 +414,72 @@
     <ul class="rules" style="margin-top:1rem">
       <li><span class="k"><Icon name="flag"/></span><div><b>Faction Excursion</b> is a faction upgrade (+1 per level, up to +10). Ask leadership where it stands.</div></li>
       <li><span class="k"><Icon name="backpack"/></span><div>Suitcases don't stack; only your biggest one counts: small +1 ($2M), medium +2 ($4M), large +3 ($10M).</div></li>
-      <li><span class="k">×2</span><div><b>Tourism Day (27 September)</b> doubles your capacity. Plan a big day of flying around it.</div></li>
+      <li><span class="k">×2</span><div><b>Tourism Day (26–28 September)</b> doubles your capacity, up to 86 items. The rules changed with Travel 2.0. <a href="#tourism">Plan it →</a></div></li>
+      <li><span class="k">15</span><div>No PI yet? A <b>Business Class Ticket</b>, the <b>WLT</b> benefit block or a <b>10★ Lingerie Store</b> job (free business class) also gets you to 15.</div></li>
       <li><span class="k">+5</span><div>A <b>7★ Flower Shop</b> or <b>7★ Toy Shop</b> job adds 5 flowers or 5 plushies; a <b>3★ Lingerie Store</b> adds 2 items (and makes property upkeep free at 7★).</div></li>
     </ul>
   </div>
+</div></section>
+
+<!-- TRAVEL 2.0 -->
+<section id="travel2"><div class="wrap">
+  <span class="eyebrow">What changed in 2026</span>
+  <h2>Travel 2.0</h2>
+  <p class="lede">Travel is being rebuilt in stages. These are the changes that matter for flying for money right now.</p>
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card">
+      <h3>Capacity and gear</h3>
+      <ul class="rules" style="margin-top:.6rem">
+        <li><span class="k">!</span><div><b>Capacity can change mid-trip.</b> If you lose a bonus while abroad, say you're fired from a Cruise Line or an event ends, those slots go. Items you already bought stay, but selling or trashing one abroad shrinks your space at once.</div></li>
+        <li><span class="k"><Icon name="backpack"/></span><div><b>Suitcases give 1 less than they used to.</b> The large is +3.</div></li>
+        <li><span class="k">✈</span><div><b>Your weapons and armor stay home</b> (since 23 June). You can buy and equip some abroad, but they take up travel slots, so sell them before flying back.</div></li>
+        <li><span class="k">⏱</span><div>Flight times got a little shorter in Phase 2, so the times above may run a few minutes long.</div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Buying and selling abroad</h3>
+      <ul class="rules" style="margin-top:.6rem">
+        <li><span class="k">$</span><div><b>Prices move now.</b> Pick trips by profit per hour, which <a href="#yata">YATA</a> works out for you, not by what paid last week.</div></li>
+        <li><span class="k">↩</span><div><b>You can sell back to foreign shops.</b> General Store and Arms Dealer items go back at a fixed, lower price, so you lose a little. Black Market contraband and drugs go back at today's price.</div></li>
+        <li><span class="k">⇄</span><div>Selling back is how you swap: if Lion Plushies restock while you're full of Uncut Diamonds, sell the diamonds back and grab the plushies.</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.4rem">Contraband</h3>
+  <p style="color:var(--muted);margin:.2rem 0 .6rem">A newer import (December 2025). Flowers and plushies only pay in full sets at the Museum, so newer players end up selling them to traders. Some contraband sells more simply:</p>
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Items</th><th>Where they sell</th></tr></thead>
+    <tbody>{#each CONTRABAND as [items, where]}<tr><td><b>{items}</b></td><td>{where}</td></tr>{/each}</tbody>
+  </table></div>
+</div></section>
+
+<!-- TOURISM DAY -->
+<section id="tourism"><div class="wrap">
+  <span class="eyebrow">26–28 September</span>
+  <h2>Tourism Day under the new rules</h2>
+  <p class="lede">Tourism Day doubles your capacity, and every bonus on top of it. Under Travel 2.0 the extra slots now vanish if the event ends while you're abroad, so timing matters more than ever.</p>
+  <div class="grid2" style="margin-top:1rem;align-items:start">
+    <div class="card">
+      <h3>The plan</h3>
+      <ol class="steps" style="margin-top:.8rem">
+        <li><div><b>Check your event time.</b><small>At the top of the in-game Calendar page (10:00–16:00 TCT). Tourism Day starts on the 26th at that time and ends on the 28th at the same time.</small></div></li>
+        <li><div><b>Be abroad before it starts.</b><small>Fly out early, land, and wait. The moment it starts, your space doubles and you can fill it. Keen flyers move their event time earlier to reach the shops first.</small></div></li>
+        <li><div><b>Fill up before it ends.</b><small>Slots you haven't filled when it ends are gone. Items you've already bought still come home.</small></div></li>
+        <li><div><b>Stack what you can.</b><small>A Smuggling For Beginners book (+10) is doubled too. Flower and Toy Shop bonuses are not.</small></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Your items per trip</h3>
+      <div class="tbl-scroll" style="margin-top:.6rem"><table class="tt">
+        <thead><tr><th>Setup</th><th class="num">Normal</th><th class="num">Tourism Day</th></tr></thead>
+        <tbody>{#each TOURISM as [setup, n]}<tr><td>{setup}</td><td class="num mono">{n}</td><td class="num mono"><b>{n * 2}</b></td></tr>{/each}</tbody>
+      </table></div>
+    </div>
+  </div>
+  <Character variant="fixer" name={'Nico "The Line"'} tag="Between Us" initial="N" img="nico.png">
+    "Fly out before the party starts. Anyone still in Torn when the doors open is already late, and anyone still shopping when they close goes home light."
+  </Character>
 </div></section>
 
 <!-- PROTECT IT -->
@@ -430,10 +503,12 @@
     <span class="brandmark" style="color:var(--ink);font-size:1.2rem">TORN</span>
     <span class="mono" style="letter-spacing:.16em;font-size:.72rem;color:var(--muted)">TRAIN · TAKE OFF · LAND FULL</span>
   </div>
-  <strong>Flying for money.</strong> Money ladder, PI financing and the long-term passive plan are from <strong>Baldr [1847600]</strong>'s Basic Advice ("Making Money", "Financing your first Private Island", "Long Term Lazy plan", "How To Store Money"). Flight times, ticket costs and carry capacity are from the Torn wiki's Travel page; PI costs and pilot fees are from the Property page; energy refill time and drug cooldowns are from the Energy and Drug pages; Museum sets are from the Museum page. Rates and prices change, so treat the dollar figures as ballparks. Part of the <a href="{base}/">Faction Training Playbook</a>.
+  <strong>Flying for money.</strong> Travel 2.0 changes and the Tourism Day plan are from <strong>sugarvalves</strong>' "Tourism Day and Travel 2.0" in the Torn City Times (24 September 2026). Money ladder, PI financing and the long-term passive plan are from <strong>Baldr [1847600]</strong>'s Basic Advice ("Making Money", "Financing your first Private Island", "Long Term Lazy plan", "How To Store Money"). Flight times, ticket costs and carry capacity are from the Torn wiki's Travel page; PI costs and pilot fees are from the Property page; energy refill time and drug cooldowns are from the Energy and Drug pages; Museum sets are from the Museum page. Rates and prices change, so treat the dollar figures as ballparks. Part of the <a href="{base}/">Faction Training Playbook</a>.
 </div></footer>
 
 <style>
+  table.tt{min-width:0}
+  .num{text-align:end}
   .ladder{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.5rem;counter-reset:lad}
   .ladder li{counter-increment:lad;display:grid;grid-template-columns:8.5rem 1fr 12rem;gap:1rem;align-items:center;
     background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.8rem 1rem}

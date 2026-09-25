@@ -33,8 +33,9 @@
       'Hunting happens in South Africa. If you can fly there, hunt today for five times the skill.', ['Travel']],
     ['International Beer Day', '08-07', '08-07', 'Beer items are five times more effective.',
       'A Bottle of Beer gives 1 nerve, 5 today, and costs next to nothing. Stock up the week before. Each one still adds an hour of booster cooldown.', ['Nerve']],
-    ['Tourism Day', '09-27', '09-27', 'Travel capacity doubled for flights leaving during this event.',
-      'Carry twice the flowers or plushies per trip. Only flights that take off today (TCT) count, so plan to leave as many times as you can. The Smuggling For Beginners book stacks on top. <a href="/travel/">Flying for money →</a>',
+    // The calendar API lists 27 Sep; the Torn City Times (24 Sep 2026) gives the real 48-hour window, 26–28 Sep.
+    ['Tourism Day', '09-26', '09-28', 'Travel capacity doubled.',
+      'Twice the items per trip, bonuses included. Under Travel 2.0 the extra slots vanish if the event ends while you\'re abroad: fly out before it starts, and fill up before it ends. <a href="/travel/#tourism">The plan →</a>',
       ['Money'], true],
     ['CaffeineCon', '10-15', '10-15', 'Energy drink effects are doubled.',
       'Save your energy drinks for today: each can gives double energy. Use them inside a <a href="/training/#idea">happy jump</a>.', ['Training'], true],
@@ -106,7 +107,7 @@
   <h2>Worth planning for</h2>
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
-      <li><span class="k">$</span><div><b>Tourism Day</b> (27 Sep): twice the items per trip.</div></li>
+      <li><span class="k">$</span><div><b>Tourism Day</b> (26–28 Sep): twice the items per trip.</div></li>
       <li><span class="k">W</span><div><b>Employee Appreciation Day</b> (early March): triple working stats from company training.</div></li>
       <li><span class="k">E</span><div><b>CaffeineCon</b> (15 Oct): double energy from energy drinks.</div></li>
       <li><span class="k">M</span><div><b>Trick or Treat</b> (25 Oct – 1 Nov): an easy merit.</div></li>

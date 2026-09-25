@@ -44,6 +44,7 @@
   <h2 style="margin-top:.3em">Losses, leveling &amp; income</h2>
   <div class="credit"><div class="who">18Delta <span class="id">[1814266]</span></div><div class="what">Guide to LOSSES — Beginner to Advanced (selling losses: pricing, energy/First-Aid-Kit/Xanax math).</div></div>
   <div class="credit"><div class="who">Baldr <span class="id">[1847600]</span></div><div class="what">Leveling to 15, leveling targets, and early money methods. His "Making Money", "Financing your first Private Island", "Long Term Lazy plan" and "How To Store Money" posts are the backbone of our <a href="{base}/travel/">Flying for money</a> page.</div></div>
+  <div class="credit"><div class="who">sugarvalves</div><div class="what">"Tourism Day and Travel 2.0" in the Torn City Times: the Travel 2.0 capacity rules, selling abroad, contraband and the Tourism Day plan on our <a href="{base}/travel/#tourism">Flying for money</a> page.</div></div>
   <div class="note">Flight times, ticket costs and carry capacity come from the <a href="https://wiki.torn.com/wiki/Travel" target="_blank" rel="noopener">Travel</a> wiki page. PI prices and pilot fees come from <a href="https://wiki.torn.com/wiki/Property" target="_blank" rel="noopener">Property</a>, and sets from <a href="https://wiki.torn.com/wiki/Museum" target="_blank" rel="noopener">Museum</a>.</div>
 </div></section>
 
