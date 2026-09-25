@@ -16,6 +16,10 @@ Live: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
 | `/paths/` | Income first, stats first or balanced: interactive planner, milestones, merits, education and faction upgrades |
 | `/training/formula/` | Training Formula V2.0 explained, with an interactive gain chart and cost-vs-gain charts |
 | `/travel/` | Flying for money: money ladder, first-PI budget, routes, stats-first vs money-first |
+| `/racing/` | Racing with Gearbox: first race, classes, cars, per-class upgrades, merits |
+| `/halloween/` | Trick or Treat for new players: basket, upgrade order, week planner |
+| `/events/` | Every Torn event this year and how a new player should use it |
+| `/messages/` | Faction message templates (war rules, termed wars, OC and travel reminders, events) with an editor; saved in the browser only |
 | `/medical/` | Overdoses, medical items and cooldowns |
 | `/loadout/` | War loadout: which weapons and perks are worth buying |
 | `/crimes/` | Crimes 2.0 and OC 2.0 (checkpoints, CPR) |
