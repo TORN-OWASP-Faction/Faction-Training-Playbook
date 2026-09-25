@@ -18,7 +18,7 @@
   <p class="lede">Crimes turn a bar you'd otherwise waste into money, items, and the crime experience that powers Organized Crimes. Here's how the system works, how to grow it safely, and what each crime is actually good for.</p>
 
   <div class="say fixer">
-    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico.png" alt=""></div>
+    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Nico "The Line"</span><span class="tag">Word on the Street</span></div>
       <p class="line">"Nerve's just money you haven't collected yet. Spend it before it caps — but spend it on crimes you can actually pull off. Get greedy early and you'll pay for it."</p></div>
   </div>
@@ -26,7 +26,7 @@
 
 <section><div class="wrap">
   <div class="callout" style="border-left-color:var(--c-fixer)">
-    <h3>Interactive drop-table data</h3>
+    <h2 class="h3">Interactive drop-table data</h2>
     <p style="margin:.3em 0 .7em;color:var(--muted)">Community-compiled droptables and rates, converted to sortable/filterable tables (credit: Emforus [2535044]).</p>
     <div style="display:flex;gap:.6rem;flex-wrap:wrap">
       <a class="hero-badge" href="{base}/crimes/burglary/" style="text-decoration:none">Burglary →</a>
@@ -68,7 +68,7 @@
   <p class="lede">Your Natural Nerve Bar rises in steps of 5 as your hidden CE crosses thresholds — and each step gets harder to reach. Higher CE also raises your success chance and unlocks harder crimes.</p>
 
   <div class="say militia">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
       <p class="line">"CE isn't just your nerve bar — it's what makes you useful in an Organized Crime. Build it steady now and you're an asset when the faction needs bodies for an OC. Waste your bar and you're dead weight."</p></div>
   </div>
@@ -88,7 +88,7 @@
     </ul>
   </div>
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Ledger</span><span class="tag">Worth the Cost?</span></div>
       <p class="line">"The enhancer pays for itself. Over thousands of attempts, two percent more successes is a return most investments would envy. Buy it the day you commit to a crime."</p></div>
   </div>
@@ -108,7 +108,7 @@
   </div>
 
   <div class="say militia">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
       <p class="line">"An OC is only as strong as its weakest slot. Every crime you grind on a quiet day is you keeping your CPR up so you don't cost the crew a payout. Skip it and you're the reason we fail — and everyone sees whose number was red."</p></div>
   </div>
@@ -148,7 +148,7 @@
   </div>
 
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Ledger</span><span class="tag">Money Talk</span></div>
       <p class="line">"Rewards roughly double every tier. A faction that keeps its members' CPR high and its Scope funded is running a compounding income line — not busywork. Treat OC readiness as an asset on the books."</p></div>
   </div>
@@ -223,7 +223,7 @@
     </div>
 
     <div class="say militia">
-      <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+      <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
       <div><div><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
         <p class="line">"Don't eyeball it. Run the <b>OC Success Chance</b> script on the crimes page — it takes every slot's number and shows you the crew's real odds, so we only spend Scope on crimes we'll actually clear."</p></div>
     </div>
@@ -301,7 +301,7 @@
     </ul>
   </div>
   <div class="say fixer">
-    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico.png" alt=""></div>
+    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Nico "The Line"</span><span class="tag">There's Another Way</span></div>
       <p class="line">"Crimes are the one earner nobody can mug off you — it's already in your pocket by the time you look up. Slow, steady, and yours. Ledger approves. That should tell you something."</p></div>
   </div>
@@ -318,19 +318,19 @@
 
 <style>
   .nerd{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--border)}
-  .bar-row.weak .lbl{color:var(--c-medic);font-weight:600}
+  .bar-row.weak .lbl{color:var(--medic-ink);font-weight:600}
   .bar-row.weak .fill{background:var(--c-medic)}
-  .bar-row.weak .fill .v{color:#fff}
+  .bar-row.weak .fill .v{color:#111}
 
   .chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:.5rem}
   .cp{display:flex;flex-direction:column;gap:.15rem;justify-content:center;min-width:5.4rem;
     padding:.5rem .6rem;border-radius:3px;border:1px solid var(--border);background:var(--raised)}
   .cp .cpn{font-family:"Oswald",sans-serif;font-weight:700;font-size:.95rem}
-  .cp .cps{font-family:"IBM Plex Mono",monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
+  .cp .cps{font-family:"IBM Plex Mono",monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
   .cp.ok{border-color:var(--amber-soft)}
   .cp.ok .cpn{color:var(--amber)}
   .cp.miss{border-color:var(--c-medic);background:var(--medic-soft)}
-  .cp.miss .cpn,.cp.miss .cps{color:var(--c-medic)}
+  .cp.miss .cpn,.cp.miss .cps{color:var(--medic-ink)}
   .cp.done{border-color:var(--amber);background:var(--amber-soft)}
   .cp.done .cpn{color:var(--amber)}
   .cpar{align-self:center;color:var(--faint);font-size:1.1rem}

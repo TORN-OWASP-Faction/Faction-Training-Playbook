@@ -27,3 +27,7 @@ export const META = {
   '/medical/': ['Field medicine', 'Overdoses, medical items, cooldowns and staying useful in a war.', 'medical'],
   '/credits/': ['Credits', 'The players and guides this playbook is built on.', 'home']
 };
+
+// GoatCounter site code for visitor counts (no cookies, no personal data), e.g. 'faction-playbook'
+// for https://faction-playbook.goatcounter.com. Leave empty to turn counting off.
+export const GOATCOUNTER = '';

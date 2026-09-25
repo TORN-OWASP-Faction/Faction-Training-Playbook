@@ -290,7 +290,7 @@
   <p class="lede">Gym gains rise with your <strong>happy</strong> — steeply. A "happy jump" means: spike your happy with items, dump all your energy while it's high, then let it recharge. The curve below is why it works.</p>
 
   <div class="say trainer">
-    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer.png" alt=""></div>
+    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rep</span><span class="tag">Coach's Tip</span></div>
       <p class="line">"Happy is the multiplier. Stack it, dump every point of energy, then walk away. Miss the window and you just fed the clock."</p></div>
   </div>
@@ -360,7 +360,7 @@
   <p class="lede">At low stats, plain training already gains well and your cash is scarce. Spend money on <b>foundations that pay forever</b> (property, education), not on happy items. Do these in order:</p>
 
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Ledger</span><span class="tag">Before You Buy</span></div>
       <p class="line">"You're not rich yet, so stop shopping. Property and education pay out every day you play. Candy doesn't. Don't spend ten million fixing what patience solves for free."</p></div>
   </div>
@@ -376,7 +376,7 @@
   </ol>
 
   <div class="callout dont" style="margin-top:16px">
-    <h3 style="color:var(--crime)">Don't, yet</h3>
+    <h3 style="color:var(--crime-ink)">Don't, yet</h3>
     <p style="margin:6px 0 0">No eDVDs and no big happy jumps at this stage. They're expensive and your low stats don't need them — that money buys far more stats as a property upgrade or an education course. Jumping starts once you're past level 15 <em>and</em> have cash to spare.</p>
   </div>
 </div></section>
@@ -388,7 +388,7 @@
   <p class="lede">Money moves through this city constantly — the trick is standing where it lands. Get to <strong>level 15</strong> (that's where the real money unlocks), then pick your hustle.</p>
 
   <div class="say fixer">
-    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico.png" alt=""></div>
+    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Nico "The Line"</span><span class="tag">Between Us</span></div>
       <p class="line">"You want safe money? Talk to Ledger. You want money this week? Keep listening. First problem — you're stuck under 15. Let's fix that."</p></div>
   </div>
@@ -406,7 +406,7 @@
     </div>
   </div>
   <div class="say trainer">
-    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer.png" alt=""></div>
+    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rep</span><span class="tag">Coach's Tip</span></div>
       <p class="line">"The day you hit 15, stop chasing levels. Every point of energy goes into the gym from there — level just shows up on its own."</p></div>
   </div>
@@ -419,7 +419,7 @@
     </ul>
   </div>
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Ledger</span><span class="tag">Money Talk</span></div>
       <p class="line">"Buying a cheap property to save money is how you lose money. Rent short, move up the moment you hit 15. Your happy is an investment, not a possession."</p></div>
   </div>
@@ -431,7 +431,7 @@
       <p style="margin:.3em 0 0;color:var(--muted)">City → East Side → <b>Bits N Bobs</b> &amp; <b>Sweet Shop</b>. You can buy <b>100 items/day</b>; resell lollipops, beer and basic plushies to players at a markup — roughly <b>$50–60k/day</b>. Small, but it compounds your first property.</p>
     </div>
     <div class="card">
-      <h3>After 15 — flowers &amp; plushies <span class="tag" style="color:var(--c-trainer);background:var(--ok-soft)">the big one</span></h3>
+      <h3>After 15 — flowers &amp; plushies <span class="tag" style="color:var(--trainer-ink);background:var(--ok-soft)">the big one</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">Fly abroad, buy flowers/plushies from the General Store, fly home, sell to players. Huge demand — <b>$2–3M/day</b> with a PI, $5–6M if you're very active. See <a href="{base}/travel/">Flying for money</a> for routes, timing, and how much you need before renting a PI.</p>
     </div>
     <div class="card" id="sell-losses" style="border-left:3px solid var(--c-fixer)">
@@ -457,13 +457,13 @@
 
   <h3 style="margin-top:30px">4 · Don't get mugged</h3>
   <div class="say militia">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rook</span><span class="tag">Field Note</span></div>
       <p class="line">"Everyone gets mugged — plan for it. Keep cash off your person: a property vault if you can afford one, ghost trades (6-hour limit), the faction vault (some risk, no instant access), or park value in items and points. Use a mix until you own a PI vault."</p></div>
   </div>
 
   <div class="say fixer">
-    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico.png" alt=""></div>
+    <div class="av"><span class="mono-badge">N</span><img src="{base}/assets/nico-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Nico "The Line"</span><span class="tag">The Exit</span></div>
       <p class="line">"That's the map. Ledger tells you how to keep it, Rep tells you how to spend the energy. Me — I just know where it's moving. You didn't hear it from me."</p></div>
   </div>
@@ -476,7 +476,7 @@
   <p class="lede">Past the foundation, how hard you jump is set by cash you can put to work — your wallet plus whatever the faction backs. Match yourself to a tier.</p>
 
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Ledger</span><span class="tag">Money Talk</span></div>
       <p class="line">"Your wallet is part of your build. Pick the tier you can sustain — not the one you wish you were. You can afford it doesn't mean you should buy it."</p>
       <p class="line plain">Torres can turn money into stats fast. Unfortunately it's usually <em>my</em> money she wants to turn into stats.</p></div>
@@ -493,7 +493,7 @@
   <p class="lede">Happy tells you how <em>fast</em> to grow; your build tells you <em>which</em> stat. Two relationships decide fights — get them right and pick a role.</p>
 
   <div class="say militia">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rook</span><span class="tag">Rook's Rule</span></div>
       <p class="line">"Stats don't make you useful — knowing what you're for does. Speed lands the hit, strength ends it. Pick a role and grow into it. A weak stat is just a door you left open."</p></div>
   </div>
@@ -507,7 +507,7 @@
     <p style="margin:10px 0 0;color:var(--muted)">So an attacker wants Speed over the target's Dex and Strength over their Defense; a defender flips it — Defense to absorb, Dexterity to dodge.</p>
   </div>
 
-  <Tabs items={builds} accent="var(--c-militia)" />
+  <Tabs items={builds} accent="var(--crime-ink)" />
 
   <div class="callout" style="margin-top:16px">
     <h3>The Hawk build — three stats, one left behind</h3>
@@ -539,7 +539,7 @@
   <p class="lede">Two rhythms. Run the <b>jump day</b> when you have happy items and time to sit at the keyboard; run the <b>steady day</b> otherwise — it still grows you while you earn.</p>
 
   <div class="say trainer">
-    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer.png" alt=""></div>
+    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rep</span><span class="tag">Rep Says</span></div>
       <p class="line">"Perfect isn't the goal — consistent is. One good jump feels great; a hundred ordinary days build the account. Energy at cap is wasted stats, so never sit on a full bar."</p></div>
   </div>
@@ -579,7 +579,7 @@
   <p class="lede">Happy items push a jump; energy items give you more trains to spend at that happy. Prices move — the bot tracks live cost-per-point; values below are the effect.</p>
 
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Ledger</span><span class="tag">Worth the Cost?</span></div>
       <p class="line">"Buy the happy that returns the most stats per dollar, not the biggest number. Happy is temporary; the gains aren't. Buy accordingly — the planner does the math."</p></div>
   </div>
@@ -628,7 +628,7 @@
   <p class="lede">Education perks are <b>permanent and multiplicative</b> — a +1% gym-gain course keeps paying on every train forever. Long courses run in the background, so start them the day you qualify.</p>
 
   <div class="say militia">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rook</span><span class="tag">Faction Intel</span></div>
       <p class="line">"Your faction bonuses aren't decoration — they multiply everything you do here. Stack the gym-gain perks now. The faction gives you the advantage; wasting it is your decision."</p></div>
   </div>
@@ -657,7 +657,7 @@
   <p style="margin:6px 0 0"><a class="hero-badge" href="{base}/planner/" style="text-decoration:none">⚡ Open the live planner — auto-fills your stats, gyms &amp; prices with your API key →</a></p>
 
   <div class="say trainer">
-    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer.png" alt=""></div>
+    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div class="body"><div class="hd"><span class="nm">Rep</span><span class="tag">Training Check</span></div>
       <p class="line">"Numbers, not vibes. Punch in your gym and your sweets and it tells you exactly what the jump buys. Don't chase the expensive method because someone richer told you to."</p></div>
   </div>

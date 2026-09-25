@@ -43,7 +43,7 @@
   <p class="lede">Torn's default UI hides half the game. These are the tools serious players run — what each one does and how to set it up. All read-only, all using your own API key.</p>
 
   <div class="say">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Rook</span><span class="tag">Field Note</span></div>
       <p class="line">"Nobody complains about preparation after the fight starts. Get these installed while it's quiet — you'll understand why when it isn't."</p></div>
   </div>
@@ -312,7 +312,7 @@
     </ul>
   </div>
   <div class="say">
-    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia.png" alt=""></div>
+    <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Rook</span><span class="tag">Rook's Rule</span></div>
       <p class="line">"Your API key is access. Treat it like the keys to the armory — hand out the least you can, and know who's holding a copy."</p></div>
   </div>

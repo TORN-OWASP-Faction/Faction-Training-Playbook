@@ -73,3 +73,9 @@ workflow sets `BASE_PATH` to the repo name so links work under the project subpa
 
 All game mechanics come from the Torn wiki and community guides; every author is credited
 on `/credits/`.
+
+## Contributing
+
+Suggestions are welcome through the issue forms: add or fix a guide, suggest a script or tool, or fix a translation.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Code and content standards for contributors and AI agents are in
+[AGENTS.md](AGENTS.md).

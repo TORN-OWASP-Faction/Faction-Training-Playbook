@@ -1,0 +1,66 @@
+name: Fix a translation
+description: A translated page reads wrong, or uses the wrong game word.
+title: "[Translation] "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Our translations were machine-drafted, so native speakers catch things we can't. Thank you.
+        Game names (items, honors, properties, companies) stay in English, the way Torn shows them.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Español
+        - Português (Brasil)
+        - Français
+        - Deutsch
+        - Italiano
+        - Nederlands
+        - Polski
+        - Română
+        - Русский
+        - Українська
+        - Türkçe
+        - Svenska
+        - العربية
+        - हिन्दी
+        - Bahasa Indonesia
+        - Filipino
+        - Tiếng Việt
+        - 简体中文
+        - 日本語
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page link
+      placeholder: https://torn-owasp-faction.github.io/Faction-Training-Playbook/es/start/
+    validations:
+      required: true
+
+  - type: textarea
+    id: now
+    attributes:
+      label: What it says now
+      description: Copy the sentence as it appears.
+    validations:
+      required: true
+
+  - type: textarea
+    id: better
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why (optional)
+      description: For example "players say X, not Y", or "this reads too formal".

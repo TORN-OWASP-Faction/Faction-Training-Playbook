@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the playbook
+    url: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
+    about: Check whether a page already covers it.
+  - name: Contributing guide
+    url: https://github.com/TORN-OWASP-Faction/Faction-Training-Playbook/blob/main/CONTRIBUTING.md
+    about: How suggestions are reviewed, and how to send a change yourself.

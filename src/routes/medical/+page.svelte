@@ -50,15 +50,15 @@
   <p class="lede">Every medical item except Opium adds to your <b>medical cooldown</b> — a separate clock from your drug cooldown. Pick the right tool for the size of the problem.</p>
   <div class="grid2" style="margin-top:1rem">
     <div class="card">
-      <h3>First Aid Kit <span class="tag" style="color:var(--c-medic);background:var(--medic-soft)">everyday</span></h3>
+      <h3>First Aid Kit <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">everyday</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">−40 min hospital, +10% life, +15 min medical cooldown. Weaker than a blood bag but <b>anyone can use one</b> — the workhorse for short hospital stays and loss-selling.</p>
     </div>
     <div class="card">
-      <h3>Blood Bag <span class="tag" style="color:var(--c-medic);background:var(--medic-soft)">heavy</span></h3>
+      <h3>Blood Bag <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">heavy</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">−120–180 min hospital, +30–45% life, +30 min medical cooldown (scales with education &amp; faction upgrades). Comes in blood <b>types</b>. Your main tool for big hospital chunks — stockpile before a war.</p>
     </div>
     <div class="card">
-      <h3>Opium <span class="tag" style="color:var(--c-medic);background:var(--medic-soft)">panic button</span></h3>
+      <h3>Opium <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">panic button</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">Removes <b>all</b> standard hospital time, +50% life, and a <b>+30% passive defense</b> buff. Costs <b>no medical cooldown</b> — but adds a 120–180 min <b>drug</b> cooldown (and drug-OD risk). The war-day emergency exit.</p>
     </div>
     <div class="card">

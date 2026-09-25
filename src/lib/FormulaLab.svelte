@@ -37,7 +37,7 @@
 
   <div class="slider">
     <div class="slabel"><span>Happy (H)</span><span class="mono hv">{nf.format(H)}</span></div>
-    <input type="range" min="250" max="99999" step="250" bind:value={H} />
+    <input type="range" min="250" max="99999" step="250" bind:value={H} aria-label="Happy (H)" />
   </div>
 
   <div class="readout">

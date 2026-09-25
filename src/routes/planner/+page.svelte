@@ -231,13 +231,13 @@
   </div>
 
   <div class="say trainer">
-    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer.png" alt=""></div>
+    <div class="av"><span class="mono-badge">M</span><img src="{base}/assets/trainer-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Rep</span><span class="tag">Coach's Tip</span></div>
       <p class="line">"Fetch your profile, load your gyms, pick your sweets. Then I'll tell you exactly what the jump buys — no guessing, no vibes."</p></div>
   </div>
 
   <div class="keybar">
-    <h3>Live market prices</h3>
+    <h2 class="h3">Live market prices</h2>
     <p class="keynote"><b>Prices</b> need a Limited key. <b>Fetch my profile</b> (stat total, active gym, happy, energy, perks) needs a <b>Custom</b> key with gym + battle-stats access. Your key is stored only in this browser (localStorage) and sent only to <span class="mono">api.torn.com</span>. Create one at <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">torn.com → Settings → API Key</a>; revoke it there any time.</p>
     <div class="keyrow">
       <input id="apikey" type="password" autocomplete="off" spellcheck="false" placeholder="Paste Limited or Custom API key">
@@ -309,7 +309,7 @@
   </div>
 
   <div class="say banker">
-    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker.png" alt=""></div>
+    <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Ledger</span><span class="tag">Worth the Cost?</span></div>
       <p class="line">"Read cost-per-stat, not the sticker price. Cheap and inexpensive aren't the same thing — buy the happy that returns the most."</p></div>
   </div>

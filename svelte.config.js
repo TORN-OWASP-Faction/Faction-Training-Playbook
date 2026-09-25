@@ -8,6 +8,7 @@ export default {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({ fallback: '404.html' }),
-    paths: { base, relative: false }
+    paths: { base, relative: false },
+    prerender: { entries: ['*', '/sitemap.xml'] }
   }
 };

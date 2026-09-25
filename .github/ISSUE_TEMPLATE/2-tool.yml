@@ -1,0 +1,77 @@
+name: Suggest a script, tool or website
+description: Put a userscript, extension, app or site forward for our review.
+title: "[Tool] "
+labels: ["tools"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every tool on the Scripts page is reviewed before we list it: we read the code, check where your API key goes, and check it against Torn's scripting rules.
+        **Never paste your API key** into this form or anywhere on GitHub.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Greasy Fork or GitHub page for scripts, or the website address.
+      placeholder: https://greasyfork.org/en/scripts/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What is it?
+      options:
+        - Userscript
+        - Browser extension
+        - Website
+        - Mobile or desktop app
+        - Spreadsheet
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do, and who is it for?
+      description: One or two sentences. Say if it's useful for new players or more for veterans and faction leaders.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: key
+    attributes:
+      label: What API key does it ask for?
+      options:
+        - No key
+        - Public
+        - Minimal
+        - Limited
+        - Custom
+        - Full
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: forum
+    attributes:
+      label: Torn forum thread (optional)
+      description: The author's thread, if there is one.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I did not paste an API key anywhere in this issue.
+          required: true
+        - label: As far as I know, it doesn't automate game actions (one click, one action).

@@ -57,7 +57,7 @@
   .tab.active .tn{color:var(--acc)}
   .panel{background:var(--surface);border:1px solid var(--border);border-top:0;border-radius:0 0 3px 3px;padding:.3rem 1.1rem}
   table.kv{border-collapse:collapse;width:100%;min-width:0}
-  .kv th{text-align:start;vertical-align:top;color:var(--faint);font-family:"IBM Plex Mono",monospace;
+  .kv th{text-align:start;vertical-align:top;color:var(--muted);font-family:"IBM Plex Mono",monospace;
     font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;
     padding:.7rem 0;padding-inline-end:1.2rem;white-space:nowrap;width:1%;border-bottom:1px solid var(--border)}
   .kv td{padding:.7rem 0;color:var(--ink);font-size:.95rem;border-bottom:1px solid var(--border)}

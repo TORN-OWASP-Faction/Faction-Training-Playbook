@@ -26,12 +26,12 @@
 
   // [key, name, image, background, fallback initial, page they look after]
   const CREW = [
-    ['banker', 'Vincent "Ledger" Moretti', 'banker.png', 'bg_bank.png', 'V', '/paths/'],
-    ['trainer', 'Maya "Rep" Torres', 'trainer.png', 'bg_gym.png', 'M', '/training/'],
-    ['militia', 'Marcus "Rook" Kane', 'militia.png', 'bg_militia.png', 'R', '/loadout/'],
-    ['fixer', 'Nico "The Line" Vescari', 'nico.png', 'bg_alley.png', 'N', '/start/'],
-    ['medic', 'Dr. "Patch" Moreau', 'medic.png', 'bg_medic.png', 'P', '/medical/'],
-    ['racer', 'Axel "Gearbox" Rivera', 'racer.png', 'bg_racing.png', 'A', '/racing/']
+    ['banker', 'Vincent "Ledger" Moretti', 'banker.webp', 'bg_bank.webp', 'V', '/paths/'],
+    ['trainer', 'Maya "Rep" Torres', 'trainer.webp', 'bg_gym.webp', 'M', '/training/'],
+    ['militia', 'Marcus "Rook" Kane', 'militia.webp', 'bg_militia.webp', 'R', '/loadout/'],
+    ['fixer', 'Nico "The Line" Vescari', 'nico.webp', 'bg_alley.webp', 'N', '/start/'],
+    ['medic', 'Dr. "Patch" Moreau', 'medic.webp', 'bg_medic.webp', 'P', '/medical/'],
+    ['racer', 'Axel "Gearbox" Rivera', 'racer.webp', 'bg_racing.webp', 'A', '/racing/']
   ];
 </script>
 
@@ -92,7 +92,7 @@
         <div class="art" style="background-image:url('{base}/assets/{bg}')"></div>
         <div class="fallback" aria-hidden="true">{initial}</div>
         <div class="veil"></div>
-        <img class="art" src="{base}/assets/{img}" {alt} style="background:none">
+        <img class="art" src="{base}/assets/{img}" {alt} style="background:none" loading="lazy">
         <div class="cap"><div class="role">{role}</div><div class="who" dir="ltr">{name}</div><div class="dom">{dom}</div></div>
       </a>
     {/each}

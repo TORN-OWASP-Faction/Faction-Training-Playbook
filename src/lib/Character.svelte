@@ -6,7 +6,7 @@
 <div class="say {variant}">
   <div class="av">
     <span class="mono-badge">{initial}</span>
-    {#if img}<img src="{base}/assets/{img}" alt="" onerror={(e) => e.target.remove()} />{/if}
+    {#if img}<img src="{base}/assets/{img.replace(/\.png$/, '-sm.webp')}" alt="" width="48" height="72" loading="lazy" onerror={(e) => e.target.remove()} />{/if}
   </div>
   <div class="body">
     <div class="hd"><span class="nm">{name}</span>{#if tag}<span class="tag">{tag}</span>{/if}</div>

@@ -90,10 +90,10 @@
   <h2>Meet Gearbox</h2>
   <div class="meet">
     <div class="crew racer portrait">
-      <div class="art" style="background-image:url('{base}/assets/bg_racing.png')"></div>
+      <div class="art" style="background-image:url('{base}/assets/bg_racing.webp')"></div>
       <div class="fallback" aria-hidden="true">A</div>
       <div class="veil"></div>
-      <img class="art" src="{base}/assets/racer.png" alt="Axel Rivera, the racer, holding his helmet" style="background:none">
+      <img class="art" src="{base}/assets/racer.webp" alt="Axel Rivera, the racer, holding his helmet" style="background:none" fetchpriority="high">
       <div class="cap"><div class="role">Racer · Driving</div><div class="who">Axel "Gearbox" Rivera</div><div class="dom">Racing · driving skill · cars · upgrades</div></div>
     </div>
     <div class="bio">

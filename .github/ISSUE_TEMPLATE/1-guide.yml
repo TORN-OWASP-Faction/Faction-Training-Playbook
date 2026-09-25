@@ -1,0 +1,61 @@
+name: Add or fix a guide
+description: Something on the site is wrong, out of date, or missing.
+title: "[Guide] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. The playbook is written for **new players**, in plain words, and every number comes from a source we can check.
+        The more of this you fill in, the faster we can act on it.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change?
+      options:
+        - Something is wrong or out of date
+        - Something is missing from a page
+        - A new guide or topic
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: Paste the link, or say "new page" if it's a new topic.
+      placeholder: https://torn-owasp-faction.github.io/Faction-Training-Playbook/travel/
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What should change?
+      description: Quote what the page says now, then what it should say. For a new topic, say what a new player needs to know.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Where does this come from?
+      description: |
+        Link the source: a Torn wiki page, a forum guide, a Torn City Times article, the Torn API, or a screenshot.
+        Game changes happen often, so a date helps. "I tested it in game on <date>" is fine too.
+    validations:
+      required: true
+
+  - type: input
+    id: credit
+    attributes:
+      label: Who should be credited?
+      description: The author of the guide or data, as Name [ID]. Leave empty if it's your own finding.
+      placeholder: Baldr [1847600]
+
+  - type: input
+    id: you
+    attributes:
+      label: Your Torn name (optional)
+      description: So we can credit you or ask a follow-up question in game.

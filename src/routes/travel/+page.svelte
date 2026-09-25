@@ -77,7 +77,7 @@
   <p class="lede">Every money method costs either <b>energy</b> or <b>time</b>. Energy is what builds your stats, so the best earners are the ones that only cost time. Flying is one of them. You train, then take off, and you're back on the ground by the time your bar has refilled.</p>
   <div class="grid2" style="margin-top:1rem">
     <div class="card">
-      <h3>Costs energy <span class="tag" style="color:var(--c-medic);background:var(--medic-soft)">competes with training</span></h3>
+      <h3>Costs energy <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">competes with training</span></h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">$</span><div><b>Selling losses</b>: 25e each. Only as a short burst toward a goal (see <a href="{base}/training/#sell-losses">Selling losses</a>).</div></li>
         <li><span class="k">⚔</span><div><b>War hits</b>: 25e each, but <b>$450k–$1M</b> a hit depending on respect. Worth it while a war is on.</div></li>
@@ -85,7 +85,7 @@
       </ul>
     </div>
     <div class="card">
-      <h3>Costs time <span class="tag" style="color:var(--c-trainer);background:var(--ok-soft)">free for a trainer</span></h3>
+      <h3>Costs time <span class="tag" style="color:var(--trainer-ink);background:var(--ok-soft)">free for a trainer</span></h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="flag"/></span><div><b>Flying</b>: flowers, plushies and contraband.</div></li>
         <li><span class="k">⇄</span><div><b>Trading</b>: buy low, sell high. Needs capital and a lot of time online.</div></li>
@@ -516,7 +516,7 @@
   .ladder .lv{font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);font-size:.95rem}
   .ladder .lv::before{content:counter(lad);display:inline-block;width:1.5rem;color:var(--c-fixer);font-family:"IBM Plex Mono",monospace}
   .ladder .bd{color:var(--muted);font-size:.92rem}
-  .ladder .nx{font-size:.82rem;color:var(--faint);border-left:1px solid var(--border);padding-left:.9rem}
+  .ladder .nx{font-size:.82rem;color:var(--muted);border-left:1px solid var(--border);padding-left:.9rem}
   .ladder .nx b{color:var(--ink)}
   @media(max-width:760px){.ladder li{grid-template-columns:1fr}.ladder .nx{border-left:0;padding-left:0}}
 
@@ -545,7 +545,7 @@
   .shot img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:3px}
   .shot figcaption{margin-top:.5rem;color:var(--faint);font-size:.82rem;max-width:70ch}
   .shot .amb{color:#d98a1c}
-  .shot .red{color:var(--c-medic)}
+  .shot .red{color:var(--medic-ink)}
 
   .capbars .bar-row{grid-template-columns:13rem 1fr}
   @media(max-width:560px){.capbars .bar-row{grid-template-columns:1fr}.capbars .bar-row .lbl{text-align:left}}

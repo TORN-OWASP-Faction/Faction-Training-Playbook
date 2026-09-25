@@ -2,12 +2,12 @@
   import '../app.css';
   import { onMount } from 'svelte';
   import { page } from '$app/state';
-  import { goto } from '$app/navigation';
+  import { goto, afterNavigate } from '$app/navigation';
   import { base } from '$app/paths';
   import Nav from '$lib/Nav.svelte';
-  import { LOCALES, localeOf, splitLang, isTranslated, href, loadMessages, translateUrl } from '$lib/i18n';
+  import { LOCALES, localeOf, splitLang, isTranslated, href, localize, loadMessages, translateUrl } from '$lib/i18n';
   import { pref, loadPref, savePref } from '$lib/i18n/pref.svelte.js';
-  import { META, SITE_ORIGIN, SITE_NAME } from '$lib/meta.js';
+  import { META, SITE_ORIGIN, SITE_NAME, GOATCOUNTER } from '$lib/meta.js';
 
   let { data, children } = $props();
 
@@ -40,6 +40,19 @@
   });
 
   let suggestion = $state(null); // { lang, m } offered from the browser's language
+
+  // Visitor counts. The script counts the first page load; in-site navigation is counted here.
+  onMount(() => {
+    if (!GOATCOUNTER) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://gc.zgo.at/count.js';
+    s.dataset.goatcounter = `https://${GOATCOUNTER}.goatcounter.com/count`;
+    document.head.appendChild(s);
+  });
+  afterNavigate(({ type }) => {
+    if (GOATCOUNTER && type !== 'enter') window.goatcounter?.count?.({ path: location.pathname });
+  });
 
   onMount(async () => {
     loadPref();
@@ -101,6 +114,13 @@
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
   <meta name="twitter:image" content={meta.image} />
+  {#if translated}
+    {#each LOCALES as l}<link rel="alternate" hreflang={l.html} href={SITE_ORIGIN + base + localize(path, l.code)} />{/each}
+    <link rel="alternate" hreflang="x-default" href={SITE_ORIGIN + base + path} />
+  {/if}
+  {#if path === '/'}
+    {@html `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: SITE_ORIGIN + base + '/', inLanguage: localeOf(data.lang).html, description: meta.description })}</script>`}
+  {/if}
 </svelte:head>
 
 <a class="skip" href="#main">{m.skip}</a>
@@ -140,6 +160,7 @@
     <span class="cta">{m.repo.cta}</span>
   </a>
   <span class="hint">{m.repo.hint}</span>
+  {#if GOATCOUNTER}<span class="hint">We count page visits with GoatCounter: no cookies, no personal data.</span>{/if}
 </div></div>
 
 <style>
