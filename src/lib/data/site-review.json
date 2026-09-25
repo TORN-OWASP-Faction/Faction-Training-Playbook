@@ -1,0 +1,267 @@
+{
+ "recommend": [
+  [
+   "FFScouter",
+   "https://ffscouter.com/",
+   "Estimates other players' battle stats so you pick fights you can win.",
+   "Custom key, full disclosure",
+   "Your estimates of others become public data."
+  ],
+  [
+   "TornStats",
+   "https://www.tornstats.com/",
+   "Tracks your stat growth; faction spies and reference tables.",
+   "Key on sign-up",
+   "Your stats can be shared with your faction, depending on settings."
+  ],
+  [
+   "YATA",
+   "https://yata.yt/",
+   "Long-running all-in-one helper: awards, faction tools, travel.",
+   "Limited key",
+   "It was down (502) when we checked; it usually comes back."
+  ],
+  [
+   "Torn Travel Planner",
+   "https://torntravel.com",
+   "What to buy abroad and what it sells for at home.",
+   "Public + Minimal key, clear data policy",
+   ""
+  ],
+  [
+   "CrimesHub",
+   "https://crimeshub-2b4b0.firebaseapp.com/home",
+   "Crimes 2.0 guide index and interactive OC 2.0 maps.",
+   "No key",
+   ""
+  ],
+  [
+   "TC Essentials",
+   "https://tc-essentials.oran.pw/",
+   "Beginner guides: levelling, money, factions, crimes.",
+   "No key",
+   "Check guides against recent game changes."
+  ],
+  [
+   "Torn UI",
+   "https://algisk.shinyapps.io/Torn-UI/",
+   "Gym gains calculator, inactive-player lists, chain and war payout tools.",
+   "Optional key",
+   "The gym calculator works without a key."
+  ]
+ ],
+ "some": [
+  [
+   "Torn Exchange",
+   "https://www.tornexchange.com/",
+   "Price lists for traders who buy your items.",
+   "Limited key",
+   "Not an escrow: trade with reputable traders only."
+  ],
+  [
+   "Chedslist",
+   "https://algisk.shinyapps.io/Chedslist/",
+   "Weapons, armor and companies for sale, with filters.",
+   "No key",
+   "Mid/late-game shopping."
+  ],
+  [
+   "Tornsy",
+   "https://tornsy.com/",
+   "Charts for Torn's stock market.",
+   "No key",
+   ""
+  ],
+  [
+   "Deal Sniper",
+   "https://torn-deal-sniper.vercel.app/",
+   "Alerts you to underpriced market and bazaar listings.",
+   "Public key, stays in browser",
+   ""
+  ],
+  [
+   "torn.bzimor.dev",
+   "https://torn.bzimor.dev/",
+   "Live list of rare war weapons and armor for sale.",
+   "Public key, with consent",
+   "End-game gear."
+  ],
+  [
+   "Valigia",
+   "https://valigia.girovagabondo.com/",
+   "Travel arbitrage: what to buy abroad to resell.",
+   "Custom key, stored encrypted on their server",
+   ""
+  ],
+  [
+   "Cracking Rig Simulator",
+   "https://sliw.co/rig/",
+   "Plans cracking-rig builds for Crimes 2.0.",
+   "No key",
+   "Only once you do Cracking."
+  ],
+  [
+   "Torn Hub",
+   "https://torn.oran.pw/",
+   "Fan news: forum digests, faction profiles, economy.",
+   "No key",
+   ""
+  ],
+  [
+   "Prombot",
+   "https://prombot.co.uk",
+   "NPC loot timers with alerts.",
+   "No key",
+   "Looting isn't a new-player activity."
+  ],
+  [
+   "Lytix",
+   "https://lytix.gg/",
+   "Racing, stats, company and stock dashboards.",
+   "Key level not stated",
+   "See our <a href=\"/racing/\">Racing</a> page first."
+  ],
+  [
+   "TC ArmaSync",
+   "https://tc-armasync.netlify.app/",
+   "War payout calculator and armory manager.",
+   "Limited key + faction access, stays in browser",
+   "Faction leaders."
+  ],
+  [
+   "Extended War Reports",
+   "https://algisk.shinyapps.io/Debrief/",
+   "Detailed ranked-war reports across several wars.",
+   "Faction keys, no disclosure",
+   "Faction leaders."
+  ],
+  [
+   "S&R Loadout Revealer",
+   "https://lordrhino.co.uk/",
+   "Records opponents' loadouts from fights.",
+   "Public key, stays in browser",
+   "War tool."
+  ],
+  [
+   "Swervelord (Torn Auctions)",
+   "https://swervelord.dev/",
+   "Live auction-house listings and sale prices.",
+   "No key seen",
+   "The old torn-auctions link now redirects here."
+  ],
+  [
+   "Xanax Stack Planner",
+   "https://xan-stack-planner.pages.dev/",
+   "Plans Xanax stacking before ranked wars.",
+   "No key",
+   "Overdose risk; advanced."
+  ],
+  [
+   "Torn Fitting Room",
+   "https://idrnkcrl.cc/changeroom/",
+   "Try clothes and armor on a character before buying.",
+   "Optional key",
+   "Cosmetic fun."
+  ],
+  [
+   "Torn API docs",
+   "https://tornapi.tornplayground.eu/",
+   "Community API documentation with a test console.",
+   "Optional key",
+   "For script writers."
+  ]
+ ],
+ "caution": [
+  [
+   "torn.report",
+   "https://torn.report/",
+   "Asks for a Full key for its log tool (it says the key stays in your browser). The loot timers need no key."
+  ],
+  [
+   "Torn Tracker",
+   "https://torntracker.net/",
+   "Wants a Full key stored on its server for full features."
+  ],
+  [
+   "Torn.gg",
+   "https://torn.gg/",
+   "Requires a Full key."
+  ],
+  [
+   "Torn Radar",
+   "https://torn-lab.com/radar/",
+   "Needs a key but shows no key disclosure."
+  ],
+  [
+   "RW Travel (RWARFF)",
+   "https://rwarff.com/",
+   "Asks for two Limited keys with no disclosure."
+  ],
+  [
+   "Torn Spy",
+   "https://www.tornspy.com/",
+   "A marketplace where money changes hands between players with no stated protection. See also its script above."
+  ],
+  [
+   "Happy Jump Insurance",
+   "https://happyjump.girovagabondo.com/",
+   "Player-run overdose insurance: you trust another player with your money."
+  ],
+  [
+   "Flight Club",
+   "https://tornflight.club/",
+   "You hand the club your items and money for a payout; running since 2021, but it rests on trust."
+  ],
+  [
+   "TLL (Torn Losers' Log)",
+   "https://juzraai.github.io/torn-losers-log/",
+   "Fine, but for loss-selling deals new players don't need; key level isn't stated."
+  ]
+ ],
+ "skip": [
+  [
+   "Mug City",
+   "Gone (the domain no longer resolves)"
+  ],
+  [
+   "Torn Bay",
+   "Gone"
+  ],
+  [
+   "Torn Players Database",
+   "Gone"
+  ],
+  [
+   "Torn Stamps",
+   "Gone"
+  ],
+  [
+   "Torn FM",
+   "Gone"
+  ],
+  [
+   "torn.market",
+   "Broken security certificate"
+  ],
+  [
+   "Leslie Wheels Profitability",
+   "Down when we checked"
+  ],
+  [
+   "Arson Warehouse",
+   "Its trade service is reported discontinued"
+  ],
+  [
+   "Torn To Shreds",
+   "Very old guides on a free host"
+  ],
+  [
+   "Bazaar Hunter",
+   "Free host, no information about who runs it"
+  ],
+  [
+   "Tornder",
+   "Profile-swiping app; crude branding, shares your profile"
+  ]
+ ]
+}
