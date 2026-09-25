@@ -10,7 +10,10 @@
   "rules": "OK",
   "what": "Tracks drug addiction debuff, rehab cost/advice and drug/booster/medical cooldowns via the Torn API.",
   "why": "Readable, uses only the Torn API with a Minimal key, display only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.9.9",
+  "gf": "566464",
+  "install": "https://update.greasyfork.org/scripts/566464/Torn%20Addiction%20Watch%20%2B%20Rehab%20Advisor.user.js"
  },
  {
   "name": "Advanced Bounty Filter",
@@ -23,7 +26,10 @@
   "rules": "OK",
   "what": "Adds filters to the bounties page, including a revivable check via the API.",
   "why": "Readable, Public key sent only to api.torn.com. Minor bug: the placeholder check compares against a different string, so an unset key still calls the API.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0",
+  "gf": "554916",
+  "install": "https://update.greasyfork.org/scripts/554916/Advanced%20Bounty%20Filter.user.js"
  },
  {
   "name": "Aqua Tools",
@@ -36,7 +42,9 @@
   "rules": "OK",
   "what": "Large multi-module QoL toolkit (chain target list, activity stalker, bazaar quality sort, city finds, company effectiveness, Elo calc, poker calc, stock profit, settings page).",
   "why": "Readable and talks only to api.torn.com, but it hooks into the page's network calls on every Torn page and is distributed from GitHub with no visible update date.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.3.9",
+  "install": "https://raw.githubusercontent.com/AquaRegia/Tampermonkey/main/Torn/Torn%20AquaTools.user.js"
  },
  {
   "name": "Arson Bang for Buck",
@@ -49,7 +57,10 @@
   "rules": "OK",
   "what": "Shows profit per nerve and how-to hints for Arson crime targets on the crimes page.",
   "why": "Readable, and the only request is one user-triggered call to api.torn.com.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.00.037",
+  "gf": "556165",
+  "install": "https://update.greasyfork.org/scripts/556165/Arson%20bang%20for%20buck.user.js"
  },
  {
   "name": "Auto Gym Switcher",
@@ -62,7 +73,10 @@
   "rules": "Grey area",
   "what": "When you press Train, switches to the best gym for that stat first; also shows stat-ratio hints.",
   "why": "Replaces your Train request with a different game action (gym change) that you did not click, via a fetch hooking; one request per click but not the action the button shows; last updated Nov 2024.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.2.4",
+  "gf": "480060",
+  "install": "https://update.greasyfork.org/scripts/480060/Auto%20gym%20switch.user.js"
  },
  {
   "name": "Bazaar Filler",
@@ -75,7 +89,10 @@
   "rules": "OK",
   "what": "Adds Fill/Fill All buttons on the bazaar add/manage pages that fill in price and quantity from market data; the player still submits.",
   "why": "Readable, the key only goes to api.torn.com, and it fills form fields without ever submitting a listing.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.11.2",
+  "gf": "473470",
+  "install": "https://update.greasyfork.org/scripts/473470/Torn%20Bazaar%20Filler.user.js"
  },
  {
   "name": "Bazaar Profit Radar",
@@ -88,7 +105,10 @@
   "rules": "OK",
   "what": "Highlights bazaar listings that are below a trader's buy-price list, for flipping.",
   "why": "Clean code that keeps the key on Torn, but it wants a broader key (user log) and targets flipping rather than new players.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.3.0",
+  "gf": "575148",
+  "install": "https://update.greasyfork.org/scripts/575148/Bazaar%20Profit%20Radar.user.js"
  },
  {
   "name": "Better Faction Chat",
@@ -101,7 +121,10 @@
   "rules": "OK",
   "what": "Improves faction chat with member online/travel status dots, rank icons, @mention autocomplete, search and real timestamps.",
   "why": "The key only goes to api.torn.com; timers poll the API and redraw the chat only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.4.20",
+  "gf": "572030",
+  "install": "https://update.greasyfork.org/scripts/572030/Better%20Faction%20Chat%20%E2%80%93%20Torncom.user.js"
  },
  {
   "name": "Bloodbag Reminder",
@@ -114,7 +137,10 @@
   "rules": "OK",
   "what": "Shows a blood-bag icon when life and medical cooldown allow filling blood bags, linking to the armoury or inventory.",
   "why": "Readable, no network requests, display-only reminder.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "4.3.3",
+  "gf": "548072",
+  "install": "https://update.greasyfork.org/scripts/548072/Torn%3A%20Refill%20Blood%20Bag%20Reminder.user.js"
  },
  {
   "name": "Bookie Predictor",
@@ -127,7 +153,10 @@
   "rules": "Grey area",
   "what": "Bookie match predictor that pulls recommendations from the author's Cloudflare Worker and places bets through a custom button.",
   "why": "The settings text says 'Your key... stay in this browser', yet the key is sent in a header on every Worker request. It also places real-money bets with crafted requests.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "26.09.21.1",
+  "gf": "580611",
+  "install": "https://update.greasyfork.org/scripts/580611/Torn%20Bookie%20Predictor.user.js"
  },
  {
   "name": "Bootlegging Auto Genre Script",
@@ -140,7 +169,10 @@
   "rules": "Breaks rules",
   "what": "Colours Bootlegging genre buttons by shortage and automatically selects the most-needed genre.",
   "why": "Automates a game action (auto-selects genre without a click); small but literally against the no-automation rule.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.2.1",
+  "gf": "531715",
+  "install": "https://update.greasyfork.org/scripts/531715/Bootlegging%20Auto%20Genre%20Select.user.js"
  },
  {
   "name": "Bounty Hunter",
@@ -153,7 +185,10 @@
   "rules": "OK",
   "what": "Filters the global bounty board by reward, FFScouter fair-fight and status, with a med-out watchlist and clickable attack toasts.",
   "why": "Sends your player id to the author's personal Cloudflare worker and an FFScouter key to ffscouter.com; readable, no automation.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.21.0",
+  "gf": "574289",
+  "install": "https://update.greasyfork.org/scripts/574289/Bounty%20Hunter.user.js"
  },
  {
   "name": "BSP",
@@ -166,7 +201,9 @@
   "rules": "OK",
   "what": "Battle Stats Predictor: shows predicted battle stats for players on profiles, faction lists, attack pages and more, using the author's paid prediction service.",
   "why": "Readable and widely used, but it sends your Torn API key to a third-party server (lol-manager.com) on every lookup, and it is a paid subscription service.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "9.4.7",
+  "install": "https://raw.githubusercontent.com/tdup-torn/userscripts/master/battle_stats_predictor.user.js"
  },
  {
   "name": "Burglary Confidence Display",
@@ -179,7 +216,10 @@
   "rules": "OK",
   "what": "Shows the burglary confidence percentage as a coloured number next to the meter.",
   "why": "Display only; its a timer only reads an aria-label and redraws text.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.0",
+  "gf": "564961",
+  "install": "https://update.greasyfork.org/scripts/564961/Torn%20Burglary%20Confidence%20Display.user.js"
  },
  {
   "name": "BUSTR: Torn's Sexiest Bust Reminder",
@@ -192,7 +232,10 @@
   "rules": "OK",
   "what": "Estimates how many jail busts you can do before the penalty and scores inmates by bust difficulty.",
   "why": "Asks for a Full-access key (stored in localStorage) although the code is clean and torn-only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.1.0",
+  "gf": "480750",
+  "install": "https://update.greasyfork.org/scripts/480750/BUSTR%3A%20Busting%20Reminder%20%2B%20PDA.user.js"
  },
  {
   "name": "CAT SCRIPT",
@@ -205,7 +248,10 @@
   "rules": "OK",
   "what": "Large faction-war suite: call targets, war roster/hospital timers, battle-stat estimates, loadouts, faction stats; some features paid.",
   "why": "Torn key and faction war data go to the author's server (disclosed, Public key), plus optional third-party keys; paid features.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.9.139",
+  "gf": "555846",
+  "install": "https://update.greasyfork.org/scripts/555846/CAT%20Script%20v3.user.js"
  },
  {
   "name": "Chat Buttons",
@@ -218,7 +264,10 @@
   "rules": "OK",
   "what": "Adds customisable quick-message buttons to chat that fill the text box (with optional {bazaar}/{company}/{faction}/{buy} placeholders); you still press send.",
   "why": "API-only and it only fills the chat box; note the key is saved under a generic localStorage name 'apiKey' readable by page scripts.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.65",
+  "gf": "488294",
+  "install": "https://update.greasyfork.org/scripts/488294/Torncom%20Enhanced%20Chat%20Buttons%20Beta.user.js"
  },
  {
   "name": "Chat Emoji+",
@@ -231,7 +280,10 @@
   "rules": "OK",
   "what": "Adds an emoji picker (favourites, custom emojis, dark mode) to Torn chat.",
   "why": "Local UI only; inserts text into the chat box, never sends.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.5.1",
+  "gf": "543163",
+  "install": "https://update.greasyfork.org/scripts/543163/Torn%20Chat%20Emoji%2B.user.js"
  },
  {
   "name": "Chat Image Uploader (imgBB)",
@@ -244,7 +296,10 @@
   "rules": "OK",
   "what": "Uploads an image you pick or paste into chat to imgBB and puts the link in the chat box.",
   "why": "No Torn data leaves, but pasted images go straight to a public host using a shared embedded key (privacy slip risk, key may get revoked).",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.4",
+  "gf": "563848",
+  "install": "https://update.greasyfork.org/scripts/563848/Torn%20Chat%20Image%20Uploader%20%28ImgBB%29.user.js"
  },
  {
   "name": "Chat Link Embedder",
@@ -257,7 +312,10 @@
   "rules": "OK",
   "what": "Auto-embeds images, videos and YouTube links posted in Torn chat.",
   "why": "Auto-loading arbitrary links from other players exposes your IP to IP loggers and shows unmoderated media.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0",
+  "gf": "563081",
+  "install": "https://update.greasyfork.org/scripts/563081/Torn%20Chat%20Link%20Embedder%20-%20YouTube%20%20Multi-Link.user.js"
  },
  {
   "name": "Chat Lock",
@@ -270,7 +328,10 @@
   "rules": "OK",
   "what": "Long-press the Faction chat button to keep chat open in only one browser tab.",
   "why": "No network, cosmetic tab management.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "3.7.0",
+  "gf": "583635",
+  "install": "https://update.greasyfork.org/scripts/583635/ChatLock.user.js"
  },
  {
   "name": "Colorblindness Assistance",
@@ -283,7 +344,10 @@
   "rules": "OK",
   "what": "Recolors the energy/nerve/happy/life bars and some global colors for colorblind players.",
   "why": "Harmless CSS-only code; Medium only because the last update was March 2025.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.5",
+  "gf": "508347",
+  "install": "https://update.greasyfork.org/scripts/508347/Torn%20Colorblind%20Help.user.js"
  },
  {
   "name": "Colorful Poker",
@@ -296,7 +360,10 @@
   "rules": "OK",
   "what": "Cosmetic theme for Torn poker: button colours and highlights for the active seat and action state.",
   "why": "Pure CSS/page styling with no requests.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "3.5",
+  "gf": "569205",
+  "install": "https://update.greasyfork.org/scripts/569205/Colorful%20Poker.user.js"
  },
  {
   "name": "Company Inactivity Highlight",
@@ -309,7 +376,10 @@
   "rules": "OK",
   "what": "Highlights company employees inactive for more than 72 hours on the job list page.",
   "why": "Small, readable, API-only.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0",
+  "gf": "571442",
+  "install": "https://update.greasyfork.org/scripts/571442/Torn%20-%20Highlight%20Inactive%20Employees.user.js"
  },
  {
   "name": "Cracking Prompt Helper",
@@ -322,7 +392,10 @@
   "rules": "OK",
   "what": "Suggests likely passwords for the Cracking crime by matching revealed characters against public password wordlists.",
   "why": "Clean code, but last updated June 2024 and Cracking may have changed since.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.2.4",
+  "gf": "482828",
+  "install": "https://update.greasyfork.org/scripts/482828/torn-crime-crack-helper.user.js"
  },
  {
   "name": "Crime Morale - Scamming Solver",
@@ -335,7 +408,10 @@
   "rules": "OK",
   "what": "Crime 2.0 helper that shows crime morale and gives scamming/pickpocketing suggestions by reading Torn's own crime responses.",
   "why": "Readable, makes no requests of its own, and only displays information.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.4.15",
+  "gf": "515557",
+  "install": "https://update.greasyfork.org/scripts/515557/Crime%20Morale.user.js"
  },
  {
   "name": "Crime Profitability",
@@ -348,7 +424,10 @@
   "rules": "OK",
   "what": "Shows estimated value per nerve on crime pages using a community Google Sheet.",
   "why": "Readable and display only; it fetches public spreadsheet data and sends no player data.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.3.7.3",
+  "gf": "538188",
+  "install": "https://update.greasyfork.org/scripts/538188/Crime%20Profitability.user.js"
  },
  {
   "name": "Crimes 2.0 Hub",
@@ -361,7 +440,10 @@
   "rules": "OK",
   "what": "Offline database of Crimes 2.0 items showing where each item drops and where it is used, with optional market values.",
   "why": "Readable code that talks only to api.torn.com for public item prices and never touches game actions.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "3.3",
+  "gf": "577826",
+  "install": "https://update.greasyfork.org/scripts/577826/Crimes%2020%20Item%20Hub.user.js"
  },
  {
   "name": "Crimes Rewards Value",
@@ -374,7 +456,10 @@
   "rules": "OK",
   "what": "Shows the market value of item/cash rewards on crime outcomes and a running session total.",
   "why": "Readable, one daily Torn API call, display only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "0.6.1",
+  "gf": "476788",
+  "install": "https://update.greasyfork.org/scripts/476788/Torn%20Crimes%20Rewards%20Value.user.js"
  },
  {
   "name": "Custom & Nearest Torn Events",
@@ -387,7 +472,10 @@
   "rules": "OK",
   "what": "Countdown to the next Torn calendar event in the toolbar, plus optional community 'custom events' you can host or watch.",
   "why": "Raw key only goes to api.torn.com; third-party server is opt-in and receives only a SHA-256 hash of the key plus event data.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "2.0.38",
+  "gf": "553545",
+  "install": "https://update.greasyfork.org/scripts/553545/Custom%20and%20nearest%20Torn%20events.user.js"
  },
  {
   "name": "Dark Torn Wiki",
@@ -400,7 +488,10 @@
   "rules": "OK",
   "what": "Dark-mode restyling of wiki.torn.com.",
   "why": "Inline style changes only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.3",
+  "gf": "562479",
+  "install": "https://update.greasyfork.org/scripts/562479/TornDarkWiki.user.js"
  },
  {
   "name": "Descriptive Mission Titles",
@@ -413,7 +504,10 @@
   "rules": "OK",
   "what": "Renames Duke mission titles to describe the objective, filling in target names from the page.",
   "why": "Static text replacement on the missions page.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.4.1",
+  "gf": "384701",
+  "install": "https://update.greasyfork.org/scripts/384701/Descriptive%20Mission%20Titles.user.js"
  },
  {
   "name": "Display Crime Chain",
@@ -426,7 +520,10 @@
   "rules": "OK",
   "what": "Calculates your current crime chain from the crime log and shows it next to the crimes page heading.",
   "why": "Readable and only calls api.torn.com. It hooking window.network calls, but read-only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.7",
+  "gf": "481776",
+  "install": "https://update.greasyfork.org/scripts/481776/TORN%3A%20Display%20Crime%20Chain.user.js"
  },
  {
   "name": "Disposal Helper",
@@ -439,7 +536,10 @@
   "rules": "OK",
   "what": "Colour-codes Disposal crime methods by risk using Emforus's guide table.",
   "why": "46 lines, no network, styling only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "0.1.0",
+  "gf": "576255",
+  "install": "https://update.greasyfork.org/scripts/576255/Disposal%20crime%20helper.user.js"
  },
  {
   "name": "Doobie's Chat Pop Out",
@@ -452,7 +552,10 @@
   "rules": "OK",
   "what": "Adds a button that opens Torn chat in a separate resizable pop-up window.",
   "why": "No network code, but it takes over Ctrl+R on every Torn page.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.4",
+  "gf": "518038",
+  "install": "https://update.greasyfork.org/scripts/518038/Doobie%27s%20Torn%20City%20Chat%20Popout%20%28Chat%2030%20ONLY%29.user.js"
  },
  {
   "name": "Droqs Overseas Stock Reporter",
@@ -465,7 +568,10 @@
   "rules": "OK",
   "what": "Scrapes the foreign shop stock/prices you are looking at while abroad, uploads them to DroqsDB, and shows a travel planner panel.",
   "why": "No key or identity sent. It shares public shop stock (YATA-style crowdsourcing) with a third-party site.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.6.11",
+  "gf": "575560",
+  "install": "https://update.greasyfork.org/scripts/575560/DroqsDB%20Overseas%20Stock%20Reporter.user.js"
  },
  {
   "name": "Execute Perk Tracker",
@@ -478,7 +584,10 @@
   "rules": "OK",
   "what": "Shows enemy HP % and an EXECUTE alert when it drops below your execute-perk threshold on the attack page.",
   "why": "No network, display-only alert.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.2",
+  "gf": "580163",
+  "install": "https://update.greasyfork.org/scripts/580163/Torn%20Execute%20Tracker.user.js"
  },
  {
   "name": "Faction Armory UID",
@@ -491,7 +600,10 @@
   "rules": "OK",
   "what": "Appends each weapon and armor item's unique armory ID to its name on the faction armory page.",
   "why": "53-line page-only script.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "0.2",
+  "gf": "478314",
+  "install": "https://update.greasyfork.org/scripts/478314/Weapon%20%20Armor%20UID%20Faction.user.js"
  },
  {
   "name": "Faction Inactivity Highlight",
@@ -504,7 +616,10 @@
   "rules": "OK",
   "what": "Colours faction member rows by days since their last action and shows the relative last-action time.",
   "why": "Benign, but it has not been updated since 2024-01. The key is a hard-coded TornPDA placeholder, so desktop users must paste the key into the source.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.5",
+  "gf": "482249",
+  "install": "https://update.greasyfork.org/scripts/482249/Faction%20Inactivity%20Highlight.user.js"
  },
  {
   "name": "FairFight in Chat",
@@ -517,7 +632,10 @@
   "rules": "OK",
   "what": "Shows FFScouter fair-fight values next to player names in Torn chat.",
   "why": "The key and the IDs of everyone you chat with go to a third-party server. The script is also tiny, anonymous (no @author) and has only 28 installs.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1",
+  "gf": "583344",
+  "install": "https://update.greasyfork.org/scripts/583344/Torn%20FF%20in%20chat.user.js"
  },
  {
   "name": "Fast Keno",
@@ -530,7 +648,10 @@
   "rules": "OK",
   "what": "Speeds up Keno casino animations 5x.",
   "why": "No network; cosmetic timing change.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0.0",
+  "gf": "563412",
+  "install": "https://update.greasyfork.org/scripts/563412/Torn%20Fast%20Keno.user.js"
  },
  {
   "name": "Fast Packs",
@@ -543,7 +664,10 @@
   "rules": "OK",
   "what": "Removes supply-pack opening animations via CSS.",
   "why": "CSS-only.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "0.4.1",
+  "gf": "494656",
+  "install": "https://update.greasyfork.org/scripts/494656/Fast%20Packs.user.js"
  },
  {
   "name": "Fast Roulette",
@@ -556,7 +680,10 @@
   "rules": "OK",
   "what": "Adds a 'Retry last bet' button and an R hotkey that replay your last roulette bet request without the wheel animation, for grinding the Spinner merit.",
   "why": "One click or keypress gives one bet, but it replays a raw game request and makes fast gambling very easy.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "3.3.0",
+  "gf": "569460",
+  "install": "https://update.greasyfork.org/scripts/569460/Roulette%20Merit%20SkipSpin.user.js"
  },
  {
   "name": "Fast Slots",
@@ -569,7 +696,10 @@
   "rules": "OK",
   "what": "Speeds up the slot machine reel animation.",
   "why": "35 readable lines with no network. It only speeds up gambling, and was last updated March 2025.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0",
+  "gf": "531035",
+  "install": "https://update.greasyfork.org/scripts/531035/%5BTorn%5D%20Quick%20Slots%20Animation.user.js"
  },
  {
   "name": "FastRevive",
@@ -582,7 +712,10 @@
   "rules": "OK",
   "what": "Adds a 'Fast' button per hospital row that opens the revive prompt, then confirms it if the success chance meets your threshold.",
   "why": "No network and one click equals one action.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "3.2.0",
+  "gf": "554097",
+  "install": "https://update.greasyfork.org/scripts/554097/Torn%20-%20FastRevive.user.js"
  },
  {
   "name": "FFScouter Beta",
@@ -595,7 +728,10 @@
   "rules": "OK",
   "what": "Shows estimated Fair Fight / battle-stat estimates for players and faction-war info across Torn pages.",
   "why": "Raw Torn API key is sent to ffscouter.com (well-known, disclosed service you sign up for); this is the beta channel.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "3.3",
+  "gf": "582442",
+  "install": "https://update.greasyfork.org/scripts/582442/FF%20Scouter%20V2%20beta.user.js"
  },
  {
   "name": "Flight Visualiser",
@@ -608,7 +744,10 @@
   "rules": "OK",
   "what": "Animated world-map view of your current flight (and optionally faction members' flights) with timers and stats.",
   "why": "Key only goes to api.torn.com and behaviour is display-only; only caveat is an anonymous StatCounter pixel.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "81.4.8",
+  "gf": "574819",
+  "install": "https://update.greasyfork.org/scripts/574819/TORN%20CITY%20Flight%20Visualiser.user.js"
  },
  {
   "name": "FlightClub Helper",
@@ -621,7 +760,10 @@
   "rules": "OK",
   "what": "Adds a plane button on travel items that opens Torn's Send dialog prefilled with a Flight Club collector as recipient and the max quantity.",
   "why": "Readable and makes no requests, but it prefills hardcoded recipients with the full quantity, so a careless user could give items away.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2026-01-28.1",
+  "gf": "558052",
+  "install": "https://update.greasyfork.org/scripts/558052/FlightClub.user.js"
  },
  {
   "name": "Forum Favorites",
@@ -634,7 +776,10 @@
   "rules": "OK",
   "what": "Adds stars to pin favourite forum sections to the top of the forum list.",
   "why": "Local page reordering with GM storage; no requests.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "0.9",
+  "gf": "583873",
+  "install": "https://update.greasyfork.org/scripts/583873/Forum%20Favourite.user.js"
  },
  {
   "name": "Gym Torn Gain",
@@ -647,7 +792,10 @@
   "rules": "OK",
   "what": "Estimates stat gains per train and for your full energy at the current gym, plus a manual calculator.",
   "why": "Code is benign, but it has not been updated since 2024-09 and needs a Limited key. The key sits in page localStorage, only lightly scrambled.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.5.2",
+  "gf": "392876",
+  "install": "https://update.greasyfork.org/scripts/392876/Torn%20Extensions%20-%20Gym%20Torn%20Gain.user.js"
  },
  {
   "name": "GymIQ - Ratio Helper",
@@ -660,7 +808,10 @@
   "rules": "OK",
   "what": "Reads your stats on the gym page and shows ratio targets (Baldr/Hank/custom), 'train next' guidance, history and energy tracking.",
   "why": "Page-only display helper with no network requests and no automated clicks.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "5.2.1",
+  "gf": "568580",
+  "install": "https://update.greasyfork.org/scripts/568580/GymIQ.user.js"
  },
  {
   "name": "Happy Jump Calculator",
@@ -673,7 +824,10 @@
   "rules": "OK",
   "what": "Gym calculator for happy-jump/booster planning and estimated stat gains.",
   "why": "Readable, talks only to api.torn.com, no automation.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "2.0.1",
+  "gf": "574510",
+  "install": "https://update.greasyfork.org/scripts/574510/How%20Much%20Happy%20Makes%20Me%20Happy.user.js"
  },
  {
   "name": "Hide Crime Outcomes",
@@ -686,7 +840,10 @@
   "rules": "OK",
   "what": "Hides or shrinks the crime outcome panel (or shows it as a toast) so the crime buttons don't shift around.",
   "why": "CSS/display only with no requests of its own; last updated about 14 months ago.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.2.11",
+  "gf": "489663",
+  "install": "https://update.greasyfork.org/scripts/489663/Hide%20Crime%20Outcome.user.js"
  },
  {
   "name": "Hide Leave Faction",
@@ -699,7 +856,10 @@
   "rules": "OK",
   "what": "Removes the Leave Faction button from your own faction page to prevent accidental clicks.",
   "why": "Only hides one element with CSS/page removal.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0",
+  "gf": "582666",
+  "install": "https://update.greasyfork.org/scripts/582666/Torn%20-%20Remove%20Leave%20Faction%20Button.user.js"
  },
  {
   "name": "HospMe",
@@ -712,7 +872,10 @@
   "rules": "OK",
   "what": "Button to request a paid merc hit (hospitalization) on a target from the Whanau Merc service.",
   "why": "Sends the (Public) API key and page URL to a third-party server, disclosed. The use case is paying for attacks on other players.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "5.0",
+  "gf": "577948",
+  "install": "https://update.greasyfork.org/scripts/577948/Wh%C4%81nau%20Mercs%20Hosp%20Request%20%28API%20verified%29.user.js"
  },
  {
   "name": "Inventory Sorter",
@@ -725,7 +888,10 @@
   "rules": "Grey area",
   "what": "Sorts inventory items by market value and shows item values.",
   "why": "Unmaintained since 2025-02 and the auto-scroll loader is grey-area; otherwise clean.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.0",
+  "gf": "506679",
+  "install": "https://update.greasyfork.org/scripts/506679/Inventory%20Sorter.user.js"
  },
  {
   "name": "iOS Tooltip Fix",
@@ -738,7 +904,10 @@
   "rules": "OK",
   "what": "Fixes Torn tooltips that fail to show near screen edges.",
   "why": "Tiny CSS-opacity fix, no network.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.8",
+  "gf": "577794",
+  "install": "https://update.greasyfork.org/scripts/577794/Fix%20broken%20tooltips.user.js"
  },
  {
   "name": "Item Market \"Helper\"",
@@ -751,7 +920,10 @@
   "rules": "OK",
   "what": "Adds a mug-value calculator to Item Market listings, estimating how much you could mug back from a seller after buying.",
   "why": "The full Torn API key goes to the author's own backend (SyncLayer) on each lookup. There is no in-script disclosure or access-level guidance, only a 'Torn API Key' field.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.3",
+  "gf": "520019",
+  "install": "https://update.greasyfork.org/scripts/520019/Torn%20Item%20Market%20Helper.user.js"
  },
  {
   "name": "Item Market Auto Price",
@@ -764,7 +936,10 @@
   "rules": "OK",
   "what": "When you click an item-market price box, fills in the current lowest listing minus $5, or max quantity.",
   "why": "Key goes only to the Torn API, but it is logged to the console and kept in page-readable localStorage. Last updated July 2025.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.1.3",
+  "gf": "543799",
+  "install": "https://update.greasyfork.org/scripts/543799/Item%20Market%20Auto%20Price.user.js"
  },
  {
   "name": "Item Market Favourites Sidebar",
@@ -777,7 +952,10 @@
   "rules": "OK",
   "what": "Adds a reorderable favourite-categories bar to the Item Market.",
   "why": "No network, one click equals one native click.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.1",
+  "gf": "579493",
+  "install": "https://update.greasyfork.org/scripts/579493/IMFaves%3A%20TORN%20Item%20Market%20Favourites.user.js"
  },
  {
   "name": "Item Stats Helper",
@@ -790,7 +968,10 @@
   "rules": "OK",
   "what": "Shows weapon/armour UIDs on the Items page and copies their stats as JSON to the clipboard for pasting into torn.report.",
   "why": "Harmless code, but it has not been updated since 2023-10 and has 14 installs. Its selectors may be broken.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "0.5",
+  "gf": "478313",
+  "install": "https://update.greasyfork.org/scripts/478313/Weapon%20%20Armor%20UID.user.js"
  },
  {
   "name": "Junk Seller",
@@ -803,7 +984,10 @@
   "rules": "Grey area",
   "what": "Fills price (and quantity/select) fields on Item Market add-listing and bazaar pages from API lowest price, RRP or fixed prices.",
   "why": "Auto-pricing that fills the listing form on load is borderline under the no-automation rule, even though the player still submits.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.2.2",
+  "gf": "570131",
+  "install": "https://update.greasyfork.org/scripts/570131/Torn%20Junk%20Seller.user.js"
  },
  {
   "name": "Kenny's In-Flight Entertainment",
@@ -816,7 +1000,10 @@
   "rules": "OK",
   "what": "Minigames (snake, dino, pong, typing) to play while travelling.",
   "why": "No network, no key, pure local UI.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.23",
+  "gf": "565421",
+  "install": "https://update.greasyfork.org/scripts/565421/Kennys%20In%20Flight%20Entertainment.user.js"
  },
  {
   "name": "Large Chain Timer",
@@ -829,7 +1016,9 @@
   "rules": "OK",
   "what": "Makes the faction chain timer much larger.",
   "why": "The script itself is 31 harmless lines, but it pulls unpinned code from a gist at install/update and has no maintenance info.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0.1",
+  "install": "https://raw.githubusercontent.com/Annosz/torn-userscripts/main/larger_chain_timer.user.js"
  },
  {
   "name": "Lazy Crimes",
@@ -842,7 +1031,10 @@
   "rules": "OK",
   "what": "Adds a 'Lazy' button to Crimes 2.0 that picks the best/recommended option and presses that crime's own button for you.",
   "why": "Readable; each press of its button clicks exactly one crime/page button and returns (state machine for multi-step crimes); only external call is a public Google Sheet.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.0.19",
+  "gf": "540604",
+  "install": "https://update.greasyfork.org/scripts/540604/Lazy%20Crimes.user.js"
  },
  {
   "name": "Lily's Reviver Tool",
@@ -855,7 +1047,10 @@
   "rules": "Grey area",
   "what": "Hospital-page helper for revivers: filters revivable players and adds a quick revive panel.",
   "why": "Grey-area click helpers (moved confirm button, synthetic revive clicks with retries), though it never confirms a revive for the user.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "4.4.0",
+  "gf": "518729",
+  "install": "https://update.greasyfork.org/scripts/518729/Torn%20City%20Reviver%27s%20Tool.user.js"
  },
  {
   "name": "Merit Hunter+ QoL for Honors & Medals",
@@ -868,7 +1063,10 @@
   "rules": "OK",
   "what": "Shows progress, remaining counts and quick-win suggestions for every honor and medal on the awards page.",
   "why": "Readable, talks only to api.torn.com, and makes no page actions.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.15.2",
+  "gf": "584036",
+  "install": "https://update.greasyfork.org/scripts/584036/Merit%20Hunter%2B.user.js"
  },
  {
   "name": "Mission Reward Info",
@@ -881,7 +1079,10 @@
   "rules": "OK",
   "what": "On the missions reward shop, shows price ranges for weapon mods, owned ammo, and money-per-credit values.",
   "why": "Readable and the key stays with Torn; it does upload anonymous reward-price data to the author's site to crowdsource ranges.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "2.1.4",
+  "gf": "395668",
+  "install": "https://update.greasyfork.org/scripts/395668/TORN%3A%20Mission%20Reward%20Information.user.js"
  },
  {
   "name": "Mission Store Weapon Mod Price Evaluator",
@@ -894,7 +1095,10 @@
   "rules": "OK",
   "what": "Rates weapon mod prices in the mission credit store as good, medium or bad.",
   "why": "Tiny page-only display script.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.5",
+  "gf": "562804",
+  "install": "https://update.greasyfork.org/scripts/562804/Torn%20Mission%20Mod%20Price%20Evaluator.user.js"
  },
  {
   "name": "More Legible Player Names",
@@ -907,7 +1111,10 @@
   "rules": "OK",
   "what": "Actually named 'Torn Themes': customises Torn's background image, layout width and panel shading via CSS.",
   "why": "Pure CSS/theme script with local settings; no requests or actions.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.8",
+  "gf": "512850",
+  "install": "https://update.greasyfork.org/scripts/512850/Torn%20Themes.user.js"
  },
  {
   "name": "Nuke REVIVE ME",
@@ -920,7 +1127,9 @@
   "rules": "OK",
   "what": "Adds a 'Revive Me' link that sends a revive request to the Nuke faction's revive service when you are in hospital.",
   "why": "Sends player id/name to a third-party server (expected for a revive service) and updates straight from a GitHub repo with no Greasy Fork review.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.2",
+  "install": "https://raw.githubusercontent.com/Fogest/revive-me-script/master/reviveme.user.js"
  },
  {
   "name": "OC Payout Filter",
@@ -933,7 +1142,10 @@
   "rules": "OK",
   "what": "Adds a toggle to hide completed organized crimes that have already been paid out on the faction crimes tab.",
   "why": "Pure page filter with no network code.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0.0",
+  "gf": "576749",
+  "install": "https://update.greasyfork.org/scripts/576749/Torn%20OC%20Unpaid%20Filter.user.js"
  },
  {
   "name": "OC Weights Under Roles",
@@ -946,7 +1158,10 @@
   "rules": "OK",
   "what": "Shows each Organized Crime role's weight (importance %) from tornprobability.com under the role.",
   "why": "Only fetches public weight data; no key or player data sent.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.1",
+  "gf": "547973",
+  "install": "https://update.greasyfork.org/scripts/547973/Torn%20OC%20Weights%20Under%20Roles.user.js"
  },
  {
   "name": "OpenMarket",
@@ -959,7 +1174,10 @@
   "rules": "OK",
   "what": "Shows quality and bonus percentages on Item Market, Auction House and Bazaar listings.",
   "why": "No network or key, display only, compliance addressed by the author.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.1",
+  "gf": "571158",
+  "install": "https://update.greasyfork.org/scripts/571158/OpenMarket.user.js"
  },
  {
   "name": "OpsCheck Checklist Manager",
@@ -972,7 +1190,10 @@
   "rules": "OK",
   "what": "Floating multi-checklist panel whose items can link to Torn pages and be ticked off.",
   "why": "No network code at all; it only stores checklists in localStorage and navigates on the player's click.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.5.2",
+  "gf": "583153",
+  "install": "https://update.greasyfork.org/scripts/583153/OpsCheck.user.js"
  },
  {
   "name": "OutcomeDB",
@@ -985,7 +1206,10 @@
   "rules": "OK",
   "what": "Crowd-sources crime outcome research data by capturing every crime attempt's result and uploading it.",
   "why": "Silently sends game data from every crime attempt to a third-party server, and gives the user nothing back.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.4.2",
+  "gf": "489750",
+  "install": "https://update.greasyfork.org/scripts/489750/OutcomeDB.user.js"
  },
  {
   "name": "Pickpocketing Target Filter",
@@ -998,7 +1222,10 @@
   "rules": "OK",
   "what": "Highlights pickpocketing targets by type and timing, greys out/disables unwanted ones, and plays optional sound alerts.",
   "why": "Display and sound only; it only disables (never clicks) buttons and only runs while the tab has focus.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "2.9.12",
+  "gf": "533555",
+  "install": "https://update.greasyfork.org/scripts/533555/Torn%20Pickpocketing%20Target%20Filter.user.js"
  },
  {
   "name": "Poker Bet Slider",
@@ -1011,7 +1238,10 @@
   "rules": "OK",
   "what": "Adds a slider to the poker table that sets the bet amount input.",
   "why": "No network, no action automation.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.2",
+  "gf": "569446",
+  "install": "https://update.greasyfork.org/scripts/569446/Poker%20Bet%20Slider.user.js"
  },
  {
   "name": "Poker Card Highlight",
@@ -1024,7 +1254,10 @@
   "rules": "OK",
   "what": "Colours your hole/board cards by hand strength and shows preflop range hints on the Hold'em table.",
   "why": "Display-only overlay with no network code and no clicks on game buttons.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.0.0",
+  "gf": "569931",
+  "install": "https://update.greasyfork.org/scripts/569931/Poker%20%E2%80%93%20Card%20Highlight.user.js"
  },
  {
   "name": "Portapotty",
@@ -1037,7 +1270,10 @@
   "rules": "OK",
   "what": "Adds a Quick Search button on the dump page that runs a search without the animation.",
   "why": "One click sends one search request that the normal Search button would send; about 18 months without updates, so it may break.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0",
+  "gf": "530863",
+  "install": "https://update.greasyfork.org/scripts/530863/PortaPotty%20%28Fast%20Dump%20Search%29.user.js"
  },
  {
   "name": "Prayer Reminder",
@@ -1050,7 +1286,10 @@
   "rules": "OK",
   "what": "Adds a church icon to the status bar until you pray that UTC day.",
   "why": "Local reminder link only; just listens for your own Pray click.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.0.1",
+  "gf": "567550",
+  "install": "https://update.greasyfork.org/scripts/567550/-Fortie-%20QOL%3A%20Prayer%20Reminder%20Icon.user.js"
  },
  {
   "name": "QOL: Item Intel",
@@ -1063,7 +1302,10 @@
   "rules": "OK",
   "what": "Adds markers and tooltips to item icons showing OC use, enhancer effects, crime requirements and energy/nerve/happy gains.",
   "why": "Readable, all data hardcoded, no network, display only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.3.3",
+  "gf": "570952",
+  "install": "https://update.greasyfork.org/scripts/570952/-Fortie-%20QOL%3A%20Item%20Intel.user.js"
  },
  {
   "name": "QOL: Med Advisor",
@@ -1076,7 +1318,10 @@
   "rules": "Grey area",
   "what": "Recommends which/how many medical items to use based on your HP and hospital time.",
   "why": "Grey-area use of a Torn internal endpoint instead of the API, with an automatic retry.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.2.6",
+  "gf": "570541",
+  "install": "https://update.greasyfork.org/scripts/570541/-Fortie-%20QOL%3A%20Med%20Advisor.user.js"
  },
  {
   "name": "Quick DVD",
@@ -1089,7 +1334,9 @@
   "rules": "Grey area",
   "what": "Adds a link on the Bootlegging crime that copies a DVD of the next or least-stocked genre.",
   "why": "Forges crime requests (grey). It is unversioned on a gist with no update data, and its loader.php match and hashed class names likely no longer fit the current crimes page.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "0.7",
+  "install": "https://gist.githubusercontent.com/sportshead/0db77f8739c00d7d29f02d1509753e0c/raw/quickdvd.user.js"
  },
  {
   "name": "Racing Commentary",
@@ -1102,7 +1349,10 @@
   "rules": "OK",
   "what": "Adds a live text-commentary overlay to the racing page, built from the race page plus optional Torn API racing data.",
   "why": "Clean API use, but it fires an undisclosed statcounter tracking pixel every time you open the racing page.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "4.0.6",
+  "gf": "574820",
+  "install": "https://update.greasyfork.org/scripts/574820/TORN%20CITY%20Race%20Commentary.user.js"
  },
  {
   "name": "Rem4k's Item Locking Script",
@@ -1115,7 +1365,10 @@
   "rules": "OK",
   "what": "Lets you padlock inventory items so they are hidden on trade, bazaar, market-listing, shop-sell and faction donate pages to prevent accidental selling.",
   "why": "No network; note it removes Torn's native lock icons and select-all box on the Item Market and only hides items visually.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "3.5.6",
+  "gf": "563066",
+  "install": "https://update.greasyfork.org/scripts/563066/Rem4rk%27s%20Locked%20Items%20Manager.user.js"
  },
  {
   "name": "Rem4rk's Item Wiki Links",
@@ -1128,7 +1381,10 @@
   "rules": "OK",
   "what": "Adds a small W link on item images that opens the item's Torn wiki page.",
   "why": "114 readable lines, no network, just adds links.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "3.3",
+  "gf": "571095",
+  "install": "https://update.greasyfork.org/scripts/571095/Rem4rk%27s%20Item%20Wiki%20Links.user.js"
  },
  {
   "name": "Remaining Time on Tab Title",
@@ -1141,7 +1397,10 @@
   "rules": "OK",
   "what": "Shows the travel, hospital, racing or chain countdown in the browser tab title.",
   "why": "Tiny, readable and display only. Last updated April 2025 and relies on hashed class names that may have gone stale.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "0.8",
+  "gf": "481120",
+  "install": "https://update.greasyfork.org/scripts/481120/Time%20on%20Tab%20Title.user.js"
  },
  {
   "name": "Russian Roulette AIO Tool",
@@ -1154,7 +1413,10 @@
   "rules": "Grey area",
   "what": "Russian Roulette tracker with win/loss stats, a profit graph, Martingale bet calculator, and custom buttons that start games and shoot.",
   "why": "Places gambling actions through hand-built sends (one per click), pushes Martingale betting, and its optional 'Instant Leave' redirects the page automatically after each game.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "19",
+  "gf": "542132",
+  "install": "https://update.greasyfork.org/scripts/542132/RR%20Tracker%20v19.user.js"
  },
  {
   "name": "RW Gear Price Checker",
@@ -1167,7 +1429,10 @@
   "rules": "OK",
   "what": "Looks up historical auction sale prices and current market/bazaar listings for ranked-war weapons and armour with matching bonuses.",
   "why": "It only fetches public price data from the author's Supabase backend and TornW3B. No key or identity leaves the browser.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "5.1.0",
+  "gf": "564049",
+  "install": "https://update.greasyfork.org/scripts/564049/TORN%20Auction%20Price%20Checker.user.js"
  },
  {
   "name": "Search for Cash Suggester",
@@ -1180,7 +1445,10 @@
   "rules": "OK",
   "what": "Highlights the suggested Search for Cash location on the crimes page based on percentages and time-of-day heuristics.",
   "why": "Only adds a highlight/badge; no clicks or requests (though its jittered scan timer and 'torn-auto-tools' namespace look borrowed from an auto-clicker).",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "3.1.0",
+  "gf": "555184",
+  "install": "https://update.greasyfork.org/scripts/555184/Torn%3A%20SFC%20Suggester%20%28ItemProfit%20Optimized%29.user.js"
  },
  {
   "name": "Search Torn Forums by User",
@@ -1193,7 +1461,10 @@
   "rules": "OK",
   "what": "Adds a poster/user field (using Torn's native autocomplete) to forum search.",
   "why": "No network or key, simple UI helper.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0",
+  "gf": "582122",
+  "install": "https://update.greasyfork.org/scripts/582122/Search%20Torn%20Forums%20by%20User.user.js"
  },
  {
   "name": "Shoplifting Monitor",
@@ -1206,7 +1477,10 @@
   "rules": "OK",
   "what": "Polls shoplifting security status and alerts (sound/visual/optional Discord ping) when cameras or guards are down at chosen shops.",
   "why": "Key goes only to api.torn.com, and the Discord webhook is opt-in, user-owned and carries no key. It runs on every torn.com page, so several open tabs multiply API calls.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "7.6",
+  "gf": "558351",
+  "install": "https://update.greasyfork.org/scripts/558351/Torn%20Shoplifting%20Monitor.user.js"
  },
  {
   "name": "Show Bazaar Listings in Market",
@@ -1219,7 +1493,10 @@
   "rules": "OK",
   "what": "Shows cheaper player bazaar listings (from TornW3B) inside the Item Market and syncs auction-house listings you view to weav3r.dev.",
   "why": "No key is sent, but it auto-uploads other players' auction data (IDs/names/bids) to a third-party server. That upload is disclosed in @description and the host is the well-known TornW3B.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "4.1.8",
+  "gf": "527616",
+  "install": "https://update.greasyfork.org/scripts/527616/Bazaars%20in%20Item%20Market%20Powered%20by%20TornW3B.user.js"
  },
  {
   "name": "Show War Local Time",
@@ -1232,7 +1509,10 @@
   "rules": "OK",
   "what": "Shows territory and ranked war end times in your local time on the faction page.",
   "why": "Harmless display code, but unmaintained since January 2024 and its ranked-war math hardcodes a 123h duration.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.6",
+  "gf": "482256",
+  "install": "https://update.greasyfork.org/scripts/482256/Show%20War%20Local%20Time.user.js"
  },
  {
   "name": "Smart Stock Vault",
@@ -1245,7 +1525,10 @@
   "rules": "Grey area",
   "what": "Stock-market dashboard that tracks a 'vault' portfolio, P&L, blocks and swing trades, and places buy/sell orders from its own panels.",
   "why": "Needs a Full Access key and places trades with its own crafted sends; the live paths do one trade per click, but uncalled multi-trade loop functions (executeSpreadTrades/executeRebalance/executeWithdrawPlan) are still in the code.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "10.2.12",
+  "gf": "564798",
+  "install": "https://update.greasyfork.org/scripts/564798/Smart%20Stock%20Vault.user.js"
  },
  {
   "name": "Solenya's Merits Tracker",
@@ -1258,7 +1541,10 @@
   "rules": "OK",
   "what": "Panel listing your missing honors/merits, easiest first, with how-to guides per honor.",
   "why": "Readable, sends the key only to api.torn.com, display-only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "3.0",
+  "gf": "579300",
+  "install": "https://update.greasyfork.org/scripts/579300/Torn%20City%20-%20Merit%20Tracker.user.js"
  },
  {
   "name": "Spotlight Search",
@@ -1271,7 +1557,10 @@
   "rules": "OK",
   "what": "Ctrl+Shift+K command palette to jump to Torn pages and custom bookmarks.",
   "why": "Harmless code, but unmaintained since 2024-09 and depends on two unreviewed @require libraries.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "beta-2.5.3",
+  "gf": "499236",
+  "install": "https://update.greasyfork.org/scripts/499236/Torn%20Spotlight%20Search.user.js"
  },
  {
   "name": "Stock Cash Buy/Sell",
@@ -1284,7 +1573,10 @@
   "rules": "OK",
   "what": "Adds a cash-amount box to stock buy/sell so you can type dollars instead of share counts.",
   "why": "No network; only pre-fills an input the player must confirm.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.4",
+  "gf": "541515",
+  "install": "https://update.greasyfork.org/scripts/541515/Stock%20Cash%20BuySell.user.js"
  },
  {
   "name": "Stock Manager & Advisor",
@@ -1297,7 +1589,10 @@
   "rules": "Grey area",
   "what": "Stock-market 'vault' panel: one-click buy/sell of a chosen stock to park cash, plus portfolio P/L, benefit-block protection and an ROI advisor.",
   "why": "Moves real in-game money through hand-built sends to Torn's trade endpoint (grey under the rules); otherwise readable, and the key is only sent to api.torn.com.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "7.6.3",
+  "gf": "561390",
+  "install": "https://update.greasyfork.org/scripts/561390/Stock%20Manager%20%20Advisor%20v76.user.js"
  },
  {
   "name": "Supply Pack Analyzer",
@@ -1310,7 +1605,10 @@
   "rules": "OK",
   "what": "Tracks supply pack purchases/openings from your logs and computes profit and drop rates.",
   "why": "Needs a Full-access key (stored in localStorage) and sends your player id to the author's worker.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.4.7",
+  "gf": "573251",
+  "install": "https://update.greasyfork.org/scripts/573251/Supply%20Pack%20Analyzer.user.js"
  },
  {
   "name": "Swiss Army Knife",
@@ -1323,7 +1621,10 @@
   "rules": "OK",
   "what": "Bundle of small QoL modules (weapon tab on right, faction balance, company filter, chat highlighter, hospital timer, RR filter, chain bonus highlighter).",
   "why": "Readable, API-only, display features; low install count.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.7",
+  "gf": "567266",
+  "install": "https://update.greasyfork.org/scripts/567266/The%20Swiss%20Army%20Knife.user.js"
  },
  {
   "name": "TCAT - Torn Chain Alerter and Tools",
@@ -1336,7 +1637,10 @@
   "rules": "OK",
   "what": "Chain timer alerts (tab title/sound), optional Discord webhook alerts, and a chain target list tool with faction import and sorting.",
   "why": "Readable, key only goes to api.torn.com, and the webhook goes to the user's own Discord.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.0.1",
+  "gf": "534481",
+  "install": "https://update.greasyfork.org/scripts/534481/TCAT%20-%20Torn%20Chain%20Alert%20%20Tool%20%28Chain%20Alert%20hotfix%29.user.js"
  },
  {
   "name": "TEEM - Torn's Elephant Economy Manager",
@@ -1349,7 +1653,9 @@
   "rules": "OK",
   "what": "Market signals, travel-profit rankings, war-gear pricing and crime $/hour tracker panel.",
   "why": "Readable, key only goes to api.torn.com, YATA calls are public data; hosted on GitHub (not Greasy Fork) so no install/review metadata.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "6.10.5",
+  "install": "https://raw.githubusercontent.com/StonedWasteland/Torn-Elephant-Economy-Manager/main/TornElephantEconomyManager.user.js"
  },
  {
   "name": "TimeZoneTracker",
@@ -1362,7 +1668,10 @@
   "rules": "OK",
   "what": "Shows clocks for chosen time zones in the Torn footer.",
   "why": "No network or key; pure display.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.4",
+  "gf": "497622",
+  "install": "https://update.greasyfork.org/scripts/497622/TimeZoneTracker.user.js"
  },
  {
   "name": "Torn City Weather Forecast",
@@ -1375,7 +1684,10 @@
   "rules": "OK",
   "what": "Novelty 7-day 'Torn City' weather widget on profile pages using real forecast data.",
   "why": "Harmless function, but it includes an undisclosed StatCounter tracking pixel that reports each profile-page view to a third party.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.19.0",
+  "gf": "575081",
+  "install": "https://update.greasyfork.org/scripts/575081/TORN%20CITY%20Weather%20Forecast.user.js"
  },
  {
   "name": "Torn Color Customizer",
@@ -1388,7 +1700,10 @@
   "rules": "OK",
   "what": "Recolors sidebar notification highlights and ranked-war weapon/armor rarity backgrounds.",
   "why": "Cosmetic CSS changes stored in localStorage, no network.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.0",
+  "gf": "584628",
+  "install": "https://update.greasyfork.org/scripts/584628/Torn%20Color%20Customizer.user.js"
  },
  {
   "name": "Torn Crack",
@@ -1401,7 +1716,10 @@
   "rules": "Grey area",
   "what": "Suggests candidate passwords for the Cracking crime from a 1M wordlist plus a community word list.",
   "why": "Sends in-game page data to an unlisted personal Cloudflare worker (wildcard *.workers.dev @connect) and does one unprompted page reload.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.1.2",
+  "gf": "544469",
+  "install": "https://update.greasyfork.org/scripts/544469/torn-crack.user.js"
  },
  {
   "name": "Torn Foreign Stock",
@@ -1414,7 +1732,10 @@
   "rules": "OK",
   "what": "Shows live abroad shop stock, restock countdowns and travel profit per item on the travel page.",
   "why": "The key goes only to api.torn.com, and the third-party calls are anonymous fetches of public stock data.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "0.9.29",
+  "gf": "581933",
+  "install": "https://update.greasyfork.org/scripts/581933/Torn%20Foreign%20Stock.user.js"
  },
  {
   "name": "Torn Forum Notifier",
@@ -1427,7 +1748,10 @@
   "rules": "OK",
   "what": "Polls the Torn API for new posts in the player's own and subscribed forum threads and shows notifications.",
   "why": "Readable and uses only the Torn API, but it is very new with about 7 installs.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.0",
+  "gf": "573797",
+  "install": "https://update.greasyfork.org/scripts/573797/Torn%20Forum%20Notifier.user.js"
  },
  {
   "name": "Torn Forums Feed Height Increase",
@@ -1440,7 +1764,10 @@
   "rules": "OK",
   "what": "Makes forum feed panels taller.",
   "why": "Rated Medium only because it is unmaintained since 2024-05; the code is one harmless CSS line (worst case it stops working).",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "0.1",
+  "gf": "494693",
+  "install": "https://update.greasyfork.org/scripts/494693/Torn%20Forums%20Feed%20Height%20Increase.user.js"
  },
  {
   "name": "Torn Mail Templates",
@@ -1453,7 +1780,9 @@
   "rules": "OK",
   "what": "Saves and loads mail subject/body templates, adds a Quick Send button with a 10s cooldown, and adds mail buttons to the user list.",
   "why": "No network and one click equals one send. It is installed from GitHub raw rather than Greasy Fork, and it auto-updates from there.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.0.1",
+  "install": "https://raw.githubusercontent.com/GlasnostDev/torn-mail-templates/main/torn-mail-templates.user.js"
  },
  {
   "name": "Torn Newspaper Ad Blocker",
@@ -1466,7 +1795,10 @@
   "rules": "OK",
   "what": "Hides the player-ad message strip on newspaper, job list, bounties and similar pages.",
   "why": "The 53-line CSS hide is harmless, but it has not been updated since 2024-03 and may no longer match Torn's hashed class names.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.5",
+  "gf": "489334",
+  "install": "https://update.greasyfork.org/scripts/489334/Torn%20Newspaper%20Adblock.user.js"
  },
  {
   "name": "Torn Poker HUD & Coach",
@@ -1479,7 +1811,10 @@
   "rules": "OK",
   "what": "Profiles poker opponents (VPIP/PFR etc.) from the hand log on the holdem page and shows badges plus live coaching hints.",
   "why": "Readable, key only goes to api.torn.com, and the GitHub sync is opt-in to the user's own private gist. 23.5k lines were grep-audited, not read line by line.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "6.12",
+  "gf": "569933",
+  "install": "https://update.greasyfork.org/scripts/569933/Torn%20Poker%20HUD%20-%20Player%20Profiler%20%20Coach.user.js"
  },
  {
   "name": "Torn Quick-Nav Hotkeys",
@@ -1492,7 +1827,10 @@
   "rules": "OK",
   "what": "Configurable keyboard shortcuts that open Torn pages.",
   "why": "No network, no key, navigation only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.8.0",
+  "gf": "568934",
+  "install": "https://update.greasyfork.org/scripts/568934/Torn%20Quick-Nav%20Hotkeys.user.js"
  },
  {
   "name": "Torn Racing Guide",
@@ -1505,7 +1843,10 @@
   "rules": "OK",
   "what": "Racing overlay with best cars and parts per track, highlighting recommended upgrades.",
   "why": "No network, no key, display only.",
-  "pick": "yes"
+  "pick": "yes",
+  "reviewed": "1.5.1",
+  "gf": "569449",
+  "install": "https://update.greasyfork.org/scripts/569449/Torn%20Racing%20Guide.user.js"
  },
  {
   "name": "Torn Radial Menu",
@@ -1518,7 +1859,10 @@
   "rules": "OK",
   "what": "Radial quick-navigation menu with search, notes, timers and an optional API bars/money monitor.",
   "why": "Readable, only talks to api.torn.com, clicks are navigation/UI links and file export.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.6.1",
+  "gf": "553889",
+  "install": "https://update.greasyfork.org/scripts/553889/Torn%20Quick-Travel%20%28Radial%20Menu%29.user.js"
  },
  {
   "name": "Torn Spy - Bazaar",
@@ -1531,7 +1875,10 @@
   "rules": "Grey area",
   "what": "Integrates the tornspy.com spy-report marketplace into Torn: stats on profiles and faction pages, buying reports, using company spy specials.",
   "why": "A third-party server controls HTML injected into Torn pages and supplies the recipient and amount for cash sent via sendcash.php. The script also uploads browsing and attack data.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.0.10",
+  "gf": "500134",
+  "install": "https://update.greasyfork.org/scripts/500134/Torn%20Spy%20Integration.user.js"
  },
  {
   "name": "Torn Stats Comparison - TSC",
@@ -1544,7 +1891,10 @@
   "rules": "OK",
   "what": "Button on profiles that compares a few of your personal stats against the viewed player.",
   "why": "Small, readable, API-only on explicit click.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.7",
+  "gf": "577909",
+  "install": "https://update.greasyfork.org/scripts/577909/Torn%20Stats%20Comparison%20%28TSC%29.user.js"
  },
  {
   "name": "Torn Tactical Clock",
@@ -1557,7 +1907,10 @@
   "rules": "OK",
   "what": "Draggable floating widget showing TCT and local time.",
   "why": "Pure display with no requests.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.4",
+  "gf": "584486",
+  "install": "https://update.greasyfork.org/scripts/584486/Torn%20Tactical%20Clock%20-%201224hr%20TCT%20%2B%20Local.user.js"
  },
  {
   "name": "Torn Themes",
@@ -1570,7 +1923,10 @@
   "rules": "OK",
   "what": "Customizes Torn's background image, layout width and panel shading.",
   "why": "Cosmetic CSS only, no requests or key.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.8",
+  "gf": "512850",
+  "install": "https://update.greasyfork.org/scripts/512850/Torn%20Themes.user.js"
  },
  {
   "name": "Torn War Stuff Enhanced",
@@ -1583,7 +1939,10 @@
   "rules": "OK",
   "what": "On the faction war page, shows travel status and hospital countdowns for enemy members and sorts them by hospital time.",
   "why": "Every poll uploads faction API data and a key-derived hash to twse.dev, which the script description does not mention.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.1",
+  "gf": "529238",
+  "install": "https://update.greasyfork.org/scripts/529238/Torn%20War%20Stuff%20Enhanced.user.js"
  },
  {
   "name": "Torn-Per-Day",
@@ -1596,7 +1955,10 @@
   "rules": "OK",
   "what": "Adds a per-day rate comparison graph under the personal stats charts.",
   "why": "Display-only, no network, uses only data already on the page.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "0.1.1",
+  "gf": "570165",
+  "install": "https://update.greasyfork.org/scripts/570165/Torn%20Per-Day%20Comparison%20Graph.user.js"
  },
  {
   "name": "TornBuddy - Chat Enhancer",
@@ -1609,7 +1971,10 @@
   "rules": "OK",
   "what": "Saves favourite contacts and fills their ID into the recipient box on messages, trade and item-send pages.",
   "why": "Only fills a text input from localStorage and never sends anything.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.1",
+  "gf": "496998",
+  "install": "https://update.greasyfork.org/scripts/496998/TornBuddy.user.js"
  },
  {
   "name": "TornCast",
@@ -1622,7 +1987,10 @@
   "rules": "OK",
   "what": "Raycast-style keyboard launcher for jumping to Torn pages, plus a small calculator.",
   "why": "Navigation shortcuts only; the calculator uses its own parser, not eval.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.1",
+  "gf": "560082",
+  "install": "https://update.greasyfork.org/scripts/560082/TornCast.user.js"
  },
  {
   "name": "Trade Reputation",
@@ -1635,7 +2003,10 @@
   "rules": "Grey area",
   "what": "Shows and lets you vote on crowd-sourced trader reputation on profiles, plus Torn Exchange data and mug/trade evidence.",
   "why": "Sends the raw Torn API key to a personal workers.dev server while its key prompt says the key is 'stored locally in your browser only', and auto-uploads your Events page contents.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.3.0.6",
+  "gf": "573609",
+  "install": "https://update.greasyfork.org/scripts/573609/Torn%20Trade%20Reputation.user.js"
  },
  {
   "name": "Trading Companion Script",
@@ -1648,7 +2019,10 @@
   "rules": "OK",
   "what": "Values items in a trade using the trader's weav3r.dev pricelist, shows receipts and helps add money/accept trades.",
   "why": "Asks for a Full-access key and sends player id/name and trade contents to weav3r.dev (well-known trader site).",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.8.0",
+  "gf": "561291",
+  "install": "https://update.greasyfork.org/scripts/561291/TornW3B%20Trading%20Companion.user.js"
  },
  {
   "name": "Travel Agency 3.0D",
@@ -1661,7 +2035,10 @@
   "rules": "OK",
   "what": "Replaces the travel page's world map with an interactive 3D globe.",
   "why": "Cosmetic, readable, no network beyond pinned CDN libraries and static images.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "0.25.13",
+  "gf": "412025",
+  "install": "https://update.greasyfork.org/scripts/412025/Travel%20Agency%2030D.user.js"
  },
  {
   "name": "Travel Blocker",
@@ -1674,7 +2051,10 @@
   "rules": "OK",
   "what": "Warns about or blocks the travel page's fly buttons when an OC is about to start, a drug cooldown or war is active, etc.",
   "why": "Readable, talks only to api.torn.com, and is purely a safety/blocking aid.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "2.3.0",
+  "gf": "543904",
+  "install": "https://update.greasyfork.org/scripts/543904/Travel%20Blocker%20%28OC%20TimingBazaar%20%20Drug%20Cooldown%20Notifier%29.user.js"
  },
  {
   "name": "Unf**k Torn",
@@ -1687,7 +2067,10 @@
   "rules": "OK",
   "what": "Replaces Torn's censored swear words in forum posts with the original words.",
   "why": "Text replacement only with no network code.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "1.1.1",
+  "gf": "574622",
+  "install": "https://update.greasyfork.org/scripts/574622/Unf%2A%2Ak%20Torn.user.js"
  },
  {
   "name": "Universal Healthcare",
@@ -1700,7 +2083,10 @@
   "rules": "OK",
   "what": "Adds a REVIVE ME button while in hospital that sends a revive request to the Universal Healthcare Alliance.",
   "why": "Sends player ID, name and faction to a third-party server, though only public identity data, only on an explicit click, and that is the point of the script.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.7",
+  "gf": "412591",
+  "install": "https://update.greasyfork.org/scripts/412591/Universal%20Healthcare%20Revives.user.js"
  },
  {
   "name": "View Listings Anytime",
@@ -1713,7 +2099,10 @@
   "rules": "OK",
   "what": "Shows your bazaar, item market and points market listings (and prices) even when those pages are unavailable, e.g. while in hospital/travelling.",
   "why": "Readable and API-only, but explicitly asks for a Full access key (log selection) stored in page localStorage, and prompts for it on every Torn page until set.",
-  "pick": "maybe"
+  "pick": "maybe",
+  "reviewed": "1.0.1",
+  "gf": "544333",
+  "install": "https://update.greasyfork.org/scripts/544333/View%20Listings%20Anytime.user.js"
  },
  {
   "name": "War Stuff Enhanced Beta",
@@ -1726,7 +2115,10 @@
   "rules": "OK",
   "what": "On faction war pages, shows travel/hospital timers, sorts members by status, and adds a chain-timer bubble and copy buttons.",
   "why": "Shares faction member status data with twse.dev by default; this is explained in the settings, but it is a beta build.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "2.2-beta2",
+  "gf": "579772",
+  "install": "https://update.greasyfork.org/scripts/579772/Torn%20War%20Stuff%20Enhanced%20Beta.user.js"
  },
  {
   "name": "WarBuddy",
@@ -1739,6 +2131,9 @@
   "rules": "OK",
   "what": "Faction war roster monitor with member status, hospital timers and bounty info on the faction page.",
   "why": "Public key used only against api.torn.com; no third-party hosts or automation.",
-  "pick": "no"
+  "pick": "no",
+  "reviewed": "4.0.4",
+  "gf": "565591",
+  "install": "https://update.greasyfork.org/scripts/565591/Insomnis%27%20WarBuddy.user.js"
  }
 ]

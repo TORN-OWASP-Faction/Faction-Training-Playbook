@@ -3,6 +3,9 @@
   import Icon from '$lib/Icon.svelte';
   import REVIEW from '$lib/data/script-review.json';
   import SITES from '$lib/data/site-review.json';
+  import CodeViewer from '$lib/CodeViewer.svelte';
+
+  let viewing = $state(null); // the script whose code is open
 
   const link = (html) => html.replace(/href="\//g, `href="${base}/`);
 
@@ -162,15 +165,20 @@
       {#each names as name}
         {@const r = byName[name]}
         {#if r}
-          <a class="pick card" href={r.url} target="_blank" rel="noopener">
-            <span class="pn">{r.name} <span aria-hidden="true">↗</span></span>
+          <div class="pick card">
+            <a class="pn" href={r.url} target="_blank" rel="noopener">{r.name} <span aria-hidden="true">↗</span></a>
             <span class="pw">{r.what}</span>
             <span class="badges"><span class="risk {r.risk.toLowerCase()}">{r.risk} risk</span><span class="kb">{r.key}</span></span>
-          </a>
+            <span class="acts">
+              <a class="btn-i" href={r.install}>Install</a>
+              <button class="btn-c" onclick={() => (viewing = r)}>View code</button>
+            </span>
+          </div>
         {/if}
       {/each}
     </div>
   {/each}
+  <p class="note"><b>Install</b> opens your script manager's install screen (Tampermonkey or Violentmonkey). On Torn PDA, add the script from the app's userscript settings instead. <b>View code</b> shows the live source so you can check it yourself.</p>
   <p class="note">Show Bazaar Listings is rated Medium only because it shares the auction listings you view with TornW3B; it sends no key. Droqs and Mission Reward Info share shop stock and reward prices you see, anonymously. That's how they crowdsource their data.</p>
 </div></section>
 
@@ -252,7 +260,8 @@
     <tbody>
       {#each shown as r (r.name)}
         <tr>
-          <td class="nm">{#if r.url}<a href={r.url} target="_blank" rel="noopener">{r.name}</a>{:else}{r.name}{/if}<small>{r.type}</small></td>
+          <td class="nm">{#if r.url}<a href={r.url} target="_blank" rel="noopener">{r.name}</a>{:else}{r.name}{/if}<small>{r.type}</small>
+            <span class="rowacts">{#if r.risk !== 'High'}<a href={r.install}>Install</a> · {/if}<button onclick={() => (viewing = r)}>Code</button></span></td>
           <td><span class="risk {r.risk.toLowerCase()}">{r.risk}</span></td>
           <td class="kc">{r.key}</td>
           <td class:warn={r.rules !== 'OK'}>{r.rules}</td>
@@ -311,12 +320,22 @@
   </div>
 </div></section>
 
+<CodeViewer script={viewing} onclose={() => (viewing = null)} />
+
 <style>
   .grp{margin:1.4rem 0 .6rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--amber)}
   .picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:.7rem}
   .pick{display:flex;flex-direction:column;gap:.35rem;text-decoration:none;color:var(--ink);padding:.9rem 1rem;border-radius:3px}
-  .pick:hover{border-color:var(--amber)}
-  .pn{font-weight:600}
+  .pick:hover{border-color:color-mix(in srgb,var(--amber) 55%,var(--border))}
+  .pn{font-weight:600;color:var(--ink);text-decoration:none}
+  .pn:hover{color:var(--amber)}
+  .acts{display:flex;gap:.4rem;margin-top:.4rem}
+  .btn-i,.btn-c{font:inherit;font-size:.85rem;border-radius:3px;padding:.3rem .7rem;cursor:pointer;text-decoration:none}
+  .btn-i{background:var(--amber);color:#111;font-weight:600;border:1px solid var(--amber)}
+  .btn-c{background:none;color:var(--ink);border:1px solid var(--border)}
+  .btn-c:hover{border-color:var(--amber)}
+  .rowacts{display:block;margin-top:.3rem;font-size:.8rem}
+  .rowacts button{font:inherit;background:none;border:0;padding:0;color:var(--amber);cursor:pointer;text-decoration:underline}
   .pw{color:var(--muted);font-size:.86rem;flex:1}
   .pw em{display:block;font-style:normal;color:var(--faint);margin-top:.2rem}
   .badges{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.2rem}
