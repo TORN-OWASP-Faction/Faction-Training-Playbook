@@ -82,8 +82,6 @@
   const inDays = (s) => (s.live ? 'On now' : s.days === 1 ? 'Tomorrow' : `In ${s.days} days`);
 </script>
 
-<svelte:head><title>Events calendar · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Plan around them</span>
   <h1>Events <em>calendar</em></h1>

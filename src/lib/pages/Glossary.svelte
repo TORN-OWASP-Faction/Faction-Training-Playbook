@@ -14,8 +14,6 @@
   ];
 </script>
 
-<svelte:head><title>{m.title}</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">{m.eyebrow}</span>
   <h1>{@html m.h1}</h1>

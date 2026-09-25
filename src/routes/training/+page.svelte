@@ -270,8 +270,6 @@
   });
 </script>
 
-<svelte:head><title>Training guide · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Get stronger</span>
   <h1>Training <em>guide</em></h1>

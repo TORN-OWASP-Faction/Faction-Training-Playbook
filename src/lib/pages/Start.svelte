@@ -45,8 +45,6 @@
   </table></div>
 {/snippet}
 
-<svelte:head><title>{m.title}</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">{m.hero.eyebrow}</span>
   <h1>{@html m.hero.h1}</h1>

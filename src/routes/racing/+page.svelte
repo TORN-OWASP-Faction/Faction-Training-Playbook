@@ -73,8 +73,6 @@
   ];
 </script>
 
-<svelte:head><title>Racing · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Racing · with Gearbox</span>
   <h1>Learn the <em>road</em></h1>

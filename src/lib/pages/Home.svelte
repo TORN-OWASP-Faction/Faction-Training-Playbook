@@ -35,8 +35,6 @@
   ];
 </script>
 
-<svelte:head><title>{m.title}</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="hero-badge">{m.badge}</span>
   <h1>{@html m.h1}</h1>

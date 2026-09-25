@@ -37,8 +37,6 @@
   const count = (level) => REVIEW.filter((r) => r.risk === level).length;
 </script>
 
-<svelte:head><title>Scripts &amp; tools · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="hero-badge">SET UP BEFORE THE FIGHT</span>
   <h1>Scripts &amp; <em>Tools</em></h1>

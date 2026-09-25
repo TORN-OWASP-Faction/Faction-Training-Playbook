@@ -79,8 +79,6 @@
 
 </script>
 
-<svelte:head><title>Halloween: Trick or Treat · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Seasonal event · usually 25 October – 1 November</span>
   <h1>Trick or <em>Treat</em></h1>

@@ -260,8 +260,6 @@
   ];
 </script>
 
-<svelte:head><title>Progression paths · Faction Training Playbook</title></svelte:head>
-
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Your plan · level 15 and up</span>
   <h1>Pick your <em>path</em></h1>

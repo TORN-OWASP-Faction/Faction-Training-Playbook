@@ -7,6 +7,7 @@
   import Nav from '$lib/Nav.svelte';
   import { LOCALES, localeOf, splitLang, isTranslated, href, loadMessages, translateUrl } from '$lib/i18n';
   import { pref, loadPref, savePref } from '$lib/i18n/pref.svelte.js';
+  import { META, SITE_ORIGIN, SITE_NAME } from '$lib/meta.js';
 
   let { data, children } = $props();
 
@@ -68,7 +69,39 @@
   }
 
   const fill = (str, lang) => str.replace('{language}', localeOf(lang).name);
+
+  // Link-preview tags. Translated pages take their title and intro from their own messages.
+  const strip = (html) => html.replace(/<[^>]+>/g, '');
+  const meta = $derived.by(() => {
+    const [title, description, image] = META[path.split('#')[0]] ?? META['/'];
+    const m = page.data?.m;
+    const local = translated && m
+      ? { title: m.title, description: strip(m.lede ?? m.hero?.lede ?? description) }
+      : { title: path === '/' ? SITE_NAME : `${title} · ${SITE_NAME}`, description };
+    return { ...local, image: `${SITE_ORIGIN}${base}/og/${image}.jpg`, url: SITE_ORIGIN + page.url.pathname };
+  });
 </script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <meta name="theme-color" content="#C39A6B" />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={meta.title} />
+  <meta property="og:locale" content={localeOf(data.lang).html.replace('-', '_')} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+</svelte:head>
 
 <a class="skip" href="#main">{m.skip}</a>
 
