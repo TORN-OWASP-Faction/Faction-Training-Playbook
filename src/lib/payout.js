@@ -67,6 +67,9 @@ export function payout({ totalMade, spent, pct, points }) {
 //       'abroad' most kills abroad | 'hits' most war hits | 'manual' leadership picks, reason says why
 export const AWARD_RULES = [['score', 'Best score'], ['newScore', 'Best score, newer players'], ['abroad', 'Most kills abroad'], ['hits', 'Most war hits'], ['manual', "Leadership's pick"]];
 
+// Positions that can't win awards unless leadership picks them by hand.
+export const DEFAULT_EXCLUDED = ['Leader', 'Co-leader'];
+
 export const DEFAULT_AWARDS = [
   { rule: 'score', min: 200, maxAge: 150, reason: '', item: 'Donator Pack', qty: 1, price: 0, winner: null },
   { rule: 'newScore', min: 50, maxAge: 150, reason: '', item: 'Donator Pack', qty: 1, price: 0, winner: null },

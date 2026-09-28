@@ -1,4 +1,5 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import PathChart from '$lib/PathChart.svelte';
@@ -448,8 +449,8 @@
       <ul class="rules">
         <li><span class="k">E</span><div><b>Energy.</b> A full bar every 5 hours, captured only when you check in (and a night's sleep wastes some). Up to 3 Xanax a day (6–8h cooldown), a daily refill, and happy jumps, each bought from the path's energy budget.</div></li>
         <li><span class="k">S</span><div><b>Stats.</b> Training Formula V2.0 on your current gym. Gyms unlock after the wiki's energy requirement and fee; balanced and stats-first also buy the specialist gyms (Frontline, Gym 3000).</div></li>
-        <li><span class="k">$</span><div><b>Money.</b> Flying needs two check-ins per round trip. A PI is rented only when its extra items cover its cost, and the large suitcase follows. Spare cash goes to the bank (to $2B, rate set by your bank merits); a stock block is bought whenever it returns more than the bank would, working down the list by return.</div></li>
-        <li><span class="k">✗</span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts and mugging losses. Merits come from real players' award counts (see Merits in each guide). Faction upgrades are off unless you add them. Real players usually earn a little more and lose a little more.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div><b>Money.</b> Flying needs two check-ins per round trip. A PI is rented only when its extra items cover its cost, and the large suitcase follows. Spare cash goes to the bank (to $2B, rate set by your bank merits); a stock block is bought whenever it returns more than the bank would, working down the list by return.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div><b>Left out on purpose:</b> war pay, trading, crimes, OC payouts and mugging losses. Merits come from real players' award counts (see Merits in each guide). Faction upgrades are off unless you add them. Real players usually earn a little more and lose a little more.</div></li>
       </ul>
       <div>
         <p style="margin:0 0 .5rem;color:var(--muted)">Checked against the guides' own numbers:</p>

@@ -66,8 +66,8 @@
       <h3>API keys — one per tool</h3>
       <p class="what" style="color:var(--muted)">Each tool needs a Torn API key. Make a <b>separate key per tool</b> with the <b>minimum access</b> it needs (Limited or Custom), at torn.com → Settings → API Key.</p>
       <ul class="rules" style="margin-top:.7rem">
-        <li><span class="k">✓</span><div>Separate keys let you see each tool's usage in your key history and revoke just that one if needed.</div></li>
-        <li><span class="k">✗</span><div>Never paste a <b>Full</b>-access key into a random script.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>Separate keys let you see each tool's usage in your key history and revoke just that one if needed.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div>Never paste a <b>Full</b>-access key into a random script.</div></li>
       </ul>
     </div>
   </div>
@@ -187,7 +187,7 @@
   <p class="lede">Out of {REVIEW.length}, {count('High')} are ones we'd tell players to skip. None is outright malware, but each breaks trust or Torn's rules:</p>
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
-      {#each AVOID as [name, why]}<li><span class="k">✗</span><div><b>{name}.</b> {why}</div></li>{/each}
+      {#each AVOID as [name, why]}<li><span class="k"><Icon name="x"/></span><div><b>{name}.</b> {why}</div></li>{/each}
     </ul>
   </div>
   <p class="note">About a dozen more sit in a grey area: one click triggers a different action than the button shows, or a script asks for a Full key or log access it doesn't strictly need. They're marked in the table below.</p>
@@ -224,13 +224,13 @@
     <div class="callout">
       <h3 style="margin-bottom:.5rem">Use with care</h3>
       <ul class="rules">
-        {#each SITES.caution as [name, url, why]}<li><span class="k">!</span><div><a href={url} target="_blank" rel="noopener"><b>{name}</b></a>: {why}</div></li>{/each}
+        {#each SITES.caution as [name, url, why]}<li><span class="k"><Icon name="alert"/></span><div><a href={url} target="_blank" rel="noopener"><b>{name}</b></a>: {why}</div></li>{/each}
       </ul>
     </div>
     <div class="card">
       <h3 style="margin-bottom:.5rem">Skip</h3>
       <ul class="rules">
-        {#each SITES.skip as [name, why]}<li><span class="k">✗</span><div><b>{name}</b>: {why}</div></li>{/each}
+        {#each SITES.skip as [name, why]}<li><span class="k"><Icon name="x"/></span><div><b>{name}</b>: {why}</div></li>{/each}
       </ul>
     </div>
   </div>
@@ -279,11 +279,11 @@
     <div class="card">
       <h3>What we look for</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">→</span><div><b>Where it sends data.</b> Only to Torn's API is best. A known service (FF Scouter, TornStats) is fine if the script says so.</div></li>
-        <li><span class="k">🔑</span><div><b>Where your key goes,</b> and whether that matches what the script tells you.</div></li>
+        <li><span class="k"><Icon name="right"/></span><div><b>Where it sends data.</b> Only to Torn's API is best. A known service (FF Scouter, TornStats) is fine if the script says so.</div></li>
+        <li><span class="k"><Icon name="key"/></span><div><b>Where your key goes,</b> and whether that matches what the script tells you.</div></li>
         <li><span class="k">1:1</span><div><b>Torn's rules:</b> scripts may only use the API or the page you're viewing, and one click can do one thing. Anything that acts on its own is automation, and banned.</div></li>
-        <li><span class="k">?</span><div><b>Hidden code:</b> scrambled code, or code downloaded and run later.</div></li>
-        <li><span class="k">↻</span><div><b>Upkeep:</b> not updated in 18 months counts against it.</div></li>
+        <li><span class="k"><Icon name="help"/></span><div><b>Hidden code:</b> scrambled code, or code downloaded and run later.</div></li>
+        <li><span class="k"><Icon name="refresh"/></span><div><b>Upkeep:</b> not updated in 18 months counts against it.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -292,7 +292,7 @@
         <li><span class="k low">L</span><div><b>Low:</b> readable, talks only to Torn's API (or public data), no rule issues.</div></li>
         <li><span class="k med">M</span><div><b>Medium:</b> shares your key or game data with another site, needs a broad key, sits in a grey area, or is unmaintained.</div></li>
         <li><span class="k high">H</span><div><b>High:</b> misleads about your key, lets another server control what you pay, or automates the game.</div></li>
-        <li><span class="k">!</span><div>Scripts update. We read the versions on Greasy Fork on 25 September 2026; a later update can change any of this.</div></li>
+        <li><span class="k"><Icon name="alert"/></span><div>Scripts update. We read the versions on Greasy Fork on 25 September 2026; a later update can change any of this.</div></li>
       </ul>
     </div>
   </div>

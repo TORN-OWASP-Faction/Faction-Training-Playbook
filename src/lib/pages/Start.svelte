@@ -1,4 +1,5 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import Character from '$lib/Character.svelte';
   import { naturalEnergy } from '$lib/progression.js';
   import { href, rich } from '$lib/i18n';
@@ -12,25 +13,25 @@
 
   // Badge shown beside each line of a list, in the same order as the lines in the messages.
   const K = {
-    missionsNew: ['E', '↑', '!'],
-    missionsReg: ['15', '✓', '✗'],
-    safeTips: ['↻', '✗', '$'],
-    sellWhere: ['IM', 'B', '⇄'],
-    sellHow: ['$', '!', '⚑'],
-    drugsWhat: ['↓', '%', '✗', '!'],
-    drugsKeep: ['✈', 'M', '★', '⚑'],
-    scams: ['$', '⇄', '🔑', '✈', '🏦', '🎲'],
-    respect: ['R', '×', '↓'],
-    help: ['OC', '⛓', '↺', '+', '✈'],
-    day: ['E', '↑', 'X', 'N', '✈', 'JP', '$'],
-    week: ['↻', '$', '🎓', 'OC'],
-    month: ['🏝', '★', '$', '📖']
+    missionsNew: ['E', 'i:up', 'i:alert'],
+    missionsReg: ['15', 'i:check', 'i:x'],
+    safeTips: ['i:refresh', 'i:x', 'i:dollar'],
+    sellWhere: ['IM', 'B', 'i:swap'],
+    sellHow: ['i:dollar', 'i:alert', 'i:flag'],
+    drugsWhat: ['i:down', 'i:percent', 'i:x', 'i:alert'],
+    drugsKeep: ['i:plane', 'M', 'i:star', 'i:flag'],
+    scams: ['i:dollar', 'i:swap', 'i:key', 'i:plane', 'i:bank', 'i:dice'],
+    respect: ['R', 'i:x', 'i:down'],
+    help: ['OC', 'i:link', 'i:revive', 'i:plus', 'i:plane'],
+    day: ['E', 'i:up', 'X', 'N', 'i:plane', 'JP', 'i:dollar'],
+    week: ['i:refresh', 'i:dollar', 'i:grad', 'OC'],
+    month: ['i:palm', 'i:star', 'i:dollar', 'i:book-open']
   };
 </script>
 
 {#snippet rules(lines, badges)}
   <ul class="rules">
-    {#each lines as line, i}<li><span class="k" aria-hidden="true">{badges[i]}</span><div>{@html r(line)}</div></li>{/each}
+    {#each lines as line, i}<li><span class="k" aria-hidden="true">{#if badges[i].startsWith('i:')}<Icon name={badges[i].slice(2)} />{:else}{badges[i]}{/if}</span><div>{@html r(line)}</div></li>{/each}
   </ul>
 {/snippet}
 

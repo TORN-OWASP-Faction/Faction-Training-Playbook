@@ -1,7 +1,9 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import Tabs from '$lib/Tabs.svelte';
+  import Item from '$lib/Item.svelte';
 
   // [class, total racing points earned to reach it, Baldr's car pick, points to spend on arrival, points to carry forward]
   const CLASSES = [
@@ -136,7 +138,7 @@
       {#each CLASSES as [cls, reach, car, spend, carry]}
         <tr>
           <td><b>Class {cls}</b>{#if cls === 'A'} <span class="merit">+1 merit</span>{/if}</td>
-          <td class="num mono">{reach}</td><td>{car}</td>
+          <td class="num mono">{reach}</td><td>{#each car.split(' or ') as c, i}{#if i}<br /><small class="or">or</small><br />{/if}<Item name={c} />{/each}</td>
           <td class="num mono">{spend}{#if cls === 'A'} (full){/if}</td><td class="num mono">{carry ?? '—'}</td>
         </tr>
       {/each}
@@ -158,7 +160,7 @@
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">V</span><div><b>Volt MNG:</b> follow the Class B list above and save 40–50 points for your first A car. The safe, common route.</div></li>
         <li><span class="k">C</span><div><b>Colina Tanprice:</b> no saving. Upgrade it with parts you keep in Class A (the list on the right) and it becomes your first A car. It's the best car on the Mudpit even in A and fine on dirt, but weaker on tarmac, and there are more tarmac tracks. It's also expensive now.</div></li>
-        <li><span class="k">=</span><div>Both work. Baldr used the Volt; players who took the Colina were happy with it too.</div></li>
+        <li><span class="k"><Icon name="equal"/></span><div>Both work. Baldr used the Volt; players who took the Colina were happy with it too.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -175,7 +177,7 @@
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
       <li><span class="k">A</span><div><b>One car or two in Class A?</b> Put everything into your first A car until you have the 250-win merit or nothing left to buy. After that, some drivers build a second car so they have one for tarmac and one for dirt.</div></li>
-      <li><span class="k">!</span><div>Upgrades stay with the car. Un-enlisting a car strips its upgrades, and you can't sell an enlisted car.</div></li>
+      <li><span class="k"><Icon name="alert"/></span><div>Upgrades stay with the car. Un-enlisting a car strips its upgrades, and you can't sell an enlisted car.</div></li>
     </ul>
   </div>
   <Character variant="racer" name="Gearbox" tag="Garage Talk" initial="A" img="racer.png">
@@ -205,9 +207,9 @@
     <div class="card">
       <h3>More skill</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">↻</span><div>Keep racing. You gain skill even when you don't place.</div></li>
+        <li><span class="k"><Icon name="refresh"/></span><div>Keep racing. You gain skill even when you don't place.</div></li>
         <li><span class="k">100</span><div>Long races give more skill. Some drivers run 100-lap unofficial races just for it.</div></li>
-        <li><span class="k">★</span><div>A 10★ Mechanic Shop gives +50% driving skill gain.</div></li>
+        <li><span class="k"><Icon name="star"/></span><div>A 10★ Mechanic Shop gives +50% driving skill gain.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -231,16 +233,16 @@
     <div class="card">
       <h3>Race if</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">✓</span><div>You're online a lot anyway and have hours you aren't flying.</div></li>
-        <li><span class="k">✓</span><div>You want the merits. Six permanent upgrades is a real reward.</div></li>
-        <li><span class="k">✓</span><div>You're training stats, not flying all day. Racing uses no energy.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>You're online a lot anyway and have hours you aren't flying.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>You want the merits. Six permanent upgrades is a real reward.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>You're training stats, not flying all day. Racing uses no energy.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Wait if</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">✈</span><div>You fly flowers and plushies back to back. You can't travel mid-race. <a href="{base}/travel/">Flying for money →</a></div></li>
-        <li><span class="k">$</span><div>$1.6M for the license is a big share of what you have. Get your <a href="{base}/start/#week">first week</a> set up first.</div></li>
+        <li><span class="k"><Icon name="plane"/></span><div>You fly flowers and plushies back to back. You can't travel mid-race. <a href="{base}/travel/">Flying for money →</a></div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div>$1.6M for the license is a big share of what you have. Get your <a href="{base}/start/#week">first week</a> set up first.</div></li>
       </ul>
     </div>
   </div>
@@ -254,6 +256,7 @@
 </div></footer>
 
 <style>
+  small.or{color:var(--muted);font-size:.75rem;line-height:1.6}
   .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem;margin-top:1.4rem}
   .facts .tile{display:flex;flex-direction:column;gap:.1rem;border-radius:3px}
   .facts span{font-family:"IBM Plex Mono",monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}

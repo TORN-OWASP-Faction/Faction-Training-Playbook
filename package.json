@@ -10,6 +10,7 @@
     "i18n:check": "node scripts/check-i18n.js"
   },
   "devDependencies": {
+    "@lucide/svelte": "^1.48.0",
     "@sveltejs/adapter-static": "^3.0.8",
     "@sveltejs/kit": "^2.15.1",
     "@sveltejs/vite-plugin-svelte": "^4.0.4",

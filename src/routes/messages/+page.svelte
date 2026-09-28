@@ -1,4 +1,5 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import Character from '$lib/Character.svelte';
@@ -227,8 +228,8 @@
     <ul class="rules">
       <li><span class="k">T</span><div><b>Torn:</b> "Copy for Torn" keeps the formatting when you paste into the faction announcement editor. If an editor only takes code, use "Copy HTML".</div></li>
       <li><span class="k">D</span><div><b>Discord:</b> "Copy for Discord" turns bold, lists and links into Discord formatting. Colours don't carry over.</div></li>
-      <li><span class="k">⏱</span><div>Times are in TCT (Torn time, same as UTC), so members in every time zone read the same time.</div></li>
-      <li><span class="k">✓</span><div>Post it once, then pin or link it rather than repeating it in chat.</div></li>
+      <li><span class="k"><Icon name="timer"/></span><div>Times are in TCT (Torn time, same as UTC), so members in every time zone read the same time.</div></li>
+      <li><span class="k"><Icon name="check"/></span><div>Post it once, then pin or link it rather than repeating it in chat.</div></li>
     </ul>
   </div>
 </div></section>

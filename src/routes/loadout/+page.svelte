@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import Icon from '$lib/Icon.svelte';
+  import Item from '$lib/Item.svelte';
 
   const rifles = [
     ['Armalite', 'Top pick', 'Highest damage AND accuracy of any rifle. Reloads every 5 turns.'],
@@ -55,16 +56,16 @@
   <div class="tbl-scroll" style="margin-top:1rem"><table>
     <thead><tr><th>Rifle</th><th>Tier</th><th>Why</th></tr></thead>
     <tbody>
-      {#each rifles as [name, tier, why]}<tr><td><b>{name}</b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
+      {#each rifles as [name, tier, why]}<tr><td><b><Item {name} /></b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
     </tbody>
   </table></div>
   <div class="card" style="margin-top:1rem">
     <h3>Best rifle perks</h3>
     <ul class="rules" style="margin-top:.6rem">
-      <li><span class="k">★</span><div><b>Powerful</b> — best if you run <b>special ammo</b> (no diminishing returns, doesn't fight piercing).</div></li>
-      <li><span class="k">+</span><div><b>Penetrate / Puncture</b> — the pick if you don't use special ammo often.</div></li>
-      <li><span class="k">≈</span><div><b>Deadeye / Expose</b> — slightly less damage; the rare <b>double</b> Deadeye+Expose is the strongest rifle in the game.</div></li>
-      <li><span class="k">→</span><div><b>Sureshot</b> vs dexterity-heavy targets; <b>Specialist</b> only on an Enfield (costs a mod slot for a Recoil Pad, but huge sustained damage).</div></li>
+      <li><span class="k"><Icon name="star"/></span><div><b>Powerful</b> — best if you run <b>special ammo</b> (no diminishing returns, doesn't fight piercing).</div></li>
+      <li><span class="k"><Icon name="plus"/></span><div><b>Penetrate / Puncture</b> — the pick if you don't use special ammo often.</div></li>
+      <li><span class="k"><Icon name="approx"/></span><div><b>Deadeye / Expose</b> — slightly less damage; the rare <b>double</b> Deadeye+Expose is the strongest rifle in the game.</div></li>
+      <li><span class="k"><Icon name="right"/></span><div><b>Sureshot</b> vs dexterity-heavy targets; <b>Specialist</b> only on an Enfield (costs a mod slot for a Recoil Pad, but huge sustained damage).</div></li>
     </ul>
   </div>
 </div></section>
@@ -77,7 +78,7 @@
   <div class="tbl-scroll" style="margin-top:1rem"><table>
     <thead><tr><th>Pistol</th><th>Role</th><th>Why</th></tr></thead>
     <tbody>
-      {#each pistols as [name, tier, why]}<tr><td><b>{name}</b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
+      {#each pistols as [name, tier, why]}<tr><td><b>{#each name.split(' / ') as n, i}{#if i}<br />{/if}<Item name={n} />{/each}</b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
     </tbody>
   </table></div>
   <Character variant="militia" name="Rook" tag="Faction Intel" initial="R" img="militia.png">
@@ -86,10 +87,10 @@
   <div class="card" style="margin-top:1rem">
     <h3>Pistol perks</h3>
     <ul class="rules" style="margin-top:.6rem">
-      <li><span class="k">★</span><div><b>Revitalize</b> (BT MP9) — extra energy = more hits = more respect/retals. Nothing beats it.</div></li>
+      <li><span class="k"><Icon name="star"/></span><div><b>Revitalize</b> (BT MP9) — extra energy = more hits = more respect/retals. Nothing beats it.</div></li>
       <li><span class="k"><Icon name="skull"/></span><div><b>Stricken</b> — caps meds; good for merc hits / selling hospital time.</div></li>
-      <li><span class="k">↯</span><div><b>Assassinate</b> — huge one-turn damage, but needs trigger + accuracy mods (and tracer ammo to land it), and a strong melee to back it up. Better with <b>Double Tap</b>.</div></li>
-      <li><span class="k">↑</span><div><b>Motivation</b> — a 5-minute stat buff that boosts the damage of your other weapons.</div></li>
+      <li><span class="k"><Icon name="zap"/></span><div><b>Assassinate</b> — huge one-turn damage, but needs trigger + accuracy mods (and tracer ammo to land it), and a strong melee to back it up. Better with <b>Double Tap</b>.</div></li>
+      <li><span class="k"><Icon name="up"/></span><div><b>Motivation</b> — a 5-minute stat buff that boosts the damage of your other weapons.</div></li>
     </ul>
   </div>
 </div></section>
@@ -102,17 +103,17 @@
   <div class="tbl-scroll" style="margin-top:1rem"><table>
     <thead><tr><th>Melee</th><th>Tier</th><th>Why</th></tr></thead>
     <tbody>
-      {#each melee as [name, tier, why]}<tr><td><b>{name}</b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
+      {#each melee as [name, tier, why]}<tr><td><b>{#each name.split(' / ') as n, i}{#if i}<br />{/if}<Item name={n} />{/each}</b></td><td class="mono">{tier}</td><td>{why}</td></tr>{/each}
     </tbody>
   </table></div>
   <div class="card" style="margin-top:1rem">
     <h3>Melee perks</h3>
     <ul class="rules" style="margin-top:.6rem">
-      <li><span class="k">★</span><div><b>Fury / Rage</b> — highest overall damage (an extra attack), but RNG.</div></li>
-      <li><span class="k">+</span><div><b>Penetrate / Puncture</b> — consistent damage if you dislike RNG.</div></li>
-      <li><span class="k">🩸</span><div><b>Bleed</b> — best on the high-damage Kodachi.</div></li>
-      <li><span class="k">◈</span><div><b>Bloodlust</b> if you're a frequent group-fight victim (pairs with EOD armor); <b>Eviscerate / Motivation</b> for a debuff/buff you apply then swap to your rifle.</div></li>
-      <li><span class="k">⊘</span><div><b>Parry</b> vs melee/Plunder players; <b>Plunder</b> is for mugging, not for winning the fight.</div></li>
+      <li><span class="k"><Icon name="star"/></span><div><b>Fury / Rage</b> — highest overall damage (an extra attack), but RNG.</div></li>
+      <li><span class="k"><Icon name="plus"/></span><div><b>Penetrate / Puncture</b> — consistent damage if you dislike RNG.</div></li>
+      <li><span class="k"><Icon name="droplet"/></span><div><b>Bleed</b> — best on the high-damage Kodachi.</div></li>
+      <li><span class="k"><Icon name="gem"/></span><div><b>Bloodlust</b> if you're a frequent group-fight victim (pairs with EOD armor); <b>Eviscerate / Motivation</b> for a debuff/buff you apply then swap to your rifle.</div></li>
+      <li><span class="k"><Icon name="ban"/></span><div><b>Parry</b> vs melee/Plunder players; <b>Plunder</b> is for mugging, not for winning the fight.</div></li>
     </ul>
   </div>
 </div></section>
@@ -125,19 +126,19 @@
     <div class="card">
       <h3>Ammo</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">★</span><div><b>Special ammo</b> is what makes <b>Powerful</b> the top rifle perk — no diminishing returns.</div></li>
-        <li><span class="k">→</span><div><b>Tracer ammo</b> secures an <b>Assassinate</b> hit when accuracy is tight.</div></li>
+        <li><span class="k"><Icon name="star"/></span><div><b>Special ammo</b> is what makes <b>Powerful</b> the top rifle perk — no diminishing returns.</div></li>
+        <li><span class="k"><Icon name="right"/></span><div><b>Tracer ammo</b> secures an <b>Assassinate</b> hit when accuracy is tight.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Mods</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⚙</span><div><b>Recoil Pad</b> is the mod cost of running <b>Specialist</b> on an Enfield.</div></li>
-        <li><span class="k">⚙</span><div><b>Assassinate</b> needs a <b>trigger + accuracy</b> mod pair to be reliable.</div></li>
+        <li><span class="k"><Icon name="settings"/></span><div><b>Recoil Pad</b> is the mod cost of running <b>Specialist</b> on an Enfield.</div></li>
+        <li><span class="k"><Icon name="settings"/></span><div><b>Assassinate</b> needs a <b>trigger + accuracy</b> mod pair to be reliable.</div></li>
       </ul>
     </div>
   </div>
-  <p class="note" style="margin-top:1rem">Armor and full mod choices are covered in the complete guide — this page distils the weapon meta. See <a href="{base}/medical/">Field medicine</a> for the meds and cooldowns that keep you in the fight.</p>
+  <p class="note" style="margin-top:1rem">Every mod, its price and which guns it fits: see <a href="{base}/weapon-mods/">Weapon mods</a>. Armor is covered in the complete guide; this page distils the weapon meta. See <a href="{base}/medical/">Field medicine</a> for the meds and cooldowns that keep you in the fight.</p>
 </div></section>
 
 <footer><div class="wrap">

@@ -53,7 +53,8 @@ export async function loadFaction(key) {
       const them = w.factions.find((f) => f.id !== faction.id);
       return { id: w.id, start: w.start, end: w.end || null, target: w.target, winner: w.winner, us, them };
     }),
-    names: Object.fromEntries(members.members.map((m) => [m.id, m.name]))
+    names: Object.fromEntries(members.members.map((m) => [m.id, m.name])),
+    positions: Object.fromEntries(members.members.map((m) => [m.id, m.position]))
   };
 }
 

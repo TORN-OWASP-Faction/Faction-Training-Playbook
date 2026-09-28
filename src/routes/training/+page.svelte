@@ -3,6 +3,7 @@
   import Icon from '$lib/Icon.svelte';
   import { onMount } from 'svelte';
   import Tabs from '$lib/Tabs.svelte';
+  import Item from '$lib/Item.svelte';
 
   const brackets = [
     { label: 'Broke', note: '< $5M', rows: [
@@ -306,10 +307,10 @@
     <div class="callout">
       <h3>The golden rules</h3>
       <ul class="rules" style="margin-top:10px">
-        <li><span class="k">×</span><div>Every train burns <b>40–60% of the energy you spend</b> back out of your happy bar.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div>Every train burns <b>40–60% of the energy you spend</b> back out of your happy bar.</div></li>
         <li><span class="k"><Icon name="timer"/></span><div>Happy over your max <b>resets at :00 / :15 / :30 / :45</b>. Spend a jump immediately — don't let the clock eat it.</div></li>
-        <li><span class="k">∏</span><div>Perks from <b>property, faction &amp; education multiply</b> your gains (they don't add). Stack them.</div></li>
-        <li><span class="k">↓</span><div>The bigger your stats, the <b>less</b> happy matters — so new players get the most out of it.</div></li>
+        <li><span class="k"><Icon name="layers"/></span><div>Perks from <b>property, faction &amp; education multiply</b> your gains (they don't add). Stack them.</div></li>
+        <li><span class="k"><Icon name="down"/></span><div>The bigger your stats, the <b>less</b> happy matters — so new players get the most out of it.</div></li>
       </ul>
     </div>
     <div class="callout">
@@ -342,12 +343,12 @@
     <div class="callout">
       <h3>The jump — in order</h3>
       <ol class="steps" style="margin-top:10px">
-        <li><b>Stack, then XTC last.</b> Eat your 5 eDVDs, candies and job-points special — <b>then</b> 1 Ecstasy, so its ×2 doubles the whole stacked total.</li>
-        <li><b>Train.</b> Dump your full energy bar into the target stat.</li>
-        <li><b>Refill.</b> Point refill (or Xanax) to top the bar back up.</li>
-        <li><b>Train.</b> Dump it again while happy's still high.</li>
-        <li><b>Wait.</b> Let natural energy tick back.</li>
-        <li><b>Train the +5</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — spend the regen tick before happy resets.</li>
+        <li><div><b>Stack, then XTC last.</b> Eat your 5 eDVDs, candies and job-points special — <b>then</b> 1 Ecstasy, so its ×2 doubles the whole stacked total.</div></li>
+        <li><div><b>Train.</b> Dump your full energy bar into the target stat.</div></li>
+        <li><div><b>Refill.</b> Point refill (or Xanax) to top the bar back up.</div></li>
+        <li><div><b>Train.</b> Dump it again while happy's still high.</div></li>
+        <li><div><b>Wait.</b> Let natural energy tick back.</div></li>
+        <li><div><b>Train the +5</b> <span class="mono" style="color:var(--faint);font-size:.8rem">optional</span> — spend the regen tick before happy resets.</div></li>
       </ol>
     </div>
   </div>
@@ -440,7 +441,7 @@
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">E</span><div>25 energy per attack → hospital; a <b>First Aid Kit</b> clears 50 min. A full bar = ~4 losses.</div></li>
         <li><span class="k">X</span><div><b>Xanax</b> (+250 energy) → ~10 more; stack First Aid Kits and knock out ~16 in a sitting (dual-tab it).</div></li>
-        <li><span class="k">$</span><div>16 losses ≈ <b>$5.6M</b> gross → <b>~$4.4M net</b> after Xanax + kits (donator). Works before level 15 — you just need buyers.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div>16 losses ≈ <b>$5.6M</b> gross → <b>~$4.4M net</b> after Xanax + kits (donator). Works before level 15 — you just need buyers.</div></li>
         <li><span class="k"><Icon name="phone"/></span><div>Set it up through <a href="https://ffscouter.com/sell-losses" target="_blank" rel="noopener">FFScouter → Sell Losses</a> (see the <a href="{base}/scripts/">Scripts</a> page). Prepaid contracts mean you're always paid.</div></li>
       </ul>
       <p style="margin:.8rem 0 0;padding-left:.75rem;border-left:2px solid var(--c-medic);color:var(--muted);font-size:.88rem"><b style="color:var(--ink)">Use it for a goal, not as a job.</b> Selling losses is a burst of cash for one <em>specific</em> target — a first property, a book, a Xanax stack — then you switch off it. It is <b>not</b> a long-term income: every hour spent taking hits is an hour you're <b>not training or warring</b>, so your stats stall and you stay weak. And the math says so — that same <b>25 energy spent on a war hit earns ~$450k–$1M</b> (depending on respect gain), well above a $350k loss. The real ladder is <b>war payouts first</b>, then <b>passive income</b> (a ~$2B bank stack earning interest, plus the faction's other money methods) once you can afford to build it.</p>
@@ -588,12 +589,12 @@
   <div class="tbl-scroll" style="margin-top:10px"><table>
     <thead><tr><th>Item</th><th>Happy</th><th>Notes</th></tr></thead>
     <tbody>
-      <tr><td>Cheap candy <span class="tag h">low tier</span></td><td class="mono">+25</td><td>Lollipop, Box of Chocolate Bars, Bon Bons. Topping up / new players.</td></tr>
-      <tr><td>Mid candy</td><td class="mono">+75–150</td><td>Tootsie Rolls, Humbugs, Jawbreaker, Pixie Sticks. Building-tier jumps.</td></tr>
-      <tr><td>Birthday Cupcake</td><td class="mono">+250</td><td>Top candy value per item.</td></tr>
-      <tr><td>Erotic DVD (eDVD) <span class="tag h">jump workhorse</span></td><td class="mono">+2,500</td><td>Made at the <b>Adult Novelties</b> company — you earn ~<b>1 eDVD per 20 job points</b>. The company's star rating adds a happy bonus: at <b>10★</b> it's <b>+100%</b>, so each eDVD gives <b>+5,000</b>, not 2,500. Only worth it once you're in a <b>3★+</b> Adult Novelties (or about to be) — below that, stick to candy.</td></tr>
-      <tr><td>Ecstasy (XTC) <span class="tag h">always</span></td><td class="mono">×2</td><td><b>Doubles your current happy</b> for a fairly low price — the best-value happy multiplier there is. <b>Always take one if you're small, or on any full happy jump.</b> Big drug cooldown, so time it; pairs with eDVD stacks.</td></tr>
-      <tr><td>Xanax</td><td class="mono">+75</td><td>Bonus happy on top of its energy (below).</td></tr>
+      <tr><td>Cheap candy <span class="tag h">low tier</span><span class="item-row"><Item name="Lollipop" icon /><Item name="Box of Chocolate Bars" icon /><Item name="Bon Bons" icon /></span></td><td class="mono">+25</td><td>Lollipop, Box of Chocolate Bars, Bon Bons. Topping up / new players.</td></tr>
+      <tr><td>Mid candy<span class="item-row"><Item name="Tootsie Rolls" icon /><Item name="Humbugs" icon /><Item name="Jawbreaker" icon /><Item name="Pixie Sticks" icon /></span></td><td class="mono">+75–150</td><td>Tootsie Rolls, Humbugs, Jawbreaker, Pixie Sticks. Building-tier jumps.</td></tr>
+      <tr><td><Item name="Birthday Cupcake" /></td><td class="mono">+250</td><td>Top candy value per item.</td></tr>
+      <tr><td><Item name="Erotic DVD" label="Erotic DVD (eDVD)" /> <span class="tag h">jump workhorse</span></td><td class="mono">+2,500</td><td>Made at the <b>Adult Novelties</b> company — you earn ~<b>1 eDVD per 20 job points</b>. The company's star rating adds a happy bonus: at <b>10★</b> it's <b>+100%</b>, so each eDVD gives <b>+5,000</b>, not 2,500. Only worth it once you're in a <b>3★+</b> Adult Novelties (or about to be) — below that, stick to candy.</td></tr>
+      <tr><td><Item name="Ecstasy" label="Ecstasy (XTC)" /> <span class="tag h">always</span></td><td class="mono">×2</td><td><b>Doubles your current happy</b> for a fairly low price — the best-value happy multiplier there is. <b>Always take one if you're small, or on any full happy jump.</b> Big drug cooldown, so time it; pairs with eDVD stacks.</td></tr>
+      <tr><td><Item name="Xanax" /></td><td class="mono">+75</td><td>Bonus happy on top of its energy (below).</td></tr>
       <tr><td>Sweet Shop special</td><td class="mono">+4,500</td><td>10★ company, for job points. Endgame jumps.</td></tr>
     </tbody>
   </table></div>
@@ -602,11 +603,11 @@
   <div class="tbl-scroll" style="margin-top:10px"><table>
     <thead><tr><th>Source</th><th>Energy</th><th>Notes</th></tr></thead>
     <tbody>
-      <tr><td>Xanax <span class="tag e">best value</span></td><td class="mono">+250</td><td>~$3.4k/energy. Also +75 happy. The daily backbone.</td></tr>
+      <tr><td><Item name="Xanax" /> <span class="tag e">best value</span></td><td class="mono">+250</td><td>~$3.4k/energy. Also +75 happy. The daily backbone.</td></tr>
       <tr><td>Natural regen</td><td class="mono">5 / 10–15 min</td><td>Free. Don't let it sit capped (150 donator / 100 not).</td></tr>
-      <tr><td>Energy drinks</td><td class="mono">+5–30</td><td>Faction perk ×1.5. Adds 2h booster cooldown.</td></tr>
-      <tr><td>LSD</td><td class="mono">+50</td><td>Cheapest per-energy budget option for low tiers.</td></tr>
-      <tr><td>Feathery Hotel Coupon</td><td class="mono">full refill</td><td>+500 happy too; +6h booster cooldown.</td></tr>
+      <tr><td>Energy drinks<span class="item-row"><Item name="Can of Goose Juice" icon /><Item name="Can of Munster" icon /><Item name="Can of Red Cow" icon /><Item name="Can of Taurine Elite" icon /></span></td><td class="mono">+5–30</td><td>Faction perk ×1.5. Adds 2h booster cooldown.</td></tr>
+      <tr><td><Item name="LSD" /></td><td class="mono">+50</td><td>Cheapest per-energy budget option for low tiers.</td></tr>
+      <tr><td><Item name="Feathery Hotel Coupon" /></td><td class="mono">full refill</td><td>+500 happy too; +6h booster cooldown.</td></tr>
       <tr><td>Point refill</td><td class="mono">+150</td><td>Costs points — for pushes, not daily.</td></tr>
     </tbody>
   </table></div>
@@ -615,8 +616,8 @@
   <div class="tbl-scroll" style="margin-top:10px"><table>
     <thead><tr><th>Book</th><th>Effect</th><th>When</th></tr></thead>
     <tbody>
-      <tr><td>Yes Please Diabetes</td><td>Candy happy ×2 (31 days)</td><td>If you jump on candy often — stacks to ×9 on World Diabetes Day.</td></tr>
-      <tr><td>Ignorance Is Bliss</td><td>Happy regens above max (31 days)</td><td>High tiers holding a big happy stack.</td></tr>
+      <tr><td><Item name="Yes Please Diabetes" /></td><td>Candy happy ×2 (31 days)</td><td>If you jump on candy often — stacks to ×9 on World Diabetes Day.</td></tr>
+      <tr><td><Item name="Ignorance Is Bliss" /></td><td>Happy regens above max (31 days)</td><td>High tiers holding a big happy stack.</td></tr>
     </tbody>
   </table></div>
 </div></section>

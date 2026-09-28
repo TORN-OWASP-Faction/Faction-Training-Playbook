@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import Icon from '$lib/Icon.svelte';
+  import Item from '$lib/Item.svelte';
 
   // One-way flight minutes: standard ticket vs PI airstrip + pilot (70% of standard). Torn wiki, Travel.
   const dest = [
@@ -79,16 +80,16 @@
     <div class="card">
       <h3>Costs energy <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">competes with training</span></h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">$</span><div><b>Selling losses</b>: 25e each. Only as a short burst toward a goal (see <a href="{base}/training/#sell-losses">Selling losses</a>).</div></li>
-        <li><span class="k">⚔</span><div><b>War hits</b>: 25e each, but <b>$450k–$1M</b> a hit depending on respect. Worth it while a war is on.</div></li>
-        <li><span class="k">✗</span><div><b>Mugging</b>: uses a lot of energy for uneven returns. Skip it until you're strong.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div><b>Selling losses</b>: 25e each. Only as a short burst toward a goal (see <a href="{base}/training/#sell-losses">Selling losses</a>).</div></li>
+        <li><span class="k"><Icon name="swords"/></span><div><b>War hits</b>: 25e each, but <b>$450k–$1M</b> a hit depending on respect. Worth it while a war is on.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div><b>Mugging</b>: uses a lot of energy for uneven returns. Skip it until you're strong.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Costs time <span class="tag" style="color:var(--trainer-ink);background:var(--ok-soft)">free for a trainer</span></h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="flag"/></span><div><b>Flying</b>: flowers, plushies and contraband.</div></li>
-        <li><span class="k">⇄</span><div><b>Trading</b>: buy low, sell high. Needs capital and a lot of time online.</div></li>
+        <li><span class="k"><Icon name="swap"/></span><div><b>Trading</b>: buy low, sell high. Needs capital and a lot of time online.</div></li>
         <li><span class="k">N</span><div><b>Crimes</b> run on nerve, a separate bar. <b>Your job</b> pays and grows work stats either way.</div></li>
       </ul>
     </div>
@@ -153,9 +154,9 @@
     <div class="callout">
       <h3>Must-haves on the lease</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">✓</span><div>A <b>landing strip</b>, always. Double-check it on any PI under 3,600 happy.</div></li>
-        <li><span class="k">✓</span><div><b>Hire a pilot</b> as soon as you move in.</div></li>
-        <li><span class="k">✓</span><div><b>Rent, don't buy.</b> A bought PI starts at $500M. Renting costs a small fraction of that (you can't use the vault while renting, but that's fine).</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>A <b>landing strip</b>, always. Double-check it on any PI under 3,600 happy.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div><b>Hire a pilot</b> as soon as you move in.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div><b>Rent, don't buy.</b> A bought PI starts at $500M. Renting costs a small fraction of that (you can't use the vault while renting, but that's fine).</div></li>
       </ul>
     </div>
     <div class="callout">
@@ -215,7 +216,7 @@
     <tbody>
       {#each dest as d}
         <tr>
-          <td><b>{d.c}</b></td><td>{d.flower}</td><td>{d.plush}</td>
+          <td><b>{d.c}</b></td><td><Item name={d.flower} /></td><td>{#if d.plush === '—'}—{:else}{#each d.plush.split(' · ') as pl, i}{#if i}<br />{/if}<Item name={pl} />{/each}{/if}</td>
           <td class="mono">{hm(d.std)} → {hm(d.air)}</td>
           <td class="mono">{hm(roundTrip(d))}</td>
           <td class="mono">{mode === 'air' ? 'free' : money(d.cost)}</td>
@@ -294,7 +295,7 @@
       <ul class="rules" style="margin-top:.8rem">
         <li><span class="k">⅓</span><div>Land at a random time and there's roughly a <b>1-in-3 chance</b> your item is sold out.</div></li>
         <li><span class="k"><Icon name="timer"/></span><div>The next refill is usually <b>under an hour away</b>. You can wait abroad for it, but anyone in that country can attack you while you do.</div></li>
-        <li><span class="k">↘</span><div>A <b>steep drop</b> after each refill means lots of people fly that route. Keep a backup item picked there.</div></li>
+        <li><span class="k"><Icon name="trending-down"/></span><div>A <b>steep drop</b> after each refill means lots of people fly that route. Keep a backup item picked there.</div></li>
       </ul>
     </div>
   </div>
@@ -319,7 +320,7 @@
     <div class="card">
       <h3>What a delay can cost you</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⚔</span><div><b>Wars and chains.</b> Don't take off within two hours of a war start or a scheduled chain.</div></li>
+        <li><span class="k"><Icon name="swords"/></span><div><b>Wars and chains.</b> Don't take off within two hours of a war start or a scheduled chain.</div></li>
         <li><span class="k">OC</span><div><b>Organized crimes.</b> Torn warns you when your OC will be ready before you're back. Give that warning two extra hours of room.</div></li>
         <li><span class="k">E</span><div><b>Energy.</b> Your bar keeps refilling in the air, and anything past full is wasted. Take off with an empty bar.</div></li>
         <li><span class="k">0</span><div><b>Stock.</b> You land later, so a low-stock item may be gone. Pick a backup item in the same country, or check its <a href="#yata">restock chart</a> to see when it refills.</div></li>
@@ -329,8 +330,8 @@
       <h3>Flying around it</h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="timer"/></span><div>Before anything time-critical, fly a <b>short hop</b>. Even with a delay you're back in about 2½ hours.</div></li>
-        <li><span class="k">✈</span><div>Save <b>long hauls</b> for when your next 8 hours are clear.</div></li>
-        <li><span class="k">↻</span><div><b>Check YATA again when you land</b> and buy whatever's best in stock.</div></li>
+        <li><span class="k"><Icon name="plane"/></span><div>Save <b>long hauls</b> for when your next 8 hours are clear.</div></li>
+        <li><span class="k"><Icon name="refresh"/></span><div><b>Check YATA again when you land</b> and buy whatever's best in stock.</div></li>
       </ul>
     </div>
   </div>
@@ -355,9 +356,9 @@
     <div class="card">
       <h3>What that means for you</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">$</span><div>Prices follow the <b>point price</b>. When points go up, flowers and plushies go up too.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div>Prices follow the <b>point price</b>. When points go up, flowers and plushies go up too.</div></li>
         <li><span class="k"><Icon name="grad"/></span><div>The Museum unlocks with the <b>Bachelor of History</b>. With it you can sell to the Museum yourself instead of to other players.</div></li>
-        <li><span class="k">⇄</span><div>Players without the degree have to sell to someone who has it. That's the market you're selling into.</div></li>
+        <li><span class="k"><Icon name="swap"/></span><div>Players without the degree have to sell to someone who has it. That's the market you're selling into.</div></li>
       </ul>
     </div>
   </div>
@@ -430,18 +431,18 @@
     <div class="card">
       <h3>Capacity and gear</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">!</span><div><b>Capacity can change mid-trip.</b> If you lose a bonus while abroad, say you're fired from a Cruise Line or an event ends, those slots go. Items you already bought stay, but selling or trashing one abroad shrinks your space at once.</div></li>
+        <li><span class="k"><Icon name="alert"/></span><div><b>Capacity can change mid-trip.</b> If you lose a bonus while abroad, say you're fired from a Cruise Line or an event ends, those slots go. Items you already bought stay, but selling or trashing one abroad shrinks your space at once.</div></li>
         <li><span class="k"><Icon name="backpack"/></span><div><b>Suitcases give 1 less than they used to.</b> The large is +3.</div></li>
-        <li><span class="k">✈</span><div><b>Your weapons and armor stay home</b> (since 23 June). You can buy and equip some abroad, but they take up travel slots, so sell them before flying back.</div></li>
-        <li><span class="k">⏱</span><div>Flight times got a little shorter in Phase 2, so the times above may run a few minutes long.</div></li>
+        <li><span class="k"><Icon name="plane"/></span><div><b>Your weapons and armor stay home</b> (since 23 June). You can buy and equip some abroad, but they take up travel slots, so sell them before flying back.</div></li>
+        <li><span class="k"><Icon name="timer"/></span><div>Flight times got a little shorter in Phase 2, so the times above may run a few minutes long.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Buying and selling abroad</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">$</span><div><b>Prices move now.</b> Pick trips by profit per hour, which <a href="#yata">YATA</a> works out for you, not by what paid last week.</div></li>
-        <li><span class="k">↩</span><div><b>You can sell back to foreign shops.</b> General Store and Arms Dealer items go back at a fixed, lower price, so you lose a little. Black Market contraband and drugs go back at today's price.</div></li>
-        <li><span class="k">⇄</span><div>Selling back is how you swap: if Lion Plushies restock while you're full of Uncut Diamonds, sell the diamonds back and grab the plushies.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div><b>Prices move now.</b> Pick trips by profit per hour, which <a href="#yata">YATA</a> works out for you, not by what paid last week.</div></li>
+        <li><span class="k"><Icon name="undo"/></span><div><b>You can sell back to foreign shops.</b> General Store and Arms Dealer items go back at a fixed, lower price, so you lose a little. Black Market contraband and drugs go back at today's price.</div></li>
+        <li><span class="k"><Icon name="swap"/></span><div>Selling back is how you swap: if Lion Plushies restock while you're full of Uncut Diamonds, sell the diamonds back and grab the plushies.</div></li>
       </ul>
     </div>
   </div>
@@ -450,7 +451,7 @@
   <p style="color:var(--muted);margin:.2rem 0 .6rem">A newer import (December 2025). Flowers and plushies only pay in full sets at the Museum, so newer players end up selling them to traders. Some contraband sells more simply:</p>
   <div class="tbl-scroll"><table>
     <thead><tr><th>Items</th><th>Where they sell</th></tr></thead>
-    <tbody>{#each CONTRABAND as [items, where]}<tr><td><b>{items}</b></td><td>{where}</td></tr>{/each}</tbody>
+    <tbody>{#each CONTRABAND as [items, where]}<tr><td>{#each items.split(', ') as it, i}{#if i}<br />{/if}<b><Item name={it} /></b>{/each}</td><td>{where}</td></tr>{/each}</tbody>
   </table></div>
 </div></section>
 
@@ -488,8 +489,8 @@
   <h2>Don't fly home to get mugged</h2>
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
-      <li><span class="k">✈</span><div>Nobody can attack you <b>while you're in the air</b>. <b>Abroad</b>, anyone in the same country can. Buy fast and leave.</div></li>
-      <li><span class="k">$</span><div>Cash in your pocket can be mugged. After selling, move it right away: <b>bank investment</b> (locked but safe), <b>stocks</b> (0.1% fee to sell), <b>ghost trades</b> (6 hours max), the <b>faction vault</b>, or <b>points</b>.</div></li>
+      <li><span class="k"><Icon name="plane"/></span><div>Nobody can attack you <b>while you're in the air</b>. <b>Abroad</b>, anyone in the same country can. Buy fast and leave.</div></li>
+      <li><span class="k"><Icon name="dollar"/></span><div>Cash in your pocket can be mugged. After selling, move it right away: <b>bank investment</b> (locked but safe), <b>stocks</b> (0.1% fee to sell), <b>ghost trades</b> (6 hours max), the <b>faction vault</b>, or <b>points</b>.</div></li>
       <li><span class="k"><Icon name="pill"/></span><div>Selling in bulk makes you a target. Spread out big sales and don't advertise your balance.</div></li>
     </ul>
   </div>

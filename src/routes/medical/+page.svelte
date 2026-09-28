@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import Icon from '$lib/Icon.svelte';
+  import Item from '$lib/Item.svelte';
 </script>
 
 <header class="hero"><div class="wrap">
@@ -26,14 +27,14 @@
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">0</span><div>Empties your <b>happy, energy and nerve</b> bars — a happy-jump's worth of progress, gone.</div></li>
         <li><span class="k"><Icon name="hospital"/></span><div>Long hospital stay, plus your <b>drug cooldown balloons — up to 24 hours</b>.</div></li>
-        <li><span class="k">✗</span><div>Some drugs do extra damage on OD (life loss, stat/happy wipes). A careless Xanax can cost you a whole day of training.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div>Some drugs do extra damage on OD (life loss, stat/happy wipes). A careless Xanax can cost you a whole day of training.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>How to not do it</h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="timer"/></span><div><b>Respect the drug cooldown</b> — cooldowns run from under an hour (Ketamine, Cannabis) up to 6–8h (Xanax). Don't re-dose early.</div></li>
-        <li><span class="k">↑</span><div>OD risk rises the more you push drugs — <b>don't stack</b> multiple drugs back-to-back chasing a jump.</div></li>
+        <li><span class="k"><Icon name="up"/></span><div>OD risk rises the more you push drugs — <b>don't stack</b> multiple drugs back-to-back chasing a jump.</div></li>
         <li><span class="k"><Icon name="pill"/></span><div>Manage addiction; a heavily-addicted player ODs more and gains less. Rehab (Switzerland) resets it.</div></li>
       </ul>
     </div>
@@ -50,19 +51,19 @@
   <p class="lede">Every medical item except Opium adds to your <b>medical cooldown</b> — a separate clock from your drug cooldown. Pick the right tool for the size of the problem.</p>
   <div class="grid2" style="margin-top:1rem">
     <div class="card">
-      <h3>First Aid Kit <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">everyday</span></h3>
+      <h3><Item name="First Aid Kit" /> <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">everyday</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">−40 min hospital, +10% life, +15 min medical cooldown. Weaker than a blood bag but <b>anyone can use one</b> — the workhorse for short hospital stays and loss-selling.</p>
     </div>
     <div class="card">
-      <h3>Blood Bag <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">heavy</span></h3>
+      <h3><Item name="Blood Bag" /> <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">heavy</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">−120–180 min hospital, +30–45% life, +30 min medical cooldown (scales with education &amp; faction upgrades). Comes in blood <b>types</b>. Your main tool for big hospital chunks — stockpile before a war.</p>
     </div>
     <div class="card">
-      <h3>Opium <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">panic button</span></h3>
+      <h3><Item name="Opium" /> <span class="tag" style="color:var(--medic-ink);background:var(--medic-soft)">panic button</span></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">Removes <b>all</b> standard hospital time, +50% life, and a <b>+30% passive defense</b> buff. Costs <b>no medical cooldown</b> — but adds a 120–180 min <b>drug</b> cooldown (and drug-OD risk). The war-day emergency exit.</p>
     </div>
     <div class="card">
-      <h3>Others</h3>
+      <h3><Item name="Morphine" label="Others" /></h3>
       <p style="margin:.3em 0 0;color:var(--muted)">Morphine and similar restore life at a heavier medical-cooldown cost; keep a couple for emergencies. Check the wiki for current exact values — Ched tweaks these.</p>
     </div>
   </div>

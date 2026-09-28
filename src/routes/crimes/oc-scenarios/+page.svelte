@@ -28,9 +28,9 @@
     <div class="card">
       <h3>Slots aren't interchangeable</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">%</span><div>Each role weights <b>crime XP, battle stats and job stats differently</b> — a great Muscle can be a poor Hacker. Put people where their stats fit.</div></li>
-        <li><span class="k">≥</span><div>Roles have a practical <b>CPR floor</b>: faction worksheets run higher slots at <b>~70–80 CPR minimum</b> before they'll fill them.</div></li>
-        <li><span class="k">Σ</span><div>Roles carry <b>different weight</b> toward the crew's success — the <b>Key role</b> column below is each crime's heaviest slot (e.g. Break the Bank leans <b>32%</b> on Muscle 3). A weak member there hurts far more than in a minor slot.</div></li>
+        <li><span class="k"><Icon name="percent"/></span><div>Each role weights <b>crime XP, battle stats and job stats differently</b> — a great Muscle can be a poor Hacker. Put people where their stats fit.</div></li>
+        <li><span class="k"><Icon name="chevrons-up"/></span><div>Roles have a practical <b>CPR floor</b>: faction worksheets run higher slots at <b>~70–80 CPR minimum</b> before they'll fill them.</div></li>
+        <li><span class="k"><Icon name="sigma"/></span><div>Roles carry <b>different weight</b> toward the crew's success — the <b>Key role</b> column below is each crime's heaviest slot (e.g. Break the Bank leans <b>32%</b> on Muscle 3). A weak member there hurts far more than in a minor slot.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -38,7 +38,7 @@
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="backpack"/></span><div>Higher tiers <b>burn consumables per run</b> — from a few thousand $ up to <b>millions</b> in parts (drills, charges, viruses) each attempt.</div></li>
         <li><span class="k"><Icon name="fuel"/></span><div>They cost more <b>Scope</b> to spawn (a tier-4 group runs ~4 Scope) — but clear one and it more than pays that back.</div></li>
-        <li><span class="k">$</span><div>Rewards scale hard: top-tier runs average <b>hundreds of millions</b> gross. One weak slot dropping you from 85% to 55% success is real money per attempt.</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div>Rewards scale hard: top-tier runs average <b>hundreds of millions</b> gross. One weak slot dropping you from 85% to 55% success is real money per attempt.</div></li>
       </ul>
     </div>
   </div>

@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import { onMount } from 'svelte';
+  import { itemId } from '$lib/data/items.js';
   onMount(() => {
 
 (function(){
@@ -36,7 +37,8 @@
   // item rows
   ITEMS.forEach(function(it){
     var row=document.createElement('div'); row.className='item';
-    row.innerHTML='<div class="nm">'+it.name+'<small>+'+it.happy+(it.kind==='candy'?' · candy':'')+'</small></div>'+
+    row.innerHTML='<img class="pic" src="'+base+'/assets/items/'+itemId(it.name)+'.webp" alt="" width="50" height="25" loading="lazy">'+
+      '<div class="nm">'+it.name+'<small>+'+it.happy+(it.kind==='candy'?' · candy':'')+'</small></div>'+
       '<div class="stepper"><button type="button" aria-label="less">−</button><span class="q" id="q-'+it.id+'">0</span><button type="button" aria-label="more">+</button></div>'+
       '<div class="price"><input type="number" min="0" inputmode="numeric" placeholder="$ each" id="pr-'+it.id+'"></div>';
     var b=row.querySelectorAll('button');

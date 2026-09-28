@@ -601,3 +601,16 @@ h2.h3{font-size:1.12rem;font-weight:600;letter-spacing:.01em;margin:0 0 .2em;lin
 :root{ --trainer-ink:#44B267; }
 .say .tag{color:var(--crime-ink)}
 .say.trainer .tag,.crew.trainer .role{color:var(--trainer-ink)}
+
+/* A row of item pictures under a label (e.g. the candies in a "cheap candy" row) */
+.item-row{display:flex;flex-wrap:wrap;gap:.25rem .5rem;margin-top:.35rem}
+/* Planner item rows with a picture in front */
+.item:has(> .pic){grid-template-columns:50px 1fr auto auto}
+.item .pic{width:50px;height:25px;object-fit:contain}
+@media(max-width:420px){.item:has(> .pic){grid-template-columns:40px 1fr auto auto;gap:8px}.item .pic{width:40px;height:20px}}
+
+/* Rule lists: every badge in a list shares one column, as wide as the widest badge, so each line's text starts in the same place */
+.rules{grid-template-columns:auto minmax(0,1fr);column-gap:.75rem}
+.rules > li{display:grid;grid-column:1/-1;grid-template-columns:subgrid;align-items:start}
+.rules > li > :only-child{grid-column:1/-1}
+.rules .k{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:1.9rem;min-height:1.45rem;white-space:nowrap;line-height:1;justify-self:stretch}

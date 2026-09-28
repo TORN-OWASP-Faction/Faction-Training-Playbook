@@ -1,4 +1,5 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import { base } from '$app/paths';
   import Character from '$lib/Character.svelte';
   import { naturalEnergy, gainPerEnergy } from '$lib/progression.js';
@@ -123,7 +124,7 @@
   <div class="callout" style="margin-top:1rem">
     <h3 style="margin-bottom:.5rem">Skip these</h3>
     <ul class="rules">
-      {#each SKIP as [name, cost, what]}<li><span class="k">✗</span><div><b>{name}</b> ({nf.format(cost)}): {what}.</div></li>{/each}
+      {#each SKIP as [name, cost, what]}<li><span class="k"><Icon name="x"/></span><div><b>{name}</b> ({nf.format(cost)}): {what}.</div></li>{/each}
     </ul>
   </div>
   <p class="note">Order from Andyman's upgrade chart (October 2023), shared in <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16192843&b=0&a=0" target="_blank" rel="noopener">IceBlueFire's forum guide</a>. His note on Cold Sweat: it assumes you've unlocked Crimes 2.0.</p>
@@ -190,18 +191,18 @@
     <div class="card">
       <h3>Spend the right energy</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">↑</span><div><b>Never spend happy-jump energy on treats.</b> At your stats, a jump trains about {jumpTimes}× more per energy than a normal session. Attack on normal days and keep jump days for the gym.</div></li>
-        <li><span class="k">⛓</span><div><b>Hit on your faction's chains.</b> A chain hit is still an attack, so it rolls for a treat and earns respect at the same time. Ask leadership when chains are planned during event week.</div></li>
-        <li><span class="k">✓</span><div><b>Stop at your goal.</b> For most new players that's Frightful and its merit. After that, each treat costs training you won't get back.</div></li>
+        <li><span class="k"><Icon name="up"/></span><div><b>Never spend happy-jump energy on treats.</b> At your stats, a jump trains about {jumpTimes}× more per energy than a normal session. Attack on normal days and keep jump days for the gym.</div></li>
+        <li><span class="k"><Icon name="link"/></span><div><b>Hit on your faction's chains.</b> A chain hit is still an attack, so it rolls for a treat and earns respect at the same time. Ask leadership when chains are planned during event week.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div><b>Stop at your goal.</b> For most new players that's Frightful and its merit. After that, each treat costs training you won't get back.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Make every attack count</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">⚔</span><div><b>Fight with the Axe from the first hit</b> on weak targets, so the final hit is always spooky. On tougher ones, open with your gun and switch to the Axe when they're nearly down.</div></li>
-        <li><span class="k">✓</span><div><b>Gear on before the first attack.</b> Equip the mask and the Axe, and check they say "Spooky: Yes".</div></li>
-        <li><span class="k">$</span><div><b>Buy gear early.</b> Spooky items tend to get pricier as the event gets close. The Axe also sells in a city shop.</div></li>
-        <li><span class="k">↻</span><div><b>Think in years.</b> Basket progress and upgrades never reset. Frightful this year; Shocking and Terrifying (a second merit) as your energy grows.</div></li>
+        <li><span class="k"><Icon name="swords"/></span><div><b>Fight with the Axe from the first hit</b> on weak targets, so the final hit is always spooky. On tougher ones, open with your gun and switch to the Axe when they're nearly down.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div><b>Gear on before the first attack.</b> Equip the mask and the Axe, and check they say "Spooky: Yes".</div></li>
+        <li><span class="k"><Icon name="dollar"/></span><div><b>Buy gear early.</b> Spooky items tend to get pricier as the event gets close. The Axe also sells in a city shop.</div></li>
+        <li><span class="k"><Icon name="refresh"/></span><div><b>Think in years.</b> Basket progress and upgrades never reset. Frightful this year; Shocking and Terrifying (a second merit) as your energy grows.</div></li>
       </ul>
     </div>
   </div>
@@ -212,11 +213,11 @@
   <h2>Picking targets</h2>
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
-      <li><span class="k">✓</span><div>Pick players you beat in a few hits. <a href="{base}/scripts/">FF Scouter</a> shows who. A lost fight drops no treat, wastes the energy and puts you in hospital.</div></li>
+      <li><span class="k"><Icon name="check"/></span><div>Pick players you beat in a few hits. <a href="{base}/scripts/">FF Scouter</a> shows who. A lost fight drops no treat, wastes the energy and puts you in hospital.</div></li>
       <li><span class="k">Zz</span><div>The safest targets are low-level players with no faction who haven't been active for weeks (their profile shows Last Action). Easy wins, and nobody comes back for revenge.</div></li>
-      <li><span class="k">↩</span><div>When you win, choose <b>Leave</b>. Every finish has the same treat chance, and Leave gives the most experience without taking their cash, so fewer people come back for revenge.</div></li>
-      <li><span class="k">⚑</span><div>Never hit your own faction or its allies. Follow your faction's rules on who to attack, and ask leadership if you're not sure.</div></li>
-      <li><span class="k">$</span><div>Don't carry cash while you're picking fights. <a href="{base}/start/#safe">Keep your money →</a></div></li>
+      <li><span class="k"><Icon name="undo"/></span><div>When you win, choose <b>Leave</b>. Every finish has the same treat chance, and Leave gives the most experience without taking their cash, so fewer people come back for revenge.</div></li>
+      <li><span class="k"><Icon name="flag"/></span><div>Never hit your own faction or its allies. Follow your faction's rules on who to attack, and ask leadership if you're not sure.</div></li>
+      <li><span class="k"><Icon name="dollar"/></span><div>Don't carry cash while you're picking fights. <a href="{base}/start/#safe">Keep your money →</a></div></li>
     </ul>
   </div>
   <Character variant="militia" name="Rook" tag="Rook's Rule" initial="R" img="militia.png">
@@ -231,8 +232,8 @@
     <div class="card">
       <h3>What "Exchange All Treats" does</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">!</span><div>It swaps <b>every</b> treat you hold for candy, alcohol and energy drinks. Treats saved for upgrades are gone.</div></li>
-        <li><span class="k">✓</span><div>In your first years, keep the treats. Upgrades pay you back every October.</div></li>
+        <li><span class="k"><Icon name="alert"/></span><div>It swaps <b>every</b> treat you hold for candy, alcohol and energy drinks. Treats saved for upgrades are gone.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>In your first years, keep the treats. Upgrades pay you back every October.</div></li>
         <li><span class="k">10</span><div>Once you own the upgrades you want, exchange 100 at a time. With the Freebie upgrade, every 10 treats exchanged gives 1 free.</div></li>
       </ul>
     </div>
@@ -242,7 +243,7 @@
         <li><span class="k">II</span><div><b>Frightful:</b> better candy, alcohol and energy drinks from exchanges.</div></li>
         <li><span class="k">III</span><div><b>Shocking:</b> Save Your Tears (+500 happy per treat exchanged, up to 99,999: a <a href="{base}/training/#idea">happy jump</a>), Dark Power (+5 energy per treat, up to 1,000) and Cold Sweat (+1 nerve per treat).</div></li>
         <li><span class="k">IV</span><div><b>Horrifying:</b> exchanges can turn into eDVDs and FHCs, plus Shadow of Doubt (+1,100 treats).</div></li>
-        <li><span class="k">✗</span><div>Summoning M'aol takes 9,999 treats and years of saving. Not a new-player goal.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div>Summoning M'aol takes 9,999 treats and years of saving. Not a new-player goal.</div></li>
       </ul>
     </div>
   </div>

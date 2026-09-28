@@ -3,6 +3,7 @@
   import DataTable from '$lib/DataTable.svelte';
   import ScoutChart from '$lib/ScoutChart.svelte';
   import Character from '$lib/Character.svelte';
+  import Item from '$lib/Item.svelte';
   import data from '$lib/data/burglary.json';
 </script>
 
@@ -18,8 +19,8 @@
   <h2>What you need</h2>
   <p class="lede">Burglary uses six reusable tools (not consumed) — each opens different targets and outcomes. Get the enhancer first.</p>
   <div class="grid2" style="margin-top:1rem">
-    <div class="card"><h3>Flashlight <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer</span></h3><p style="margin:.3em 0 0;color:var(--muted)">+5% CE &amp; CS and unlocks better outcomes. Unique find while shoplifting Bits 'n' Bobs, or burgling the Tool Shed with lockpicks.</p></div>
-    <div class="card"><h3>Jemmy</h3><p style="margin:.3em 0 0;color:var(--muted)">Pry / force open targets. From shoplifting Bits 'n' Bobs or burgling the Mobile Home.</p></div>
+    <div class="card"><h3><Item name="Flashlight" /> <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer</span></h3><p style="margin:.3em 0 0;color:var(--muted)">+5% CE &amp; CS and unlocks better outcomes. Unique find while shoplifting Bits 'n' Bobs, or burgling the Tool Shed with lockpicks.</p></div>
+    <div class="card"><h3><Item name="Jemmy" /></h3><p style="margin:.3em 0 0;color:var(--muted)">Pry / force open targets. From shoplifting Bits 'n' Bobs or burgling the Mobile Home.</p></div>
     <div class="card"><h3>Rope</h3><p style="margin:.3em 0 0;color:var(--muted)">Climb up/down certain targets. Searching the junkyard/beach, casing the Mobile Home, burgling the Tool Shed &amp; Beach Hut.</p></div>
     <div class="card"><h3>Credit cards, lockpicks &amp; more</h3><p style="margin:.3em 0 0;color:var(--muted)">Credit cards shimmy some locks (very common drop); lockpicks pick others. Six tools total — different locations need different ones.</p></div>
   </div>

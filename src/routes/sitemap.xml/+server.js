@@ -16,7 +16,8 @@ function alternates(path) {
 }
 
 export function GET() {
-  const paths = Object.keys(META).flatMap((path) =>
+  // Pages marked noindex (like shared war reports, which are empty without their link) stay out.
+  const paths = Object.keys(META).filter((path) => META[path][3] !== 'noindex').flatMap((path) =>
     isTranslated(path) ? LOCALES.map((l) => [localize(path, l.code), path]) : [[path, path]]
   );
   const body = `<?xml version="1.0" encoding="UTF-8"?>

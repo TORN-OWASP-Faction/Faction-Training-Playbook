@@ -52,9 +52,9 @@
     <div class="card">
       <h3>Three outcomes</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">✓</span><div><b>Success</b> — cash and/or items, plus CE and CS.</div></li>
-        <li><span class="k">–</span><div><b>Fail</b> (orange) — no reward, but no loss either.</div></li>
-        <li><span class="k">✗</span><div><b>Critical fail</b> (red) — lose CE and CS (can drop a whole level), plus jail, hospital, or lost items/cash.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div><b>Success</b> — cash and/or items, plus CE and CS.</div></li>
+        <li><span class="k"><Icon name="minus"/></span><div><b>Fail</b> (orange) — no reward, but no loss either.</div></li>
+        <li><span class="k"><Icon name="x"/></span><div><b>Critical fail</b> (red) — lose CE and CS (can drop a whole level), plus jail, hospital, or lost items/cash.</div></li>
       </ul>
     </div>
   </div>
@@ -117,24 +117,24 @@
     <div class="card">
       <h3>Roles &amp; CPR</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">%</span><div>An OC has <b>slots (roles)</b>. Each open slot shows a coloured <b>success chance</b> for you — that's your CPR for that role.</div></li>
+        <li><span class="k"><Icon name="percent"/></span><div>An OC has <b>slots (roles)</b>. Each open slot shows a coloured <b>success chance</b> for you — that's your CPR for that role.</div></li>
         <li><span class="k">NNB</span><div>CPR rises mainly with your <b>NNB</b> (crimes), plus the role's <b>required item</b>. Put people in roles they actually pass.</div></li>
-        <li><span class="k">?</span><div>There's a hidden factor too — an OC can occasionally clear even with a lower score — but don't plan around luck.</div></li>
+        <li><span class="k"><Icon name="help"/></span><div>There's a hidden factor too — an OC can occasionally clear even with a lower score — but don't plan around luck.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Tiers &amp; rewards</h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k">1–10</span><div>OCs run in difficulty tiers. Higher tier = higher CPR required, but <b>~double the rewards</b> of the tier below (cash, items, respect).</div></li>
-        <li><span class="k">↑</span><div>Building NNB is what unlocks the bigger, better-paying OC roles. Your personal grind is the faction's access to the top tiers.</div></li>
+        <li><span class="k"><Icon name="up"/></span><div>Building NNB is what unlocks the bigger, better-paying OC roles. Your personal grind is the faction's access to the top tiers.</div></li>
       </ul>
     </div>
     <div class="card">
       <h3>Scope — the faction's fuel</h3>
       <ul class="rules" style="margin-top:.6rem">
         <li><span class="k"><Icon name="fuel"/></span><div>Spawning an OC costs <b>Scope</b>. A faction starts at <b>25</b>, caps at <b>100</b>, and it only regenerates <b>+1/day</b>.</div></li>
-        <li><span class="k">+</span><div>You earn <b>1 + the OC's tier</b> in Scope for each one you <b>clear</b> — so successes fund more OCs; failures burn Scope for nothing.</div></li>
-        <li><span class="k">✓</span><div>That's why members' readiness matters faction-wide: the faction should only run OCs its people can pass, or it bleeds Scope.</div></li>
+        <li><span class="k"><Icon name="plus"/></span><div>You earn <b>1 + the OC's tier</b> in Scope for each one you <b>clear</b> — so successes fund more OCs; failures burn Scope for nothing.</div></li>
+        <li><span class="k"><Icon name="check"/></span><div>That's why members' readiness matters faction-wide: the faction should only run OCs its people can pass, or it bleeds Scope.</div></li>
       </ul>
     </div>
     <div class="card">
@@ -168,17 +168,17 @@
       <div class="card">
         <h3>What CPR actually is</h3>
         <ul class="rules" style="margin-top:.6rem">
-          <li><span class="k">%</span><div>Your <b>CPR</b> is your chance to pass <b>one checkpoint</b> in that role — the coloured number on the slot.</div></li>
-          <li><span class="k">Σ</span><div>It's built from <b>crime experience + battle stats + job stats</b>, weighted by the role. <b>CE is weighted heavily</b> and keeps raising CPR even past CS 100 — so the crime grind never stops paying.</div></li>
+          <li><span class="k"><Icon name="percent"/></span><div>Your <b>CPR</b> is your chance to pass <b>one checkpoint</b> in that role — the coloured number on the slot.</div></li>
+          <li><span class="k"><Icon name="sigma"/></span><div>It's built from <b>crime experience + battle stats + job stats</b>, weighted by the role. <b>CE is weighted heavily</b> and keeps raising CPR even past CS 100 — so the crime grind never stops paying.</div></li>
           <li><span class="k"><Icon name="backpack"/></span><div>The role's <b>required item</b> (and its quality) feeds in too — a missing item can cap an otherwise-ready member.</div></li>
         </ul>
       </div>
       <div class="card">
         <h3>Why it's not just multiplying the slots</h3>
         <ul class="rules" style="margin-top:.6rem">
-          <li><span class="k">↻</span><div>Each checkpoint is <b>one member's own roll</b> at their CPR — CPRs don't pool or average. If a member fails, the crew gets <b>another attempt</b>.</div></li>
+          <li><span class="k"><Icon name="refresh"/></span><div>Each checkpoint is <b>one member's own roll</b> at their CPR — CPRs don't pool or average. If a member fails, the crew gets <b>another attempt</b>.</div></li>
           <li><span class="k"><Icon name="skull"/></span><div>The OC only <b>fails outright</b> after several checkpoints fail in a row (community reports ~<b>3–4</b>). So a strong bench <b>absorbs</b> a weak slot's misses.</div></li>
-          <li><span class="k">≠</span><div>That makes the real team chance <b>more forgiving</b> than "all slots must pass" — but the low slot is still where failure starts.</div></li>
+          <li><span class="k"><Icon name="not-equal"/></span><div>That makes the real team chance <b>more forgiving</b> than "all slots must pass" — but the low slot is still where failure starts.</div></li>
         </ul>
       </div>
     </div>

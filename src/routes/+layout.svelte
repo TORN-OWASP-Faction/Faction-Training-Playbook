@@ -86,18 +86,19 @@
   // Link-preview tags. Translated pages take their title and intro from their own messages.
   const strip = (html) => html.replace(/<[^>]+>/g, '');
   const meta = $derived.by(() => {
-    const [title, description, image] = META[path.split('#')[0]] ?? META['/'];
+    const [title, description, image, robots] = META[path.split('#')[0]] ?? META['/'];
     const m = page.data?.m;
     const local = translated && m
       ? { title: m.title, description: strip(m.lede ?? m.hero?.lede ?? description) }
       : { title: path === '/' ? SITE_NAME : `${title} · ${SITE_NAME}`, description };
-    return { ...local, image: `${SITE_ORIGIN}${base}/og/${image}.jpg`, url: SITE_ORIGIN + page.url.pathname };
+    return { ...local, robots, image: `${SITE_ORIGIN}${base}/og/${image}.jpg`, url: SITE_ORIGIN + page.url.pathname };
   });
 </script>
 
 <svelte:head>
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
+  {#if meta.robots}<meta name="robots" content={meta.robots} />{/if}
   <meta name="theme-color" content="#C39A6B" />
   <link rel="canonical" href={meta.url} />
   <meta property="og:type" content="website" />

@@ -1,11 +1,14 @@
 <script>
   import { onMount, untrack } from 'svelte';
-  import { memberPoints, payout, awardText, awardWinner, AWARD_RULES, DEFAULT_RULES, DEFAULT_TIERS, DEFAULT_SPLITS, DEFAULT_AWARDS } from '$lib/payout.js';
+  import { memberPoints, payout, awardText, awardWinner, AWARD_RULES, DEFAULT_RULES, DEFAULT_TIERS, DEFAULT_SPLITS, DEFAULT_AWARDS, DEFAULT_EXCLUDED } from '$lib/payout.js';
   import { itemPrices, itemCatalog, playerAges } from '$lib/warreport.js';
   import { copyTable } from '$lib/tablecopy.js';
+  import { encodeReport } from '$lib/sharecode.js';
+  import { base } from '$app/paths';
 
-  // report: the built war report (rows, rewards, chainReports). result: 'won' | 'lost'.
-  let { report, key, result, title, warId } = $props();
+  // report: the built war report (rows, rewards, chainReports). result: 'won' | 'lost'. positions: { id: faction position }.
+  // info: the war's faction names, times and scores, for the share link.
+  let { report, positions = {}, info, key, result, title, warId } = $props();
 
   const STORE = 'ftp:war-payout:v1';
 
@@ -27,6 +30,8 @@
   let rules = $state({ ...DEFAULT_RULES });
   let awards = $state(structuredClone(DEFAULT_AWARDS));
   let awardsFromProfit = $state(true);
+  let excluded = $state([...DEFAULT_EXCLUDED]);
+  let excludedIds = $state([]);
   let ready = false;
 
   // Winners belong to one war: a new report goes back to picking them automatically.
@@ -45,11 +50,13 @@
       if (saved?.rules) rules = { ...DEFAULT_RULES, ...saved.rules };
       if (Array.isArray(saved?.awards)) awards = cleanAwards(saved.awards);
       if (saved?.awardsFromProfit === false) awardsFromProfit = false;
+      if (Array.isArray(saved?.excluded)) excluded = cleanList(saved.excluded);
+      if (Array.isArray(saved?.excludedIds)) { excludedIds = cleanIds(saved.excludedIds); idsText = excludedIds.join(', '); }
     } catch { /* storage blocked or old data: keep defaults */ }
     ready = true;
   });
   $effect(() => {
-    const data = JSON.stringify({ splits, tiers, tierName, extraPct, rules, awards: awardDefs(), awardsFromProfit });
+    const data = JSON.stringify({ splits, tiers, tierName, extraPct, rules, awards: awardDefs(), awardsFromProfit, excluded, excludedIds });
     if (!ready) return;
     try { localStorage.setItem(STORE, data); } catch { /* ignore */ }
   });
@@ -96,9 +103,23 @@
   let catalog = $state([]);
   let awardMsg = $state('');
 
-  const winnerOf = (a) => (a.winner != null ? byId[a.winner] ?? null : awardWinner(a, report.rows, ages));
+  // Every position in the faction, most common first, for the "can't win" choices.
+  const positionList = $derived(Object.entries(Object.values(positions).reduce((c, p) => ({ ...c, [p]: (c[p] ?? 0) + 1 }), {}))
+    .sort((a, b) => b[1] - a[1]));
+  function toggleExcluded(pos, on) {
+    excluded = on ? [...excluded, pos] : excluded.filter((p) => p !== pos);
+  }
+  // Player IDs typed or pasted in any form: "3214737", "Name [3214737]", or a list of either.
+  let idsText = $state('');
+  function readIds() {
+    excludedIds = cleanIds(idsText.match(/\d+/g) ?? []);
+    idsText = excludedIds.join(', ');
+  }
+  const eligible = $derived(report.rows.filter((r) => !excluded.includes(positions[r.id]) && !excludedIds.includes(r.id)));
+
+  const winnerOf = (a) => (a.winner != null ? byId[a.winner] ?? null : awardWinner(a, eligible, ages));
   const ageCandidates = $derived([...new Set(awards.filter((a) => a.rule === 'newScore')
-    .flatMap((a) => report.rows.filter((r) => (r.score ?? 0) > n(a.min)).map((r) => r.id)))]);
+    .flatMap((a) => eligible.filter((r) => (r.score ?? 0) > n(a.min)).map((r) => r.id)))]);
   const agesMissing = $derived(ageCandidates.some((id) => ages[id] == null));
 
   function why(a, w) {
@@ -162,13 +183,15 @@
     catch { setupMsg = "Couldn't save: this browser is blocking storage."; return false; }
   }
 
-  const current = () => $state.snapshot({ splits, tiers, tierName, extra, extraPct, rules, awards: awardDefs(), awardsFromProfit });
+  const current = () => $state.snapshot({ splits, tiers, tierName, extra, extraPct, rules, awards: awardDefs(), awardsFromProfit, excluded, excludedIds });
 
   function apply(setup) {
     splits = setup.splits; tiers = setup.tiers; tierName = setup.tierName;
     extra = setup.extra; extraPct = setup.extraPct; rules = setup.rules;
     if (setup.awards) awards = setup.awards;
     awardsFromProfit = setup.awardsFromProfit;
+    if (setup.excluded) excluded = setup.excluded;
+    if (setup.excludedIds) { excludedIds = setup.excludedIds; idsText = excludedIds.join(', '); }
   }
 
   function saveSetup(asNew) {
@@ -224,9 +247,13 @@
       extraPct: num(d.extraPct, 5),
       rules: Object.fromEntries(Object.entries(DEFAULT_RULES).map(([k, v]) => [k, typeof v === 'boolean' ? (d.rules?.[k] ?? v) === true : num(d.rules?.[k], v)])),
       awards: Array.isArray(d.awards) ? cleanAwards(d.awards) : null,
-      awardsFromProfit: d.awardsFromProfit !== false
+      awardsFromProfit: d.awardsFromProfit !== false,
+      excluded: Array.isArray(d.excluded) ? cleanList(d.excluded) : null,
+      excludedIds: Array.isArray(d.excludedIds) ? cleanIds(d.excludedIds) : null
     };
   }
+  const cleanList = (list) => list.slice(0, 30).map((x) => str(x, 40));
+  const cleanIds = (list) => [...new Set(list.map(Number).filter((x) => Number.isInteger(x) && x > 0))].slice(0, 200);
   function cleanAwards(list) {
     const ruleIds = AWARD_RULES.map(([id]) => id);
     return list.slice(0, 30).map((a) => ({
@@ -259,6 +286,45 @@
       setupMsg = `Imported "${str(d.name)}".${note}`;
     } catch {
       setupMsg = "That file isn't a war payout export.";
+    }
+  }
+
+  // ---- share the finished report as a link (see sharecode.js) ----
+  let shareUrl = $state('');
+  let shareMsg = $state('');
+  const r1 = (v) => Math.round(n(v) * 10) / 10;
+
+  function snapshot() {
+    const row = Object.fromEntries(report.rows.map((r) => [r.id, r]));
+    return {
+      v: 1,
+      war: { id: warId, ...info, result: outcome },
+      tot: { made: Math.round(totalMade), splits: Math.round(splitsSpent), awards: Math.round(awardsTotal), fromProfit: awardsFromProfit, pct, pool: Math.round(res.pool), keeps: Math.round(res.keeps), perPoint: Math.round(res.perPoint) },
+      rewards: rewards.map((r) => [r.name, n(r.qty), n(r.price)]),
+      splits: splits.filter((s) => n(s.qty) * n(s.price)).map((s) => [s.name, n(s.qty) * n(s.price)]),
+      awards: awards.map((a) => { const w = winnerOf(a); return [n(a.qty), a.item, awardText(a), w?.id ?? null, w?.name ?? null, n(a.qty) * n(a.price)]; }),
+      m: res.pays.filter((p) => p.rp > 0).sort((a, b) => b.pay - a.pay)
+        .map((p) => [p.id, p.name ?? '', p.hits, row[p.id]?.abroad ?? 0, r1(row[p.id]?.score), r1(p.rp), Math.round(p.pay)])
+    };
+  }
+
+  async function makeShareLink() {
+    try {
+      shareUrl = `${location.origin}${base}/war-report/view/#${await encodeReport(snapshot())}`;
+      shareMsg = shareUrl.length > 2000
+        ? `The link is ${shareUrl.length.toLocaleString()} characters, more than one Discord message holds. Send it as a file, or share the code and have people paste it on the view page.`
+        : `Link ready (${shareUrl.length.toLocaleString()} characters). If you change anything above, make a new one.`;
+    } catch {
+      shareMsg = "This browser can't make share links. Try an up-to-date Chrome, Firefox, Edge or Safari.";
+    }
+  }
+
+  async function copyShare(what) {
+    try {
+      await navigator.clipboard.writeText(what === 'code' ? shareUrl.split('#')[1] : shareUrl);
+      shareMsg = what === 'code' ? 'Copied the code. It opens on the view page under "Paste a report".' : 'Copied the link.';
+    } catch {
+      shareMsg = 'Your browser blocked copying. Select the link and copy it by hand.';
     }
   }
 
@@ -357,6 +423,18 @@
     </div>
     <p class="note">Donator packs, event items and other perks for standout play. Winners are picked from this war's numbers; pick someone else from the list to override.</p>
     {#if awardMsg}<p class="note" aria-live="polite">{awardMsg}</p>{/if}
+    <fieldset class="excl">
+      <legend>Can't win awards</legend>
+      {#each positionList as [pos, count] (pos)}
+        <label class="tog"><input type="checkbox" checked={excluded.includes(pos)} onchange={(e) => toggleExcluded(pos, e.currentTarget.checked)} /> <span>{pos} <small>({count})</small></span></label>
+      {/each}
+      <label class="fld ids"><span>Players by ID</span>
+        <input bind:value={idsText} onchange={readIds} placeholder="e.g. 1234567, 2345678 or Name [1234567]" /></label>
+      {#if excludedIds.length}
+        <p class="note">Skipping {excludedIds.map((id) => (byId[id]?.name ? `${byId[id].name} [${id}]` : `[${id}]`)).join(', ')}.</p>
+      {/if}
+      <p class="note">Ticked positions and listed players are skipped when winners are picked. Leadership can still choose them by hand.</p>
+    </fieldset>
     <div class="tbl-scroll"><table class="ed awards">
       <thead><tr><th>Goes to</th><th>Item</th><th class="num">Qty</th><th class="num">Value each</th><th class="num">Total</th><th>Winner</th><th><span class="sr">Remove</span></th></tr></thead>
       <tbody>
@@ -474,6 +552,20 @@
     <button class="btn-c" onclick={() => copy('csv')}>Copy as CSV</button>
     <span class="note" aria-live="polite">{copied}</span>
   </div>
+  <div class="block card share">
+    <div class="bh"><h3>Share the final report</h3><button class="btn-i" onclick={makeShareLink}>Make a share link</button></div>
+    <p class="note">Packs the payouts, awards, rewards and splits into one link anyone can open: no key needed, nothing to install. The report lives inside the link itself and is never uploaded, so only people you give it to can see it.</p>
+    {#if shareUrl}
+      <label class="fld"><span>Share link</span><input class="link" readonly value={shareUrl} onfocus={(e) => e.currentTarget.select()} /></label>
+      <div class="row">
+        <button class="btn-c" onclick={() => copyShare('link')}>Copy link</button>
+        <button class="btn-c" onclick={() => copyShare('code')}>Copy code only</button>
+        <a class="btn-c" href={shareUrl} target="_blank" rel="noopener">Open it</a>
+      </div>
+    {/if}
+    {#if shareMsg}<p class="note" aria-live="polite">{shareMsg}</p>{/if}
+  </div>
+
   <p class="note">RP = war respect (minus chain bonuses you landed) + your share of each chain's bonuses by hits in that chain + {rules.oow} per out-of-war hit + {rules.assist} per assist, the last two only in chains of more than {rules.minChain} hits. Payout = pool × your RP ÷ net RP, so the payouts always add up to the pool.</p>
 </div>
 
@@ -523,6 +615,17 @@
   .btn-c:disabled{opacity:.5;cursor:default}
   table.wr th button{font:inherit;font-weight:600;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-transform:inherit;letter-spacing:inherit}
   .num{text-align:end;white-space:nowrap}
+  .share{display:grid;gap:.6rem}
+  .share .bh{margin-bottom:0}
+  .link{font-family:"IBM Plex Mono",monospace;font-size:.8rem!important}
+  a.btn-c{text-decoration:none;display:inline-block}
+  .btn-i{font:inherit;font-size:.9rem;border-radius:3px;padding:.4rem .85rem;cursor:pointer;background:var(--amber);border:1px solid var(--amber);color:#111;font-weight:600}
+  .excl{display:flex;flex-wrap:wrap;gap:.2rem 1.2rem;align-items:center;border:1px solid var(--border);border-radius:3px;padding:.5rem .9rem .6rem;margin:.6rem 0 .8rem}
+  .excl legend{font-size:.85rem;color:var(--muted);padding:0 .3rem}
+  .excl .tog{padding-bottom:0}
+  .excl small{color:var(--muted)}
+  .excl .note{flex-basis:100%}
+  .excl .ids{flex-basis:100%;margin-top:.3rem}
   table.awards td{vertical-align:top}
   table.awards select{font:inherit;font-size:.9rem;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:.3rem .4rem;width:100%;min-width:11rem}
   .rule{display:grid;gap:.35rem;min-width:13rem}

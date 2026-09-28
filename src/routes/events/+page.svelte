@@ -1,4 +1,5 @@
 <script>
+  import Icon from '$lib/Icon.svelte';
   import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import Character from '$lib/Character.svelte';
@@ -42,7 +43,7 @@
   <h2>Worth planning for</h2>
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
-      <li><span class="k">$</span><div><b>Tourism Day</b> (26–28 Sep): twice the items per trip.</div></li>
+      <li><span class="k"><Icon name="dollar"/></span><div><b>Tourism Day</b> (26–28 Sep): twice the items per trip.</div></li>
       <li><span class="k">W</span><div><b>Employee Appreciation Day</b> (early March): triple working stats from company training.</div></li>
       <li><span class="k">E</span><div><b>CaffeineCon</b> (15 Oct): double energy from energy drinks.</div></li>
       <li><span class="k">M</span><div><b>Trick or Treat</b> (25 Oct – 1 Nov): an easy merit.</div></li>

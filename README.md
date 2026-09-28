@@ -23,6 +23,7 @@ Live: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
 | `/messages/` | Faction message templates (war rules, termed wars, OC and travel reminders, events) with an editor; saved in the browser only |
 | `/medical/` | Overdoses, medical items and cooldowns |
 | `/loadout/` | War loadout: which weapons and perks are worth buying |
+| `/weapon-mods/` | Every weapon mod: effects, mission credit prices, which guns take which mods (from the Torn API), and when to start buying |
 | `/crimes/` | Crimes 2.0 and OC 2.0 (checkpoints, CPR) |
 | `/crimes/oc-scenarios/` | Every OC's slots, roles and role weights |
 | `/crimes/{burglary,shoplifting,cracking,forgery}/` | Sortable drop tables |
