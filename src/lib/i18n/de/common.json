@@ -43,7 +43,8 @@
       "halloween": "Halloween-Event",
       "events": "Event-Kalender",
       "racing": "Rennen",
-      "messages": "Fraktionsnachrichten"
+      "messages": "Fraktionsnachrichten",
+      "warReport": "Kriegsbericht"
     }
   },
   "notice": {

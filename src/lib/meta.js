@@ -26,6 +26,7 @@ export const META = {
   '/loadout/': ['War loadout', 'Which weapons and armor are worth buying, and how to fight above your weight.', 'loadout'],
   '/medical/': ['Field medicine', 'Overdoses, medical items, cooldowns and staying useful in a war.', 'medical'],
   '/messages/': ['Faction messages', 'War rules, termed war terms, OC and travel reminders, and upcoming events: set a few options, polish the wording, and paste it into Torn or Discord.', 'messages'],
+  '/war-report/': ['War report', 'Ranked war hits and hits abroad per member, plus a payout calculator: rewards, faction splits, special awards, tiers and each member\'s share. Your key stays in your browser.', 'warreport'],
   '/credits/': ['Credits', 'The players and guides this playbook is built on.', 'home']
 };
 

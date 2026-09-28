@@ -43,7 +43,8 @@
       "halloween": "Halloween event",
       "events": "Events calendar",
       "racing": "Racing",
-      "messages": "Faction messages"
+      "messages": "Faction messages",
+      "warReport": "War report"
     }
   },
   "notice": {

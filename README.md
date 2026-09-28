@@ -19,6 +19,7 @@ Live: https://torn-owasp-faction.github.io/Faction-Training-Playbook/
 | `/racing/` | Racing with Gearbox: first race, classes, cars, per-class upgrades, merits |
 | `/halloween/` | Trick or Treat for new players: basket, upgrade order, week planner |
 | `/events/` | Every Torn event this year and how a new player should use it |
+| `/war-report/` | Ranked war report (war hits and hits abroad per member) and payout calculator (rewards, faction splits, special awards, tiers, per-member payouts); the key stays in the browser |
 | `/messages/` | Faction message templates (war rules, termed wars, OC and travel reminders, events) with an editor; saved in the browser only |
 | `/medical/` | Overdoses, medical items and cooldowns |
 | `/loadout/` | War loadout: which weapons and perks are worth buying |
