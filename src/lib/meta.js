@@ -23,6 +23,7 @@ export const META = {
   '/crimes/shoplifting/': ['Shoplifting data', 'Shoplifting drop tables by store.', 'crimes'],
   '/crimes/cracking/': ['Cracking data', 'Cracking data tables.', 'crimes'],
   '/crimes/forgery/': ['Forgery data', 'Forgery data tables.', 'crimes'],
+  '/crimes/graffiti/': ['Graffiti guide', 'Graffiti districts, the best paint color for cash or reputation, joining a crew, and critical failures.', 'crimes'],
   '/loadout/': ['War loadout', 'Which weapons and armor are worth buying, and how to fight above your weight.', 'loadout'],
   '/medical/': ['Field medicine', 'Overdoses, medical items, cooldowns and staying useful in a war.', 'medical'],
   '/messages/': ['Faction messages', 'War rules, termed war terms, OC and travel reminders, and upcoming events: set a few options, polish the wording, and paste it into Torn or Discord.', 'messages'],

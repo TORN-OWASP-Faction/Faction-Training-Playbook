@@ -33,6 +33,7 @@
       <a class="hero-badge" href="{base}/crimes/shoplifting/" style="text-decoration:none">Shoplifting →</a>
       <a class="hero-badge" href="{base}/crimes/cracking/" style="text-decoration:none">Cracking →</a>
       <a class="hero-badge" href="{base}/crimes/forgery/" style="text-decoration:none">Forgery →</a>
+      <a class="hero-badge" href="{base}/crimes/graffiti/" style="text-decoration:none">Graffiti →</a>
     </div>
   </div>
 </div></section>
@@ -258,7 +259,7 @@
   <div class="cat">
     <div class="cat-h">Vandalism</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Graffiti</span><span class="pill skill">Skill</span></div><p>Tag locations with color/location mechanics — a low-risk CS/CE builder.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Graffiti</span><span class="pill skill">Skill</span></div><p>Tag walls across seven districts; paint color decides cash or reputation. Crew membership (CS 70 + 5 stars) unlocks the best districts. <a href="{base}/crimes/graffiti/">Full guide →</a></p></div>
       <div class="crime"><div class="top"><span class="nm">Arson</span><span class="pill skill">Skill</span></div><p>Newer vandalism crime — burn targets. Note it can <b>hospitalize</b> you rather than jail you.</p></div>
     </div>
   </div>

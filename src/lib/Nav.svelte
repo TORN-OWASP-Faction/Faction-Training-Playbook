@@ -24,7 +24,7 @@
       ['overview', '/crimes/'], ['how', '/crimes/#how'], ['nerve', '/crimes/#nerve'], ['oc', '/crimes/#oc'],
       ['ocScenarios', '/crimes/oc-scenarios/'], ['dataTables'],
       ['Burglary', '/crimes/burglary/'], ['Shoplifting', '/crimes/shoplifting/'],
-      ['Cracking', '/crimes/cracking/'], ['Forgery', '/crimes/forgery/']
+      ['Cracking', '/crimes/cracking/'], ['Forgery', '/crimes/forgery/'], ['Graffiti', '/crimes/graffiti/']
     ] },
     { id: 'fight', links: [['loadout', '/loadout/'], ['weaponMods', '/weapon-mods/'], ['medical', '/medical/'], ['factionBasics', '/start/#faction'], ['messages', '/messages/'], ['warReport', '/war-report/'], ['halloween', '/halloween/']] },
     { id: 'more', links: [['events', '/events/'], ['racing', '/racing/'], ['scripts', '/scripts/'], ['glossary', '/glossary/'], ['credits', '/credits/']] }
