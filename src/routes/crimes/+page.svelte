@@ -34,6 +34,7 @@
       <a class="hero-badge" href="{base}/crimes/cracking/" style="text-decoration:none">Cracking →</a>
       <a class="hero-badge" href="{base}/crimes/forgery/" style="text-decoration:none">Forgery →</a>
       <a class="hero-badge" href="{base}/crimes/graffiti/" style="text-decoration:none">Graffiti →</a>
+      <a class="hero-badge" href="{base}/crimes/arson/" style="text-decoration:none">Arson →</a>
     </div>
   </div>
 </div></section>
@@ -260,7 +261,7 @@
     <div class="cat-h">Vandalism</div>
     <div class="crimes">
       <div class="crime"><div class="top"><span class="nm">Graffiti</span><span class="pill skill">Skill</span></div><p>Tag walls across seven districts; paint color decides cash or reputation. Crew membership (CS 70 + 5 stars) unlocks the best districts. <a href="{base}/crimes/graffiti/">Full guide →</a></p></div>
-      <div class="crime"><div class="top"><span class="nm">Arson</span><span class="pill skill">Skill</span></div><p>Newer vandalism crime — burn targets. Note it can <b>hospitalize</b> you rather than jail you.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Arson</span><span class="pill skill">Skill</span></div><p>The most complex crime yet: place fuel, light it and manage the fire before the firefighters arrive. Jobs are daily, so do them all every day. <a href="{base}/crimes/arson/">Full guide →</a></p></div>
     </div>
   </div>
 

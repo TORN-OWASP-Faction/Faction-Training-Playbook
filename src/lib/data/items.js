@@ -55,6 +55,7 @@ export const ITEM_IDS = {
   "Kabuki Mask": 278,
   "Kodachi": 237,
   "LSD": 199,
+  "Ladder": 980,
   "Lion Plushie": 281,
   "Lollipop": 310,
   "Macana": 391,
@@ -66,6 +67,7 @@ export const ITEM_IDS = {
   "Nessie Plushie": 266,
   "Opium": 200,
   "Orchid": 264,
+  "Paint Mask": 979,
   "Panda Plushie": 274,
   "Papani Col\u00e9": 499,
   "Peony": 276,
@@ -82,6 +84,8 @@ export const ITEM_IDS = {
   "Uncut Diamonds": 1497,
   "Veloria LFA": 522,
   "Volt MNG": 93,
+  "Windproof Lighter": 544,
+  "Wire Cutters": 981,
   "Wolverine Plushie": 261,
   "Xanax": 206
 };
