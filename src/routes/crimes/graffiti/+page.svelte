@@ -10,10 +10,21 @@
       ['East Side', 'Start', 'Lowest risk, the safest zone', 'Purple', 'Red'],
       ['West Side', 'Start', 'Police presence, play it carefully', 'Green', 'Blue'],
       ['North Side', 'Start', 'High risk, high failure rate', 'Green', 'Orange'],
-      ['Residential District', 'CS 50', 'Lowest failure rate, best for grinding', 'White', 'Blue'],
-      ['Red-Light District', 'CS 50', 'Highest failure rate and arrest risk', 'Green', 'Pink'],
+      ['Residential District', 'CS 50 (found in East Side)', 'Lowest failure rate, best for grinding', 'White', 'Blue'],
+      ['Red-Light District', 'CS 50 (found in West Side)', 'Highest failure rate and arrest risk', 'Green', 'Pink'],
       ['Financial District', 'Crew', 'Crew members only', 'Black', 'Red'],
       ['City Center', 'Crew', 'Crew members only', 'Green', 'Blue']
+    ]
+  };
+
+  const reputation = {
+    columns: ['Stars', 'Graffiti in the district', 'What it unlocks'],
+    rows: [
+      ['1 star', '25', 'First unique find. Spray cans can drop.'],
+      ['2 stars', '50', 'Second unique find. Cash can drop.'],
+      ['3 stars', '100', 'Third unique find. A little more cash.'],
+      ['4 stars', '250', 'Fourth unique find. More cash.'],
+      ['5 stars', '500', 'Much more cash. With CS 70 you can join a crew. Fifth unique find at CS 100.']
     ]
   };
 </script>
@@ -26,13 +37,36 @@
 </div></header>
 
 <section><div class="wrap">
+  <span class="eyebrow">Before you start</span>
+  <h2>What you need</h2>
+  <p class="lede">Graffiti costs 3 nerve per try. You need some spray cans in a few colors, and later three key items. You find all three key items while doing this crime. You don't need them to start, but they lower your chance to fail or get a critical failure.</p>
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card"><h3>Spray cans</h3><p style="margin:.3em 0 0;color:var(--muted)">$5 each in Bits 'n' Bobs, also sold in the Print Store and on the item market. You need fewer than 100 to reach CS 100.</p></div>
+    <div class="card"><h3>Ladder <span class="tag" style="color:var(--muted);background:var(--surface)">CS 15 · West Side</span></h3><p style="margin:.3em 0 0;color:var(--muted)">The easiest key item to get. It seems to stop bad outcomes from high places and falls.</p></div>
+    <div class="card"><h3>Wire cutters <span class="tag" style="color:var(--muted);background:var(--surface)">CS 25 · North Side</span></h3><p style="margin:.3em 0 0;color:var(--muted)">Lets you reach places that are locked, so you fail less often.</p></div>
+    <div class="card"><h3>Paint mask <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer · CS 35 · East Side</span></h3><p style="margin:.3em 0 0;color:var(--muted)">+5% CS and CE gains, and it unlocks the best-paying outcomes. It is the biggest single reason one player makes more cash than another. Rare and expensive.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
   <span class="eyebrow">Districts</span>
   <h2>Where to spray, and which color</h2>
-  <p class="lede">Seven districts in three tiers. Three are open from the start, two open at Crime Skill 50, and the last two need crew membership. Click a header to sort.</p>
+  <p class="lede">Seven districts in three tiers. Three are open from the start, two open at Crime Skill 50, and the last two need crew membership. Paint colors are the best guess from community logs; there is not much data on colors yet. Click a header to sort.</p>
   <DataTable columns={districts.columns} rows={districts.rows} caption="Graffiti: districts, risk and best paint color" />
   <Character variant="fixer" name={'Nico "The Line"'} tag="Word on the Street" initial="N" img="nico.png">
-    "New to the can? Rotate through East, West and North Side until your skill is up. East Side is where you learn without paying for it. North Side is where you find out if you learned."
+    "Don't spread yourself thin. Pick one district and take it to 5 stars, so you can join a crew as soon as you hit CS 70. After that, go wherever you like. East Side is where you learn without paying for it. North Side is where you find out if you learned."
   </Character>
+</div></section>
+
+<section><div class="wrap">
+  <span class="eyebrow">Stars</span>
+  <h2>Reputation</h2>
+  <p class="lede">Each district has its own reputation, from 0 to 5 stars, based on how many tags you have there. About 80% of tries add reputation. More stars unlock unique finds and bigger cash.</p>
+  <DataTable columns={reputation.columns} rows={reputation.rows} caption="Graffiti: reputation levels" />
+  <div class="callout" style="margin-top:1rem;border-left-color:var(--c-militia)">
+    <h3 class="h3">Your tags get cleaned up</h3>
+    <p style="margin:.3em 0 0;color:var(--muted)">Every day the city removes some of your graffiti, and this can drop you a star. It is random, from a few tags to more than a dozen a day (once 100 in City Center). The more tags you have in a district, the faster they go. Districts lower on the list (Financial District, City Center) lose tags faster.</p>
+  </div>
 </div></section>
 
 <section><div class="wrap">
@@ -41,8 +75,8 @@
   <p class="lede">The two best districts are locked behind crew membership. Many players miss how you join.</p>
   <div class="grid2" style="margin-top:1rem">
     <div class="card"><h3>What you need</h3><p style="margin:.3em 0 0;color:var(--muted)">1. <b>5-star reputation</b> in any one of the first five districts (the three starter districts, Residential or Red-Light).<br>2. <b>Crime Skill 70</b>.</p></div>
-    <div class="card"><h3>How it happens</h3><p style="margin:.3em 0 0;color:var(--muted)">When you meet both conditions, a special star appears in that 5-star district. Claim it and you join a crew.</p></div>
-    <div class="card"><h3>What you get</h3><p style="margin:.3em 0 0;color:var(--muted)">The <b>"Fresh Blud"</b> honor bar. The Financial District and City Center unlock for good. The loot in every earlier district gets better too, with high-tier consumables and rare materials added.</p></div>
+    <div class="card"><h3>How it happens</h3><p style="margin:.3em 0 0;color:var(--muted)">When you meet both conditions, a new unique find appears in that 5-star district. You must find it to join a crew. Reaching the conditions alone is not enough.</p></div>
+    <div class="card"><h3>What you get</h3><p style="margin:.3em 0 0;color:var(--muted)">The <b>"Fresh Blud"</b> honor bar. The Financial District and City Center unlock for good. New outcomes open in every district too, with high-tier consumables and rare materials added.</p></div>
     <div class="card"><h3>Is it worth it?</h3><p style="margin:.3em 0 0;color:var(--muted)">Yes, if you want the big payouts. The best rewards in Graffiti all come after you join a crew.</p></div>
   </div>
 </div></section>
@@ -67,13 +101,23 @@
     <div class="card"><h3>Usually</h3><p style="margin:.3em 0 0;color:var(--muted)">You lose the spray can you are using, or a small part of your health.</p></div>
     <div class="card"><h3>In risky districts</h3><p style="margin:.3em 0 0;color:var(--muted)">In the Red-Light District or North Side, a critical failure can put you in <b>jail for 1 to 5 hours</b>.</p></div>
     <div class="card"><h3>Worst case</h3><p style="margin:.3em 0 0;color:var(--muted)">A bad critical failure can <b>destroy your wire cutters or your paint mask</b>.</p></div>
-    <div class="card"><h3>Protect yourself</h3><p style="margin:.3em 0 0;color:var(--muted)">Carry all three key items (backpack, wire cutters and paint mask). They lower your failure rate a lot and protect you from hazards. Always have the mask and wire cutters in the Red-Light District, because the guards there show no mercy.</p></div>
+    <div class="card"><h3>Protect yourself</h3><p style="margin:.3em 0 0;color:var(--muted)">Carry all three key items: ladder, wire cutters and paint mask. They seem to stop some critical failures. The risk also depends on the district, so the riskier the district, the more crits you will see.</p></div>
   </div>
   <Character variant="fixer" name={'Nico "The Line"'} tag="Nico Knows a Guy" initial="N" img="nico.png">
-    "Paint color does nothing to your crit odds. Don't waste time on it. Pick your district for the risk and pick your color for the payout."
+    "Paint color does nothing to your crit odds, or to your failure rate. Don't waste time on it. Pick your district for the risk and pick your color for the payout."
   </Character>
 </div></section>
 
+<section><div class="wrap">
+  <span class="eyebrow">Merits</span>
+  <h2>Honor bars and medals</h2>
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card"><h3>Let Us Spray</h3><p style="margin:.3em 0 0;color:var(--muted)">Honor bar for reaching CS 100.</p></div>
+    <div class="card"><h3>Fresh Blud</h3><p style="margin:.3em 0 0;color:var(--muted)">Honor bar for joining a crew.</p></div>
+  </div>
+  <p style="margin-top:1rem;color:var(--muted)">Every try also counts toward the Vandalism crime medals. Vandalism is new in Crimes 2.0, so older players can earn all of these medals too.</p>
+</div></section>
+
 <footer><div class="wrap">
-  <strong>Graffiti guide.</strong> Districts, paint colors and rewards come from community guides. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
+  <strong>Graffiti guide.</strong> Key items, reputation, decay, crews and paint colors from the in-depth Graffiti guide by <strong>Emforus [2535044]</strong>, built on more than 32,000 player logs. District loot from community guides. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
 </div></footer>
