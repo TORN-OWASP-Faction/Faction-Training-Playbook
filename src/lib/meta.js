@@ -16,7 +16,7 @@ export const META = {
   '/racing/': ['Racing', "Gearbox's guide to Torn racing: your first race, classes and cars, what to upgrade in each class, and six merits.", 'racing'],
   '/halloween/': ['Trick or Treat', 'Halloween for new players: get a basket, the upgrade order, a week planner and an easy merit.', 'halloween'],
   '/events/': ['Events calendar', 'Every Torn event this year, what it does, and how a new player should use it.', 'events'],
-  '/scripts/': ['Scripts and tools', 'The tools worth running, plus a safety review of 134 community scripts and 37 websites.', 'scripts'],
+  '/scripts/': ['Scripts and tools', 'The tools worth running, plus a safety review of 135 community scripts and 37 websites.', 'scripts'],
   '/crimes/': ['Crimes', 'How Crimes 2.0 works, how to build your nerve, and organized crime.', 'crimes'],
   '/crimes/oc-scenarios/': ['OC scenarios', "Every organized crime's slots, roles and role weights.", 'crimes'],
   '/crimes/burglary/': ['Burglary data', 'Burglary targets, casing rates and drop tables.', 'crimes'],

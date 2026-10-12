@@ -292,7 +292,7 @@
         <li><span class="k low">L</span><div><b>Low:</b> readable, talks only to Torn's API (or public data), no rule issues.</div></li>
         <li><span class="k med">M</span><div><b>Medium:</b> shares your key or game data with another site, needs a broad key, sits in a grey area, or is unmaintained.</div></li>
         <li><span class="k high">H</span><div><b>High:</b> misleads about your key, lets another server control what you pay, or automates the game.</div></li>
-        <li><span class="k"><Icon name="alert"/></span><div>Scripts update. We read the versions on Greasy Fork on 25 September 2026; a later update can change any of this.</div></li>
+        <li><span class="k"><Icon name="alert"/></span><div>Scripts update. We read the versions on Greasy Fork between 25 and 30 September 2026; a later update can change any of this.</div></li>
       </ul>
     </div>
   </div>

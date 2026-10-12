@@ -1722,6 +1722,22 @@
   "install": "https://update.greasyfork.org/scripts/544469/torn-crack.user.js"
  },
  {
+  "name": "Torn Faction Dibs",
+  "type": "Activities",
+  "url": "https://greasyfork.org/en/scripts/580351-torn-faction-dibs",
+  "updated": "2026-09-28",
+  "installs": 18,
+  "risk": "High",
+  "key": "Key sent to torn-dibs.farscythe.workers.dev · also FFScouter",
+  "rules": "OK",
+  "what": "Ranked-war dibs for your faction: call a target from the war page, see who has called whom, med-out deals, a warning before you hit someone else's target, and FFScouter fair-fight on enemies.",
+  "why": "Its key box says the key is 'Stored locally only', but on first run it sends the key to the author's workers.dev server to sign you in. It only asks for a Public key, which limits the harm, and the rest of the code is clean: no automation, and text from the server is escaped. A faction that wants dibs should ask the author to fix the wording, or run its own copy of the server.",
+  "pick": "no",
+  "reviewed": "1.7.6",
+  "gf": "580351",
+  "install": "https://update.greasyfork.org/scripts/580351/Torn%20Faction%20Dibs.user.js"
+ },
+ {
   "name": "Torn Foreign Stock",
   "type": "Activities",
   "url": "https://greasyfork.org/scripts/581933",
