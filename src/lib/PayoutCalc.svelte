@@ -43,7 +43,7 @@
   onMount(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
-      if (saved?.splits) splits = saved.splits;
+      if (saved?.splits) splits = cleanSplits(saved.splits);
       if (saved?.tiers) tiers = saved.tiers;
       if (saved?.tierName) tierName = saved.tierName;
       if (saved?.extraPct != null) extraPct = saved.extraPct;
@@ -79,7 +79,10 @@
   const pctOf = (v, of) => (of ? ((v / of) * 100).toFixed(1) + '%' : '—');
 
   const totalMade = $derived(rewards.reduce((s, r) => s + n(r.qty) * n(r.price), 0));
-  const splitsSpent = $derived(splits.reduce((s, r) => s + n(r.qty) * n(r.price), 0));
+  const nf = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+  const splitAmount = (s) => (n(s.pct) / 100) * totalMade;
+  const splitsSpent = $derived(splits.reduce((sum, s) => sum + splitAmount(s), 0));
+  const splitsPct = $derived(splits.reduce((sum, s) => sum + n(s.pct), 0));
   const awardsTotal = $derived(awards.reduce((s, a) => s + n(a.qty) * n(a.price), 0));
   const spent = $derived(splitsSpent + (awardsFromProfit ? awardsTotal : 0));
   const tier = $derived(tiers.find((t) => t[0] === tierName) ?? tiers[0]);
@@ -186,7 +189,7 @@
   const current = () => $state.snapshot({ splits, tiers, tierName, extra, extraPct, rules, awards: awardDefs(), awardsFromProfit, excluded, excludedIds });
 
   function apply(setup) {
-    splits = setup.splits; tiers = setup.tiers; tierName = setup.tierName;
+    splits = cleanSplits(setup.splits); tiers = setup.tiers; tierName = setup.tierName;
     extra = setup.extra; extraPct = setup.extraPct; rules = setup.rules;
     if (setup.awards) awards = setup.awards;
     awardsFromProfit = setup.awardsFromProfit;
@@ -238,9 +241,14 @@
   // A file could come from anyone: keep known fields only, as plain strings and finite numbers.
   const num = (v, d = 0) => (Number.isFinite(+v) ? +v : d);
   const str = (v, max = 80) => String(v ?? '').slice(0, max);
+  // Splits used to be quantity × price; those older ones come back as 0% to fill in again.
+  function cleanSplits(list) {
+    return (Array.isArray(list) ? list : []).slice(0, 50)
+      .map((x) => ({ name: str(x?.name), pct: Math.min(100, Math.max(0, num(x?.pct))), sold: !!x?.sold, note: str(x?.note, 120) }));
+  }
   function clean(d) {
     return {
-      splits: (Array.isArray(d.splits) ? d.splits : []).slice(0, 50).map((x) => ({ name: str(x?.name), qty: num(x?.qty), price: num(x?.price), sold: !!x?.sold, note: str(x?.note, 120) })),
+      splits: cleanSplits(d.splits),
       tiers: (Array.isArray(d.tiers) && d.tiers.length ? d.tiers : DEFAULT_TIERS).slice(0, 12).map((t) => [str(t?.[0], 30), num(t?.[1]), num(t?.[2])]),
       tierName: str(d.tierName, 30),
       extra: !!d.extra,
@@ -301,7 +309,7 @@
       war: { id: warId, ...info, result: outcome },
       tot: { made: Math.round(totalMade), splits: Math.round(splitsSpent), awards: Math.round(awardsTotal), fromProfit: awardsFromProfit, pct, pool: Math.round(res.pool), keeps: Math.round(res.keeps), perPoint: Math.round(res.perPoint) },
       rewards: rewards.map((r) => [r.name, n(r.qty), n(r.price)]),
-      splits: splits.filter((s) => n(s.qty) * n(s.price)).map((s) => [s.name, n(s.qty) * n(s.price)]),
+      splits: splits.filter((s) => splitAmount(s)).map((s) => [s.name, splitAmount(s)]),
       awards: awards.map((a) => { const w = winnerOf(a); return [n(a.qty), a.item, awardText(a), w?.id ?? null, w?.name ?? null, n(a.qty) * n(a.price)]; }),
       m: res.pays.filter((p) => p.rp > 0).sort((a, b) => b.pay - a.pay)
         .map((p) => [p.id, p.name ?? '', p.hits, row[p.id]?.abroad ?? 0, r1(row[p.id]?.score), r1(p.rp), Math.round(p.pay)])
@@ -391,17 +399,15 @@
 
   <!-- SPLITS -->
   <div class="block card">
-    <div class="bh"><h3>Faction splits</h3><span class="note">Entered by hand; saved in this browser for next time.</span></div>
+    <div class="bh"><h3>Faction splits</h3><span class="note">Each split is a share of the total the rewards made. Saved in this browser for next time.</span></div>
     <div class="tbl-scroll"><table class="ed">
-      <thead><tr><th>Split</th><th class="num">Qty</th><th class="num">Price each</th><th class="num">Total</th><th class="num">% of made</th><th>Sold</th><th>Note</th><th><span class="sr">Remove</span></th></tr></thead>
+      <thead><tr><th>Split</th><th class="num">% of made</th><th class="num">Amount</th><th>Sold</th><th>Note</th><th><span class="sr">Remove</span></th></tr></thead>
       <tbody>
         {#each splits as s, i}
           <tr>
             <td><input aria-label="Split name" bind:value={s.name} /></td>
-            <td class="num"><input class="qty" type="number" min="0" aria-label="{s.name} quantity" bind:value={s.qty} /></td>
-            <td class="num"><input class="amt" type="number" min="0" step="1000" aria-label="{s.name} price each" bind:value={s.price} /></td>
-            <td class="num mono">{money(n(s.qty) * n(s.price))}</td>
-            <td class="num mono">{pctOf(n(s.qty) * n(s.price), totalMade)}</td>
+            <td class="num"><input class="qty" type="number" min="0" max="100" step="0.5" aria-label="{s.name} percent of total made" bind:value={s.pct} /></td>
+            <td class="num mono">{money(splitAmount(s))}</td>
             <td><input type="checkbox" aria-label="{s.name} sold" bind:checked={s.sold} /></td>
             <td><input aria-label="{s.name} note" bind:value={s.note} /></td>
             <td><button class="x" aria-label="Remove {s.name}" onclick={() => splits.splice(i, 1)}>×</button></td>
@@ -409,10 +415,11 @@
         {/each}
       </tbody>
       <tfoot>
-        <tr><td><button class="chip" onclick={() => splits.push({ name: 'New split', qty: 1, price: 0, sold: false, note: '' })}>+ Add a split</button></td><td></td><th class="num">Total spent</th><td class="num mono"><b>{money(splitsSpent)}</b></td><td class="num mono">{pctOf(splitsSpent, totalMade)}</td><td colspan="3"></td></tr>
-        <tr><td colspan="2"></td><th class="num">Profit after splits</th><td class="num mono"><b>{money(totalMade - splitsSpent)}</b></td><td class="num mono">{pctOf(totalMade - splitsSpent, totalMade)}</td><td colspan="3"></td></tr>
+        <tr><td><button class="chip" onclick={() => splits.push({ name: 'New split', pct: 0, sold: false, note: '' })}>+ Add a split</button></td><td class="num mono">{nf.format(splitsPct)}%</td><td class="num mono"><b>{money(splitsSpent)}</b></td><th colspan="3" class="lt">Total spent</th></tr>
+        <tr><td></td><td class="num mono">{nf.format(100 - splitsPct)}%</td><td class="num mono"><b>{money(totalMade - splitsSpent)}</b></td><th colspan="3" class="lt">Profit after splits</th></tr>
       </tfoot>
     </table></div>
+    {#if splitsPct > 100}<p class="warn" role="alert">The splits add up to {nf.format(splitsPct)}%, more than everything the rewards made.</p>{/if}
   </div>
 
   <!-- SPECIAL AWARDS -->
@@ -606,6 +613,7 @@
   .sum span{font-family:"IBM Plex Mono",monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .sum b{font-family:"Oswald",sans-serif;font-size:1.35rem;font-weight:600}
   .sum small{color:var(--muted);font-size:.8rem}
+  th.lt{text-align:start}
   .warn{padding:.6rem .9rem;border:1px solid var(--amber);border-radius:3px;background:var(--amber-soft);max-width:none}
   td.paycell{color:var(--amber);font-weight:600}
   .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.8rem}

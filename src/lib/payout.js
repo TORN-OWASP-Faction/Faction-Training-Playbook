@@ -6,11 +6,12 @@ export const DEFAULT_RULES = { warPct: 100, bonusPct: 100, reallocate: true, oow
 // [tier, % of rewards on a win, % on a loss]
 export const DEFAULT_TIERS = [['Bronze', 70, 40], ['Silver', 75, 45], ['Gold', 80, 50], ['Platinum', 85, 55], ['Diamond', 90, 60]];
 
+// Each split is a percentage of the total the rewards made.
 export const DEFAULT_SPLITS = [
-  { name: 'Faction cut', qty: 1, price: 0, sold: false, note: '' },
-  { name: 'War resupply: points', qty: 0, price: 0, sold: false, note: '' },
-  { name: 'War resupply: drugs', qty: 0, price: 0, sold: false, note: '' },
-  { name: 'War reimbursements: revives', qty: 0, price: 0, sold: false, note: 'Paid directly to revivers' }
+  { name: 'Faction cut', pct: 0, sold: false, note: '' },
+  { name: 'War resupply: points', pct: 0, sold: false, note: '' },
+  { name: 'War resupply: drugs', pct: 0, sold: false, note: '' },
+  { name: 'War reimbursements: revives', pct: 0, sold: false, note: 'Paid directly to revivers' }
 ];
 
 // Points per member from the war report rows (official score) and the war's chain reports.

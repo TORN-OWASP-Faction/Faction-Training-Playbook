@@ -214,6 +214,7 @@
   </div>
 
   {#if report && war}
+    <PayoutCalc {report} positions={fac.positions} info={{ faction: fac.faction.name, them: war.them?.name ?? '?', start: war.start, end: war.end, score: [war.us?.score ?? 0, war.them?.score ?? 0], exact: !!report.exact, official: !!report.official }} key={apiKey.value} result={outcome(war)} {title} warId={war.id} />
     <div class="tiles">
       <div class="tile"><span>War hits</span><b class="mono">{nf.format(total('hits'))}</b><small>{report.official ? "from Torn's war report" : 'from chain reports'}</small></div>
       <div class="tile"><span>Abroad</span><b class="mono">{nf.format(total('abroad'))}</b><small>{report.exact ? 'war hits outside Torn City' : 'overseas hits during chains'}</small></div>
@@ -283,7 +284,6 @@
       {#if report.official}War hits and score come from Torn's official war report.{:else if !war.end}Torn only publishes its official war report when the war ends, so hits are from chain reports until then.{/if}
     </p>
 
-    <PayoutCalc {report} positions={fac.positions} info={{ faction: fac.faction.name, them: war.them?.name ?? '?', start: war.start, end: war.end, score: [war.us?.score ?? 0, war.them?.score ?? 0], exact: !!report.exact, official: !!report.official }} key={apiKey.value} result={outcome(war)} {title} warId={war.id} />
   {/if}
 </div></section>
 
