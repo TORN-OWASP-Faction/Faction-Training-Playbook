@@ -1,15 +1,11 @@
 <script>
   import { base } from '$app/paths';
-  import { onMount } from 'svelte';
+  import { apiKey } from '$lib/apikey.svelte.js';
   import Character from '$lib/Character.svelte';
   import { loadFaction, buildExact, buildFromChains } from '$lib/warreport.js';
   import { copyTable } from '$lib/tablecopy.js';
   import PayoutCalc from '$lib/PayoutCalc.svelte';
 
-  const KEY_STORE = 'ftp:war-report-key';
-
-  let key = $state('');
-  let remember = $state(false);
   let loading = $state(false);
   let error = $state('');
   let progress = $state('');
@@ -21,32 +17,19 @@
   let sortKey = $state('hits');
   let sortDir = $state(-1);
 
-  onMount(() => {
-    try {
-      const saved = localStorage.getItem(KEY_STORE);
-      if (saved) { key = saved; remember = true; }
-    } catch { /* storage blocked: the key just isn't remembered */ }
+  // A new or forgotten key in the header means the loaded faction may not be this key's.
+  let loadedWith = '';
+  $effect(() => {
+    if (apiKey.value !== loadedWith) { fac = null; report = null; }
   });
-
-  function rememberKey() {
-    try {
-      if (remember) localStorage.setItem(KEY_STORE, key.trim());
-      else localStorage.removeItem(KEY_STORE);
-    } catch { /* ignore */ }
-  }
-
-  function forget() {
-    key = ''; remember = false; fac = null; report = null;
-    try { localStorage.removeItem(KEY_STORE); } catch { /* ignore */ }
-  }
 
   async function load(e) {
     e?.preventDefault();
     error = ''; report = null; loading = true;
     try {
-      fac = await loadFaction(key.trim());
+      loadedWith = apiKey.value;
+      fac = await loadFaction(apiKey.value);
       warId = fac.wars[0]?.id ?? null;
-      rememberKey();
     } catch (err) {
       error = err.message; fac = null;
     }
@@ -58,7 +41,7 @@
   async function build() {
     error = ''; loading = true; progress = 'Starting…';
     try {
-      const k = key.trim();
+      const k = apiKey.value;
       const res = fac.exact
         ? await buildExact(k, war, fac.faction.id, fac.names, (m) => (progress = m))
         : await buildFromChains(k, war, fac.faction.id, fac.names, (m) => (progress = m));
@@ -117,16 +100,17 @@
 </div></header>
 
 <section id="report"><div class="wrap">
-  <form class="keycard card" onsubmit={load}>
-    <label class="fld"><span>Your Torn API key</span>
-      <input type="password" bind:value={key} autocomplete="off" spellcheck="false" maxlength="16" placeholder="16 characters" required /></label>
-    <label class="tog"><input type="checkbox" bind:checked={remember} onchange={rememberKey} /> <span>Remember it on this device</span></label>
-    <div class="row">
-      <button class="btn-i" type="submit" disabled={loading || key.trim().length < 16}>{loading && !fac ? 'Loading…' : 'Load my faction'}</button>
-      {#if key}<button class="btn-c" type="button" onclick={forget}>Forget key</button>{/if}
-    </div>
-    <p class="note">Your key goes straight from your browser to Torn's API and nowhere else. A <b>Limited</b> key works. For exact abroad counts, faction leadership also has to turn on <b>Faction API Access</b> for your position; the same key then works. Make a key at <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">Settings → API Key</a>.</p>
-  </form>
+  <div class="keycard card">
+    {#if apiKey.value}
+      <div class="row">
+        <button class="btn-i" onclick={load} disabled={loading}>{loading && !fac ? 'Loading…' : 'Load my faction'}</button>
+        <span class="note">Uses the API key saved in the header.</span>
+      </div>
+    {:else}
+      <p><b>Add your API key first.</b> Use the <b>API key</b> button at the top of the page. A <b>Limited</b> key works.</p>
+    {/if}
+    <p class="note">Your key goes straight from your browser to Torn's API and nowhere else. For exact abroad counts, faction leadership also has to turn on <b>Faction API Access</b> for your position; the same key then works. Make a key at <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">Settings → API Key</a>.</p>
+  </div>
 
   {#if error}<p class="err" role="alert">{error}</p>{/if}
 
@@ -221,7 +205,7 @@
       {#if report.official}War hits and score come from Torn's official war report.{:else if !war.end}Torn only publishes its official war report when the war ends, so hits are from chain reports until then.{/if}
     </p>
 
-    <PayoutCalc {report} positions={fac.positions} info={{ faction: fac.faction.name, them: war.them?.name ?? '?', start: war.start, end: war.end, score: [war.us?.score ?? 0, war.them?.score ?? 0], exact: !!report.exact, official: !!report.official }} key={key.trim()} result={outcome(war)} {title} warId={war.id} />
+    <PayoutCalc {report} positions={fac.positions} info={{ faction: fac.faction.name, them: war.them?.name ?? '?', start: war.start, end: war.end, score: [war.us?.score ?? 0, war.them?.score ?? 0], exact: !!report.exact, official: !!report.official }} key={apiKey.value} result={outcome(war)} {title} warId={war.id} />
   {/if}
 </div></section>
 
@@ -249,17 +233,14 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>War report.</strong> Built on Torn's API (faction attacks, chain reports and ranked war reports). Nothing is stored except, if you tick the box, your key in this browser. Part of the <a href="{base}/">Faction Training Playbook</a>.
+  <strong>War report.</strong> Built on Torn's API (faction attacks, chain reports and ranked war reports). Nothing is stored except the API key you save in the header, and that stays in this browser. Part of the <a href="{base}/">Faction Training Playbook</a>.
 </div></footer>
 
 <style>
   .keycard,.pick{display:grid;gap:.7rem;border-radius:3px;max-width:44rem}
   .pick{margin-top:1rem}
   .fld{display:grid;gap:.25rem;font-size:.88rem;color:var(--muted)}
-  .fld input,.fld select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:.45rem .6rem;min-width:0;width:100%}
-  .fld input{font-family:"IBM Plex Mono",monospace;letter-spacing:.05em}
-  .tog{display:flex;gap:.5rem;align-items:center;font-size:.9rem;color:var(--ink);cursor:pointer}
-  .tog input{accent-color:var(--amber);width:1rem;height:1rem}
+  .fld select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:.45rem .6rem;min-width:0;width:100%}
   .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
   .note{color:var(--muted);font-size:.88rem;margin:.2rem 0 0}
   .err{margin-top:1rem;padding:.6rem .9rem;border:1px solid var(--crime-ink);border-radius:3px;background:var(--crime-soft);max-width:44rem}

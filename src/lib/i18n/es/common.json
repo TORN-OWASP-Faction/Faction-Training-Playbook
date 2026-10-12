@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Ver en GitHub ↗",
     "hint": "¿Viste un error o tienes una guía para agregar? Abre un issue o envía un pull request."
+  },
+  "apiKey": {
+    "button": "Clave API",
+    "label": "Tu clave API de Torn",
+    "save": "Guardar",
+    "forget": "Olvidar clave",
+    "saved": "Clave guardada",
+    "missing": "Sin clave guardada",
+    "note": "Se guarda solo en este navegador. Las páginas la envían solo a api.torn.com. Una clave Limited sirve para casi todo.",
+    "make": "Crear una clave"
   }
 }

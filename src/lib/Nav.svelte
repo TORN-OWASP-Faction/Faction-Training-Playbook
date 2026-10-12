@@ -3,11 +3,28 @@
   import { afterNavigate } from '$app/navigation';
   import Icon from '$lib/Icon.svelte';
   import { LOCALES, href, localeOf } from '$lib/i18n';
+  import { apiKey, saveKey, forgetKey } from '$lib/apikey.svelte.js';
 
   let { m, lang, onpick } = $props();
 
   let open = $state(null); // which group's links are showing
   let menuOpen = $state(false); // the whole menu, on narrow screens
+  let keyOpen = $state(false);
+  let keyDraft = $state('');
+
+  function toggleKey() {
+    keyOpen = !keyOpen;
+    keyDraft = apiKey.value;
+  }
+  function submitKey(e) {
+    e.preventDefault();
+    saveKey(keyDraft);
+    keyOpen = false;
+  }
+  function clearKey() {
+    forgetKey();
+    keyDraft = '';
+  }
 
   // [message key or plain game name, path]. A missing path is a divider.
   const GROUPS = [
@@ -38,16 +55,24 @@
   const here = (link) => !link.includes('#') && page.url.pathname === href(link, lang);
   const groupHere = (g) => g.links.some(([, p]) => p && page.url.pathname === href(p.split('#')[0], lang));
 
-  afterNavigate(() => { open = null; menuOpen = false; });
+  afterNavigate(() => { open = null; menuOpen = false; keyOpen = false; });
 
   function onKey(e) {
+    if (e.key === 'Escape' && keyOpen) {
+      keyOpen = false;
+      document.getElementById('keybtn')?.focus();
+      return;
+    }
     if (e.key !== 'Escape' || !(open || menuOpen)) return;
     const btn = document.getElementById(open ? `nd-${open}` : 'menubtn');
     open = null;
     if (!btn?.offsetParent) menuOpen = false;
     btn?.focus();
   }
-  const onDocClick = (e) => { if (!e.target.closest('nav.toc')) { open = null; menuOpen = false; } };
+  const onDocClick = (e) => {
+    if (!e.target.closest('nav.toc')) { open = null; menuOpen = false; }
+    if (!e.target.closest('.keypick')) keyOpen = false;
+  };
   const onFocusOut = (e) => { if (!e.currentTarget.contains(e.relatedTarget)) open = null; };
 </script>
 
@@ -81,6 +106,24 @@
     {/each}
   </ul>
 
+  <div class="keypick">
+    <button id="keybtn" class="keybtn" class:set={apiKey.value} aria-expanded={keyOpen} aria-controls="keypanel" onclick={toggleKey}>
+      <Icon name="key" size={16} /><span class="keytext">{m.apiKey.button}</span><span class="keydot" aria-hidden="true"></span>
+      <span class="sr">{apiKey.value ? m.apiKey.saved : m.apiKey.missing}</span>
+    </button>
+    {#if keyOpen}
+      <form id="keypanel" class="keypanel" onsubmit={submitKey}>
+        <label class="keyfld"><span>{m.apiKey.label}</span>
+          <input type="password" bind:value={keyDraft} autocomplete="off" spellcheck="false" maxlength="16" /></label>
+        <div class="keyrow">
+          <button class="btn-k primary" type="submit" disabled={keyDraft.trim().length < 16}>{m.apiKey.save}</button>
+          {#if apiKey.value}<button class="btn-k" type="button" onclick={clearKey}>{m.apiKey.forget}</button>{/if}
+        </div>
+        <p class="keynote">{m.apiKey.note} <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">{m.apiKey.make} ↗</a></p>
+      </form>
+    {/if}
+  </div>
+
   <label class="langpick">
     <Icon name="globe" size={16} />
     <span class="sr">{m.language}</span>
@@ -113,7 +156,27 @@
   .top{display:inline-block;color:var(--muted);font-size:.95rem;white-space:nowrap;padding:.45rem .8rem;border-radius:2px;font-weight:500}
   .top:hover{color:var(--ink);background:var(--raised)}
   .top.start{color:var(--amber)}
-  .langpick{display:inline-flex;align-items:center;gap:.35rem;color:var(--muted);margin-inline-start:auto}
+  .keypick{position:relative;margin-inline-start:auto}
+  .keybtn{font:inherit;font-size:.85rem;display:inline-flex;align-items:center;gap:.35rem;cursor:pointer;color:var(--muted);
+    background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.3rem .55rem}
+  .keybtn:hover,.keybtn[aria-expanded="true"]{border-color:var(--amber);color:var(--ink)}
+  .keydot{width:.45rem;height:.45rem;border-radius:50%;background:var(--faint)}
+  .keybtn.set .keydot{background:var(--energy)}
+  .keypanel{position:absolute;top:calc(100% + .4rem);inset-inline-end:0;width:min(19rem,calc(100vw - 2rem));z-index:45;
+    background:var(--surface);border:1px solid var(--border);border-radius:3px;box-shadow:var(--shadow);padding:.8rem;
+    display:flex;flex-direction:column;gap:.6rem}
+  .keyfld{display:flex;flex-direction:column;gap:.3rem;font-size:.8rem;color:var(--muted)}
+  .keyfld input{font:inherit;font-family:"IBM Plex Mono",monospace;font-size:.9rem;color:var(--ink);background:var(--bg);
+    border:1px solid var(--border);border-radius:4px;padding:.45rem .55rem}
+  .keyfld input:focus{border-color:var(--amber);outline:none}
+  .keyrow{display:flex;gap:.5rem}
+  .btn-k{font:inherit;font-size:.85rem;cursor:pointer;border:1px solid var(--border);background:var(--raised);color:var(--ink);
+    border-radius:4px;padding:.35rem .75rem}
+  .btn-k.primary{background:var(--amber);border-color:var(--amber);color:#111;font-weight:600}
+  .btn-k:disabled{opacity:.5;cursor:default}
+  .keynote{margin:0;font-size:.78rem;line-height:1.45;color:var(--muted)}
+  .keynote a{color:var(--amber)}
+  .langpick{display:inline-flex;align-items:center;gap:.35rem;color:var(--muted)}
   .langpick select{font:inherit;font-size:.85rem;color:var(--ink);background:var(--surface);border:1px solid var(--border);
     border-radius:4px;padding:.3rem .4rem;max-width:11rem;cursor:pointer}
   .langpick select:hover{border-color:var(--amber)}
@@ -124,6 +187,8 @@
   @media(max-width:960px){
     .nav-inner{flex-wrap:wrap;position:relative}
     .menubtn{display:inline-flex}
+    .keypick{order:2;position:static}
+    .keypanel{inset-inline-end:1rem}
     .langpick{order:2}
     .langpick select{max-width:8.5rem}
     .navlist{display:none;order:4;flex:1 0 100%;flex-direction:column;align-items:stretch;gap:0;
@@ -138,6 +203,7 @@
   }
   @media(max-width:480px){
     .brand{padding-inline:.2rem;margin-inline-end:0}
+    .keytext{display:none}
     .langpick select{max-width:6rem}
   }
 </style>

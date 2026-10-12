@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Vezi pe GitHub ↗",
     "hint": "Ai găsit o greșeală sau ai un ghid de adăugat? Deschide un issue sau trimite un pull request."
+  },
+  "apiKey": {
+    "button": "Cheie API",
+    "label": "Cheia ta API Torn",
+    "save": "Salvează",
+    "forget": "Uită cheia",
+    "saved": "Cheie salvată",
+    "missing": "Nicio cheie salvată",
+    "note": "Salvată doar în acest browser. Paginile o trimit doar la api.torn.com. O cheie Limited merge pentru majoritatea uneltelor.",
+    "make": "Creează o cheie"
   }
 }

@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Xem trên GitHub ↗",
     "hint": "Thấy lỗi hoặc muốn thêm hướng dẫn? Mở issue hoặc gửi pull request."
+  },
+  "apiKey": {
+    "button": "Khóa API",
+    "label": "Khóa API Torn của bạn",
+    "save": "Lưu",
+    "forget": "Quên khóa",
+    "saved": "Đã lưu khóa",
+    "missing": "Chưa lưu khóa",
+    "note": "Chỉ lưu trong trình duyệt này. Các trang chỉ gửi nó đến api.torn.com. Khóa Limited đủ cho hầu hết công cụ.",
+    "make": "Tạo khóa"
   }
 }

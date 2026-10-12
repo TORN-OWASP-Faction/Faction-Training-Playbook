@@ -7,6 +7,7 @@
   import Nav from '$lib/Nav.svelte';
   import { LOCALES, localeOf, splitLang, isTranslated, href, localize, loadMessages, translateUrl } from '$lib/i18n';
   import { pref, loadPref, savePref } from '$lib/i18n/pref.svelte.js';
+  import { loadKey } from '$lib/apikey.svelte.js';
   import { META, SITE_ORIGIN, SITE_NAME, GOATCOUNTER } from '$lib/meta.js';
 
   let { data, children } = $props();
@@ -55,6 +56,7 @@
   });
 
   onMount(async () => {
+    loadKey();
     loadPref();
     if (data.lang !== 'en') return savePref(data.lang);
     if (pref.lang) return;

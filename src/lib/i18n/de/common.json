@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Auf GitHub ansehen ↗",
     "hint": "Einen Fehler gefunden oder einen Guide zum Ergänzen? Eröffne ein Issue oder schick einen Pull Request."
+  },
+  "apiKey": {
+    "button": "API-Schlüssel",
+    "label": "Dein Torn-API-Schlüssel",
+    "save": "Speichern",
+    "forget": "Schlüssel löschen",
+    "saved": "Schlüssel gespeichert",
+    "missing": "Kein Schlüssel gespeichert",
+    "note": "Nur in diesem Browser gespeichert. Seiten senden ihn nur an api.torn.com. Ein Limited-Schlüssel reicht für die meisten Tools.",
+    "make": "Schlüssel erstellen"
   }
 }

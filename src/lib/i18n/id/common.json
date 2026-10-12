@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Lihat di GitHub ↗",
     "hint": "Nemu kesalahan atau punya panduan untuk ditambahkan? Buka issue atau kirim pull request."
+  },
+  "apiKey": {
+    "button": "Kunci API",
+    "label": "Kunci API Torn kamu",
+    "save": "Simpan",
+    "forget": "Lupakan kunci",
+    "saved": "Kunci tersimpan",
+    "missing": "Belum ada kunci",
+    "note": "Hanya disimpan di browser ini. Halaman hanya mengirimnya ke api.torn.com. Kunci Limited cukup untuk sebagian besar alat.",
+    "make": "Buat kunci"
   }
 }

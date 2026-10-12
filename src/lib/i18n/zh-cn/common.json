@@ -63,5 +63,15 @@
   "repo": {
     "cta": "在 GitHub 上查看 ↗",
     "hint": "发现错误或想补充指南？提交 issue 或发送 pull request。"
+  },
+  "apiKey": {
+    "button": "API 密钥",
+    "label": "你的 Torn API 密钥",
+    "save": "保存",
+    "forget": "忘记密钥",
+    "saved": "密钥已保存",
+    "missing": "未保存密钥",
+    "note": "只保存在此浏览器中。页面只会把它发送到 api.torn.com。大多数工具用 Limited 密钥即可。",
+    "make": "创建密钥"
   }
 }

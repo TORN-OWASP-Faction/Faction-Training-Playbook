@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import { itemId } from '$lib/data/items.js';
+  import { apiKey } from '$lib/apikey.svelte.js';
   onMount(() => {
 
 (function(){
@@ -92,7 +93,6 @@
 
   // ---- live prices via Torn API ----
   function setStatus(msg,cls){var s=byId('status');s.textContent=msg;s.className='status'+(cls?' '+cls:'');}
-  try{var saved=localStorage.getItem('tornApiKey'); if(saved){byId('apikey').value=saved;setStatus('Saved key loaded. Click "Save & fetch prices" to refresh.','');}}catch(e){}
 
   function priceOf(rec){
     if(!rec) return null;
@@ -102,9 +102,8 @@
   }
 
   byId('fetch').addEventListener('click',async function(){
-    var key=byId('apikey').value.trim();
-    if(!key){setStatus('Enter your Limited API key first.','err');return;}
-    try{localStorage.setItem('tornApiKey',key);}catch(e){}
+    var key=apiKey.value;
+    if(!key){setStatus('Add your API key first with the API key button at the top of the page.','err');return;}
     setStatus('Fetching item prices…','');
     try{
       var res=await fetch('https://api.torn.com/torn/?selections=items,gyms&key='+encodeURIComponent(key)+'&comment=JumpPlanner');
@@ -128,12 +127,6 @@
     }catch(err){
       setStatus('Could not reach the Torn API ('+(err&&err.message?err.message:'network/CORS')+'). Check the key and your connection.','err');
     }
-  });
-  byId('forget').addEventListener('click',function(){
-    try{localStorage.removeItem('tornApiKey');}catch(e){}
-    byId('apikey').value='';
-    ITEMS.forEach(function(it){if(live[it.id]){price[it.id]=null;live[it.id]=false;var i=byId('pr-'+it.id);i.value='';i.classList.remove('live');}});
-    calc();setStatus('Key removed from this browser.','');
   });
 
   // ---- gyms ----
@@ -182,9 +175,8 @@
     return Math.round(total*100)/100;
   }
   byId('profile').addEventListener('click',async function(){
-    var key=byId('apikey').value.trim();
-    if(!key){setStatus('Enter your API key first.','err');return;}
-    try{localStorage.setItem('tornApiKey',key);}catch(e){}
+    var key=apiKey.value;
+    if(!key){setStatus('Add your API key first with the API key button at the top of the page.','err');return;}
     setStatus('Fetching your profile…','');
     try{
       var res=await fetch('https://api.torn.com/user/?selections=battlestats,bars,gym,perks&key='+encodeURIComponent(key)+'&comment=JumpPlanner');
@@ -240,12 +232,10 @@
 
   <div class="keybar">
     <h2 class="h3">Live market prices</h2>
-    <p class="keynote"><b>Prices</b> need a Limited key. <b>Fetch my profile</b> (stat total, active gym, happy, energy, perks) needs a <b>Custom</b> key with gym + battle-stats access. Your key is stored only in this browser (localStorage) and sent only to <span class="mono">api.torn.com</span>. Create one at <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">torn.com → Settings → API Key</a>; revoke it there any time.</p>
+    <p class="keynote"><b>Prices</b> need a Limited key. <b>Fetch my profile</b> (stat total, active gym, happy, energy, perks) needs a <b>Custom</b> key with gym + battle-stats access. Set your key once with the <b>API key</b> button at the top of the page. It is stored only in this browser and sent only to <span class="mono">api.torn.com</span>. Create one at <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener">torn.com → Settings → API Key</a>; revoke it there any time.</p>
     <div class="keyrow">
-      <input id="apikey" type="password" autocomplete="off" spellcheck="false" placeholder="Paste Limited or Custom API key">
-      <button class="btn primary" id="fetch">Save &amp; fetch prices</button>
+      <button class="btn primary" id="fetch">Fetch prices</button>
       <button class="btn ghost" id="profile">Fetch my profile</button>
-      <button class="btn ghost" id="forget">Forget key</button>
     </div>
     <div class="status" id="status" role="status" aria-live="polite"></div>
   </div>

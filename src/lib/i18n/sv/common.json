@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Visa på GitHub ↗",
     "hint": "Hittat ett fel eller har en guide att lägga till? Öppna ett issue eller skicka en pull request."
+  },
+  "apiKey": {
+    "button": "API-nyckel",
+    "label": "Din Torn API-nyckel",
+    "save": "Spara",
+    "forget": "Glöm nyckeln",
+    "saved": "Nyckel sparad",
+    "missing": "Ingen nyckel sparad",
+    "note": "Sparas bara i den här webbläsaren. Sidorna skickar den bara till api.torn.com. En Limited-nyckel räcker för de flesta verktyg.",
+    "make": "Skapa en nyckel"
   }
 }

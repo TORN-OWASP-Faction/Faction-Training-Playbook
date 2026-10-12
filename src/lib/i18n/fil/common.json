@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Tingnan sa GitHub ↗",
     "hint": "May nakitang mali o may guide kang gustong idagdag? Mag-open ng issue o magpadala ng pull request."
+  },
+  "apiKey": {
+    "button": "API key",
+    "label": "Ang iyong Torn API key",
+    "save": "I-save",
+    "forget": "Kalimutan ang key",
+    "saved": "Naka-save ang key",
+    "missing": "Walang naka-save na key",
+    "note": "Sa browser na ito lang naka-save. Sa api.torn.com lang ito ipinapadala ng mga page. Sapat ang Limited key para sa karamihan ng tool.",
+    "make": "Gumawa ng key"
   }
 }

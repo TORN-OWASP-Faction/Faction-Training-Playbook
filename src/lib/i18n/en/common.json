@@ -63,5 +63,15 @@
   "repo": {
     "cta": "View on GitHub ↗",
     "hint": "Spot a mistake or have a guide to add? Open an issue or send a pull request."
+  },
+  "apiKey": {
+    "button": "API key",
+    "label": "Your Torn API key",
+    "save": "Save",
+    "forget": "Forget key",
+    "saved": "Key saved",
+    "missing": "No key saved",
+    "note": "Saved in this browser only. Pages send it only to api.torn.com. A Limited key works for most tools.",
+    "make": "Make a key"
   }
 }

@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Zobacz na GitHubie ↗",
     "hint": "Widzisz błąd albo masz poradnik do dodania? Otwórz issue albo wyślij pull request."
+  },
+  "apiKey": {
+    "button": "Klucz API",
+    "label": "Twój klucz API Torn",
+    "save": "Zapisz",
+    "forget": "Zapomnij klucz",
+    "saved": "Klucz zapisany",
+    "missing": "Brak zapisanego klucza",
+    "note": "Zapisany tylko w tej przeglądarce. Strony wysyłają go tylko do api.torn.com. Klucz Limited wystarcza do większości narzędzi.",
+    "make": "Utwórz klucz"
   }
 }

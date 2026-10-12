@@ -63,5 +63,15 @@
   "repo": {
     "cta": "GitHub'da gör ↗",
     "hint": "Bir hata mı buldun ya da eklemek istediğin bir rehber mi var? Bir issue aç ya da pull request gönder."
+  },
+  "apiKey": {
+    "button": "API anahtarı",
+    "label": "Torn API anahtarın",
+    "save": "Kaydet",
+    "forget": "Anahtarı unut",
+    "saved": "Anahtar kaydedildi",
+    "missing": "Kayıtlı anahtar yok",
+    "note": "Yalnızca bu tarayıcıda saklanır. Sayfalar onu yalnızca api.torn.com adresine gönderir. Çoğu araç için Limited anahtar yeterli.",
+    "make": "Anahtar oluştur"
   }
 }

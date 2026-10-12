@@ -63,5 +63,15 @@
   "repo": {
     "cta": "Bekijk op GitHub ↗",
     "hint": "Een fout gezien of een gids om toe te voegen? Open een issue of stuur een pull request."
+  },
+  "apiKey": {
+    "button": "API-sleutel",
+    "label": "Je Torn API-sleutel",
+    "save": "Opslaan",
+    "forget": "Sleutel vergeten",
+    "saved": "Sleutel opgeslagen",
+    "missing": "Geen sleutel opgeslagen",
+    "note": "Alleen in deze browser opgeslagen. Pagina’s sturen hem alleen naar api.torn.com. Een Limited-sleutel werkt voor de meeste tools.",
+    "make": "Maak een sleutel"
   }
 }
