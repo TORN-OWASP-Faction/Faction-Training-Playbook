@@ -23,8 +23,12 @@
     { id: 'crimes', links: [
       ['overview', '/crimes/'], ['how', '/crimes/#how'], ['nerve', '/crimes/#nerve'], ['oc', '/crimes/#oc'],
       ['ocScenarios', '/crimes/oc-scenarios/'], ['dataTables'],
-      ['Burglary', '/crimes/burglary/'], ['Shoplifting', '/crimes/shoplifting/'],
-      ['Cracking', '/crimes/cracking/'], ['Forgery', '/crimes/forgery/'], ['Graffiti', '/crimes/graffiti/'], ['Arson', '/crimes/arson/']
+      ['Search for Cash', '/crimes/search-for-cash/'], ['Shoplifting', '/crimes/shoplifting/'],
+      ['Pickpocketing', '/crimes/pickpocketing/'], ['Burglary', '/crimes/burglary/'],
+      ['Bootlegging', '/crimes/bootlegging/'], ['Forgery', '/crimes/forgery/'],
+      ['Graffiti', '/crimes/graffiti/'], ['Arson', '/crimes/arson/'],
+      ['Card Skimming', '/crimes/card-skimming/'], ['Hustling', '/crimes/hustling/'], ['Scamming', '/crimes/scamming/'],
+      ['Disposal', '/crimes/disposal/'], ['Cracking', '/crimes/cracking/']
     ] },
     { id: 'fight', links: [['loadout', '/loadout/'], ['weaponMods', '/weapon-mods/'], ['medical', '/medical/'], ['factionBasics', '/start/#faction'], ['messages', '/messages/'], ['warReport', '/war-report/'], ['halloween', '/halloween/']] },
     { id: 'more', links: [['events', '/events/'], ['racing', '/racing/'], ['scripts', '/scripts/'], ['glossary', '/glossary/'], ['credits', '/credits/']] }

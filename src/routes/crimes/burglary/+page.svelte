@@ -1,29 +1,34 @@
 <script>
+  import CrimeHero from '$lib/CrimeHero.svelte';
   import { base } from '$app/paths';
   import DataTable from '$lib/DataTable.svelte';
   import ScoutChart from '$lib/ScoutChart.svelte';
   import Character from '$lib/Character.svelte';
-  import Item from '$lib/Item.svelte';
   import data from '$lib/data/burglary.json';
+  // Safety levels in the order the data lists them, from safe to unknown.
+  const levelColor = ['var(--c-trainer)', 'var(--amber)', 'var(--amber)', 'var(--c-militia)', 'var(--c-militia)', 'var(--c-militia)', 'var(--faint)'];
+  const categories = [
+    ['Residential', 'from CS 1', 'RESIDENTIAL TARGETS'],
+    ['Commercial', 'from CS 25', 'COMMERCIAL TARGETS'],
+    ['Industrial', 'from CS 50', 'INDUSTRIAL TARGETS']
+  ].map(([label, unlock, key]) => [label, unlock, data.locations.rows.filter((r) => r[0] === key).map((r) => r.slice(1))]);
+  const kit = [
+    {"name": "Flashlight", "enhancer": true, "where": "Bits 'n' Bobs · Tool Shed", "text": "+5% CS and CE, and unlocks better outcomes."},
+    {"name": "Jemmy", "where": "Bits 'n' Bobs · Mobile Home", "text": "Forces and pries things open."},
+    {"name": "Rope", "where": "SFC · Mobile Home · Tool Shed", "text": "Climb up or down some targets."},
+    {"name": "Credit Card", "where": "wallets, many places", "text": "Shimmies open some locked doors. A very common drop."},
+    {"name": "Lockpicks", "where": "Tool Shed · Cottage · Cabin", "text": "Opens locks of any kind."},
+    {"name": "Window Breaker", "where": "Beach Hut · Lake House", "text": "Breaks windows. Gets you into most houses."},
+    {"name": "Skeleton Key", "where": "Self-Storage · Shipyard", "text": "Opens the more advanced targets."}
+  ];
 </script>
 
-<header class="hero"><div class="wrap">
-  <span class="eyebrow">Crimes 2.0 · data</span>
-  <h1>Burglary</h1>
-  <p class="lede">Identify a place worth robbing, case it until it's safe, then break in and take what isn't nailed down. Below are the live droptables, casing rates and scouting distribution — filter and sort them.</p>
-  <p style="margin-top:.6rem"><a href="{base}/crimes/">← Back to Crimes</a></p>
-</div></header>
+<CrimeHero title="Burglary" lede="Identify a place worth robbing, case it until it's safe, then break in and take what isn't nailed down. Below are the drop tables, casing rates and scouting numbers. Filter and sort them." kitTitle="The seven tools" items={kit} note="None are used up and none are required, but you need them for uniques and the best loot. You find them all while doing the crime." />
 
 <section><div class="wrap">
   <span class="eyebrow">Before you start</span>
   <h2>What you need</h2>
-  <p class="lede">Burglary uses six reusable tools (not consumed) — each opens different targets and outcomes. Get the enhancer first.</p>
-  <div class="grid2" style="margin-top:1rem">
-    <div class="card"><h3><Item name="Flashlight" /> <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer</span></h3><p style="margin:.3em 0 0;color:var(--muted)">+5% CE &amp; CS and unlocks better outcomes. Unique find while shoplifting Bits 'n' Bobs, or burgling the Tool Shed with lockpicks.</p></div>
-    <div class="card"><h3><Item name="Jemmy" /></h3><p style="margin:.3em 0 0;color:var(--muted)">Pry / force open targets. From shoplifting Bits 'n' Bobs or burgling the Mobile Home.</p></div>
-    <div class="card"><h3>Rope</h3><p style="margin:.3em 0 0;color:var(--muted)">Climb up/down certain targets. Searching the junkyard/beach, casing the Mobile Home, burgling the Tool Shed &amp; Beach Hut.</p></div>
-    <div class="card"><h3>Credit cards, lockpicks &amp; more</h3><p style="margin:.3em 0 0;color:var(--muted)">Credit cards shimmy some locks (very common drop); lockpicks pick others. Six tools total — different locations need different ones.</p></div>
-  </div>
+  <p class="lede">Get the Flashlight first. The other six tools come as you burgle (see the list at the top of the page).</p>
   <Character variant="fixer" name={'Nico "The Line"'} tag="Word on the Street" initial="N" img="nico.png">
     "Case before you crack. The safety read on the table below is the difference between a payday and a hospital bed. Rush it and you're just donating to the guard dog."
   </Character>
@@ -32,8 +37,16 @@
 <section><div class="wrap">
   <span class="eyebrow">Targets</span>
   <h2>Locations &amp; casing</h2>
-  <p class="lede">CS to unlock, safety, recommended casing, sample size and casing success rate per target. Click a header to sort.</p>
-  <DataTable columns={data.locations.columns} rows={data.locations.rows} caption="Burglary — locations & casing rates" group={true} />
+  <p class="lede">CS to unlock, safety, how many times to case, sample size and casing success rate per target. Click a header to sort.</p>
+  <ul class="safety">
+    {#each data.safety as [level, text], i}
+      <li style="--lvl:{levelColor[i]}"><b>{level}</b><span>{text}</span></li>
+    {/each}
+  </ul>
+  {#each categories as [label, unlock, rows]}
+    <h3 class="cat-h">{label} <span>{unlock}</span></h3>
+    <DataTable columns={data.locations.columns.slice(1)} rows={rows} caption="Burglary: {label.toLowerCase()} targets" search={false} />
+  {/each}
 </div></section>
 
 <section><div class="wrap">
@@ -55,10 +68,16 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>Burglary data.</strong> Droptables, casing rates and scouting distribution compiled by <strong>Emforus [2535044]</strong> in the Burglary Consolidated spreadsheet, linked from the in-depth guide. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
+  <strong>Burglary data.</strong> Droptables, casing rates and scouting distribution compiled by <strong>Emforus [2535044]</strong> in the Burglary Consolidated spreadsheet, linked from the in-depth guide. Read the full <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16353303" target="_blank" rel="noopener">Burglary forum guide</a> and the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHkfnG4oFUhLM8RByNXI1POUw56FJ7WEqRnVyCvDNSmd24z1eCRIdgFQIRL0CCiOsqvZd_BubHfW6/pubhtml" target="_blank" rel="noopener">source sheet</a>. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
 </div></footer>
 
 <style>
+  .safety{list-style:none;margin:1rem 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.6rem}
+  .safety li{background:var(--surface);border:1px solid var(--border);border-inline-start:3px solid var(--lvl);padding:.6rem .8rem;display:grid;gap:.15rem}
+  .safety b{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+  .safety span{color:var(--muted);font-size:.86rem;line-height:1.4}
+  .cat-h{margin:1.4rem 0 .5rem;display:flex;gap:.5rem;align-items:baseline}
+  .cat-h span{font-size:.8rem;color:var(--faint);font-family:"IBM Plex Mono",monospace;font-weight:400}
   .raw{margin-top:1rem}
   .raw summary{cursor:pointer;color:var(--muted);font-size:.85rem;padding:.3rem 0}
   .raw summary:hover{color:var(--ink)}

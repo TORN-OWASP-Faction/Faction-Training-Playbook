@@ -1,8 +1,8 @@
 <script>
+  import CrimeHero from '$lib/CrimeHero.svelte';
   import { base } from '$app/paths';
   import DataTable from '$lib/DataTable.svelte';
   import Character from '$lib/Character.svelte';
-  import Item from '$lib/Item.svelte';
 
   const actions = {
     columns: ['Action', 'Nerve', 'What it does', 'CS gain'],
@@ -83,21 +83,21 @@
       ['6th', '31.6%', '47.5%', '47.5%']
     ]
   };
+  const kit = [
+    {"name": "Windproof Lighter", "enhancer": true, "where": "Burglary · Secluded Cabin", "text": "+5% CS and CE, and it takes the place of the normal Lighter. A crit can take it."},
+    {"name": "Lighter", "text": "Lights and stokes the fire. Its crit chance depends on how much fuel you placed."},
+    {"name": "Gasoline", "text": "Your first fuel, open from the start. Cheap and easy to get."},
+    {"name": "Blanket", "text": "Your first dampener. Not used up, but it crits often at low CS."}
+  ];
 </script>
 
-<header class="hero"><div class="wrap">
-  <span class="eyebrow">Crimes 2.0 · guide</span>
-  <h1>Arson</h1>
-  <p class="lede">Take a job, break in, place fuel, light it, then manage the fire until the firefighters arrive. Arson is the most complex crime in Torn so far, and the most time-gated: there is only a fixed number of jobs each day.</p>
-  <p style="margin-top:.6rem"><a href="{base}/crimes/">← Back to Crimes</a></p>
-</div></header>
+<CrimeHero title="Arson" lede="Take a job, break in, place fuel, light it, then manage the fire until the firefighters arrive. Arson is the most complex crime in Torn so far, and the most time-gated: there is only a fixed number of jobs each day." kitTitle="What you need" items={kit} note="15 tools and materials in all, and more open as your CS rises. Try to have two of each tool and a couple of hundred of each material." />
 
 <section><div class="wrap">
   <span class="eyebrow">Before you start</span>
   <h2>What you need</h2>
   <p class="lede">There are 15 tools and materials, plus some special items for certain jobs. Try to have two of each tool and a couple of hundred of each material, if you can afford it. Gasoline and Potassium Nitrate are cheap, and most of the rest comes easily from Search for Cash and Burglary.</p>
   <div class="grid2" style="margin-top:1rem">
-    <div class="card"><h3><Item name="Windproof Lighter" /> <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer</span></h3><p style="margin:.3em 0 0;color:var(--muted)">+5% CS and CE gains, and it takes the place of the normal Lighter. A unique find when you burgle the Secluded Cabin. You can lose it on a critical failure.</p></div>
     <div class="card"><h3>Time and nerve</h3><p style="margin:.3em 0 0;color:var(--muted)">A job moves fast once it starts. Have 2-3 free minutes and enough nerve to finish it. Keep 40+ nerve until you know what you are doing.</p></div>
     <div class="card"><h3>New jobs every day</h3><p style="margin:.3em 0 0;color:var(--muted)">A new set of jobs comes at 00:00 TCT. Every player gets the same jobs, but some only show at higher CS. When you finish them all, there are no more until the next day. Jobs you don't touch are gone at the end of the day.</p></div>
     <div class="card"><h3>Keep a job for tomorrow</h3><p style="margin:.3em 0 0;color:var(--muted)">Inquire on a job (0 nerve) and it stays until you do it. But if the same job would come again while you still hold it, the new one will not appear. Clear kept jobs soon.</p></div>
@@ -208,5 +208,5 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>Arson guide.</strong> From the in-depth Arson guide by <strong>Emforus [2535044]</strong>, built on player logs. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
+  <strong>Arson guide.</strong> From the in-depth Arson guide by <strong>Emforus [2535044]</strong>, built on player logs. Read the full <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16510947" target="_blank" rel="noopener">Arson forum guide</a>. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
 </div></footer>

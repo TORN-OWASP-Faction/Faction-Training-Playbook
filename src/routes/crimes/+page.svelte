@@ -26,15 +26,22 @@
 
 <section><div class="wrap">
   <div class="callout" style="border-left-color:var(--c-fixer)">
-    <h2 class="h3">Interactive drop-table data</h2>
-    <p style="margin:.3em 0 .7em;color:var(--muted)">Community-compiled droptables and rates, converted to sortable/filterable tables (credit: Emforus [2535044]).</p>
+    <h2 class="h3">Crime guides and data</h2>
+    <p style="margin:.3em 0 .7em;color:var(--muted)">A page for every crime: guides from the in-depth forum guides and sortable drop tables, by Emforus [2535044].</p>
     <div style="display:flex;gap:.6rem;flex-wrap:wrap">
-      <a class="hero-badge" href="{base}/crimes/burglary/" style="text-decoration:none">Burglary →</a>
+      <a class="hero-badge" href="{base}/crimes/search-for-cash/" style="text-decoration:none">Search for Cash →</a>
       <a class="hero-badge" href="{base}/crimes/shoplifting/" style="text-decoration:none">Shoplifting →</a>
-      <a class="hero-badge" href="{base}/crimes/cracking/" style="text-decoration:none">Cracking →</a>
+      <a class="hero-badge" href="{base}/crimes/pickpocketing/" style="text-decoration:none">Pickpocketing →</a>
+      <a class="hero-badge" href="{base}/crimes/burglary/" style="text-decoration:none">Burglary →</a>
+      <a class="hero-badge" href="{base}/crimes/bootlegging/" style="text-decoration:none">Bootlegging →</a>
       <a class="hero-badge" href="{base}/crimes/forgery/" style="text-decoration:none">Forgery →</a>
       <a class="hero-badge" href="{base}/crimes/graffiti/" style="text-decoration:none">Graffiti →</a>
       <a class="hero-badge" href="{base}/crimes/arson/" style="text-decoration:none">Arson →</a>
+      <a class="hero-badge" href="{base}/crimes/card-skimming/" style="text-decoration:none">Card Skimming →</a>
+      <a class="hero-badge" href="{base}/crimes/hustling/" style="text-decoration:none">Hustling →</a>
+      <a class="hero-badge" href="{base}/crimes/scamming/" style="text-decoration:none">Scamming →</a>
+      <a class="hero-badge" href="{base}/crimes/disposal/" style="text-decoration:none">Disposal →</a>
+      <a class="hero-badge" href="{base}/crimes/cracking/" style="text-decoration:none">Cracking →</a>
     </div>
   </div>
 </div></section>
@@ -81,18 +88,30 @@
   </div>
 
   <div class="card" style="margin-top:1rem">
-    <h3>Raise your success rate</h3>
+    <h3>Level faster: CE and CS bonuses</h3>
+    <p style="margin:.4rem 0 0;color:var(--muted)">These add together into one bonus to the CE and CS you get from every crime.</p>
     <ul class="rules" style="margin-top:.6rem">
-      <li><span class="k">+2%</span><div>Buy the crime's <b>enhancer item</b> early — you'll do thousands of attempts, so 2% is a lot of extra successes.</div></li>
-      <li><span class="k"><Icon name="smile"/></span><div><b>Happiness</b> and <b>merits</b> both help — the same happy that boosts gym gains helps crimes.</div></li>
-      <li><span class="k"><Icon name="grad"/></span><div><b>Bachelor of Psychological Sciences</b> (education) and the <b>Federal Judge</b> rank in the Law city job.</div></li>
-      <li><span class="k"><Icon name="flag"/></span><div>The faction <b>Criminality</b> upgrade tree — a faction-wide boost worth pushing for.</div></li>
+      <li><span class="k">+5%</span><div>The crime's <b>enhancer item</b>. Each crime has its own one. It only helps that crime.</div></li>
+      <li><span class="k">+10%</span><div><b>Crime Progression</b> merit upgrades.</div></li>
+      <li><span class="k">+10%</span><div><b>Education</b> courses.</div></li>
+      <li><span class="k">+10%</span><div>The faction <b>Criminality</b> upgrades.</div></li>
+      <li><span class="k">+5%</span><div>Finishing the <b>Law</b> starter job.</div></li>
+      <li><span class="k">+15%</span><div>Up to this much from <b>company</b> specials.</div></li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <h3>Crime chain</h3>
+    <ul class="rules" style="margin-top:.6rem">
+      <li><span class="k">↑</span><div>Each success builds your <b>crime chain</b>. A higher chain gives more CE and CS on the next successes, in every crime.</div></li>
+      <li><span class="k">½</span><div>A <b>fail</b> cuts your chain bonus in half.</div></li>
+      <li><span class="k">0</span><div>A <b>critical fail</b> resets it to zero. It also makes you <b>demoralized</b>: less CE and CS for a while, until more successes wear it off.</div></li>
     </ul>
   </div>
   <div class="say banker">
     <div class="av"><span class="mono-badge">V</span><img src="{base}/assets/banker-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
     <div><div><span class="nm">Ledger</span><span class="tag">Worth the Cost?</span></div>
-      <p class="line">"The enhancer pays for itself. Over thousands of attempts, two percent more successes is a return most investments would envy. Buy it the day you commit to a crime."</p></div>
+      <p class="line">"The enhancer pays for itself. Five percent more skill on every one of thousands of attempts is a return most investments would envy. Buy it the day you commit to a crime."</p></div>
   </div>
 </div></section>
 
@@ -142,7 +161,7 @@
     <div class="card">
       <h3>Boost OC success</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k"><Icon name="flag"/></span><div>The same crime boosters carry over: <b>happy, merits, education, the faction Criminality tree</b>.</div></li>
+        <li><span class="k"><Icon name="flag"/></span><div>Your CE drives OC success, so every CE bonus above helps: <b>merits, education, the faction Criminality tree</b>.</div></li>
         <li><span class="k"><Icon name="building"/></span><div>A <b>Law Firm</b> company special boosts OC success — handy if a member works there.</div></li>
         <li><span class="k"><Icon name="backpack"/></span><div>Bring the role's <b>required item</b> — a missing item can block an otherwise-ready member (this is where the faction armory earns its keep).</div></li>
       </ul>
@@ -242,18 +261,18 @@
   <div class="cat">
     <div class="cat-h">Theft</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Search for Cash</span><span class="pill money">Money</span></div><p>The starter. Search spots (Trash, Subway, Junkyard; unlock Beach, Cemetery, Fountain) for cash and items. Your bread-and-butter early earner and CE builder.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Shoplifting</span><span class="pill items">Items</span></div><p>Lift goods from shops — a source of candy, jewelry and <b>rings</b> (yes, wedding rings). Learn each shop's drop rates.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Pickpocketing</span><span class="pill skill">Skill</span></div><p>Fast and low-risk, but light on income. Great for grinding CS/CE without much downside.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Burglary</span><span class="pill money">Money</span></div><p>Break into houses — scout first, mind the drop tables and safety. Higher-value hauls once you can handle it.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Search for Cash</span><span class="pill money">Money</span></div><p>The starter. Search spots (Trash, Subway, Junkyard; unlock Beach, Cemetery, Fountain) for cash and items. Your bread-and-butter early earner and CE builder. <a href="{base}/crimes/search-for-cash/">Full guide →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Shoplifting</span><span class="pill items">Items</span></div><p>Lift goods from shops — a source of candy, jewelry and <b>rings</b> (yes, wedding rings). Learn each shop's drop rates. <a href="{base}/crimes/shoplifting/">Drop tables →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Pickpocketing</span><span class="pill skill">Skill</span></div><p>Fast and low-risk, but light on income. Great for grinding CS/CE without much downside. <a href="{base}/crimes/pickpocketing/">Full guide →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Burglary</span><span class="pill money">Money</span></div><p>Break into houses — scout first, mind the drop tables and safety. Higher-value hauls once you can handle it. <a href="{base}/crimes/burglary/">Data tables →</a></p></div>
     </div>
   </div>
 
   <div class="cat">
     <div class="cat-h">Counterfeiting</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Bootlegging</span><span class="pill money">Money</span></div><p>Copy and sell media on a timer — a steady, semi-passive earner once your setup is running.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Forgery</span><span class="pill items">Items</span></div><p>Forge documents (ID badges, ATM keys) from material components on timers, with fixed item outputs. More parts to juggle than Bootlegging.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Bootlegging</span><span class="pill money">Money</span></div><p>Copy and sell media on a timer — a steady, semi-passive earner once your setup is running. <a href="{base}/crimes/bootlegging/">Full guide →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Forgery</span><span class="pill items">Items</span></div><p>Forge documents (ID badges, ATM keys) from material components on timers, with fixed item outputs. More parts to juggle than Bootlegging. <a href="{base}/crimes/forgery/">Data tables →</a></p></div>
     </div>
   </div>
 
@@ -268,23 +287,23 @@
   <div class="cat">
     <div class="cat-h">Fraud</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Card Skimming</span><span class="pill money">Money</span></div><p>Skim card data from machines on time-dependent windows. Fail and you can <b>lose your card details</b> — timing matters.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Hustling</span><span class="pill money">Money</span></div><p>Street cons and hustles for cash.</p></div>
-      <div class="crime"><div class="top"><span class="nm">Scamming</span><span class="pill money">Money</span></div><p>The most complex crime yet — work the <b>mark</b> and <b>persuasion</b> bars; even player age factors in. High skill ceiling.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Card Skimming</span><span class="pill money">Money</span></div><p>Install skimmers on ATMs, let them collect card details over time, then recover them and sell the details. Leave them too long and they may be found. <a href="{base}/crimes/card-skimming/">Full guide →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Hustling</span><span class="pill money">Money</span></div><p>Gather a crowd, show them the game, then take their bets. Lose a little to hook them, win to cash in, and watch their suspicion. <a href="{base}/crimes/hustling/">Full guide →</a></p></div>
+      <div class="crime"><div class="top"><span class="nm">Scamming</span><span class="pill money">Money</span></div><p>Farm email addresses, send spam waves, then persuade the marks who reply. Many moving parts and a high skill ceiling. <a href="{base}/crimes/scamming/">Full guide →</a></p></div>
     </div>
   </div>
 
   <div class="cat">
     <div class="cat-h">Illicit Services</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Disposal</span><span class="pill time">Time-gated</span></div><p>A daily-job system — the most time-gated crime out. Patience is the whole game here.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Disposal</span><span class="pill time">Time-gated</span></div><p>Daily jobs: get rid of each load with the right method. Pick wrong and the job fails. Once the day's jobs are done, you wait for tomorrow. <a href="{base}/crimes/disposal/">Full guide →</a></p></div>
     </div>
   </div>
 
   <div class="cat">
     <div class="cat-h">Cybercrime</div>
     <div class="crimes">
-      <div class="crime"><div class="top"><span class="nm">Cracking</span><span class="pill skill">Skill</span></div><p>Crack passwords, Wordle-style — a mix of Disposal and Pickpocketing. Puzzle-brained players do well here.</p></div>
+      <div class="crime"><div class="top"><span class="nm">Cracking</span><span class="pill skill">Skill</span></div><p>Crack passwords, Wordle-style — a mix of Disposal and Pickpocketing. Puzzle-brained players do well here. <a href="{base}/crimes/cracking/">Data tables →</a></p></div>
     </div>
   </div>
 </div></section>
@@ -297,9 +316,9 @@
     <ul class="rules">
       <li><span class="k">1</span><div><b>Never sit on a full nerve bar</b> — that's wasted CE and cash, same as capped energy is wasted stats.</div></li>
       <li><span class="k">2</span><div><b>Grind the hardest crime you pass reliably</b>, not the hardest one available. Move up only as your natural nerve bar rises.</div></li>
-      <li><span class="k">3</span><div><b>Buy the enhancer</b> for your main crime immediately (+2% over thousands of attempts).</div></li>
+      <li><span class="k">3</span><div><b>Buy the enhancer</b> for your main crime early (+5% CS and CE on every attempt).</div></li>
       <li><span class="k">4</span><div><b>Money now vs. CE for later:</b> chase the money crimes (Search for Cash, Bootlegging, Burglary, Card Skimming, Scamming) when you need cash; grind the safe ones to bank CE for OCs.</div></li>
-      <li><span class="k">5</span><div><b>Stack success boosters</b> — happy, merits, education, Law job, faction Criminality tree.</div></li>
+      <li><span class="k">5</span><div><b>Stack the CE and CS bonuses</b>: merits, education, the Law starter job, company specials, faction Criminality. Don't break your crime chain with risky attempts.</div></li>
     </ul>
   </div>
   <div class="say fixer">

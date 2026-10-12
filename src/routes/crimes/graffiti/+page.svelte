@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import CrimeHero from '$lib/CrimeHero.svelte';
   import DataTable from '$lib/DataTable.svelte';
   import Character from '$lib/Character.svelte';
   import Item from '$lib/Item.svelte';
@@ -27,25 +28,14 @@
       ['5 stars', '500', 'Much more cash. With CS 70 you can join a crew. Fifth unique find at CS 100.']
     ]
   };
+  const kit = [
+    {"name": "Ladder", "where": "CS 15 · West Side", "text": "Stops falls and bad outcomes from high places."},
+    {"name": "Wire Cutters", "where": "CS 25 · North Side", "text": "Gets you into locked places, so you fail less."},
+    {"name": "Paint Mask", "enhancer": true, "where": "CS 35 · East Side", "text": "+5% CS and CE, and unlocks the best cash outcomes. The biggest money factor in Graffiti."}
+  ];
 </script>
 
-<header class="hero"><div class="wrap hero-split">
-  <div>
-    <span class="eyebrow">Crimes 2.0 · guide</span>
-    <h1>Graffiti</h1>
-    <p class="lede">Tag walls across the city. Each district has its own risk, and in each one paint color decides what you get: one color pays the most cash, another builds reputation (stars) fastest. Pick the district for the risk, then pick the color for the goal.</p>
-    <p style="margin-top:.6rem"><a href="{base}/crimes/">← Back to Crimes</a></p>
-  </div>
-  <aside class="kit" aria-label="Graffiti key items">
-    <h2 class="kit-h">The three key items</h2>
-    <ul>
-      <li><Item name="Ladder" icon /><div><b>Ladder</b> <span class="where">CS 15 · West Side</span><p>Stops falls and bad outcomes from high places.</p></div></li>
-      <li><Item name="Wire Cutters" icon /><div><b>Wire Cutters</b> <span class="where">CS 25 · North Side</span><p>Gets you into locked places, so you fail less.</p></div></li>
-      <li><Item name="Paint Mask" icon /><div><b>Paint Mask</b> <span class="tag" style="color:var(--c-fixer);background:var(--fixer-soft)">enhancer</span> <span class="where">CS 35 · East Side</span><p>+5% CS and CE, and unlocks the best cash outcomes. The biggest money factor in Graffiti.</p></div></li>
-    </ul>
-    <p class="kit-note">You find all three while doing Graffiti. You don't need them to start, but carry all three: they seem to stop some critical failures.</p>
-  </aside>
-</div></header>
+<CrimeHero title="Graffiti" lede="Tag walls across the city. Each district has its own risk, and in each one paint color decides what you get: one color pays the most cash, another builds reputation (stars) fastest. Pick the district for the risk, then pick the color for the goal." kitTitle="The three key items" items={kit} note="You find all three while doing Graffiti. You don't need them to start, but carry all three: they seem to stop some critical failures." />
 
 <section><div class="wrap">
   <span class="eyebrow">Before you start</span>
@@ -125,17 +115,6 @@
 </div></section>
 
 <footer><div class="wrap">
-  <strong>Graffiti guide.</strong> Key items, reputation, decay, crews and paint colors from the in-depth Graffiti guide by <strong>Emforus [2535044]</strong>, built on more than 32,000 player logs. District loot from community guides. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
+  <strong>Graffiti guide.</strong> Key items, reputation, decay, crews and paint colors from the in-depth Graffiti guide by <strong>Emforus [2535044]</strong>, built on more than 32,000 player logs. District loot from community guides. Read the full <a href="https://www.torn.com/forums.php#/p=threads&f=61&t=16344567" target="_blank" rel="noopener">Graffiti forum guide</a>. Part of the <a href="{base}/crimes/">Crimes 2.0 guide</a>. Numbers change as the crime is updated.
 </div></footer>
 
-<style>
-  .hero-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:2.5rem;align-items:center}
-  @media(max-width:900px){.hero-split{grid-template-columns:minmax(0,1fr);gap:1.5rem}}
-  .kit{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--c-fixer);padding:1rem 1.1rem}
-  .kit-h{font-size:1rem;margin:0 0 .6rem;letter-spacing:.04em;text-transform:uppercase;color:var(--c-fixer)}
-  .kit ul{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-  .kit li{display:grid;grid-template-columns:50px minmax(0,1fr);gap:.7rem;align-items:start}
-  .kit li p{margin:.15em 0 0;color:var(--muted);font-size:.88rem;line-height:1.4}
-  .kit .where{font-size:.75rem;color:var(--muted);white-space:nowrap}
-  .kit-note{margin:.8rem 0 0;padding-top:.7rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--muted);line-height:1.4}
-</style>
