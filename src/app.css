@@ -614,3 +614,6 @@ h2.h3{font-size:1.12rem;font-weight:600;letter-spacing:.01em;margin:0 0 .2em;lin
 .rules > li{display:grid;grid-column:1/-1;grid-template-columns:subgrid;align-items:start}
 .rules > li > :only-child{grid-column:1/-1}
 .rules .k{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:1.9rem;min-height:1.45rem;white-space:nowrap;line-height:1;justify-self:stretch}
+
+/* No full-width lines between the page header, sections and footer: the spacing separates them. */
+header,section,footer{border-top:none;border-bottom:none}

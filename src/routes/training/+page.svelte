@@ -626,7 +626,7 @@
 <section id="edu"><div class="wrap">
   <span class="eyebrow">The compounding buy</span>
   <h2>Education targets</h2>
-  <p class="lede">Education perks are <b>permanent and multiplicative</b> — a +1% gym-gain course keeps paying on every train forever. Long courses run in the background, so start them the day you qualify.</p>
+  <p class="lede">Education perks are <b>permanent and multiplicative</b> — a +1% gym-gain course keeps paying on every train forever. Long courses run in the background, so start them the day you qualify. To plan your whole order, use the <a href="{base}/education/">education journey</a>.</p>
 
   <div class="say militia">
     <div class="av"><span class="mono-badge">R</span><img src="{base}/assets/militia-sm.webp" alt="" width="48" height="72" loading="lazy"></div>
@@ -639,7 +639,7 @@
       <ul class="rules" style="margin-top:10px">
         <li><span class="k">1</span><div><b>Gym-gain courses</b> (Sports Science line) — direct % on the stat you're building.</div></li>
         <li><span class="k">2</span><div><b>Permanent stat / attribute courses</b> — flat strength/defense/endurance/intelligence boosts.</div></li>
-        <li><span class="k">3</span><div><b>War &amp; property support</b> — see the faction's <em>Educations for War</em> guide for the exact list worth taking.</div></li>
+        <li><span class="k">3</span><div><b>War &amp; property support</b> — the <a href="{base}/education/">education journey</a> lists the courses for each build.</div></li>
       </ul>
     </div>
     <div class="callout">

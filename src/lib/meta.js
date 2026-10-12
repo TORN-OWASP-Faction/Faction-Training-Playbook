@@ -10,6 +10,7 @@ export const META = {
   '/glossary/': ['Glossary', 'Torn words and abbreviations in plain language, each linked to the page that explains it.', 'glossary'],
   '/training/': ['Training guide', 'Happy jumps, builds, schedules, the best gym for each stat, items and education: turn energy into stats fast.', 'training'],
   '/training/formula/': ['Training math', 'Training Formula V2.0 explained, with an interactive gains chart.', 'training'],
+  '/education/': ['Education journey', 'Which Torn education to take next: the gym line first, then pick fighting, company, museum points, faction support, jail or crimes, one priority at a time.', 'training'],
   '/planner/': ['Jump planner', 'Plan a happy jump with live prices from your own Torn API key.', 'training'],
   '/paths/': ['Paths and milestones', 'Income first, stats first or balanced: an interactive planner with timelines, milestones, merits and education.', 'paths'],
   '/travel/': ['Flying for money', 'Flowers, plushies and contraband: when to rent a Private Island, the Travel 2.0 rules and the Tourism Day plan.', 'travel'],

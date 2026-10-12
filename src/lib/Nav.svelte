@@ -30,7 +30,7 @@
   const GROUPS = [
     { id: 'train', links: [
       ['guide', '/training/'], ['idea', '/training/#idea'], ['new', '/training/#new'], ['builds', '/training/#builds'],
-      ['schedule', '/training/#schedule'], ['items', '/training/#items'], ['edu', '/training/#edu'],
+      ['schedule', '/training/#schedule'], ['items', '/training/#items'], ['edu', '/education/'],
       ['planner', '/planner/'], ['math', '/training/formula/']
     ] },
     { id: 'money', links: [
