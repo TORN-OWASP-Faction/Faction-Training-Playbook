@@ -9,6 +9,6 @@ export default {
   kit: {
     adapter: adapter({ fallback: '404.html' }),
     paths: { base, relative: false },
-    prerender: { entries: ['*', '/sitemap.xml'] }
+    prerender: { entries: ['*', '/sitemap.xml', '/sitemap.txt'] }
   }
 };
