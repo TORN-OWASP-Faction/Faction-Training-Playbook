@@ -18,6 +18,8 @@
     const items = report.rewards?.items ?? [];
     const pts = report.rewards?.points ? [{ id: null, name: 'Points', qty: report.rewards.points, price: 0, sold: false }] : [];
     rewards = [...items.map((i) => ({ id: i.id, name: i.name, qty: i.quantity, price: 0, sold: false })), ...pts];
+    // Price the items straight away, so the totals mean something without an extra click.
+    if (key && items.length) untrack(fillPrices);
   });
 
   // Faction setup, remembered in this browser.
@@ -68,7 +70,8 @@
     try {
       const prices = await itemPrices(key, rewards.filter((r) => r.id).map((r) => r.id));
       for (const r of rewards) if (r.id && prices[r.id]) r.price = prices[r.id];
-      pricing = 'Filled with current market value. Change any price you actually sold for.';
+      const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+      pricing = `Prices are today's market value (${today}), not what the items were worth when the war ended. Change any price to what you actually sold for.`;
     } catch (err) {
       pricing = err.message;
     }
@@ -377,7 +380,7 @@
 
   <!-- REWARDS -->
   <div class="block card">
-    <div class="bh"><h3>Rewards</h3><button class="btn-c" onclick={fillPrices} disabled={!rewards.some((r) => r.id)}>Fill market prices</button></div>
+    <div class="bh"><h3>Rewards</h3>{#if report.rewards?.respect}<span class="note">Also won: <b>{report.rewards.respect.toLocaleString('en-US')} faction respect</b>. It isn't money, so it's not in the total.</span>{/if}<button class="btn-c" onclick={fillPrices} disabled={!rewards.some((r) => r.id)}>Fill market prices</button></div>
     {#if pricing}<p class="note" aria-live="polite">{pricing}</p>{/if}
     <div class="tbl-scroll"><table class="ed">
       <thead><tr><th>Item</th><th class="num">Qty</th><th class="num">Price each</th><th class="num">Total</th><th>Sold</th><th><span class="sr">Remove</span></th></tr></thead>
