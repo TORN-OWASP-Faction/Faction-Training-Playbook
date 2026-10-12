@@ -202,7 +202,7 @@ export const TEMPLATES = [
         .sort((a, b) => a.s.days - b.s.days)
         .slice(0, +v.count);
       const tip = (html) => html.replace(/href="\//g, `href="${site}/`);
-      const soon = (s) => (s.live ? 'on now' : s.days === 1 ? 'tomorrow' : `in ${s.days} days`);
+      const soon = (s) => (s.live ? 'on now' : s.days === 0 ? 'later today' : s.days === 1 ? 'tomorrow' : `in ${s.days} days`);
       return [
         title('COMING UP IN TORN', COLORS.amber),
         v.intro?.trim() ? `<p>${esc(v.intro)}</p>` : '',

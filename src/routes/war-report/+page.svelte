@@ -5,6 +5,9 @@
   import { loadFaction, buildExact, buildFromChains } from '$lib/warreport.js';
   import { copyTable } from '$lib/tablecopy.js';
   import PayoutCalc from '$lib/PayoutCalc.svelte';
+  import WarCharts from '$lib/WarCharts.svelte';
+  import DefenseTable from '$lib/DefenseTable.svelte';
+  import ReviveTable from '$lib/ReviveTable.svelte';
 
   let loading = $state(false);
   let error = $state('');
@@ -59,7 +62,8 @@
   // Columns: [key, label, shown in exact mode, shown in chain mode]
   const COLS = [
     ['hits', 'War hits', true, true], ['abroad', 'Abroad', true, true], ['unknown', 'Location unknown', false, true], ['score', 'Score', true, true],
-    ['respect', 'Respect', true, false], ['leave', 'Leave', true, true], ['mug', 'Mug', true, true],
+    ['respect', 'Respect', true, false], ['lost', 'Respect lost', true, false], ['net', 'Respect +/-', true, false],
+    ['taken', 'Hits taken', true, false], ['leave', 'Leave', true, true], ['mug', 'Mug', true, true],
     ['hosp', 'Hosp', true, true], ['assists', 'Assists', true, false]
   ];
   const cols = $derived(COLS.filter(([k, , ex, ch]) => (report?.exact ? ex : ch) && ((k !== 'score' && k !== 'unknown') || report?.official)));
@@ -80,7 +84,7 @@
 
   // ---- copy ----
   const title = $derived(war ? `War report: ${fac.faction.name} vs ${war.them?.name ?? '?'}` : '');
-  const cell = (r, k) => (r[k] == null ? '—' : nf.format(r[k]));
+  const cell = (r, k) => (r[k] == null ? '—' : (k === 'net' && r[k] > 0 ? '+' : '') + nf.format(r[k]));
 
   const tableHead = () => ['Member', ...cols.map(([, l]) => l)];
   const tableBody = () => rows.map((r) => [r.name, ...cols.map(([k]) => cell(r, k))]);
@@ -160,6 +164,10 @@
         <div class="tile"><span>Location unknown</span><b class="mono">{nf.format(total('unknown'))}</b><small>war hits made between chains</small></div>
       {/if}
       <div class="tile"><span>{report.official ? 'Score' : 'Respect'}</span><b class="mono">{nf.format(report.official ? total('score') : total('respect'))}</b><small>{outcome(war) === 'ongoing' ? 'so far' : outcome(war)}</small></div>
+      {#if report.exact}
+        {@const net = total('net')}
+        <div class="tile"><span>Respect +/-</span><b class="mono" class:up={net > 0} class:down={net < 0}>{net > 0 ? '+' : ''}{nf.format(net)}</b><small>{nf.format(total('respect'))} gained · {nf.format(total('lost'))} lost</small></div>
+      {/if}
       <div class="tile"><span>Members</span><b class="mono">{rows.filter((r) => r.hits).length}</b><small>made a war hit</small></div>
     </div>
 
@@ -196,8 +204,20 @@
       <span class="prog" aria-live="polite">{copied}</span>
     </div>
 
+    {#if report.exact && report.timeline}
+      {#key report}
+        <WarCharts timeline={report.timeline} rows={report.rows} positions={fac.positions} start={war.start} end={war.end}
+          us={fac.faction.name} them={war.them?.name ?? 'Enemy'} />
+        <DefenseTable rows={report.rows} them={war.them?.name ?? 'the enemy'} revives={report.revives.count} />
+        <ReviveTable revives={report.revives} us={fac.faction.name} them={war.them?.name ?? 'Enemy'} />
+      {/key}
+    {:else}
+      <p class="note">The charts need your faction's attack log, so they show once your key has <b>Faction API Access</b>.</p>
+    {/if}
+
     <p class="note">
       {#if report.exact}
+        Respect lost is the respect the enemy scored by beating each member, which is their war score. Respect +/- is respect gained minus respect lost.
         Counted from your faction's attack log: every ranked-war hit that got Torn's overseas bonus counts as abroad.
       {:else}
         Abroad comes from {report.chains} chain report{report.chains === 1 ? '' : 's'} and counts every overseas hit made during a chain, war or not; hits made while no chain was running aren't in it. For exact numbers, use a key with faction API access.
@@ -216,7 +236,7 @@
     <div class="card">
       <h3>With faction API access (exact)</h3>
       <ul class="rules" style="margin-top:.6rem">
-        <li><span class="k">1</span><div>Reads every outgoing attack from the war start, 100 at a time.</div></li>
+        <li><span class="k">1</span><div>Reads every outgoing and incoming attack, and every revive, from the war start, 100 at a time.</div></li>
         <li><span class="k">2</span><div>Keeps ranked-war hits only, and counts a hit as abroad when Torn applied the overseas bonus (fights outside Torn City).</div></li>
         <li><span class="k">3</span><div>Once the war ends, hits and score come from Torn's official war report.</div></li>
       </ul>
@@ -257,6 +277,8 @@
   .tiles .tile{display:flex;flex-direction:column;gap:.1rem;border-radius:3px}
   .tiles span{font-family:"IBM Plex Mono",monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .tiles b{font-family:"Oswald",sans-serif;font-size:1.6rem;font-weight:600}
+  .tiles b.up{color:var(--energy)}
+  .tiles b.down{color:var(--crime)}
   .tiles small{color:var(--muted);font-size:.8rem}
   table.wr caption{text-align:start;color:var(--muted);font-size:.85rem;padding:.4rem 0;caption-side:top}
   table.wr th button{font:inherit;font-weight:600;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-transform:inherit;letter-spacing:inherit}

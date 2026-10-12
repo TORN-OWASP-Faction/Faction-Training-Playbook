@@ -61,7 +61,7 @@ export async function loadFaction(key) {
 const WINS = new Set(['Attacked', 'Mugged', 'Hospitalized', 'Arrested', 'Looted', 'Bounty', 'Special']);
 
 function row(rows, id, name) {
-  rows[id] ??= { id, name: name ?? `[${id}]`, hits: 0, score: null, abroad: 0, unknown: 0, respect: 0, leave: 0, mug: 0, hosp: 0, assists: 0, losses: 0 };
+  rows[id] ??= { id, name: name ?? `[${id}]`, hits: 0, score: null, abroad: 0, unknown: 0, respect: 0, lost: 0, net: 0, taken: 0, leave: 0, mug: 0, hosp: 0, assists: 0, losses: 0 };
   return rows[id];
 }
 
@@ -86,33 +86,103 @@ function applyOfficial(rows, members) {
   return true;
 }
 
-// Exact: every outgoing attack in the war window, 100 per page.
-export async function buildExact(key, war, factionId, names, onProgress) {
-  const rows = {};
+// Every attack one way (outgoing or incoming) in the war window, 100 per page.
+async function readAttacks(key, war, direction, onProgress, onAttack) {
+  await readPages(key, war, `/faction/attacks?filters=${direction}`, 'attacks', `${direction} attacks`, onProgress, onAttack);
+}
+
+async function readPages(key, war, path, field, what, onProgress, onItem) {
   const to = war.end ?? Math.floor(Date.now() / 1000);
-  let next = `/faction/attacks?filters=outgoing&from=${war.start}&to=${to}&limit=100&sort=ASC`;
-  let pages = 0;
+  let next = `${path}${path.includes('?') ? '&' : '?'}from=${war.start}&to=${to}&limit=100&sort=ASC`;
+  let read = 0;
   while (next) {
     const data = await call(key, next);
-    for (const a of data.attacks) {
-      if (!a.is_ranked_war || !a.attacker) continue;
-      const r = row(rows, a.attacker.id, a.attacker.name ?? names[a.attacker.id]);
-      if (a.result === 'Assist') { r.assists++; continue; }
-      if (!WINS.has(a.result)) { r.losses++; continue; }
-      r.hits++;
-      r.respect += a.respect_gain;
-      if (a.modifiers?.overseas > 1) r.abroad++;
-      if (a.result === 'Attacked') r.leave++;
-      else if (a.result === 'Mugged') r.mug++;
-      else if (a.result === 'Hospitalized') r.hosp++;
-    }
-    onProgress?.(`Read ${++pages * 100} attacks…`);
-    next = data.attacks.length === 100 ? data._metadata?.links?.next : null;
+    data[field].forEach(onItem);
+    read += data[field].length;
+    onProgress?.(`Read ${read} ${what}…`);
+    next = data[field].length === 100 ? data._metadata?.links?.next : null;
   }
+}
+
+// Where and by whom each member got beaten during the war, and how long they lasted after a revive.
+// "Abroad" is any fight that got Torn's overseas bonus; the attack log doesn't say which country.
+export const BEATEN_BY = ['war', 'bounty', 'other'];
+const emptyDefense = () => ({ torn: { war: 0, bounty: 0, other: 0 }, abroad: { war: 0, bounty: 0, other: 0 }, revives: 0, gaps: [], quick: 0 });
+const QUICK = 5 * 60;
+
+async function buildDefense(key, war, factionId, beatings, rows, onProgress) {
+  for (const b of beatings) {
+    const d = (rows[b.id].defense ??= emptyDefense());
+    d[b.place][b.by]++;
+  }
+  // Who our members revived (us, the enemy or anyone else), and who revived our members.
+  const side = (f) => (f?.id === factionId ? 'us' : f?.id === war.them?.id ? 'them' : 'other');
+  const revivers = {};
+  const received = { us: 0, them: 0, other: 0 };
+  const revives = [];
+  await readPages(key, war, '/faction/revives', 'revives', 'revives', onProgress, (r) => {
+    const ok = /success/i.test(r.result);
+    if (r.reviver?.faction?.id === factionId) {
+      const m = (revivers[r.reviver.id] ??= { id: r.reviver.id, name: r.reviver.name, us: 0, them: 0, other: 0, failed: 0 });
+      if (ok) m[side(r.target?.faction)]++; else m.failed++;
+    }
+    if (r.target?.faction?.id === factionId && ok) {
+      received[side(r.reviver?.faction)]++;
+      revives.push({ id: r.target.id, t: r.timestamp });
+    }
+  });
+  for (const r of revives) {
+    if (!rows[r.id]) continue;
+    const d = (rows[r.id].defense ??= emptyDefense());
+    d.revives++;
+    const next = beatings.find((b) => b.id === r.id && b.t > r.t);
+    if (!next) continue;
+    d.gaps.push(next.t - r.t);
+    if (next.t - r.t <= QUICK) d.quick++;
+  }
+  return { count: revives.length, revivers: Object.values(revivers), received };
+}
+
+// Exact: every outgoing and incoming attack in the war window.
+// The timeline holds one entry per war hit won, by either side, for the charts:
+// { t: unix seconds, us: true when we made the hit, id: our member who hit or was hit, respect }.
+export async function buildExact(key, war, factionId, names, onProgress) {
+  const rows = {};
+  const timeline = [];
+  await readAttacks(key, war, 'outgoing', onProgress, (a) => {
+    if (!a.is_ranked_war || !a.attacker) return;
+    const r = row(rows, a.attacker.id, a.attacker.name ?? names[a.attacker.id]);
+    if (a.result === 'Assist') { r.assists++; return; }
+    if (!WINS.has(a.result)) { r.losses++; return; }
+    r.hits++;
+    r.respect += a.respect_gain;
+    if (a.modifiers?.overseas > 1) r.abroad++;
+    if (a.result === 'Attacked') r.leave++;
+    else if (a.result === 'Mugged') r.mug++;
+    else if (a.result === 'Hospitalized') r.hosp++;
+    timeline.push({ t: a.ended, us: true, id: a.attacker.id, respect: a.respect_gain });
+  });
+  // The enemy's war score is the respect they gain from beating us, so that is what each member "lost".
+  // Every other win against a member is kept too, to show who beat them and where.
+  const beatings = [];
+  await readAttacks(key, war, 'incoming', onProgress, (a) => {
+    if (!WINS.has(a.result) || (a.defender.faction && a.defender.faction.id !== factionId)) return;
+    const r = row(rows, a.defender.id, a.defender.name ?? names[a.defender.id]);
+    const by = a.result === 'Bounty' ? 'bounty' : a.attacker?.faction?.id === war.them?.id ? 'war' : 'other';
+    beatings.push({ t: a.ended, id: a.defender.id, place: a.modifiers?.overseas > 1 ? 'abroad' : 'torn', by });
+    if (!a.is_ranked_war || !a.attacker) return;
+    r.taken++;
+    r.lost += a.respect_gain;
+    timeline.push({ t: a.ended, us: false, id: a.defender.id, respect: a.respect_gain });
+  });
+  beatings.sort((x, y) => x.t - y.t);
+  const reviveStats = await buildDefense(key, war, factionId, beatings, rows, onProgress);
+  timeline.sort((x, y) => x.t - y.t);
+  for (const r of Object.values(rows)) r.net = r.respect - r.lost;
   const ours = await official(key, war, factionId);
   const hasOfficial = applyOfficial(rows, ours?.members);
   const chainReports = await loadWarChains(key, war, onProgress);
-  return { rows: Object.values(rows).filter((r) => r.hits || r.abroad || r.assists || r.losses), official: hasOfficial, rewards: ours?.rewards ?? null, chainReports };
+  return { rows: Object.values(rows).filter((r) => r.hits || r.abroad || r.assists || r.losses || r.taken || r.defense), official: hasOfficial, rewards: ours?.rewards ?? null, chainReports, timeline, revives: reviveStats };
 }
 
 // Every chain that ran during the war, including one still going.

@@ -17,13 +17,13 @@
   const byMonth = $derived(MONTHS.map((m, i) => [m, withStatus.filter(({ e }) => +e[1].slice(0, 2) === i + 1)]).filter(([, list]) => list.length));
 
   const link = (html) => html.replace(/href="\//g, `href="${base}/`);
-  const inDays = (s) => (s.live ? 'On now' : s.days === 1 ? 'Tomorrow' : `In ${s.days} days`);
+  const inDays = (s) => (s.live ? 'On now' : s.days === 0 ? 'Later today' : s.days === 1 ? 'Tomorrow' : `In ${s.days} days`);
 </script>
 
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Plan around them</span>
   <h1>Events <em>calendar</em></h1>
-  <p class="lede">Torn runs an event almost every month. Most last a day and boost one thing. Here's what each one does and how a new player should use it.</p>
+  <p class="lede">Torn runs an event almost every month. Most run for 48 hours and boost one thing. Here's what each one does and how a new player should use it.</p>
 
   <h2 class="sr" id="next-h">Coming up</h2>
   <ol class="next" aria-labelledby="next-h">
@@ -44,10 +44,10 @@
   <div class="callout" style="margin-top:1rem">
     <ul class="rules">
       <li><span class="k"><Icon name="dollar"/></span><div><b>Tourism Day</b> (26–28 Sep): twice the items per trip.</div></li>
-      <li><span class="k">W</span><div><b>Employee Appreciation Day</b> (early March): triple working stats from company training.</div></li>
-      <li><span class="k">E</span><div><b>CaffeineCon</b> (15 Oct): double energy from energy drinks.</div></li>
+      <li><span class="k">W</span><div><b>Employee Appreciation Day</b> (5–7 Mar): triple working stats from company training.</div></li>
+      <li><span class="k">E</span><div><b>CaffeineCon</b> (14–16 Oct): double energy from energy drinks.</div></li>
       <li><span class="k">M</span><div><b>Trick or Treat</b> (25 Oct – 1 Nov): an easy merit.</div></li>
-      <li><span class="k">H</span><div><b>World Diabetes Day</b> (14 Nov): triple happy from candy, the cheapest big jump of the year.</div></li>
+      <li><span class="k">H</span><div><b>World Diabetes Day</b> (13–15 Nov): triple happy from candy, the cheapest big jump of the year.</div></li>
     </ul>
   </div>
   <Character variant="banker" name="Ledger" tag="Money Talk" initial="V" img="banker.png">
