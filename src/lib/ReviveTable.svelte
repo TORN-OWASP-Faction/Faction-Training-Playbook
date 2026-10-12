@@ -1,9 +1,14 @@
 <script>
   // Revives during the war: who our members revived, and who revived our members.
+  import ColumnPicker from '$lib/ColumnPicker.svelte';
+
   let { revives, us, them } = $props();
 
   const nf = new Intl.NumberFormat('en-US');
   const COLS = [['name', 'Member'], ['us', `For ${us}`], ['them', `For ${them}`], ['other', 'For anyone else'], ['total', 'Total'], ['failed', 'Failed']];
+
+  let hidden = $state([]);
+  const shown = $derived(COLS.filter(([k]) => k === 'name' || !hidden.includes(k)));
 
   let sortKey = $state('total');
   let sortDir = $state(-1);
@@ -30,9 +35,10 @@
   </div>
 
   {#if members.length}
+    <div class="tools"><ColumnPicker columns={COLS.slice(1)} bind:hidden storeKey="ftp:war-revive-cols" /></div>
     <div class="tbl-scroll"><table>
       <thead><tr>
-        {#each COLS as [k, l]}
+        {#each shown as [k, l]}
           <th class:num={k !== 'name'} aria-sort={sortKey === k ? (sortDir > 0 ? 'ascending' : 'descending') : 'none'}>
             <button onclick={() => sortBy(k)}>{l}{sortKey === k ? (sortDir > 0 ? ' ↑' : ' ↓') : ''}</button></th>
         {/each}
@@ -41,7 +47,7 @@
         {#each sorted as m (m.id)}
           <tr>
             <td><a href="https://www.torn.com/profiles.php?XID={m.id}" target="_blank" rel="noopener">{m.name}</a></td>
-            {#each COLS.slice(1) as [k]}<td class="num mono" class:dim={!m[k]} class:warn={k === 'them' && m.them}>{nf.format(m[k])}</td>{/each}
+            {#each shown.slice(1) as [k]}<td class="num mono" class:dim={!m[k]} class:warn={k === 'them' && m.them}>{nf.format(m[k])}</td>{/each}
           </tr>
         {/each}
       </tbody>
@@ -61,6 +67,7 @@
   .tile b{font-family:"Oswald",sans-serif;font-size:1.5rem;font-weight:600}
   .tile small{color:var(--muted);font-size:.78rem}
   .tbl-scroll{overflow-x:auto}
+  .tools{display:flex;justify-content:flex-end;margin-bottom:.5rem}
   table{width:100%;border-collapse:collapse;font-size:.86rem}
   th,td{padding:.4rem .55rem;border-bottom:1px solid var(--border);text-align:start;white-space:nowrap}
   th button{font:inherit;font-size:.74rem;color:var(--faint);background:none;border:0;padding:0;cursor:pointer;font-weight:500}

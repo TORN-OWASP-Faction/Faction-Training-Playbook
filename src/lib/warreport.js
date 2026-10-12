@@ -182,7 +182,7 @@ export async function buildExact(key, war, factionId, names, onProgress) {
   const ours = await official(key, war, factionId);
   const hasOfficial = applyOfficial(rows, ours?.members);
   const chainReports = await loadWarChains(key, war, onProgress);
-  return { rows: Object.values(rows).filter((r) => r.hits || r.abroad || r.assists || r.losses || r.taken || r.defense), official: hasOfficial, rewards: ours?.rewards ?? null, chainReports, timeline, revives: reviveStats };
+  return { rows: Object.values(rows).filter((r) => r.hits || r.abroad || r.assists || r.losses || r.taken || r.defense), official: hasOfficial, rewards: ours?.rewards ?? null, chainReports, timeline, revives: reviveStats, beatings };
 }
 
 // Every chain that ran during the war, including one still going.
@@ -223,6 +223,11 @@ export async function buildFromChains(key, war, factionId, names, onProgress) {
   const hasOfficial = applyOfficial(rows, ours?.members);
   for (const r of Object.values(rows)) r.unknown = Math.max(0, r.hits - (inChains[r.id] ?? 0));
   return { rows: Object.values(rows).filter((r) => r.hits || r.abroad), chains: reports.length, official: hasOfficial, rewards: ours?.rewards ?? null, chainReports: reports };
+}
+
+// Every member's status right now (Okay, Hospital, Traveling, Abroad, Jail...), for the live recorder.
+export async function memberStatuses(key) {
+  return (await call(key, '/faction/members')).members.map((m) => ({ id: m.id, state: m.status.state, until: m.status.until }));
 }
 
 // Current market price of each item id, for valuing war rewards.

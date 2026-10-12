@@ -95,8 +95,11 @@
   }
 
   // ---- line chart geometry ----
-  const W = 900, H = 340, m = { l: 64, r: 20, t: 16, b: 34 };
-  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  // The charts take the width of their box, so text stays the same size on wide and narrow screens.
+  let boxWidth = $state(900);
+  const W = $derived(Math.max(320, boxWidth));
+  const H = 340, m = { l: 64, r: 20, t: 16, b: 34 };
+  const pw = $derived(W - m.l - m.r), ph = H - m.t - m.b;
   const X = (t) => m.l + ((t - from) / (to - from)) * pw;
 
   const yRange = $derived.by(() => {
@@ -134,7 +137,8 @@
 
   const timeTicks = $derived.by(() => {
     const span = to - from;
-    const step = [900, 1800, 3600, 7200, 10800, 21600, 43200, 86400].find((s) => span / s <= 7) ?? 86400;
+    const most = Math.max(4, Math.floor(pw / 110));
+    const step = [900, 1800, 3600, 7200, 10800, 21600, 43200, 86400].find((s) => span / s <= most) ?? 86400;
     const out = [];
     for (let t = Math.ceil(from / step) * step; t <= to; t += step) out.push(t);
     return out;
@@ -162,7 +166,7 @@
   const tipLeft = $derived(hoverT === null ? 0 : (X(hoverT) / W) * 100);
 
   // ---- hits per time slot: ours above the line, theirs below ----
-  const binSize = $derived([900, 1800, 3600, 7200, 10800, 21600].find((s) => (to - from) / s <= 48) ?? 43200);
+  const binSize = $derived([900, 1800, 3600, 7200, 10800, 21600].find((s) => (to - from) / s <= Math.max(24, pw / 14)) ?? 43200);
   const bins = $derived.by(() => {
     const first = Math.floor(from / binSize) * binSize;
     const out = [];
@@ -254,7 +258,7 @@
     {/each}
   </div>
 
-  <div class="plot" role="slider" tabindex="0" aria-label="Running totals over time. Use the left and right arrow keys to move through time."
+  <div class="plot" bind:clientWidth={boxWidth} role="slider" tabindex="0" aria-label="Running totals over time. Use the left and right arrow keys to move through time."
     aria-valuemin={from} aria-valuemax={to} aria-valuenow={hoverT ?? to}
     aria-valuetext={readout.length ? `${dayClock(hoverT)}: ` + readout.map((r) => `${r.label} ${fmt(r.v)}`).join(', ') : 'Move to read values'}
     onpointermove={onMove} onpointerleave={() => (hoverT = null)} onkeydown={onKey} onblur={() => (hoverT = null)}>

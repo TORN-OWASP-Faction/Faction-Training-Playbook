@@ -8,6 +8,9 @@
   import WarCharts from '$lib/WarCharts.svelte';
   import DefenseTable from '$lib/DefenseTable.svelte';
   import ReviveTable from '$lib/ReviveTable.svelte';
+  import ColumnPicker from '$lib/ColumnPicker.svelte';
+  import { loadLog, clearLog, startRecording } from '$lib/warlive.js';
+  import { onDestroy } from 'svelte';
 
   let loading = $state(false);
   let error = $state('');
@@ -41,6 +44,34 @@
 
   const war = $derived(fac?.wars.find((w) => w.id === warId));
 
+  // ---- live status recording, for time alive ----
+  let liveLog = $state(null);
+  let recording = $state(false);
+  let liveError = $state('');
+  let stopRecording = null;
+  $effect(() => {
+    const id = warId;
+    stop();
+    liveLog = id ? loadLog(id) : null;
+  });
+  function record() {
+    liveError = '';
+    recording = true;
+    stopRecording = startRecording(apiKey.value, warId, (log) => (liveLog = log), (err) => (liveError = err.message));
+  }
+  function stop() {
+    stopRecording?.();
+    stopRecording = null;
+    recording = false;
+  }
+  function deleteRecording() {
+    stop();
+    clearLog(warId);
+    liveLog = null;
+  }
+  onDestroy(stop);
+  const changes = $derived(liveLog ? Object.values(liveLog.members).reduce((n, list) => n + list.length, 0) : 0);
+
   async function build() {
     error = ''; loading = true; progress = 'Starting…';
     try {
@@ -66,7 +97,9 @@
     ['taken', 'Hits taken', true, false], ['leave', 'Leave', true, true], ['mug', 'Mug', true, true],
     ['hosp', 'Hosp', true, true], ['assists', 'Assists', true, false]
   ];
-  const cols = $derived(COLS.filter(([k, , ex, ch]) => (report?.exact ? ex : ch) && ((k !== 'score' && k !== 'unknown') || report?.official)));
+  const available = $derived(COLS.filter(([k, , ex, ch]) => (report?.exact ? ex : ch) && ((k !== 'score' && k !== 'unknown') || report?.official)));
+  let hidden = $state([]);
+  const cols = $derived(available.filter(([k]) => !hidden.includes(k)));
 
   const rows = $derived.by(() => {
     if (!report) return [];
@@ -104,6 +137,7 @@
 </div></header>
 
 <section id="report"><div class="wrap">
+  <div class="setup">
   <div class="keycard card">
     {#if apiKey.value}
       <div class="row">
@@ -150,11 +184,34 @@
           <button class="btn-i" onclick={build} disabled={loading}>{loading ? 'Working…' : report ? 'Refresh report' : 'Build report'}</button>
           <span class="prog" aria-live="polite">{progress}</span>
         </div>
+        {#if fac.exact && war}
+          <div class="live">
+            <b>Live status recording</b>
+            <p class="note">Torn keeps no history of who was in hospital, flying or abroad. To time how long members stay alive, this page reads every member's status every 30 seconds and keeps it in this browser. It only sees what happens while this tab stays open, so leave it open during the war, ideally in its own window.</p>
+            <div class="row">
+              {#if recording}
+                <button class="btn-c" onclick={stop}>Stop recording</button>
+                <span class="rec" aria-live="polite">● Recording</span>
+              {:else if !war.end}
+                <button class="btn-i" onclick={record}>Start recording</button>
+              {/if}
+              {#if liveLog}
+                <span class="note">{nf.format(changes)} status changes · last read {new Date(liveLog.lastPoll * 1000).toLocaleTimeString()}</span>
+                <button class="btn-c" onclick={deleteRecording}>Delete recording</button>
+              {:else if war.end}
+                <span class="note">This war has ended and nothing was recorded for it.</span>
+              {/if}
+            </div>
+            {#if liveError}<p class="err" role="alert">{liveError}</p>{/if}
+          </div>
+        {/if}
       {:else}
         <p class="note">Your faction has no ranked wars on record yet.</p>
       {/if}
     </div>
   {/if}
+
+  </div>
 
   {#if report && war}
     <div class="tiles">
@@ -179,6 +236,7 @@
       </div>
     {/if}
 
+    <div class="tools"><ColumnPicker columns={available} bind:hidden storeKey="ftp:war-report-cols" /></div>
     <div class="tbl-scroll"><table class="wr">
       <caption>{title} · built {report.builtAt.toLocaleTimeString()}</caption>
       <thead><tr>
@@ -208,7 +266,7 @@
       {#key report}
         <WarCharts timeline={report.timeline} rows={report.rows} positions={fac.positions} start={war.start} end={war.end}
           us={fac.faction.name} them={war.them?.name ?? 'Enemy'} />
-        <DefenseTable rows={report.rows} them={war.them?.name ?? 'the enemy'} revives={report.revives.count} />
+        <DefenseTable rows={report.rows} them={war.them?.name ?? 'the enemy'} revives={report.revives.count} beatings={report.beatings ?? []} log={liveLog} />
         <ReviveTable revives={report.revives} us={fac.faction.name} them={war.them?.name ?? 'Enemy'} />
       {/key}
     {:else}
@@ -257,8 +315,14 @@
 </div></footer>
 
 <style>
-  .keycard,.pick{display:grid;gap:.7rem;border-radius:3px;max-width:44rem}
-  .pick{margin-top:1rem}
+  /* Reports have many columns, so this page uses the full width of wide screens. */
+  header.hero > .wrap,#report > .wrap,#how > .wrap,footer > .wrap{max-width:none}
+  .tools{display:flex;justify-content:flex-end;margin-bottom:.5rem}
+  .live{display:grid;gap:.4rem;border-top:1px solid var(--border);padding-top:.8rem}
+  .rec{color:var(--crime);font-weight:600;font-size:.88rem}
+  .setup{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:1rem;align-items:start}
+  .setup .err{grid-column:1/-1}
+  .keycard,.pick{display:grid;gap:.7rem;border-radius:3px}
   .fld{display:grid;gap:.25rem;font-size:.88rem;color:var(--muted)}
   .fld select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:.45rem .6rem;min-width:0;width:100%}
   .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
